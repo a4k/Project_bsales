@@ -1,0 +1,149 @@
+.grid
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	.gd
+		&-xs
+			&-1
+				width: 100%;
+				position: relative;
+			&-2
+				width: 50%;
+				position: relative;
+		&-s
+			&-1
+				position: relative;
+			&-2
+				position: relative;
+			&-3
+				position: relative;
+		&-m
+			&-1
+				position: relative;
+			&-2
+				position: relative;
+			&-3
+				position: relative;
+			&-4
+				position: relative;
+		&-l
+			&-1
+				position: relative;
+			&-2
+				position: relative;
+			&-3
+				position: relative;
+			&-4
+				position: relative;
+
+	@media (min-width: '#{$xsmall}px')
+		.gd
+			&-s
+				&-1
+					width: 100%;
+				&-2
+					width: 50%;
+				&-3
+					width: 33.33%;
+	@media (min-width: '#{$small}px')
+		.gd
+			&-m
+				&-1
+					width: 100%;
+				&-2
+					width: 50%;
+				&-3
+					width: 33.33%;
+				&-4
+					width: 25%;
+				&-5
+					width: 75%;
+	@media (min-width: '#{$medium}px')
+		.gd
+			&-l
+				&-1
+					width: 100%;
+				&-2
+					width: 50%;
+				&-3
+					width: 33.33%;
+				&-4
+					width: 25%;
+
+.order
+	&-xs
+		&-0
+			order: 0;
+		&-1
+			order: 1;
+		&-2
+			order: 2;
+		&-3
+			order: 3;
+		&-4
+			order: 4;
+		&-5
+			order: 5;
+	@media (min-width: '#{$small}px')
+		&-xs
+			&-0
+				order: 0;
+			&-1
+				order: 0;
+			&-2
+				order: 0;
+			&-3
+				order: 0;
+			&-4
+				order: 0;
+			&-5
+				order: 0;
+
+.order
+	&-ms
+		&-0
+			order: 0;
+		&-1
+			order: 1;
+		&-2
+			order: 2;
+		&-3
+			order: 3;
+		&-4
+			order: 4;
+		&-5
+			order: 5;
+	@media (min-width: '#{$medium}px')
+		&-ms
+			&-0
+				order: 0;
+			&-1
+				order: 0;
+			&-2
+				order: 0;
+			&-3
+				order: 0;
+			&-4
+				order: 0;
+			&-5
+				order: 0;
+
+.hidden
+	@media (max-width: '#{($xsmall)-1}px')
+		&-xs
+			display: none;
+	@media (max-width: '#{($small)-1}px')
+		&-s
+			display: none;
+	@media (max-width: '#{($medium)-1}px')
+		&-m
+			display: none;
+	@media (max-width: '#{($large)-1}px')
+		&-l
+			display: none;
+	@media (min-width: '#{($medium)-1}px')
+		&-bl
+			display: none;
+	@media (min-width: '#{($small)-1}px')
+		&-bm
+			display: none;

@@ -1,0 +1,148 @@
+*
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+html, body
+    height: 100%;
+
+body
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: normal;
+    color: $black;
+    background: $cgray;
+
+a
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    color: $blue;
+    transition: all .2s ease;
+
+ul
+    list-style: none;
+
+ol
+    padding-left: 15px;
+
+img
+    display: block;
+    margin: auto;
+
+h1
+    font-size: 60px;
+    text-align: center;
+
+h2
+    font-size: 26px;
+    color: inherit;
+    margin: 0 0 25px;
+    font-family: 'Arial';
+    font-weight: 300;
+    @media (min-width: '#{$small}px')
+        font-size: 30px;
+        margin: 0 0 35px;
+
+h3
+    font-size: 22px;
+    text-align: center;
+    color: inherit;
+    font-family: 'Arial';
+    font-weight: 300;
+    margin: 0 0 45px;
+    padding-top: 40px;
+    @media (min-width: '#{$small}px')
+        font-size: 30px;
+        margin: 0 0 35px;
+h3.title
+    font-size: 40px
+    padding-top: 60px
+    padding-bottom: 20px
+h4
+    font-size: 18px;
+    color: inherit;
+    font-family: 'Arial';
+    font-weight: 700;
+    margin: 0 0 15px;
+    @media (min-width: '#{$small}px')
+        margin: 0 0 20px;
+
+p
+    font-size: 12px;
+    line-height: 20px;
+    @media (min-width: '#{$small}px')
+        font-size: 16px;
+        line-height: 32px;
+
+/*base classes*/
+
+
+
+.main_container
+    width: 1400px
+    margin: 0 auto
+    background: #{$white}
+.footer_container
+    width: 1400px
+    margin: 0 auto
+.container
+    margin: auto;
+    padding: 0 55px;
+    transition: all 0.5s ease-in-out
+    -o-transition: all 0.5s ease-in-out
+    -moz-transition: all 0.5s ease-in-out
+    -webkit-transition: all 0.5s ease-in-out
+    -ms-transition: all 0.5s ease-in-out
+    &.no-padding
+        padding: 0;
+    &.no-padding-right
+        padding: 0 0 0 25px;
+    @media (min-width: '#{$small}px')
+        padding: 0 110px;
+        &.no-padding-right
+            padding: 0 0 0 55px;
+
+.bg
+    &-black
+        background: $black;
+        &-o8
+            background: $black_o_8
+        &-o9
+            background: $black_o_9
+        &-o65
+            background: $black_o_65
+    &-gray
+        background: $gray;
+    &-dgrey
+        background: $dark_gray;
+
+.c
+    &-white
+        color: $white;
+    &-black
+        color: $black;
+
+.italic
+    font-style: italic;
+
+.btn
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-family: 'Arial';
+    font-weight: 400;
+    &-blue
+        background: $blue;
+        color: $white;
+        width: 210px;
+        padding: 11px 0 8px;
+        font-size: 16px;
+    &-black
+        background: #000000;
+        color: $white;
+        padding: 10px;

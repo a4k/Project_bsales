@@ -1,0 +1,244 @@
+.slider
+	&_inner
+		margin: 60px 0
+		border: 1px solid #{$gray}
+		height: 400px
+		width: 100%
+		overflow: hidden
+		position: relative
+		.arrows
+			position: absolute
+			z-index: 50
+			bottom: 20px
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: center
+			width: 100%
+			.sel
+				border: 1px solid #{$dgray}
+				border-radius: 15px
+				width: 15px
+				height: 15px
+				background: #{$white}
+				margin: 0 10px
+				cursor: pointer
+			.active
+				background: #{$dgray}
+				cursor: default
+	&_wrapper
+		width: calc(100%*4);
+		height: 100%
+		transition: all 0.5s ease-in-out;
+		.slide
+			float: left
+			height: 100%
+			width: 100%
+			&_info
+				margin: 120px 0 0 40px
+			&_title
+				width: 300px
+				font-size: 50px
+				line-height: 60px
+				color: #{$dark_gray}
+				padding-bottom: 20px
+				border-bottom: 1px solid #{$dgray}
+			&_about
+				font-size: 14px
+				line-height: 25px
+				margin-top: 20px
+.products
+	.items
+		display: flex
+		flex-direction: row
+		align-items: stretch
+		justify-content: center
+		flex-wrap: nowrap
+		padding: 0 0 60px
+		&_inner
+			position: relative
+			overflow: hidden
+			width: 100%
+			height: 100%
+			padding: 0 0 60px
+			.arrows
+				position: absolute
+				z-index: 50
+				bottom: 40px
+				display: flex
+				flex-direction: row
+				align-items: center
+				justify-content: center
+				width: 100%
+				.sel
+					border: 1px solid #{$dgray}
+					border-radius: 15px
+					width: 15px
+					height: 15px
+					background: #{$white}
+					margin: 0 10px
+					cursor: pointer
+				.active
+					background: #{$dgray}
+					cursor: default
+		.item
+			width: 100%
+			border: 1px solid #{$dgray}
+			margin: 0 20px
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			&_photo
+				height: 200px
+				width: 100%
+			&_about
+				padding: 0 30px
+				display: flex
+				height: 150px
+				flex-direction: column
+				justify-content: center
+			&_link
+				font-size: 25px
+				line-height: 30px
+				margin-bottom: 20px
+				a
+					display: block
+					height: 100%
+			&_info
+				font-size: 14px
+				color: #{$dark_gray}
+
+.services
+	.items
+		display: flex
+		flex-direction: row
+		align-items: stretch
+		justify-content: center
+		flex-wrap: nowrap
+		padding: 0 0 60px
+		.item
+			width: 100%
+			border: 1px solid #{$dgray}
+			margin: 0 20px
+			&_photo
+				height: 100%
+				width: 100%
+			&_about
+				height: 80px
+				padding: 0 30px
+				margin-top: 150px
+			&_link
+				font-size: 25px
+				line-height: 30px
+				margin-bottom: 20px
+				a
+					display: block
+					height: 100%
+.company
+	&_about
+		color: #{$dark_gray}
+		width: 800px
+		margin: 0px auto 40px
+		p
+			font-size: 14px
+			line-height: 25px
+	.media
+		display: flex
+		flex-direction: row
+		align-items: stretch
+		justify-content: center
+		flex-wrap: nowrap
+		padding: 0 0 60px
+		&_item
+			width: 100%
+			margin: 0 20px
+			display: flex
+			flex-direction: row
+			flex-wrap: nowrap
+			&_photo
+				height: 80px
+				width: 80px
+				border: 1px solid #{$dgray}
+			&_title
+				font-size: 16px
+				line-height: 30px
+				margin-left: 20px
+				margin-right: 20px
+				display: flex
+				flex-direction: row
+				flex-wrap: nowrap
+				align-items: center
+				justify-content: flex-start
+				color: #{$dark_gray}
+				a
+					display: block
+					height: 100%
+	&_info
+		display: flex
+		flex-direction: row
+		flex-wrap: nowrap
+		padding-bottom: 40px
+		.news
+			flex: 1 auto
+			h3
+				&.title
+					text-align: left
+					padding-bottom: 0
+			&_item
+				display: flex
+				flex-direction: row
+				flex-wrap: nowrap
+				padding: 10px 0
+				&_date
+					color: #{$dark_gray}
+					font-size: 16px
+				&_link
+					font-size: 16px
+					margin-left: 40px
+		.vacancies
+			flex: 1 auto
+			display: flex
+			flex-direction: column
+			flex-wrap: nowrap
+			h3
+				&.title
+					text-align: left
+					padding-bottom: 0
+			&_link
+				font-size: 16px
+				padding: 10px 0
+.clients
+	.items
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-around
+		margin: 0 auto
+		width: 1000px
+		padding-bottom: 40px
+		.item
+			border: 1px solid #{$dgray}
+			width: 180px
+			height: 80px
+			margin: 20px 0
+			a
+				width: 100%
+				height: 100%
+				display: block
+.footer_nav
+	.items
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-around
+		padding: 40px 0
+		.item
+			flex: 1 auto
+			display: flex
+			flex-direction: column
+			flex-wrap: nowrap
+			align-items: flex-start
+			justify-content: flex-start
+			.title
+				padding-bottom: 20px
+				margin: 0
+				font-weight: normal
+
