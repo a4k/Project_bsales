@@ -1,0 +1,230 @@
+.header_product
+	position: relative;
+	height: 100px;
+	width: 100%;
+	border-top: 1px solid #{$cgray}
+	border-bottom: 1px solid #{$cgray}
+	.container
+		height: 100%
+		.menu
+			display: flex
+			flex-direction: row
+			flex-wrap: nowrap
+			align-items: center
+			justify-content: space-between
+			height: 100%
+			.logo
+				padding-top: 5px;
+				float: left;
+				width: 150px
+				height: 60px
+				border: 1px solid #{$cgray}
+			.menu_product
+				float: right
+				ul
+					margin: 0
+					padding: 0
+					display: flex
+					flex-direction: row
+					flex-wrap: nowrap
+					align-items: center
+					li
+						float: left
+						margin: 0 0 0 40px
+h2.title
+	font-size: 38px
+.product_info
+	position: relative
+	&_photo
+		position: absolute
+		top: 50px
+		width: 550px
+		height: 450px
+		border: 1px solid #{$cgray}
+		&:before
+			content: 'Красивый коллаж из документов'
+			display: block
+			width: 100%
+			margin-top: 150px
+			color: #{$dgray}
+			text-align: center
+			padding-bottom: 20px
+	.inner
+		padding-top: 40px
+		z-index: 50
+		position: relative
+		
+		&_text
+			display: flex
+			flex-flow: row nowrap
+		.title
+			flex: 1 100%
+			font-size: 40px
+	&_textout
+		flex: 2 100%
+		width: 100%
+		height: 50px
+	&_text
+		flex: 2 100%
+		p
+			font-size: 14px
+			padding-top: 20px
+			padding-left: 10px
+			color: #{$kgray}
+	&_box
+		flex: 1 100%
+		margin: 80px 60px 60px
+		height: 160px
+		background: #{$gray}
+		display: flex
+		flex-flow: row nowrap
+		padding: 10px 0
+		color: #{$kgray}
+	&_price
+		flex: 2 100%
+		padding-top: 20px
+		border-right: 2px solid #{$dgray}
+		text-align: center
+	&_demo
+		flex: 2 100%
+		padding-top: 20px
+		text-align: center
+
+.capability
+	padding-top: 30px
+	.items
+		display: flex
+		flex-direction: row
+		align-items: stretch
+		justify-content: center
+		flex-wrap: nowrap
+		padding: 0 0 60px
+		&_inner
+			position: relative
+			overflow: hidden
+			width: 100%
+			height: 100%
+			padding: 0 0 60px
+			.arrows
+				position: absolute
+				z-index: 50
+				bottom: 40px
+				display: flex
+				flex-direction: row
+				align-items: center
+				justify-content: center
+				width: 100%
+				.sel
+					border: 1px solid #{$dgray}
+					border-radius: 15px
+					width: 15px
+					height: 15px
+					background: #{$white}
+					margin: 0 10px
+					cursor: pointer
+				.active
+					background: #{$dgray}
+					cursor: default
+		.item
+			width: 100%
+			margin: 0 20px
+			height: 350px
+			&_photo
+				height: 150px
+				width: 150px
+				margin: 0 auto 20px
+				border: 1px solid #{$dgray}
+				&:before
+					content: 'Иконка'
+					display: block
+					width: 100%
+					padding-top: 50px	
+					color: #{$dgray}
+					text-align: center
+					padding-bottom: 20px
+			&_about
+				text-align: center
+				h4
+					font-weight: normal
+					margin-bottom: 10px
+				p
+					font-size: 14px
+					line-height: 25px
+					color: #{$dark_gray}
+
+.prices
+	padding-top: 30px
+	.items_price
+		.item
+			border: 1px solid #{$dgray}
+			&_about
+				text-align: center
+				color: #{$dark_gray}
+				h4
+					font-weight: normal
+					font-size: 24px
+					margin-bottom: 0
+				.small_text
+					color: #{$dark_gray}
+				.list
+					padding: 10px 0 20px
+					li
+						padding: 20px 0 0
+						font-size: 18px
+						&.noactive
+							color: #{$dgray}
+	.all_prices
+		display: block
+		margin: 0px auto
+.view_service
+	.items_service
+		.item
+			border: 1px solid #{$dgray}
+			&_photo
+				width: 100%
+				height: 150px
+.reviews
+	&_inner
+		margin: 60px 0
+		border: 1px solid #{$gray}
+		height: 400px
+		width: 100%
+		overflow: hidden
+		position: relative
+		.arrows
+			position: absolute
+			z-index: 50
+			bottom: 20px
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: center
+			width: 100%
+			.sel
+				border: 1px solid #{$dgray}
+				border-radius: 15px
+				width: 15px
+				height: 15px
+				background: #{$white}
+				margin: 0 10px
+				cursor: pointer
+			.active
+				background: #{$dgray}
+				cursor: default
+	&_wrapper
+		width: calc(100%*4);
+		height: 100%
+		transition: all 0.5s ease-in-out;
+		.review
+			float: left
+			height: 100%
+			width: 100%
+			&_photo
+				border: 1px solid #{$gray}
+				width: 80px
+				height: 120px
+			&_info
+				p
+					font-size: 14px
+					line-height: 25px
+					margin-top: 20px

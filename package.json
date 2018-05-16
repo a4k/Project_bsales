@@ -1,5 +1,5 @@
 {
-  "name": "avibus",
+  "name": "rit",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -16,6 +16,7 @@
     "gulp-sprite-generator": "^0.2.3",
     "gulp-uglify": "^3.0.0",
     "hbs": "^4.0.1",
+    "http": "0.0.0",
     "http-errors": "^1.6.3",
     "morgan": "^1.9.0",
     "node-sass-middleware": "^0.11.0"

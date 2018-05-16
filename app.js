@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var http = require("http");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -7,10 +8,11 @@ var sassMiddleware = require('node-sass-middleware');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const productsRouter = require('./routes/products');;
+const productsRouter = require('./routes/products');
 const productRouter = require('./routes/product');
 
 var app = express();
+var port = 3000;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -38,6 +40,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -47,6 +50,9 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+var server = http.createServer(app).listen(port, () => {
+  console.log('Listen server on port :: ' + port)
 });
 
 module.exports = app;
