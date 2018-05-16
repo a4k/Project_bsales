@@ -21,6 +21,8 @@ a
     outline: none;
     color: $blue;
     transition: all .2s ease;
+    &:hover
+        text-decoration: underline
 
 ul
     list-style: none;
@@ -45,7 +47,13 @@ h2
     @media (min-width: '#{$small}px')
         font-size: 30px;
         margin: 0 0 35px;
-
+h2.title
+    font-size: 50px
+    padding-top: 40px
+    padding-bottom: 20px
+    text-align: center
+    font-weight: bold
+    color: #{$kgray}
 h3
     font-size: 22px;
     text-align: center;

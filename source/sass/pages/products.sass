@@ -1,0 +1,61 @@
+.products
+	padding: 40px 0
+	.breadcrumbs
+		margin: 0 auto
+		color: #{$dgray}
+		text-align: center
+		
+	.items
+		display: flex
+		flex-flow: row wrap
+		align-items: stretch
+		justify-content: center
+		padding: 0 0 60px
+		.item:nth-child(1)
+			flex: 1 100%
+		.item:nth-child(2)
+			flex: 2 60%
+		.item:nth-child(3)
+			flex: 2 30%
+		.item:nth-child(4)
+			flex: 3 auto
+		.item:nth-child(5)
+			flex: 3 auto
+		.item:nth-child(6)
+			flex: 3 auto
+		.item:nth-child(7)
+			flex: 2 30%
+		.item:nth-child(8)
+			flex: 2 60%
+		.item
+			border: 1px solid #{$dgray}
+			margin: 20px
+			height: 350px
+			&_photo
+				height: 100%
+				width: 100%
+				display: flex
+				flex-direction: column
+				justify-content: flex-end
+				&:before
+					content: 'Логотип, фотография или скриншот'
+					color: #{$dgray}
+					text-align: center
+					padding-bottom: 20px
+			&_about
+				padding: 0 30px
+				height: 120px
+				max-width: 400px
+				display: flex
+				flex-direction: column
+				justify-content: center
+			&_link
+				font-size: 25px
+				line-height: 30px
+				margin-bottom: 20px
+				a
+					display: block
+					height: 100%
+			&_info
+				font-size: 14px
+				color: #{$dark_gray}
