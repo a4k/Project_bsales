@@ -99,6 +99,9 @@ p
 .s_container
     width: 975px
     margin: 0 auto
+.m_container
+    width: 800px
+    margin: 0 auto
 .x_container
     width: 600px
     margin: 0 auto
@@ -194,6 +197,10 @@ p
         margin: 20px
         height: 350px
         padding: 0
+        cursor: pointer
+        &:hover
+            .item_info
+                max-height: 200px
         &_photo
             height: 100%
             width: 100%
@@ -202,7 +209,7 @@ p
             justify-content: flex-end
             position: relative
             &:before
-                content: 'Логотип, фотография или скриншот'
+                content: 'Фотография'
                 color: #{$dgray}
                 text-align: center
                 position: absolute
@@ -217,10 +224,17 @@ p
         &_link
             font-size: 25px
             line-height: 30px
-            margin-bottom: 20px
+            margin-bottom: 10px
             a
-                display: block
                 height: 100%
+            &:hover
+                text-decoration: none
         &_info
             font-size: 14px
             color: #{$dark_gray}
+            max-height: 0
+            overflow: hidden
+            transition: all 0.5s ease-in-out;
+            p
+                font-size: 14px
+                line-height: 22px

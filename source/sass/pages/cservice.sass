@@ -1,0 +1,64 @@
+.cservice
+	padding: 40px 0 0
+	.breadcrumbs
+		margin: 0 auto
+		color: #{$dgray}
+		text-align: center
+	.about
+		margin-bottom: 40px
+		color: #{$dark_gray}
+	.prods
+		flex-wrap: wrap
+		display: flex
+		flex-flow: row wrap
+		align-items: stretch
+		justify-content: flex-start
+		padding-bottom: 0
+		.item
+			width: auto
+			height: 250px
+			flex: 0 1 350px
+			&_link
+				color: #{$dark_gray}
+.projects
+	.title
+		margin-bottom: 0
+		color: #{$dark_gray}
+	.items
+		display: flex
+		flex-flow: row wrap
+		align-items: stretch
+		justify-content: stretch
+		padding: 0 0 60px
+		.wl
+			flex: 0 1 790px
+			display: flex
+			flex-flow: row wrap
+			align-items: stretch
+			justify-content: stretch
+			.item
+				&:nth-child(1)
+					flex: 0 100%
+				&:nth-child(2)
+					flex: 0 0 355px
+				&:nth-child(3)
+					flex: 0 0 355px
+				&:nth-child(4)
+					flex: 0 1 100%
+		.wr
+			height: 1130px
+			display: flex
+			flex-flow: row wrap
+			align-items: stretch
+			justify-content: stretch
+			flex: 0 0 390px
+			.item
+				flex: 0 1 390px
+				height: 100%
+		.item
+			width: auto
+			flex: 0 1 350px
+			&.wa
+				flex: 0 1 100%
+			&_info
+				height: auto
