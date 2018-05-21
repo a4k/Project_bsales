@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const productRouter = require('./routes/product');
+const buyRouter = require('./routes/buy');
 
 var app = express();
 var port = 3000;
@@ -34,6 +35,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/product', productRouter);
+app.use('/buy', buyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

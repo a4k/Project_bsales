@@ -277,6 +277,14 @@ p {
   width: 1400px;
   margin: 0 auto; }
 
+.s_container {
+  width: 975px;
+  margin: 0 auto; }
+
+.x_container {
+  width: 600px;
+  margin: 0 auto; }
+
 .container {
   margin: auto;
   padding: 0 55px;
@@ -722,7 +730,8 @@ footer {
             margin: 0 0 0 40px; }
 
 #product h2.title {
-  font-size: 38px; }
+  font-size: 38px;
+  line-height: 40px; }
 
 #product .product_info {
   position: relative; }
@@ -866,15 +875,30 @@ footer {
     display: block;
     margin: 0px auto; }
 
+#product .view_service h2.title {
+  margin-bottom: 0; }
+
 #product .view_service .items_service .item {
-  border: 1px solid #cfcfcf; }
+  border: 1px solid #cfcfcf;
+  cursor: pointer; }
   #product .view_service .items_service .item_photo {
     width: 100%;
-    height: 150px; }
+    height: 150px;
+    position: relative; }
+    #product .view_service .items_service .item_photo:before {
+      content: ' ';
+      background: url(/images/youtube.png) no-repeat center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+
+#product .related h2.title {
+  margin-bottom: 0; }
 
 #product .reviews_inner {
   margin: 60px 0;
-  border: 1px solid #f3f3f3;
   height: 400px;
   width: 100%;
   overflow: hidden;
@@ -901,18 +925,170 @@ footer {
       cursor: default; }
 
 #product .reviews_wrapper {
-  width: calc(100%*4);
+  width: calc(100%*2);
+  display: flex;
+  flex-flow: row nowrap;
   height: 100%;
   transition: all 0.5s ease-in-out; }
   #product .reviews_wrapper .review {
-    float: left;
     height: 100%;
     width: 100%; }
+    #product .reviews_wrapper .review .s_container {
+      padding: 0 80px; }
+    #product .reviews_wrapper .review .avatar {
+      width: 100px;
+      flex: 0 0 auto; }
     #product .reviews_wrapper .review_photo {
-      border: 1px solid #f3f3f3;
+      border: 1px solid #cfcfcf;
       width: 80px;
-      height: 120px; }
-    #product .reviews_wrapper .review_info p {
-      font-size: 14px;
-      line-height: 25px;
-      margin-top: 20px; }
+      height: 100px;
+      position: relative; }
+      #product .reviews_wrapper .review_photo:before {
+        content: 'Фото';
+        position: absolute;
+        left: 0;
+        top: 35px;
+        width: 100%;
+        text-align: center;
+        color: #cfcfcf; }
+    #product .reviews_wrapper .review_info {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: center; }
+      #product .reviews_wrapper .review_info p {
+        font-size: 14px;
+        line-height: 25px;
+        margin-top: 20px; }
+      #product .reviews_wrapper .review_info .company_name {
+        font-style: italic; }
+
+#product .promo_product {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  margin: 40px 0; }
+  #product .promo_product .s_container {
+    height: 100%; }
+    #product .promo_product .s_container .menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%; }
+      #product .promo_product .s_container .menu .title {
+        float: left; }
+      #product .promo_product .s_container .menu .menu_product {
+        float: right; }
+        #product .promo_product .s_container .menu .menu_product ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center; }
+          #product .promo_product .s_container .menu .menu_product ul li {
+            float: left;
+            margin: 0 0 0 40px; }
+
+#buy .header_buy {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; }
+  #buy .header_buy .container {
+    height: 100%; }
+    #buy .header_buy .container .menu {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%; }
+      #buy .header_buy .container .menu .logo {
+        padding-top: 5px;
+        float: left;
+        width: 150px;
+        height: 60px;
+        border: 1px solid #e5e5e5; }
+      #buy .header_buy .container .menu .menu_buy {
+        float: right; }
+        #buy .header_buy .container .menu .menu_buy ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center; }
+          #buy .header_buy .container .menu .menu_buy ul li {
+            float: left;
+            margin: 0 0 0 40px; }
+
+#buy h2.title {
+  font-size: 38px;
+  line-height: 40px; }
+
+#buy .buy .title {
+  margin-bottom: 0; }
+
+#buy .buy .about {
+  color: #424242; }
+
+#buy .buy_navigation {
+  margin-top: 40px;
+  width: 100%;
+  overflow: hidden;
+  height: 60px;
+  line-height: 60px; }
+  #buy .buy_navigation .buy_nav ul {
+    width: 1400px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+    #buy .buy_navigation .buy_nav ul li {
+      width: auto;
+      font-size: 24px;
+      font-weight: 400;
+      color: #424242;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+      #buy .buy_navigation .buy_nav ul li span {
+        display: block;
+        height: 100%; }
+      #buy .buy_navigation .buy_nav ul li:after {
+        content: ' ';
+        display: block;
+        background: url(/images/right-arrow.png) no-repeat center;
+        background-size: 24px auto;
+        width: 120px;
+        height: 30px;
+        text-align: center; }
+      #buy .buy_navigation .buy_nav ul li.noactive {
+        color: #cfcfcf; }
+      #buy .buy_navigation .buy_nav ul li.empty {
+        width: 200px; }
+        #buy .buy_navigation .buy_nav ul li.empty:after {
+          display: none; }
+
+#buy .buy_steps {
+  margin-bottom: 80px; }
+  #buy .buy_steps .form {
+    padding-top: 20px; }
+    #buy .buy_steps .form .row {
+      margin: 25px 0; }
+    #buy .buy_steps .form_title {
+      width: 200px;
+      padding-right: 20px;
+      text-align: right;
+      color: #424242; }
+    #buy .buy_steps .form_input input {
+      width: 300px;
+      padding: 8px 15px;
+      border: 1px solid #cfcfcf; }
+    #buy .buy_steps .form button {
+      cursor: pointer; }
