@@ -2,7 +2,6 @@
 	&_inner
 		margin: 60px 0
 		border: 1px solid #{$gray}
-		height: 400px
 		width: 100%
 		overflow: hidden
 		position: relative
@@ -30,24 +29,29 @@
 		width: calc(100%*4);
 		height: 100%
 		transition: all 0.5s ease-in-out;
+		display: flex
+		flex-direction: row
+		align-items: flex-start
+		justify-content: flex-start
 		.slide
-			float: left
-			height: 100%
 			width: 100%
 			&_info
-				margin: 120px 0 0 40px
+				padding: 11% 60px
 			&_title
 				width: 300px
-				font-size: 50px
-				line-height: 60px
-				color: #{$dark_gray}
 				padding-bottom: 20px
 				border-bottom: 1px solid #{$dgray}
+				h3
+					font-size: 50px
+					line-height: 60px
+					color: #{$dark_gray}
+
 			&_about
 				font-size: 14px
 				line-height: 25px
 				margin-top: 20px
 .products
+	padding-top: 60px
 	.items
 		&_inner
 			position: relative
@@ -77,13 +81,14 @@
 					cursor: default
 
 .services
+	padding-top: 60px
 	.items
 		.item
 			cursor: pointer
 			padding: 0
-			height: 250px
 			border: 1px solid #{$dgray}
 			&_photo
+				padding-top: 40%
 				height: 100%
 				width: 100%
 				display: flex
@@ -101,6 +106,7 @@
 					display: block
 					height: 100%
 .company
+	padding-top: 60px
 	&_about
 		color: #{$dark_gray}
 		width: 800px
@@ -139,10 +145,10 @@
 		padding-bottom: 40px
 		.news
 			flex: 1 auto
-			h3
-				&.title
+			.title
+				padding-bottom: 0
+				h3
 					text-align: left
-					padding-bottom: 0
 			&_item
 				display: flex
 				flex-direction: row
@@ -159,27 +165,27 @@
 			display: flex
 			flex-direction: column
 			flex-wrap: nowrap
-			h3
-				&.title
+			.title
+				padding-bottom: 0
+				h3
 					text-align: left
-					padding-bottom: 0
 			&_link
 				font-size: 16px
 				padding: 10px 0
 .clients
+	padding: 60px 0 4%
 	.items
 		display: flex
 		flex-flow: row wrap
-		justify-content: space-around
-		margin: 0 auto
-		width: 1000px
-		padding: 0 0 40px
+		justify-content: space-between
+		width: 100%
+		padding: 0
 		.item
 			border: 1px solid #{$dgray}
-			width: 180px
-			height: 80px
-			margin: 20px 0
+			flex: 0 1 18%
 			padding: 0
+			padding-top: 9%
+			margin-bottom: 20px
 			a
 				width: 100%
 				height: 100%

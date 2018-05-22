@@ -231,23 +231,14 @@ h2.title {
   font-weight: bold;
   color: #424242; }
 
-h3 {
-  font-size: 22px;
-  text-align: center;
-  color: inherit;
-  font-family: 'Arial';
-  font-weight: 300;
-  margin: 0 0 45px;
-  padding-top: 40px; }
-  @media (min-width: 768px) {
-    h3 {
-      font-size: 30px;
-      margin: 0 0 35px; } }
+.title {
+  margin-bottom: 35px; }
 
-h3.title {
+.title h3 {
+  padding: 0;
+  margin: 0;
   font-size: 40px;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  line-height: 44px;
   font-weight: bold;
   text-align: center;
   color: #424242; }
@@ -272,16 +263,15 @@ p {
 
 /*base classes*/
 .main_container {
-  width: 1400px;
-  margin: 0 auto;
   background: #FFFFFF; }
 
 .footer_container {
-  width: 1400px;
+  width: 100%;
   margin: 0 auto; }
 
 .s_container {
-  width: 975px;
+  width: 54vw;
+  min-width: 600px;
   margin: 0 auto; }
 
 .m_container {
@@ -381,25 +371,23 @@ p {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
   padding: 0 0 60px; }
   .items .item {
-    width: 100%;
-    margin: 0 20px;
-    padding: 30px 10px; }
+    width: 32%;
+    padding: 0; }
 
 .prods .item {
   border: 1px solid #cfcfcf;
-  margin: 20px;
-  height: 350px;
+  width: 32%;
   padding: 0;
   cursor: pointer; }
   .prods .item:hover .item_info {
     max-height: 200px; }
   .prods .item_photo {
-    height: 100%;
     width: 100%;
+    padding-top: 70%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -416,7 +404,10 @@ p {
     max-width: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
   .prods .item_link {
     font-size: 25px;
     line-height: 30px;
@@ -479,9 +470,11 @@ footer {
       align-items: center;
       justify-content: space-between;
       height: 100%;
-      padding: 40px 0; }
+      padding: 0; }
       footer .container .items .item {
         width: auto; }
+        footer .container .items .item:nth-child(2) {
+          text-align: right; }
         footer .container .items .item p {
           font-size: 14px; }
 
@@ -491,7 +484,7 @@ footer {
   justify-content: space-around;
   padding: 20px 0; }
   .footer_nav .items .item {
-    flex: 1 auto;
+    flex: 0 1 25%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -506,7 +499,6 @@ footer {
 #index .slider_inner {
   margin: 60px 0;
   border: 1px solid #f3f3f3;
-  height: 400px;
   width: 100%;
   overflow: hidden;
   position: relative; }
@@ -534,157 +526,167 @@ footer {
 #index .slider_wrapper {
   width: calc(100%*4);
   height: 100%;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start; }
   #index .slider_wrapper .slide {
-    float: left;
-    height: 100%;
     width: 100%; }
     #index .slider_wrapper .slide_info {
-      margin: 120px 0 0 40px; }
+      padding: 11% 60px; }
     #index .slider_wrapper .slide_title {
       width: 300px;
-      font-size: 50px;
-      line-height: 60px;
-      color: #424242;
       padding-bottom: 20px;
       border-bottom: 1px solid #cfcfcf; }
+      #index .slider_wrapper .slide_title h3 {
+        font-size: 50px;
+        line-height: 60px;
+        color: #424242; }
     #index .slider_wrapper .slide_about {
       font-size: 14px;
       line-height: 25px;
       margin-top: 20px; }
 
-#index .products .items_inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  padding: 0 0 60px; }
-  #index .products .items_inner .arrows {
-    position: absolute;
-    z-index: 50;
-    bottom: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%; }
-    #index .products .items_inner .arrows .sel {
-      border: 1px solid #cfcfcf;
-      border-radius: 15px;
-      width: 15px;
-      height: 15px;
-      background: #FFFFFF;
-      margin: 0 10px;
-      cursor: pointer; }
-    #index .products .items_inner .arrows .active {
-      background: #cfcfcf;
-      cursor: default; }
-
-#index .services .items .item {
-  cursor: pointer;
-  padding: 0;
-  height: 250px;
-  border: 1px solid #cfcfcf; }
-  #index .services .items .item_photo {
-    height: 100%;
+#index .products {
+  padding-top: 60px; }
+  #index .products .items_inner {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    display: flex;
-    flex-flow: column row;
-    align-items: flex-end;
-    justify-content: flex-start; }
-  #index .services .items .item_about {
-    height: 80px;
-    padding: 0 30px; }
-  #index .services .items .item_link {
-    font-size: 25px;
-    line-height: 30px;
-    margin-bottom: 20px; }
-    #index .services .items .item_link a {
-      display: block;
-      height: 100%; }
+    height: 100%;
+    padding: 0 0 60px; }
+    #index .products .items_inner .arrows {
+      position: absolute;
+      z-index: 50;
+      bottom: 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%; }
+      #index .products .items_inner .arrows .sel {
+        border: 1px solid #cfcfcf;
+        border-radius: 15px;
+        width: 15px;
+        height: 15px;
+        background: #FFFFFF;
+        margin: 0 10px;
+        cursor: pointer; }
+      #index .products .items_inner .arrows .active {
+        background: #cfcfcf;
+        cursor: default; }
 
-#index .company_about {
-  color: #424242;
-  width: 800px;
-  margin: 0px auto 40px; }
-  #index .company_about p {
-    font-size: 14px;
-    line-height: 25px; }
-
-#index .company .media_item {
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; }
-  #index .company .media_item_photo {
-    height: 80px;
-    width: 80px;
+#index .services {
+  padding-top: 60px; }
+  #index .services .items .item {
+    cursor: pointer;
+    padding: 0;
     border: 1px solid #cfcfcf; }
-  #index .company .media_item_title {
-    font-size: 16px;
-    line-height: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+    #index .services .items .item_photo {
+      padding-top: 40%;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-flow: column row;
+      align-items: flex-end;
+      justify-content: flex-start; }
+    #index .services .items .item_about {
+      height: 80px;
+      padding: 0 30px; }
+    #index .services .items .item_link {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 20px; }
+      #index .services .items .item_link a {
+        display: block;
+        height: 100%; }
+
+#index .company {
+  padding-top: 60px; }
+  #index .company_about {
+    color: #424242;
+    width: 800px;
+    margin: 0px auto 40px; }
+    #index .company_about p {
+      font-size: 14px;
+      line-height: 25px; }
+  #index .company .media_item {
+    padding: 0;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    color: #424242; }
-    #index .company .media_item_title a {
-      display: block;
-      height: 100%; }
-
-#index .company_info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding-bottom: 40px; }
-  #index .company_info .news {
-    flex: 1 auto; }
-    #index .company_info .news h3.title {
-      text-align: left;
-      padding-bottom: 0; }
-    #index .company_info .news_item {
+    flex-wrap: nowrap; }
+    #index .company .media_item_photo {
+      height: 80px;
+      width: 80px;
+      border: 1px solid #cfcfcf; }
+    #index .company .media_item_title {
+      font-size: 16px;
+      line-height: 30px;
+      margin-left: 20px;
+      margin-right: 20px;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      padding: 10px 0; }
-      #index .company_info .news_item_date {
-        color: #424242;
-        font-size: 16px; }
-      #index .company_info .news_item_link {
-        font-size: 16px;
-        margin-left: 40px; }
-  #index .company_info .vacancies {
-    flex: 1 auto;
+      align-items: center;
+      justify-content: flex-start;
+      color: #424242; }
+      #index .company .media_item_title a {
+        display: block;
+        height: 100%; }
+  #index .company_info {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap; }
-    #index .company_info .vacancies h3.title {
-      text-align: left;
-      padding-bottom: 0; }
-    #index .company_info .vacancies_link {
-      font-size: 16px;
-      padding: 10px 0; }
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-bottom: 40px; }
+    #index .company_info .news {
+      flex: 1 auto; }
+      #index .company_info .news .title {
+        padding-bottom: 0; }
+        #index .company_info .news .title h3 {
+          text-align: left; }
+      #index .company_info .news_item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 10px 0; }
+        #index .company_info .news_item_date {
+          color: #424242;
+          font-size: 16px; }
+        #index .company_info .news_item_link {
+          font-size: 16px;
+          margin-left: 40px; }
+    #index .company_info .vacancies {
+      flex: 1 auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      #index .company_info .vacancies .title {
+        padding-bottom: 0; }
+        #index .company_info .vacancies .title h3 {
+          text-align: left; }
+      #index .company_info .vacancies_link {
+        font-size: 16px;
+        padding: 10px 0; }
 
-#index .clients .items {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin: 0 auto;
-  width: 1000px;
-  padding: 0 0 40px; }
-  #index .clients .items .item {
-    border: 1px solid #cfcfcf;
-    width: 180px;
-    height: 80px;
-    margin: 20px 0;
+#index .clients {
+  padding: 60px 0 4%; }
+  #index .clients .items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
     padding: 0; }
-    #index .clients .items .item a {
-      width: 100%;
-      height: 100%;
-      display: block; }
+    #index .clients .items .item {
+      border: 1px solid #cfcfcf;
+      flex: 0 1 18%;
+      padding: 0;
+      padding-top: 9%;
+      margin-bottom: 20px; }
+      #index .clients .items .item a {
+        width: 100%;
+        height: 100%;
+        display: block; }
 
 #products .products {
   padding: 40px 0; }

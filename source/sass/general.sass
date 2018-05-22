@@ -54,21 +54,14 @@ h2.title
     text-align: center
     font-weight: bold
     color: #{$kgray}
-h3
-    font-size: 22px;
-    text-align: center;
-    color: inherit;
-    font-family: 'Arial';
-    font-weight: 300;
-    margin: 0 0 45px;
-    padding-top: 40px;
-    @media (min-width: '#{$small}px')
-        font-size: 30px;
-        margin: 0 0 35px;
-h3.title
+.title
+    margin-bottom: 35px
+    
+.title h3
+    padding: 0
+    margin: 0
     font-size: 40px
-    padding-top: 60px
-    padding-bottom: 20px
+    line-height: 44px
     font-weight: bold
     text-align: center
     color: #{$kgray}
@@ -93,14 +86,13 @@ p
 
 
 .main_container
-    width: 1400px
-    margin: 0 auto
     background: #{$white}
 .footer_container
-    width: 1400px
+    width: 100%
     margin: 0 auto
 .s_container
-    width: 975px
+    width: 54vw
+    min-width: 600px
     margin: 0 auto
 .m_container
     width: 800px
@@ -191,26 +183,24 @@ p
     display: flex
     flex-direction: row
     align-items: stretch
-    justify-content: center
+    justify-content: space-between
     flex-wrap: nowrap
     padding: 0 0 60px
     .item
-        width: 100%
-        margin: 0 20px
-        padding: 30px 10px
+        width: 32%
+        padding: 0
 .prods
     .item
         border: 1px solid #{$dgray}
-        margin: 20px
-        height: 350px
+        width: 32%
         padding: 0
         cursor: pointer
         &:hover
             .item_info
                 max-height: 200px
         &_photo
-            height: 100%
             width: 100%
+            padding-top: 70%
             display: flex
             flex-direction: column
             justify-content: flex-end
@@ -228,6 +218,9 @@ p
             display: flex
             flex-direction: column
             justify-content: center
+            position: absolute
+            left: 0
+            bottom: 0
         &_link
             font-size: 25px
             line-height: 30px
