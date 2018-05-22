@@ -12,7 +12,8 @@ body
     line-height: 25px;
     font-weight: normal;
     color: $black;
-    background: $cgray;
+    background: $cgray
+    font-size: #{$base + 'px'}
 
 a
     text-decoration: none;
@@ -33,53 +34,24 @@ ol
 img
     display: block;
     margin: auto;
-
-h1
-    font-size: 60px;
-    text-align: center;
-
 h2
-    font-size: 26px;
-    color: inherit;
-    margin: 0 0 25px;
-    font-family: 'Arial';
-    font-weight: 300;
-    @media (min-width: '#{$small}px')
-        font-size: 30px;
-        margin: 0 0 35px;
+    font-weight: 600
 h2.title
     font-size: 50px
     padding-top: 40px
     padding-bottom: 20px
     text-align: center
-    font-weight: bold
     color: #{$kgray}
 .title
     margin-bottom: 35px
-    
 .title h3
     padding: 0
     margin: 0
-    font-size: 40px
-    line-height: 44px
-    font-weight: bold
+    // font-size: 40px
+    // line-height: 44px
+    // font-weight: bold
     text-align: center
     color: #{$kgray}
-h4
-    font-size: 18px;
-    color: inherit;
-    font-family: 'Arial';
-    font-weight: 700;
-    margin: 0 0 15px;
-    @media (min-width: '#{$small}px')
-        margin: 0 0 20px;
-
-p
-    font-size: 12px;
-    line-height: 20px;
-    @media (min-width: '#{$small}px')
-        font-size: 14px;
-        line-height: 22px;
 
 /*base classes*/
 
@@ -95,7 +67,7 @@ p
     min-width: 600px
     margin: 0 auto
 .m_container
-    width: 800px
+    width: 40vw
     margin: 0 auto
 .x_container
     width: 600px
@@ -200,7 +172,8 @@ p
                 max-height: 200px
         &_photo
             width: 100%
-            padding-top: 70%
+            padding-top: 78.5%
+            min-height: 250px
             display: flex
             flex-direction: column
             justify-content: flex-end

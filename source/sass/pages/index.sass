@@ -41,14 +41,13 @@
 				width: 300px
 				padding-bottom: 20px
 				border-bottom: 1px solid #{$dgray}
-				h3
-					font-size: 50px
-					line-height: 60px
+				h2
+					// font-size: 50px
+					// line-height: 60px
+					margin: 0
 					color: #{$dark_gray}
 
 			&_about
-				font-size: 14px
-				line-height: 25px
 				margin-top: 20px
 .products
 	padding-top: 60px
@@ -88,32 +87,26 @@
 			padding: 0
 			border: 1px solid #{$dgray}
 			&_photo
-				padding-top: 40%
+				padding-top: 50%
 				height: 100%
 				width: 100%
-				display: flex
-				flex-flow: column row
-				align-items: flex-end
-				justify-content: flex-start
+				position: relative
 			&_about
-				height: 80px
-				padding: 0 30px
+				padding: 0 30px 20px
+				position: absolute
+				left: 0
+				bottom: 0
 			&_link
 				font-size: 25px
 				line-height: 30px
 				margin-bottom: 20px
-				a
-					display: block
-					height: 100%
+				&:hover
+					text-decoration: none
 .company
 	padding-top: 60px
 	&_about
 		color: #{$dark_gray}
-		width: 800px
 		margin: 0px auto 40px
-		p
-			font-size: 14px
-			line-height: 25px
 	.media
 		&_item
 			padding: 0
@@ -156,9 +149,7 @@
 				padding: 10px 0
 				&_date
 					color: #{$dark_gray}
-					font-size: 16px
 				&_link
-					font-size: 16px
 					margin-left: 40px
 		.vacancies
 			flex: 1 auto
