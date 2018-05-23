@@ -83,7 +83,8 @@ h2
     width: 40vw
     margin: 0 auto
 .x_container
-    width: 30vw
+    width: 40vw
+    min-width: 400px
     margin: 0 auto
 
 .container
@@ -224,6 +225,21 @@ h2
             p
                 font-size: 14px
                 line-height: 22px
+.crows
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    justify-content: space-between
+    flex-wrap: wrap
+    .crow_1
+        width: 32%
+    .crow_2
+        width: 66%
+    .cards
+        .card
+            padding-top: 48%
+
+
 .cards
     display: flex
     flex-direction: row
@@ -235,19 +251,34 @@ h2
         border: 1px solid #{$dgray}
         width: 32%
         padding: 0
-        cursor: pointer
         margin-bottom: 2%
         position: relative
         padding-top: 32%
+        &.empty
+            border: none
+            cursor: default
+        &.empty2
+            border: none
+            cursor: default
+            padding-top: 0
+            display: flex
+            flex-direction: row
+            align-items: stretch
+            justify-content: space-between
+            flex-wrap: wrap
         &.c_a
             width: 100%
         &.c_2_3
             width: 66%
         &.c_1_3
             width: 32%
+        &.c_2_2
+            width: 48%
+        &.c_3_1
+            padding-top: 306%
 
         &:hover
-            .item_info
+            .card_text
                 max-height: 200px
         &_photo
             position: absolute
@@ -257,8 +288,8 @@ h2
             height: 100%
         &_body
             position: absolute
-            left: 20px
-            bottom: 10px
+            left: 30px
+            bottom: 20px
             max-width: 300px
             .card_text
                 color: #{$dark_gray}

@@ -1,6 +1,6 @@
 .header_buy
 	position: relative;
-	height: 100px;
+	height: auto;
 	width: 100%;
 	border-top: 1px solid #{$cgray}
 	border-bottom: 1px solid #{$cgray}
@@ -9,32 +9,35 @@
 		.menu
 			display: flex
 			flex-direction: row
-			flex-wrap: nowrap
+			flex-wrap: wrap
 			align-items: center
 			justify-content: space-between
 			height: 100%
+			padding-bottom: 20px
 			.logo
-				padding-top: 5px;
-				float: left;
+				margin: 20px 0 0
 				width: 150px
 				height: 60px
 				border: 1px solid #{$cgray}
-			.menu_buy
-				float: right
+			&_product
+				display: block
+				margin-top: 20px
 				ul
 					margin: 0
+					margin-left: -40px
 					padding: 0
 					display: flex
 					flex-direction: row
-					flex-wrap: nowrap
+					flex-wrap: wrap
 					align-items: center
 					li
 						float: left
 						margin: 0 0 0 40px
-h2.title
-	font-size: 38px
-	line-height: 40px
+						.link
+							line-height: 60px
+
 .buy
+	padding-top: 30px
 	.title
 		margin-bottom: 0
 	.about
@@ -47,11 +50,12 @@ h2.title
 		line-height: 60px
 		.buy_nav
 			ul
-				width: 1400px
+				width: 2000px
 				display: flex
 				flex-flow: row nowrap
 				justify-content: flex-start
 				align-items: center
+				margin-left: 30%
 				li
 					width: auto
 					font-size: 24px
@@ -75,7 +79,7 @@ h2.title
 					&.noactive
 						color: #{$dgray}
 					&.empty
-						width: 200px
+						width: 0%
 						&:after
 							display: none
 	&_steps
@@ -84,14 +88,19 @@ h2.title
 			padding-top: 20px
 			.row
 				margin: 25px 0
+				display: flex
+				flex-flow: row nowrap
+				justify-content: flex-start
+				align-items: center
 			&_title
-				width: 200px
+				width: 30%
 				padding-right: 20px
 				text-align: right
 				color: #{$dark_gray}
 			&_input
+				width: 70%
 				input
-					width: 300px
+					width: 60%
 					padding: 8px 15px
 					border: 1px solid #{$dgray}
 			button
