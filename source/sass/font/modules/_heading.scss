@@ -5,10 +5,18 @@
 // [ h1: size (in rem), line height (* leading), margin top (* leading), margin bottom (* leading) ]
 $headings: (
   h1: (2.5, 2, 4, 1),
-  h2: (3, 2.5, 2.5, .5),
+  h2: (2.5, 1.5, 2.5, .5),
+  h3: (2.275, 2, 2, .5),
+  h4: (1.3, 1.3, 1.5, .5),
+  h5: (1.45, 1, 2.5, .5),
+  h6: (1, 1, 2.5, .5)
+) !default;
+$headings_m: (
+  h1: (2.5, 2, 4, 1),
+  h2: (2, 1.5, 2.5, .5),
   h3: (2.575, 2, 2, .5),
   h4: (1.2, 1, 1.5, .5),
-  h5: (1, 1, 2.5, .5),
+  h5: (1.45, 1, 2.5, .5),
   h6: (1, 1, 2.5, .5)
 ) !default;
 
@@ -22,6 +30,7 @@ $headings: (
   }
 }
 
+    
 @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
   $leading: $leading-desktop;
   $leading-rem: $leading-rem-desktop;

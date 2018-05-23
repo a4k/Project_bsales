@@ -36,22 +36,35 @@ img
     margin: auto;
 h2
     font-weight: 600
-h2.title
-    font-size: 50px
-    padding-top: 40px
-    padding-bottom: 20px
-    text-align: center
-    color: #{$kgray}
+.title 
+    h2
+        text-align: center
+        color: #{$kgray}
+        margin-top: 1rem
+        font-weight: 600
+        
 .title
     margin-bottom: 35px
-.title h3
-    padding: 0
-    margin: 0
-    // font-size: 40px
-    // line-height: 44px
-    // font-weight: bold
-    text-align: center
-    color: #{$kgray}
+.title 
+    h3
+        padding: 0
+        margin: 0
+        font-weight: 600
+        // font-size: 40px
+        // line-height: 44px
+        // font-weight: bold
+        text-align: center
+        color: #{$kgray}
+
+@media (min-width: '#{$small}px') and (max-width: '#{$mlarge}px')
+    h2
+        font-size: 2.2rem
+    h3
+        font-size: 1.8rem
+    p
+        font-size: 0.8rem
+    .link
+        font-size: 0.8rem
 
 /*base classes*/
 
@@ -70,7 +83,7 @@ h2.title
     width: 40vw
     margin: 0 auto
 .x_container
-    width: 600px
+    width: 30vw
     margin: 0 auto
 
 .container
@@ -211,3 +224,52 @@ h2.title
             p
                 font-size: 14px
                 line-height: 22px
+.cards
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 0 0 60px
+    .card
+        border: 1px solid #{$dgray}
+        width: 32%
+        padding: 0
+        cursor: pointer
+        margin-bottom: 2%
+        position: relative
+        padding-top: 32%
+        &.c_a
+            width: 100%
+        &.c_2_3
+            width: 66%
+        &.c_1_3
+            width: 32%
+
+        &:hover
+            .item_info
+                max-height: 200px
+        &_photo
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+        &_body
+            position: absolute
+            left: 20px
+            bottom: 10px
+            max-width: 300px
+            .card_text
+                color: #{$dark_gray}
+                max-height: 0
+                overflow: hidden
+                transition: all 0.5s ease-in-out;
+        &_link
+            span
+                position: absolute
+                left: 0
+                top: 0
+                z-index: 1
+                width: 100%
+                height: 100%    

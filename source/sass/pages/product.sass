@@ -1,6 +1,6 @@
 .header_product
 	position: relative;
-	height: 100px;
+	height: auto;
 	width: 100%;
 	border-top: 1px solid #{$cgray}
 	border-bottom: 1px solid #{$cgray}
@@ -9,49 +9,51 @@
 		.menu
 			display: flex
 			flex-direction: row
-			flex-wrap: nowrap
+			flex-wrap: wrap
 			align-items: center
 			justify-content: space-between
 			height: 100%
+			padding-bottom: 20px
 			.logo
-				padding-top: 5px;
-				float: left;
+				margin: 20px 0 0
 				width: 150px
 				height: 60px
 				border: 1px solid #{$cgray}
-			.menu_product
-				float: right
+			&_product
+				display: block
+				margin-top: 20px
 				ul
 					margin: 0
+					margin-left: -40px
 					padding: 0
 					display: flex
 					flex-direction: row
-					flex-wrap: nowrap
+					flex-wrap: wrap
 					align-items: center
 					li
 						float: left
 						margin: 0 0 0 40px
-h2.title
-	font-size: 38px
-	line-height: 40px
+						.link
+							line-height: 60px
+
 .product_info
 	position: relative
-	&_photo
-		position: absolute
-		top: 50px
-		width: 550px
-		height: 450px
-		border: 1px solid #{$cgray}
-		&:before
-			content: 'Красивый коллаж из документов'
-			display: block
-			width: 100%
-			margin-top: 150px
-			color: #{$dgray}
-			text-align: center
-			padding-bottom: 20px
+	.product_out
+		height: auto
+		width: 100%
+		position: relative
+		&_photo
+			position: absolute
+			top: 50px
+			width: 48%
+			padding-top: 50%
+			min-height: 480px
+			img
+				position: absolute
+				top: 0
+				left: 0
 	.inner
-		padding-top: 40px
+		padding-top: 60px
 		z-index: 50
 		position: relative
 		
@@ -60,21 +62,21 @@ h2.title
 			flex-flow: row nowrap
 		.title
 			flex: 1 100%
-			font-size: 40px
 	&_textout
 		flex: 2 100%
 		width: 100%
-		height: 50px
+		padding-top: 50%
+		margin-bottom: -200px
+		min-height: 480px
 	&_text
 		flex: 2 100%
+		padding: 20px 0 0 10px
 		p
-			font-size: 14px
-			padding-top: 20px
-			padding-left: 10px
+			padding-bottom: 20px
 			color: #{$kgray}
 	&_box
 		flex: 1 100%
-		margin: 80px 60px 60px
+		margin: 0px 60px 60px
 		height: 160px
 		background: #{$gray}
 		display: flex
@@ -86,20 +88,21 @@ h2.title
 		padding-top: 20px
 		border-right: 2px solid #{$dgray}
 		text-align: center
+	.product_info_price
+		h3
+			display: inline
+			margin: 0
+			padding: 0
 	&_demo
 		flex: 2 100%
 		padding-top: 20px
 		text-align: center
+		h3
+			margin-top: 0
 
 .capability
 	padding-top: 30px
 	.items
-		display: flex
-		flex-direction: row
-		align-items: stretch
-		justify-content: center
-		flex-wrap: nowrap
-		padding: 0 0 60px
 		&_inner
 			position: relative
 			overflow: hidden
@@ -127,30 +130,16 @@ h2.title
 					background: #{$dgray}
 					cursor: default
 		.item
-			width: 100%
-			margin: 0 20px
-			height: 350px
 			&_photo
 				height: 150px
 				width: 150px
 				margin: 0 auto 20px
-				border: 1px solid #{$dgray}
-				&:before
-					content: 'Иконка'
-					display: block
-					width: 100%
-					padding-top: 50px	
-					color: #{$dgray}
-					text-align: center
-					padding-bottom: 20px
 			&_about
 				text-align: center
 				h4
 					font-weight: normal
 					margin-bottom: 10px
 				p
-					font-size: 14px
-					line-height: 25px
 					color: #{$dark_gray}
 
 .prices
@@ -159,11 +148,11 @@ h2.title
 		.item
 			border: 1px solid #{$dgray}
 			&_about
+				padding-bottom: 20px
 				text-align: center
 				color: #{$dark_gray}
 				h4
 					font-weight: normal
-					font-size: 24px
 					margin-bottom: 0
 				.small_text
 					color: #{$dark_gray}
@@ -171,38 +160,36 @@ h2.title
 					padding: 10px 0 20px
 					li
 						padding: 20px 0 0
-						font-size: 18px
 						&.noactive
 							color: #{$dgray}
+				h3
+					margin-top: 20px
 	.all_prices
 		display: block
 		margin: 0px auto
 .view_service
+	padding-top: 40px
 	h2.title
 		margin-bottom: 0
 	.items_service
 		.item
 			border: 1px solid #{$dgray}
 			cursor: pointer
+			padding-top: 20%
+			position: relative
 			&_photo
 				width: 100%
-				height: 150px
-				position: relative
-				&:before
-					content: ' '
-					background: url(#{$img_path}/youtube.png) no-repeat center
-					width: 100%
-					height: 100%
-					position: absolute
-					top: 0
-					left: 0
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+
 .related
-	h2.title
-		margin-bottom: 0
+	padding-top: 20px
 .reviews
 	&_inner
-		margin: 60px 0
-		height: 400px
+		margin: 20px 0
+		padding-bottom: 80px
 		width: 100%
 		overflow: hidden
 		position: relative
@@ -240,6 +227,15 @@ h2.title
 			.avatar
 				width: 100px
 				flex: 0 0 auto
+			&_about
+				display: flex
+				flex-direction: row
+				align-items: space-around
+				justify-content: flex-start
+				p
+					margin: 0
+					padding: 0
+				
 			&_photo
 				border: 1px solid #{$dgray}
 				width: 80px
@@ -258,12 +254,13 @@ h2.title
 				flex-flow: column nowrap
 				align-items: flex-start
 				justify-content: center
-				p
-					font-size: 14px
-					line-height: 25px
-					margin-top: 20px
+				color: #{$dark_gray}
 				.company_name
 					font-style: italic
+			&_text
+				margin-top: 20px
+				color: #{$dark_gray}
+
 .promo_product
 	position: relative;
 	height: 100px;
@@ -280,6 +277,9 @@ h2.title
 			height: 100%
 			.title
 				float: left;
+				margin-bottom: 0
+				h2
+					text-align: left
 			.menu_product
 				float: right
 				ul
@@ -292,3 +292,5 @@ h2.title
 					li
 						float: left
 						margin: 0 0 0 40px
+@media (min-width: '#{$small}px') and (max-width: '#{$mlarge}px')
+	.title
