@@ -42,8 +42,8 @@ h3 {
 h4 {
   font-size: 20.8px;
   font-size: 1.3rem;
-  line-height: 33.8px;
-  line-height: 2.1125rem;
+  line-height: 28.6px;
+  line-height: 1.7875rem;
   margin-top: 39px;
   margin-top: 2.4375rem;
   margin-bottom: 13px;
@@ -100,8 +100,8 @@ h6 {
   h4 {
     font-size: 20.8px;
     font-size: 1.3rem;
-    line-height: 40.3px;
-    line-height: 2.23889rem;
+    line-height: 34.1px;
+    line-height: 1.89444rem;
     margin-top: 46.5px;
     margin-top: 2.58333rem;
     margin-bottom: 15.5px;
@@ -418,8 +418,13 @@ h2 {
   width: 100%;
   margin: 0 auto; }
 
+.l_container {
+  width: 75vw;
+  min-width: 800px;
+  margin: 0 auto; }
+
 .s_container {
-  width: 54vw;
+  width: 55vw;
   min-width: 600px;
   margin: 0 auto; }
 
@@ -590,11 +595,17 @@ h2 {
   .cards.gc_black .card_title a {
     color: #424242; }
   .cards.ct_2 {
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: repeat(2, 1fr); }
     .cards.ct_2 .card {
       padding-top: 33%; }
+  .cards.ct_4 {
+    grid-template-columns: repeat(4, 1fr); }
+    .cards.ct_4 .card {
+      padding-top: 25%; }
+  .cards.ct_5 {
+    grid-template-columns: repeat(5, 1fr); }
   .cards.media .card {
-    min-height: 150px;
+    min-height: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -602,12 +613,15 @@ h2 {
     .cards.media .card_title {
       margin-top: 0;
       margin-bottom: 0; }
+  .cards.media3 .card_title {
+    margin-top: 0; }
   .cards .card {
     border: 1px solid #cfcfcf;
     padding: 0;
     position: relative;
     padding-top: 100%;
-    width: 100%; }
+    width: 100%;
+    color: #424242; }
     .cards .card.c_a {
       grid-column: 1 / 4;
       padding-top: 33%; }
@@ -645,6 +659,17 @@ h2 {
       width: 80px;
       height: 80px;
       margin-right: 20px; }
+    .cards .card_u_photo {
+      padding-top: 100%;
+      width: 100%;
+      margin-bottom: 20px;
+      position: relative; }
+      .cards .card_u_photo img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; }
     .cards .card_body {
       position: absolute;
       left: 30px;
@@ -890,7 +915,7 @@ footer {
       flex-wrap: nowrap;
       padding: 10px 0; }
       #index .company_info .news_item_date {
-        color: #424242; }
+        color: #cfcfcf; }
       #index .company_info .news_item_link {
         margin-left: 40px; }
     #index .company_info .vacancies {
@@ -1447,3 +1472,93 @@ footer {
 
 #support .techsup {
   padding: 30px 0; }
+  #support .techsup .cards .card {
+    min-height: 150px; }
+
+#about .about {
+  padding: 30px 0 0; }
+  #about .about .breadcrumbs {
+    margin-bottom: 30px; }
+
+#about .menu_b .menu_top {
+  padding-top: 4%;
+  position: relative;
+  min-height: 45px; }
+  #about .menu_b .menu_top ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; }
+    #about .menu_b .menu_top ul li {
+      margin: 0 20px;
+      color: #424242; }
+      #about .menu_b .menu_top ul li h4 {
+        padding: 0;
+        margin: 0; }
+
+#about .infob {
+  padding: 40px 0 30px; }
+  #about .infob .media2 {
+    align-items: flex-start; }
+    #about .infob .media2 .card:first-child {
+      color: #424242; }
+      #about .infob .media2 .card:first-child h4 {
+        font-style: italic; }
+    #about .infob .media2 .card:nth-child(2) {
+      padding-top: 80%; }
+  #about .infob .about_text {
+    color: #424242; }
+
+#about .short_info .cards {
+  padding: 30px 0; }
+  #about .short_info .cards .card .card_title {
+    margin-bottom: 0; }
+
+#about .leadership {
+  padding-top: 40px; }
+  #about .leadership .cards .card_title {
+    margin-bottom: 0; }
+  #about .leadership .cards .card_body_u {
+    height: 120px; }
+  #about .leadership .cards .card .social_btn {
+    display: inline-block;
+    margin-right: 5px;
+    background: #f3f3f3;
+    padding: 5px 10px; }
+    #about .leadership .cards .card .social_btn:hover {
+      text-decoration: none; }
+
+#about .neva .news .title {
+  padding-bottom: 0; }
+  #about .neva .news .title h3 {
+    text-align: left; }
+
+#about .neva .news_item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 10px 0; }
+  #about .neva .news_item_date {
+    color: #cfcfcf; }
+  #about .neva .news_item_link {
+    margin-left: 40px; }
+
+#about .neva .vacancies {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; }
+  #about .neva .vacancies .title {
+    padding-bottom: 0; }
+    #about .neva .vacancies .title h3 {
+      text-align: left; }
+  #about .neva .vacancies_link {
+    font-size: 16px;
+    padding: 10px 0; }
