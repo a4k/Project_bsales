@@ -4,6 +4,9 @@
 			<div class="slider_inner">
 				<ul class="slider_wrapper">
 					<li class="slide">
+						<div class="slide_photo">
+							<img src="holder.js/100px100p" class="holder_image">
+						</div>
 						<div class="slide_info">
 							<div class="slide_title">
 								<h2>Hudway</h2>
@@ -67,50 +70,37 @@
 				<h3><a href="/products">Продукты</a></h3>
 			</div>
 			<div class="items_inner">
-				<div class="items prods">
-					<div class="item">
-						<div class="item_photo">
-							<div class="item_about">
-								<h5>
-									<a href="/product" class="item_link">Помошник арбитражного управляющего</a>
-								</h5>
-								<div class="item_info">
-									<p>
-										Система автоматизированного анализа финансового состояния предприятия
-									</p>
-								</div>
-							</div>
+				<div class="cards">
+					<div class="card">
+						<img src="holder.js/100px100p" class="holder_image card_photo">
+						<div class="card_body">
+							<h5 class="card_title"><a>Помошник арбитражного управляющего</a></h5>
+							<p class="card_text">
+								Система автоматизированного анализа финансового состояния предприятия
+							</p>
 						</div>
+						<a href="/product" class="card_link"><span></span></a>
 					</div>
-					<div class="item">
-						<div class="item_photo">
-							<div class="item_about">
-								<h5>
-									<a href="" class="item_link">F-анализ</a>
-								</h5>
-								<div class="item_info">
-									<p>
-										Система автоматизированного анализа финансового состояния предприятия
-									</p>
-								</div>
-							</div>
+					<div class="card">
+						<img src="holder.js/100px100p" class="holder_image card_photo">
+						<div class="card_body">
+							<h5 class="card_title"><a>F-анализ</a></h5>
+							<p class="card_text"></p>
 						</div>
+						<a href="/product" class="card_link"><span></span></a>
 					</div>
-					<div class="item">
-						<div class="item_photo">
-							<div class="item_about">
-								<h5>
-									<a href="" class="item_link">CPO Эксперт</a>
-								</h5>
-								<div class="item_info">
-									<p>
-										Система автоматизированного анализа финансового состояния предприятия
-									</p>
-								</div>
-							</div>
+					<div class="card">
+						<img src="holder.js/100px100p" class="holder_image card_photo">
+						<div class="card_body">
+							<h5 class="card_title"><a>CPO Эксперт</a></h5>
+							<p class="card_text">
+								Система автоматизированного анализа финансового состояния предприятия
+							</p>
 						</div>
+						<a href="/product" class="card_link"><span></span></a>
 					</div>
 				</div>
+
 				<div class="arrows">
 					<div class="sel"></div>
 					<div class="sel active"></div>
@@ -125,36 +115,30 @@
 			<div class="title">
 				<h3><a href="/services">Услуги</a></h3>
 			</div>
-			<div class="items">
-				<div class="item">
-					<div class="item_photo">
-						<div class="item_about">
-							<h5>
-								<a href="" class="item_link">Сайты</a>
-							</h5>
-							<div class="item_info"></div>
-						</div>
+			<div class="cards">
+				<div class="card">
+					<img src="holder.js/100px100p" class="holder_image card_photo">
+					<div class="card_body">
+						<h5 class="card_title"><a>Сайты</a></h5>
+						<p class="card_text"></p>
 					</div>
+					<a href="/cservice" class="card_link"><span></span></a>
 				</div>
-				<div class="item">
-					<div class="item_photo">
-						<div class="item_about">
-							<h5>
-								<a href="" class="item_link">Мобильные приложения</a>
-							</h5>
-							<div class="item_info"></div>
-						</div>
+				<div class="card">
+					<img src="holder.js/100px100p" class="holder_image card_photo">
+					<div class="card_body">
+						<h5 class="card_title"><a>Мобильные приложения</a></h5>
+						<p class="card_text"></p>
 					</div>
+					<a href="/cservice" class="card_link"><span></span></a>
 				</div>
-				<div class="item">
-					<div class="item_photo">
-						<div class="item_about">
-							<h5>
-								<a href="" class="item_link">Разработка ПО</a>
-							</h5>
-							<div class="item_info"></div>
-						</div>
+				<div class="card">
+					<img src="holder.js/100px100p" class="holder_image card_photo">
+					<div class="card_body">
+						<h5 class="card_title"><a>Разработка ПО</a></h5>
+						<p class="card_text"></p>
 					</div>
+					<a href="/cservice" class="card_link"><span></span></a>
 				</div>
 			</div>
 		</div>
@@ -198,8 +182,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="company_info">
-				<div class="news">
+			<div class="cards company_info">
+				<div class="card empty2 c_1_3 news">
 					<div class="title">
 						<h3><a href="/news">Новости</a></h3>
 					</div>
@@ -236,7 +220,7 @@
 						<a href="#" class="news_item_link link">24 августа - вебинар по эффективному использованию "Помошник АУ"</a>
 					</div>
 				</div>
-				<div class="vacancies">
+				<div class="card empty2 vacancies">
 					<div class="title">
 						<h3><a href="/vacancies">Вакансии</a></h3>
 					</div>
@@ -256,17 +240,57 @@
 				</h3>
 			</div>
 			<div class="s_container">
-				<div class="items">
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
-					<div class="item"><a href="#"><img src="" alt=""></a></div>
+				<div class="cards">
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<img src="holder.js/100px100p" class="holder_image">
+						</a>
+					</div>
 				</div>
 				
 			</div>

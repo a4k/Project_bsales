@@ -225,57 +225,53 @@ h2
             p
                 font-size: 14px
                 line-height: 22px
-.crows
-    display: flex
-    flex-direction: row
-    align-items: stretch
-    justify-content: space-between
-    flex-wrap: wrap
-    .crow_1
-        width: 32%
-    .crow_2
-        width: 66%
-    .cards
-        .card
-            padding-top: 48%
-
 
 .cards
-    display: flex
-    flex-direction: row
-    align-items: stretch
-    justify-content: space-between
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: auto
+    grid-auto-columns: 1fr
+    grid-gap: 20px 2%
+    justify-items: center
     padding: 0 0 60px
+    &.show_text
+        .card
+            .card_body
+                .card_text
+                    max-height: 200px
+    &.gc_black
+        .card
+            &_title
+                a
+                    color: #{$dark_gray}
     .card
         border: 1px solid #{$dgray}
-        width: 32%
         padding: 0
-        margin-bottom: 2%
         position: relative
-        padding-top: 32%
+        padding-top: 100%
+        width: 100%
+        &.c_a
+            grid-column: 1 / 4
+            padding-top: 33%
+        &.c_1_3
+            grid-column: 1 / 3
+            padding-top: 50%
+        &.c_2_4
+            grid-column: 2 / 4
+            padding-top: 50%
+        &.c_1_4
+            grid-column: 1 / 4
+            padding-top: 50%
+        &.c_4_8
+            grid-column: 1 / 4
+            padding-top: 50%
         &.empty
             border: none
             cursor: default
         &.empty2
             border: none
+            padding: 0
             cursor: default
-            padding-top: 0
-            display: flex
-            flex-direction: row
-            align-items: stretch
-            justify-content: space-between
-            flex-wrap: wrap
-        &.c_a
-            width: 100%
-        &.c_2_3
-            width: 66%
-        &.c_1_3
-            width: 32%
-        &.c_2_2
-            width: 48%
-        &.c_3_1
-            padding-top: 306%
 
         &:hover
             .card_text
@@ -291,11 +287,25 @@ h2
             left: 30px
             bottom: 20px
             max-width: 300px
+            color: #{$dark_gray}
             .card_text
                 color: #{$dark_gray}
                 max-height: 0
                 overflow: hidden
                 transition: all 0.5s ease-in-out;
+        &_tags
+            position: absolute
+            right: 30px
+            bottom: 20px
+            .tag
+                color: #{$dark_gray}
+                cursor: pointer
+                display: inline-block
+                border: 1px solid #{$dgray}
+                padding: 0px 18px
+                margin-left: 20px
+                &:hover
+                    text-decoration: none
         &_link
             span
                 position: absolute

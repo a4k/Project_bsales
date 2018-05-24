@@ -3,22 +3,27 @@
 	.about
 		margin-bottom: 40px
 		color: #{$dark_gray}
-	.prods
-		flex-wrap: wrap
-		display: flex
-		flex-flow: row wrap
-		align-items: stretch
-		justify-content: flex-start
-		padding-bottom: 0
-		.item
-			width: auto
-			height: 250px
-			flex: 0 1 350px
-			&_link
-				color: #{$dark_gray}
+	.cards
+		.card
+			padding-top: 70%
 .projects
 	.cards
-		padding: 0
+		grid-template-areas: "one one one" "two two six" "three four six" "five five six"
+		.g_one
+			grid-area: one
+			padding-top: 33%
+		.g_two
+			grid-area: two
+			padding-top: 50%
+		.g_three
+			grid-area: three
+		.g_four
+			grid-area: four
+		.g_five
+			grid-area: five
+			padding-top: 50%
+		.g_six
+			grid-area: six
 	.items
 		display: flex
 		flex-flow: row wrap
