@@ -167,7 +167,7 @@ h2
     font-size: 40px
 .breadcrumbs
     margin: 0 auto
-    color: #{$dgray}
+    color: #{$egray}
     text-align: center
 .items
     display: flex
@@ -176,6 +176,13 @@ h2
     justify-content: space-between
     flex-wrap: nowrap
     padding: 0 0 60px
+    &.if_tb
+        flex-direction: column
+        .item
+            width: 100%
+    &.it_c
+        align-items: center
+        text-align: center
     .item
         width: 32%
         padding: 0
