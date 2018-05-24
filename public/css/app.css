@@ -589,6 +589,19 @@ h2 {
     max-height: 200px; }
   .cards.gc_black .card_title a {
     color: #424242; }
+  .cards.ct_2 {
+    grid-template-columns: 1fr 1fr; }
+    .cards.ct_2 .card {
+      padding-top: 33%; }
+  .cards.media .card {
+    min-height: 150px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .cards.media .card_title {
+      margin-top: 0;
+      margin-bottom: 0; }
   .cards .card {
     border: 1px solid #cfcfcf;
     padding: 0;
@@ -610,6 +623,9 @@ h2 {
     .cards .card.c_4_8 {
       grid-column: 1 / 4;
       padding-top: 50%; }
+    .cards .card.c_3_5 {
+      grid-column: 3 / 5;
+      padding-top: 33%; }
     .cards .card.empty {
       border: none;
       cursor: default; }
@@ -625,6 +641,10 @@ h2 {
       left: 0;
       width: 100%;
       height: 100%; }
+    .cards .card_m_photo {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px; }
     .cards .card_body {
       position: absolute;
       left: 30px;
@@ -636,6 +656,21 @@ h2 {
         max-height: 0;
         overflow: hidden;
         transition: all 0.5s ease-in-out; }
+    .cards .card_body_c {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      color: #424242;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center; }
+      .cards .card_body_c .card_title {
+        margin-top: 0; }
+      .cards .card_body_c .card_text {
+        margin-top: 0; }
     .cards .card_tags {
       position: absolute;
       right: 30px;
@@ -1396,3 +1431,19 @@ footer {
       flex: 0 1 100%; }
     #cservice .projects .items .item_info {
       height: auto; }
+
+#support .support .breadcrumbs {
+  margin: 30px 0 0; }
+
+#support .support .about {
+  color: #424242;
+  margin-bottom: 30px; }
+
+#support .support .cards .card .card_text {
+  margin-bottom: 0; }
+
+#support .support .cards .card .card_title {
+  margin-bottom: 0; }
+
+#support .techsup {
+  padding: 30px 0; }
