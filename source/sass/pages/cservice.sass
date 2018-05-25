@@ -5,10 +5,10 @@
 		color: #{$dark_gray}
 	.cards
 		.card
-			padding-top: 70%
+			padding-top: 17%
 .projects
 	.cards
-		grid-template-areas: "one one one" "two two six" "three four six" "five five six"
+		padding-bottom: 0
 		.g_one
 			grid-area: one
 			padding-top: 33%
@@ -23,7 +23,8 @@
 			grid-area: five
 			padding-top: 50%
 		.g_six
-			grid-area: six
+			padding-top: calc(100%*3 + 2%*3)
+			margin-bottom: 4%
 	.items
 		display: flex
 		flex-flow: row wrap
