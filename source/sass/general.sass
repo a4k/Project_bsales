@@ -244,6 +244,9 @@ h2
         flex-flow: row wrap
         justify-content: flex-start
         align-items: center
+    &_center
+        justify-content: center
+        text-align: center
 .hr
     background: #{$dgray}
     height: 1px
@@ -452,71 +455,79 @@ h2
                 z-index: 1
                 width: 100%
                 height: 100%
-.hire_items
-    padding: 40px 0 80px
-    .toggles
-        border: 1px solid #{$dgray}
-        .toggle
-            color: #{$dark_gray}
-            border-bottom: 1px solid #{$dgray}
-            &:last-child
-                border-bottom: none
-            &_head
-                padding: 10px 30px
-                position: relative
-                h3
-                    margin: 0
-                    cursor: pointer
-            &_body
-                max-height: 0
-                overflow: hidden
-                transition: all 0.5s ease
-                -o-transition: all 0.5s ease
-                -moz-transition: all 0.5s ease
-                -webkit-transition: all 0.5s ease
-                -ms-transition: all 0.5s ease
-                p
-                    margin-bottom: 30px
-                ul
-                    li
-                        position: relative
-                        padding-left: 20px
-                        &:before
-                            content: ' '
-                            width: 8px
-                            height: 8px
-                            background: #{$dgray}
-                            border-radius: 50%
-                            display: block
-                            position: absolute
-                            left: 0
-                            top: 8px
-                .btn
-                    width: auto
-                    margin: 30px 0
-                    display: inline-block
-                    cursor: pointer
-                    .text_info_btn
-                        display: inline-block
-                        margin-left: 20px
-                &_text
-                    padding: 0px 30px 20px
 
-            &_btn
-                display: block
-                position: absolute
-                right: 30px
-                top: 18px
-                width: 32px
-                height: 32px
-                background: url(#{$img_path}/down.png) no-repeat center
+.social
+    &_btn
+        display: inline-block
+        margin-right: 5px
+        background: #{$gray}
+        padding: 5px 10px
+        &:hover
+            text-decoration: none
+
+.toggles
+    border: 1px solid #{$dgray}
+    .toggle
+        color: #{$dark_gray}
+        border-bottom: 1px solid #{$dgray}
+        &:last-child
+            border-bottom: none
+        &_head
+            padding: 10px 30px
+            position: relative
+            h3
+                margin: 0
                 cursor: pointer
-                
-            &.opened
-                .toggle_btn
-                    background: url(#{$img_path}/up.png) no-repeat center
-                .toggle_body
-                    max-height: 2000px
+        &_body
+            max-height: 0
+            overflow: hidden
+            transition: all 0.5s ease
+            -o-transition: all 0.5s ease
+            -moz-transition: all 0.5s ease
+            -webkit-transition: all 0.5s ease
+            -ms-transition: all 0.5s ease
+            p
+                margin-bottom: 30px
+            ul
+                li
+                    position: relative
+                    padding-left: 20px
+                    &:before
+                        content: ' '
+                        width: 8px
+                        height: 8px
+                        background: #{$dgray}
+                        border-radius: 50%
+                        display: block
+                        position: absolute
+                        left: 0
+                        top: 8px
+            .btn
+                width: auto
+                margin: 30px 0
+                display: inline-block
+                cursor: pointer
+                .text_info_btn
+                    display: inline-block
+                    margin-left: 20px
+            &_text
+                padding: 0px 30px 20px
+
+        &_btn
+            display: block
+            position: absolute
+            right: 30px
+            top: 18px
+            width: 32px
+            height: 32px
+            background: url(#{$img_path}/down.png) no-repeat center
+            cursor: pointer
+            
+        &.opened
+            .toggle_btn
+                background: url(#{$img_path}/up.png) no-repeat center
+            .toggle_body
+                max-height: 2000px
 .modal
     position: fixed
     top: 0

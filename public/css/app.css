@@ -597,6 +597,10 @@ h2 {
   justify-content: flex-start;
   align-items: center; }
 
+.text_center {
+  justify-content: center;
+  text-align: center; }
+
 .hr {
   background: #cfcfcf;
   height: 1px;
@@ -786,67 +790,73 @@ h2 {
       width: 100%;
       height: 100%; }
 
-.hire_items {
-  padding: 40px 0 80px; }
-  .hire_items .toggles {
-    border: 1px solid #cfcfcf; }
-    .hire_items .toggles .toggle {
-      color: #424242;
-      border-bottom: 1px solid #cfcfcf; }
-      .hire_items .toggles .toggle:last-child {
-        border-bottom: none; }
-      .hire_items .toggles .toggle_head {
-        padding: 10px 30px;
-        position: relative; }
-        .hire_items .toggles .toggle_head h3 {
-          margin: 0;
-          cursor: pointer; }
-      .hire_items .toggles .toggle_body {
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;
-        -ms-transition: all 0.5s ease; }
-        .hire_items .toggles .toggle_body p {
-          margin-bottom: 30px; }
-        .hire_items .toggles .toggle_body ul li {
-          position: relative;
-          padding-left: 20px; }
-          .hire_items .toggles .toggle_body ul li:before {
-            content: ' ';
-            width: 8px;
-            height: 8px;
-            background: #cfcfcf;
-            border-radius: 50%;
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 8px; }
-        .hire_items .toggles .toggle_body .btn {
-          width: auto;
-          margin: 30px 0;
-          display: inline-block;
-          cursor: pointer; }
-          .hire_items .toggles .toggle_body .btn .text_info_btn {
-            display: inline-block;
-            margin-left: 20px; }
-        .hire_items .toggles .toggle_body_text {
-          padding: 0px 30px 20px; }
-      .hire_items .toggles .toggle_btn {
-        display: block;
-        position: absolute;
-        right: 30px;
-        top: 18px;
-        width: 32px;
-        height: 32px;
-        background: url(/images/down.png) no-repeat center;
+.social_btn {
+  display: inline-block;
+  margin-right: 5px;
+  background: #f3f3f3;
+  padding: 5px 10px; }
+  .social_btn:hover {
+    text-decoration: none; }
+
+.toggles {
+  border: 1px solid #cfcfcf; }
+  .toggles .toggle {
+    color: #424242;
+    border-bottom: 1px solid #cfcfcf; }
+    .toggles .toggle:last-child {
+      border-bottom: none; }
+    .toggles .toggle_head {
+      padding: 10px 30px;
+      position: relative; }
+      .toggles .toggle_head h3 {
+        margin: 0;
         cursor: pointer; }
-      .hire_items .toggles .toggle.opened .toggle_btn {
-        background: url(/images/up.png) no-repeat center; }
-      .hire_items .toggles .toggle.opened .toggle_body {
-        max-height: 2000px; }
+    .toggles .toggle_body {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease; }
+      .toggles .toggle_body p {
+        margin-bottom: 30px; }
+      .toggles .toggle_body ul li {
+        position: relative;
+        padding-left: 20px; }
+        .toggles .toggle_body ul li:before {
+          content: ' ';
+          width: 8px;
+          height: 8px;
+          background: #cfcfcf;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 8px; }
+      .toggles .toggle_body .btn {
+        width: auto;
+        margin: 30px 0;
+        display: inline-block;
+        cursor: pointer; }
+        .toggles .toggle_body .btn .text_info_btn {
+          display: inline-block;
+          margin-left: 20px; }
+      .toggles .toggle_body_text {
+        padding: 0px 30px 20px; }
+    .toggles .toggle_btn {
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 18px;
+      width: 32px;
+      height: 32px;
+      background: url(/images/down.png) no-repeat center;
+      cursor: pointer; }
+    .toggles .toggle.opened .toggle_btn {
+      background: url(/images/up.png) no-repeat center; }
+    .toggles .toggle.opened .toggle_body {
+      max-height: 2000px; }
 
 .modal {
   position: fixed;
@@ -1749,13 +1759,6 @@ footer {
     margin-bottom: 0; }
   #about .leadership .cards .card_body_u {
     height: 120px; }
-  #about .leadership .cards .card .social_btn {
-    display: inline-block;
-    margin-right: 5px;
-    background: #f3f3f3;
-    padding: 5px 10px; }
-    #about .leadership .cards .card .social_btn:hover {
-      text-decoration: none; }
 
 #about .neva .news .title {
   padding-bottom: 0; }
@@ -1926,6 +1929,9 @@ footer {
   #hire .whybest .cards {
     padding-bottom: 30px; }
 
+#hire .hire_items {
+  padding: 40px 0 80px; }
+
 #hire .contact_manager {
   border: 1px solid #cfcfcf;
   padding: 15px 30px; }
@@ -1936,3 +1942,40 @@ footer {
       padding: 0; }
   #hire .contact_manager .contact_photo {
     margin: 10px 0; }
+
+#contacts .about {
+  padding: 30px 0 0; }
+  #contacts .about .breadcrumbs {
+    margin-bottom: 30px; }
+
+#contacts .menu_b .menu_top {
+  padding-top: 4%;
+  position: relative;
+  min-height: 45px; }
+  #contacts .menu_b .menu_top ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; }
+    #contacts .menu_b .menu_top ul li {
+      margin: 0 20px;
+      color: #424242; }
+      #contacts .menu_b .menu_top ul li h4 {
+        padding: 0;
+        margin: 0; }
+
+#contacts .infob {
+  padding: 40px 0 30px; }
+  #contacts .infob .social {
+    margin-top: 30px; }
+
+#contacts .map {
+  padding: 0 0 60px; }
