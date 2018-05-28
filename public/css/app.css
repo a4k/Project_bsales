@@ -595,6 +595,12 @@ h2 {
   justify-content: flex-start;
   align-items: center; }
 
+.hr {
+  background: #cfcfcf;
+  height: 1px;
+  width: 150px;
+  margin: 20px auto 20px; }
+
 .cards {
   display: flex;
   flex-flow: row wrap;
@@ -1660,16 +1666,16 @@ footer {
   #news .newsb .items .item:last-child:after {
     height: 0px; }
 
-#cnews .cnews {
+#blog_content .cnews {
   padding: 30px 0 0; }
-  #cnews .cnews .breadcrumbs {
+  #blog_content .cnews .breadcrumbs {
     margin-bottom: 30px; }
 
-#cnews .menu_b .menu_top {
+#blog_content .menu_b .menu_top {
   padding-top: 4%;
   position: relative;
   min-height: 45px; }
-  #cnews .menu_b .menu_top ul {
+  #blog_content .menu_b .menu_top ul {
     position: absolute;
     left: 0;
     top: 0;
@@ -1682,26 +1688,36 @@ footer {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center; }
-    #cnews .menu_b .menu_top ul li {
+    #blog_content .menu_b .menu_top ul li {
       margin: 0 20px;
       color: #424242; }
-      #cnews .menu_b .menu_top ul li h4 {
+      #blog_content .menu_b .menu_top ul li h4 {
         padding: 0;
         margin: 0; }
 
-#cnews .cnewsb .items .item {
+#blog_content .cnewsb {
+  padding: 40px 0 0; }
+
+#blog_content .news_date {
   color: #a9a9a9;
-  margin-top: 30px; }
-  #cnews .cnewsb .items .item:after {
-    content: ' ';
-    display: block;
-    width: 200px;
-    height: 1px;
-    background: #cfcfcf;
-    margin: 30px auto 0; }
-  #cnews .cnewsb .items .item_title {
-    margin-bottom: 0;
-    margin-top: 0;
-    max-width: 100%; }
-  #cnews .cnewsb .items .item:last-child:after {
-    height: 0px; }
+  text-align: center; }
+
+#blog_content .news_body {
+  padding-top: 30px; }
+
+#blog_content .text {
+  padding: 0 0 60px; }
+  #blog_content .text img {
+    width: 100%;
+    min-height: 500px;
+    border: 1px solid #cfcfcf; }
+  #blog_content .text p {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color: #424242; }
+  #blog_content .text .arrows {
+    margin-top: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end; }
