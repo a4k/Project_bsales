@@ -171,7 +171,7 @@
 								<li>Гибкий график работы - полная занятость</li>
 								<li>Испытательный срок - 1 мес.</li>
 							</ul>
-							<button class="btn btn-blue btn-big">Откликнуться на вакансию</button>
+							<button class="btn btn-blue btn-big" data-title="PHP-программист" id="openNewHire">Откликнуться на вакансию</button>
 							<p class="text_info_btn">
 								или пишите на 
 								<a href="#">hr@russianit.ru</a>
@@ -194,4 +194,62 @@
 			</div>
 		</div>
 	</section>
+
+
+	<div class="modal" id="newHire">
+		<div class="modal_shadow" data-name="newHire"></div>
+		<div class="modal_dialog">
+			<div class="modal_content">
+				<div class="modal_header">
+					<div class="title">
+						<h3>Отклик на вакансию <span class="title-info">PHP-программист</span></h3>
+					</div>
+					<div class="close" data-name="newHire"></div>
+				</div>
+				<div class="modal_body">
+					<div class="cards">
+						<div class="card w_4_6 empty2">
+							<form action="" class="form">
+								<div class="row">
+									<div class="form_title"><label for="name">Имя</label></div>
+									<div class="form_input"><input type="text" id="name"></div>
+								</div>
+								<div class="row">
+									<div class="form_title"><label for="phone">Контактная информация</label></div>
+									<div class="form_input"><input type="text" id="contact_info" placeholder="Телефон или email"></div>
+								</div>
+								<div class="row">
+									<div class="form_title"></div>
+									<div class="form_input"><input type="file" id="file"></div>
+								</div>
+								<div class="row">
+									<div class="form_title"><label for="email">Дополнительно</label></div>
+									<div class="form_input"><textarea name="addition" id="addition" cols="30" rows="5" 
+										placeholder="Сообщите дополнительную информацию о себе"></textarea></div>
+								</div>
+								<div class="row">
+									<div class="form_title"></div>
+									<div class="form_input">
+										<button class="btn btn-blue">Отправить</button>
+									</div>
+								</div>
+							</form>
+							
+						</div>
+						<div class="card w_2_6 empty2">
+							<div class="contact_manager">
+								<div class="title">
+									<h4>Наталья Окунева</h4>
+								</div>
+								<p>HR-менеджер</p>
+								<img src="holder.js/100px150" class="holder_image contact_photo">
+								<p>"Свяжусь с вами в течение рабочего дня"</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
