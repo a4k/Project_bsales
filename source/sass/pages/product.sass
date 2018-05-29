@@ -80,11 +80,11 @@
 		height: 160px
 		background: #{$gray}
 		display: flex
-		flex-flow: row nowrap
+		flex-flow: row wrap
 		padding: 10px 0
 		color: #{$kgray}
 	&_price
-		flex: 2 100%
+		width: 50%
 		padding-top: 20px
 		border-right: 2px solid #{$dgray}
 		text-align: center
@@ -94,7 +94,7 @@
 			margin: 0
 			padding: 0
 	&_demo
-		flex: 2 100%
+		width: 50%
 		padding-top: 20px
 		text-align: center
 		h3
@@ -263,34 +263,96 @@
 
 .promo_product
 	position: relative;
-	height: 100px;
+	height: auto;
 	width: 100%;
+	padding: 20px 0
 	margin: 40px 0
-	.s_container
+	.l_container
 		height: 100%
 		.menu
 			display: flex
 			flex-direction: row
-			flex-wrap: nowrap
+			flex-wrap: wrap
 			align-items: center
 			justify-content: space-between
 			height: 100%
 			.title
-				float: left;
 				margin-bottom: 0
 				h2
 					text-align: left
 			.menu_product
-				float: right
 				ul
 					margin: 0
 					padding: 0
 					display: flex
 					flex-direction: row
-					flex-wrap: nowrap
+					flex-wrap: wrap
 					align-items: center
 					li
 						float: left
-						margin: 0 0 0 40px
-@media (min-width: '#{$small}px') and (max-width: '#{$mlarge}px')
-	.title
+						margin: 0 0 0px 40px
+@media (max-width: '#{$medium}px')
+	.product
+		&_info
+			&_textout
+				display: none
+			&_box
+				margin: 0 0 30px
+				height: auto
+			.product_out_photo
+				position: relative
+				top: 0
+				margin-top: 30px
+				min-height: 300px
+				width: 100%
+			.inner_text
+				flex-flow: column wrap
+	.promo_product
+		.l_container
+			.menu
+				padding-bottom: 35px
+				flex-direction: column
+				.title
+					width: 100%
+					margin-bottom: 25px
+					h3
+						width: 100%
+						text-align: center
+				.menu_product
+					ul
+						li
+							margin: 0 0 10px 0
+							width: 100%
+							.btn
+								display: block
+								width: 100%
+	.reviews
+		&_inner
+			.review
+				.s_container
+					padding: 0
+@media (max-width: '#{$small}px')
+	.view_service
+		.items_service
+			.item
+				padding-top: 40%
+				margin-bottom: 10px
+	.reviews
+		&_inner
+			.review
+				.s_container
+					padding: 0
+					width: 100%
+
+@media (max-width: '#{$xsmall}px')
+	.product_info
+		&_box
+			flex-flow: column wrap
+		&_price
+			width: 100%
+			padding: 30px
+			border-right: none
+			border-bottom: 2px solid #{$dgray}
+		&_demo
+			padding: 30px
+			width: 100%

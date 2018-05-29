@@ -8,7 +8,7 @@ header
 		.menu
 			display: flex
 			flex-direction: row
-			flex-wrap: nowrap
+			flex-wrap: wrap
 			align-items: center
 			justify-content: space-between
 			height: 100%
@@ -28,4 +28,13 @@ header
 					li
 						float: left
 						margin: 0 0 0 60px
-
+						line-height: 60px
+@media (max-width: '#{$small}px')
+	header
+		.container
+			.menu
+				.menu_top
+					ul
+						li
+							margin-left: 0
+							margin-right: 60px

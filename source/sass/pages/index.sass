@@ -91,7 +91,7 @@
 .services
 	padding-top: 60px
 	.card
-		padding-top: 35%
+		padding-top: 25%
 .company
 	padding-top: 60px
 	&_about
@@ -158,4 +158,9 @@
 				position: absolute
 				left: 0
 				top: 0
-				
+@media (max-width: '#{$small}px')
+	.services
+		.cards
+			.card
+				padding-top: 50%
+				min-height: 150px
