@@ -32,6 +32,7 @@ class Slider {
 	}
 	init() {
 		// Первый запуск
+		let $this = this;
 		let arr = '';
 		for(let i = 0; i < this.count; i++) {
 			arr += '<div class="sel" data-id="' + (i) +'"></div>'
@@ -40,6 +41,10 @@ class Slider {
 		this.setActive(this.current);
 
 		this.sizer();
+
+		$(window).on('resize', function() {
+			$this.sizer();
+		});
 
 		this.arrows.find('.sel').click(function(){
 			// Клик по переключателю
