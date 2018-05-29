@@ -5,8 +5,10 @@
 		color: #{$dark_gray}
 		margin-bottom: 30px
 	.cards
+		padding-bottom: 0
 		.card
 			padding-top: 20%
+			min-height: 200px
 			.card_text
 				margin-bottom: 0
 			.card_title
@@ -19,3 +21,13 @@
 			min-height: 150px
 			&_m_about
 				padding-top: 15px
+@media (max-width: '#{$small}px')
+	.techsup
+		.cards
+			.card
+				min-height: 100px
+	.support
+		.cards
+			.card
+				padding-top: 35%
+				min-height: 200px

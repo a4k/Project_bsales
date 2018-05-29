@@ -72,6 +72,10 @@ h2
 
 .main_container
     background: #{$white}
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+    min-height: 80vh
 .footer_container
     width: 100%
     margin: 0 auto
@@ -430,6 +434,7 @@ h2
             flex-flow: column nowrap
             justify-content: center
             align-items: center
+            text-align: center
             .card_title
                 margin-top: 0
             .card_text
@@ -609,6 +614,66 @@ h2
                     border: 1px solid #{$dgray}
             button
                 cursor: pointer
+@media (min-width: '#{$small}px') and (max-width: '#{$medium}px')
+    .cards
+        &.media
+            padding-bottom: 30px
+        &.ctm_3
+            .card
+                width: calc(1/3*100% - (1 - 1/3)*2%)
+                padding-top: 75%
+        &.ctm_2
+            .card
+                width: calc(1/2*100% - (1 - 1/2)*2%)
+                padding-top: 75%
+        &.ctm_1
+            .card
+                width: calc(1*100%)
+                padding-top: 75%
+        .cards
+            &.wm_a
+                width: calc(1*100%)
+        .card
+            padding-top: 50%
+            width: calc(1*100%)
+            &.wm_a
+                padding-top: 75%
+                width: calc(1*100%)
+            &.wm_1_3
+                padding-top: 75%
+                width: calc(1/3*100% - (1 - 1/3)*2%)
+            &.wm_2_3
+                padding-top: 75%
+                width: calc(2/3*100% - (1 - 2/3)*2%)
+            &.wm_2_4
+                padding-top: 75%
+                width: calc(2/3*100% - (1 - 2/3)*2%)
+            &.wm_1_2
+                padding-top: 100%
+                width: calc(1/2*100% - (1 - 1/2)*2%)
+            &.wm_4_8
+                width: calc(1/2*100% - (1 - 1/2)*2%)
+                padding-top: 100%
+            &.wm_1_5
+                width: calc(1/5*100% - (1 - 1/5)*2%)
+                padding-top: 100%
+            &.wm_2_5
+                width: calc(2/5*100% - (1 - 2/5)*2%)
+                padding-top: 100%
+            &.wm_3_5
+                width: calc(3/5*100% - (1 - 3/5)*2%)
+                padding-top: 100%
+            &.wm_4_5
+                width: calc(4/5*100% - (1 - 4/5)*2%)
+                padding-top: 100%
+            &.wm_4_6
+                width: calc(4/6*100% - (1 - 4/6)*2%)
+                padding-top: 100%
+            &.wm_2_6
+                width: calc(2/6*100% - (1 - 2/6)*2%)
+                padding-top: 100%
+            &.empty2
+                padding: 0
 @media (max-width: '#{$small}px')
     .s_container
         width: 100%
@@ -627,6 +692,14 @@ h2
     .cards
         &.media
             padding-bottom: 30px
+        &.cts_2
+            .card
+                width: calc(1/2*100% - (1 - 1/2)*2%)
+                padding-top: 75%
+        &.cts_1
+            .card
+                width: calc(1*100%)
+                padding-top: 75%
         .cards
             &.ws_a
                 width: calc(1*100%)
