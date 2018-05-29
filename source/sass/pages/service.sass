@@ -2,6 +2,7 @@
 	padding: 40px 0
 	.promo
 		margin-top: 30px
+		padding-bottom: 0
 		.card_body
 			max-width: 450px
 	.brief
@@ -42,3 +43,35 @@
 		flex-flow: row nowrap
 		justify-content: space-between
 		align-items: flex-end
+
+@media (max-width: '#{$medium}px')
+	.service
+		.promo
+			.card
+				min-height: 280px
+				&_body
+					max-width: 50%
+				&_tags
+					max-width: 30%
+					text-align: right
+					.tag
+						margin-bottom: 10px
+	.similar
+		.container
+			.cards
+				.card
+					min-height: 250px
+					padding-top: 75%
+
+@media (max-width: '#{$small}px')
+	.about_client
+		.s_container
+			padding: 0 55px
+			.items
+				flex-flow: column wrap
+				align-items: center
+				.logo
+					margin-bottom: 30px
+	.text
+		.s_container
+			padding: 0 55px

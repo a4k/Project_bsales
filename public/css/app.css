@@ -956,6 +956,8 @@ h2 {
     margin-top: 25px; }
   .cards.media {
     padding-bottom: 30px; }
+  .cards .cards.ws_a {
+    width: calc(1*100%); }
   .cards .card {
     padding-top: 50%;
     width: calc(1*100%); }
@@ -1711,7 +1713,8 @@ footer {
 #service .service {
   padding: 40px 0; }
   #service .service .promo {
-    margin-top: 30px; }
+    margin-top: 30px;
+    padding-bottom: 0; }
     #service .service .promo .card_body {
       max-width: 450px; }
   #service .service .brief {
@@ -1753,12 +1756,38 @@ footer {
     justify-content: space-between;
     align-items: flex-end; }
 
+@media (max-width: 992px) {
+  #service .service .promo .card {
+    min-height: 280px; }
+    #service .service .promo .card_body {
+      max-width: 50%; }
+    #service .service .promo .card_tags {
+      max-width: 30%;
+      text-align: right; }
+      #service .service .promo .card_tags .tag {
+        margin-bottom: 10px; }
+  #service .similar .container .cards .card {
+    min-height: 250px;
+    padding-top: 75%; } }
+
+@media (max-width: 768px) {
+  #service .about_client .s_container {
+    padding: 0 55px; }
+    #service .about_client .s_container .items {
+      flex-flow: column wrap;
+      align-items: center; }
+      #service .about_client .s_container .items .logo {
+        margin-bottom: 30px; }
+  #service .text .s_container {
+    padding: 0 55px; } }
+
 #cservice .cservice {
   padding: 40px 0 0; }
   #cservice .cservice .about {
     margin-bottom: 40px;
     color: #424242; }
   #cservice .cservice .cards .card {
+    min-height: 150px;
     padding-top: 17%; }
 
 #cservice .projects {
@@ -1818,6 +1847,36 @@ footer {
         flex: 0 1 100%; }
       #cservice .projects .items .item_info {
         height: auto; }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #cservice .projects .cards .card_body {
+    right: 30px; }
+    #cservice .projects .cards .card_body .card_text {
+      max-height: 95px; }
+  #cservice .projects .cards .g_one {
+    padding-top: 75%; }
+  #cservice .projects .cards .g_two {
+    padding-top: 75%; }
+  #cservice .projects .cards .g_three {
+    padding-top: 75%; }
+  #cservice .projects .cards .g_four {
+    padding-top: 75%; }
+  #cservice .projects .cards .g_five {
+    padding-top: 75%; }
+  #cservice .projects .cards .g_six {
+    padding-top: calc(100%*1 + 2%*1); } }
+
+@media (max-width: 768px) {
+  #cservice .cservice .cards .card {
+    padding-top: 75%; }
+  #cservice .projects .cards .g_one {
+    padding-top: 75%; }
+  #cservice .projects .cards .g_two {
+    padding-top: 75%; }
+  #cservice .projects .cards .g_five {
+    padding-top: 75%; }
+  #cservice .projects .cards .g_six {
+    padding-top: calc(100%*1 + 2%*1); } }
 
 #support .support .breadcrumbs {
   margin: 30px 0 0; }

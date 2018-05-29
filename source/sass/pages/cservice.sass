@@ -5,6 +5,7 @@
 		color: #{$dark_gray}
 	.cards
 		.card
+			min-height: 150px
 			padding-top: 17%
 .projects
 	padding-bottom: 30px
@@ -64,3 +65,38 @@
 				flex: 0 1 100%
 			&_info
 				height: auto
+@media (min-width: '#{$small}px') and (max-width: '#{$medium}px')
+	.projects
+		.cards
+			.card
+				&_body
+					right: 30px
+					.card_text
+						max-height: 95px
+			.g_one
+				padding-top: 75%
+			.g_two
+				padding-top: 75%
+			.g_three
+				padding-top: 75%
+			.g_four
+				padding-top: 75%
+			.g_five
+				padding-top: 75%
+			.g_six
+				padding-top: calc(100%*1 + 2%*1)
+@media (max-width: '#{$small}px')
+	.cservice
+		.cards
+			.card
+				padding-top: 75%
+	.projects
+		.cards
+			.g_one
+				padding-top: 75%
+			.g_two
+				padding-top: 75%
+			.g_five
+				padding-top: 75%
+			.g_six
+				padding-top: calc(100%*1 + 2%*1)
