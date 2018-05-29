@@ -1,4 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 $('[class=toggles]').find('.toggle_btn, h3').click(function(){
 	$(this).parent().parent().toggleClass('opened');
 });
@@ -16,17 +15,71 @@ $('#openNewHire').click(function(){
 	$('#newHire').find('.title-info').text(title);
 })
 
-var holder_image = document.getElementByClassName('holder_image');
-
-Holder.run({
-	themes: {
-		'simple': {
-			bg: "#fff",
-			fg: '#000',
-			size: 12
+// Реализация слайдера
+class Slider {
+	constructor(el, type = 0) {
+		this.el = el;
+		this.wrapper = this.el.find('.swrapper');
+		this.arrows = this.el.find('.arrows');
+		this.slides = this.el.find('.slide');
+		this.count = this.slides.length;
+		this.current = 0;
+		this.time = 5000;
+	}
+	sizer() {
+		// Изменение размеров
+		this.wrapper.css({'width' : this.el.width() * this.count});
+	}
+	init() {
+		// Первый запуск
+		let arr = '';
+		for(let i = 0; i < this.count; i++) {
+			arr += '<div class="sel" data-id="' + (i) +'"></div>'
 		}
-	},
-  images: holder_image
-});
+		this.arrows.html(arr);
+		this.setActive(this.current);
 
-},{}]},{},[1])
+		this.sizer();
+
+		this.arrows.find('.sel').click(function(){
+			// Клик по переключателю
+		})
+	}
+	setActive(i) {
+		// Переключение к слайду
+		if(i > this.count - 1) {
+			// Проверяем выход за границу
+			i = 0;
+		} else if(i < 0) {
+			i = this.count - 1;
+		}
+		this.arrows.find('.sel').removeClass('active');
+		this.arrows.find('.sel').eq(i).addClass('active');
+		let translateWidth = -this.el.width() * (i);
+        this.wrapper.css({
+            'transform': 'translate(' + translateWidth + 'px, 0)',
+            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
+            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
+        });
+        this.current = i;
+        this.time = 5000;
+        this.startCountDown(this.time - 1000);
+	}
+	startCountDown(cd) {
+		// Обратный отсчет времени
+		let $this = this;
+		if(cd == 0) {
+			$this.setActive(this.current + 1);
+		} else {
+			setTimeout(() => {
+				$this.startCountDown(cd-1000)
+			}, 1000);
+		}
+	}
+}
+
+$(document).ready(function(){
+	let el = $('.slider').find('.sinner');
+	let slider = new Slider(el);
+	slider.init(el);
+})
