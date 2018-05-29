@@ -420,12 +420,12 @@ h2 {
 
 .l_container {
   width: 75vw;
-  min-width: 800px;
+  min-width: 300px;
   margin: 0 auto; }
 
 .s_container {
   width: 55vw;
-  min-width: 600px;
+  min-width: 300px;
   margin: 0 auto; }
 
 .m_container {
@@ -434,7 +434,7 @@ h2 {
 
 .x_container {
   width: 40vw;
-  min-width: 400px;
+  min-width: 300px;
   margin: 0 auto; }
 
 .container {
@@ -939,9 +939,58 @@ h2 {
     .modal_body .form button {
       cursor: pointer; }
 
+@media (max-width: 768px) {
+  .title {
+    margin-bottom: 15px;
+    margin-top: 25px; }
+  .cards.media {
+    padding-bottom: 30px; }
+  .cards .card {
+    padding-top: 50%;
+    width: calc(1*100%); }
+    .cards .card.ws_a {
+      padding-top: 50%;
+      width: calc(1*100%); }
+    .cards .card.ws_1_3 {
+      padding-top: 50%;
+      width: calc(1/3*100% - (1 - 1/3)*2%); }
+    .cards .card.ws_2_3 {
+      padding-top: 50%;
+      width: calc(2/3*100% - (1 - 2/3)*2%); }
+    .cards .card.ws_2_4 {
+      padding-top: 50%;
+      width: calc(2/3*100% - (1 - 2/3)*2%); }
+    .cards .card.ws_1_2 {
+      padding-top: 75%;
+      width: calc(1/2*100% - (1 - 1/2)*2%); }
+    .cards .card.ws_4_8 {
+      width: calc(1/2*100% - (1 - 1/2)*2%);
+      padding-top: 75%; }
+    .cards .card.ws_1_5 {
+      width: calc(1/5*100% - (1 - 1/5)*2%);
+      padding-top: 75%; }
+    .cards .card.ws_2_5 {
+      width: calc(2/5*100% - (1 - 2/5)*2%);
+      padding-top: 75%; }
+    .cards .card.ws_3_5 {
+      width: calc(3/5*100% - (1 - 3/5)*2%);
+      padding-top: 75%; }
+    .cards .card.ws_4_5 {
+      width: calc(4/5*100% - (1 - 4/5)*2%);
+      padding-top: 75%; }
+    .cards .card.ws_4_6 {
+      width: calc(4/6*100% - (1 - 4/6)*2%);
+      padding-top: 75%; }
+    .cards .card.ws_2_6 {
+      width: calc(2/6*100% - (1 - 2/6)*2%);
+      padding-top: 75%; }
+    .cards .card.empty2 {
+      padding: 0; } }
+
 header {
   position: relative;
-  height: 80px;
+  height: auto;
+  padding: 20px 0;
   width: 100%; }
   header .container {
     height: 100%; }
@@ -978,7 +1027,7 @@ footer {
     footer .container .items {
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       padding: 20px 0; }
@@ -1004,6 +1053,17 @@ footer {
       padding-bottom: 10px;
       margin: 0;
       font-weight: normal; }
+
+@media (max-width: 768px) {
+  footer .container .items .item {
+    padding-bottom: 20px; }
+    footer .container .items .item:nth-child(2) {
+      text-align: left; }
+  .footer_nav .items {
+    justify-content: space-between; }
+    .footer_nav .items .item {
+      flex: 0 1 50%;
+      padding-bottom: 20px; } }
 
 #index .slider_inner {
   margin: 60px 0;
@@ -1095,7 +1155,7 @@ footer {
 #index .services {
   padding-top: 60px; }
   #index .services .card {
-    padding-top: 25%; }
+    padding-top: 35%; }
 
 #index .company {
   padding-top: 60px; }
