@@ -51,6 +51,7 @@ app.use('/cservice', cserviceRouter);
 app.use('/support', supportRouter);
 app.use('/about', aboutRouter);
 app.use('/news', newsRouter);
+app.use('/cnews', cnewsRouter);
 app.use('/hire', hireRouter);
 app.use('/contacts', contactsRouter);
 

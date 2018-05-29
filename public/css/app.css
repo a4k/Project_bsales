@@ -434,7 +434,8 @@ h2 {
 
 .m_container {
   width: 40vw;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-width: 450px; }
 
 .x_container {
   width: 40vw;
@@ -482,6 +483,27 @@ h2 {
 
 .italic {
   font-style: italic; }
+
+.menu_b .menu_top {
+  position: relative;
+  padding: 20px 0; }
+  .menu_b .menu_top ul {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    .menu_b .menu_top ul li {
+      margin: 0 20px;
+      color: #424242; }
+      .menu_b .menu_top ul li h4 {
+        line-height: 40px;
+        padding: 0;
+        margin: 0; }
 
 .btn {
   display: inline-block;
@@ -811,7 +833,7 @@ h2 {
     .toggles .toggle:last-child {
       border-bottom: none; }
     .toggles .toggle_head {
-      padding: 10px 30px;
+      padding: 10px 60px 10px 30px;
       position: relative; }
       .toggles .toggle_head h3 {
         margin: 0;
@@ -861,7 +883,7 @@ h2 {
     .toggles .toggle.opened .toggle_btn {
       background: url(/images/up.png) no-repeat center; }
     .toggles .toggle.opened .toggle_body {
-      max-height: 2000px; }
+      max-height: 3500px; }
 
 .modal {
   position: fixed;
@@ -872,7 +894,8 @@ h2 {
   outline: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  display: none; }
+  display: none;
+  z-index: 500; }
   .modal_shadow {
     position: fixed;
     left: 0;
@@ -884,7 +907,7 @@ h2 {
     height: 100%;
     display: block; }
   .modal_dialog {
-    width: 800px;
+    max-width: 800px;
     margin: 15vh auto;
     position: relative;
     z-index: 1050; }
@@ -945,6 +968,8 @@ h2 {
       cursor: pointer; }
 
 @media (min-width: 768px) and (max-width: 992px) {
+  .modal_dialog {
+    margin: 15vh 15vw; }
   .cards.media {
     padding-bottom: 30px; }
   .cards.ctm_3 .card {
@@ -1001,7 +1026,15 @@ h2 {
       padding: 0; } }
 
 @media (max-width: 768px) {
+  .modal_dialog {
+    margin: 0; }
+  .modal_header .close {
+    top: -30px;
+    right: 0; }
   .s_container {
+    width: 100%;
+    min-width: 100%; }
+  .m_container {
     width: 100%;
     min-width: 100%; }
   .l_container {
@@ -1982,27 +2015,6 @@ footer {
   #about .about .breadcrumbs {
     margin-bottom: 30px; }
 
-#about .menu_b .menu_top {
-  position: relative;
-  padding: 20px 0; }
-  #about .menu_b .menu_top ul {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; }
-    #about .menu_b .menu_top ul li {
-      margin: 0 20px;
-      color: #424242; }
-      #about .menu_b .menu_top ul li h4 {
-        line-height: 40px;
-        padding: 0;
-        margin: 0; }
-
 #about .infob {
   padding: 40px 0 30px; }
   #about .infob .media2 {
@@ -2077,30 +2089,6 @@ footer {
   #news .news .breadcrumbs {
     margin-bottom: 30px; }
 
-#news .menu_b .menu_top {
-  padding-top: 4%;
-  position: relative;
-  min-height: 45px; }
-  #news .menu_b .menu_top ul {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center; }
-    #news .menu_b .menu_top ul li {
-      margin: 0 20px;
-      color: #424242; }
-      #news .menu_b .menu_top ul li h4 {
-        padding: 0;
-        margin: 0; }
-
 #news .newsb .items .item {
   color: #a9a9a9;
   margin-top: 30px; }
@@ -2122,30 +2110,6 @@ footer {
   padding: 30px 0 0; }
   #blog_content .cnews .breadcrumbs {
     margin-bottom: 30px; }
-
-#blog_content .menu_b .menu_top {
-  padding-top: 4%;
-  position: relative;
-  min-height: 45px; }
-  #blog_content .menu_b .menu_top ul {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center; }
-    #blog_content .menu_b .menu_top ul li {
-      margin: 0 20px;
-      color: #424242; }
-      #blog_content .menu_b .menu_top ul li h4 {
-        padding: 0;
-        margin: 0; }
 
 #blog_content .cnewsb {
   padding: 40px 0 0; }
@@ -2170,38 +2134,28 @@ footer {
   #blog_content .text .arrows {
     margin-top: 40px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-end; }
+    #blog_content .text .arrows .link {
+      line-height: 60px; }
+    #blog_content .text .arrows .center {
+      padding: 0 20px; }
+
+@media (max-width: 768px) {
+  #blog_content .text .s_container {
+    padding: 0 55px; }
+  #blog_content .text .m_container {
+    padding: 0 55px; } }
+
+@media (max-width: 580px) {
+  #blog_content .text .arrows .center {
+    padding: 0; } }
 
 #hire .chire {
   padding: 30px 0 0; }
   #hire .chire .breadcrumbs {
     margin-bottom: 30px; }
-
-#hire .menu_b .menu_top {
-  padding-top: 4%;
-  position: relative;
-  min-height: 45px; }
-  #hire .menu_b .menu_top ul {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center; }
-    #hire .menu_b .menu_top ul li {
-      margin: 0 20px;
-      color: #424242; }
-      #hire .menu_b .menu_top ul li h4 {
-        padding: 0;
-        margin: 0; }
 
 #hire .hireb {
   padding: 40px 0 20px; }
@@ -2228,34 +2182,16 @@ footer {
   #hire .contact_manager .contact_photo {
     margin: 10px 0; }
 
+@media (max-width: 768px) {
+  #hire .hireb .about {
+    padding: 0 55px; }
+  #hire .hire_items .s_container {
+    padding: 0 55px; } }
+
 #contacts .about {
   padding: 30px 0 0; }
   #contacts .about .breadcrumbs {
     margin-bottom: 30px; }
-
-#contacts .menu_b .menu_top {
-  padding-top: 4%;
-  position: relative;
-  min-height: 45px; }
-  #contacts .menu_b .menu_top ul {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center; }
-    #contacts .menu_b .menu_top ul li {
-      margin: 0 20px;
-      color: #424242; }
-      #contacts .menu_b .menu_top ul li h4 {
-        padding: 0;
-        margin: 0; }
 
 #contacts .infob {
   padding: 40px 0 30px; }
