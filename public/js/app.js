@@ -38,9 +38,8 @@ class Slider {
 			h_slide = w_slide * this.type * this.h_sizer;
 		if(this.h_sizer) {
 			this.slides.css({'padding-top': h_slide + 'px'})
-		} else {
-			this.slides.css({'width': w_slide + 'px'});
 		}
+		this.slides.css({'width': w_slide + 'px'});
 		this.wrapper.css({'width' : (1/this.type)*this.el.width() * this.count});
 		let translateWidth = -this.el.width() * (this.c_page);
         this.wrapper.css({
