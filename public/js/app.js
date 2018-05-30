@@ -36,7 +36,11 @@ class Slider {
 		// Изменение размеров
 		let w_slide = ((1/this.type)*this.el.width() - (1 - 1/this.type)*(this.el.width()*0.02)),
 			h_slide = w_slide * this.type * this.h_sizer;
-		this.slides.css({'width': w_slide + 'px', 'padding-top': h_slide + 'px'});
+		if(this.h_sizer) {
+			this.slides.css({'padding-top': h_slide + 'px'})
+		} else {
+			this.slides.css({'width': w_slide + 'px'});
+		}
 		this.wrapper.css({'width' : (1/this.type)*this.el.width() * this.count});
 		let translateWidth = -this.el.width() * (this.c_page);
         this.wrapper.css({
