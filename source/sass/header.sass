@@ -1,8 +1,11 @@
 header
-	position: relative;
+	position: absolute;
+	top: 0
+	left: 0
 	height: auto;
-	padding: 20px 0
+	padding: 40px 0
 	width: 100%;
+	z-index: 2
 	.container
 		height: 100%
 		.menu
@@ -14,9 +17,11 @@ header
 			height: 100%
 			.logo
 				float: left;
-				width: 150px
-				height: 40px
-				border: 1px solid #{$cgray}
+				width: 180px
+				height: 60px
+				img
+					width: 100%
+					height: auto
 			.menu_top
 				float: right
 				display: flex
@@ -29,6 +34,13 @@ header
 						float: left
 						margin: 0 0 0 60px
 						line-height: 60px
+						a
+							font-family: 'HelveticaRegular'
+							font-size: 16px
+							color: #{$white}
+							&:hover
+								opacity: .8
+								text-decoration: none
 @media (max-width: '#{$small}px')
 	header
 		.container

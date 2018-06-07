@@ -9,6 +9,7 @@
 /* Headings
    ========================================================================== */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
 h1 {
   font-size: 40px;
   font-size: 2.5rem;
@@ -173,10 +174,22 @@ p {
   line-height: 1.625rem; }
 
 @font-face {
-  font-family: 'Gerbera';
+  font-family: 'ProximaNova-Reg';
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/Gerbera.ttf) format("truetype"), url(fonts/Gerbera.otf) format("otf"); }
+  src: url(fonts/ProximaNova-Regular.ttf) format("truetype"), url(fonts/ProximaNova-Regular.otf) format("otf"), url(fonts/ProximaNova-Regular.eot) format("eot"), url(fonts/ProximaNova-Regular.woff) format("woff"); }
+
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  font-style: normal;
+  font-weight: 900;
+  src: url(fonts/ProximaNova-Bold.ttf) format("truetype"), url(fonts/ProximaNova-Bold.otf) format("otf"), url(fonts/ProximaNova-Bold.eot) format("eot"), url(fonts/ProximaNova-Bold.woff) format("woff"); }
+
+@font-face {
+  font-family: 'HelveticaRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/HelveticaRegular.ttf) format("truetype"), url(fonts/HelveticaRegular.eot) format("eot"), url(fonts/HelveticaRegular.woff) format("woff"); }
 
 @font-face {
   font-family: 'Gerbera';
@@ -189,6 +202,12 @@ p {
   font-style: normal;
   font-weight: 900;
   src: url(fonts/Gerbera_Bold.ttf) format("truetype"), url(fonts/Gerbera_Bold.otf) format("otf"); }
+
+@font-face {
+  font-family: 'Gerbera';
+  font-style: normal;
+  font-weight: 300;
+  src: url(fonts/Gerbera_Light.ttf) format("truetype"), url(fonts/Gerbera_Light.otf) format("otf"); }
 
 @font-face {
   font-family: 'Gerbera';
@@ -386,19 +405,26 @@ h2 {
 
 .title h2 {
   text-align: center;
-  color: #424242;
+  color: #333333;
   margin-top: 1rem;
   font-weight: 600; }
 
 .title {
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  font-family: "ProximaNova-Reg"; }
 
 .title h3 {
   padding: 0;
   margin: 0;
   font-weight: 600;
   text-align: center;
-  color: #424242; }
+  line-height: 50px;
+  font-size: 32px;
+  color: #333333; }
+  .title h3 a {
+    color: #333333; }
+    .title h3 a:hover {
+      text-decoration: none; }
 
 @media (min-width: 768px) and (max-width: 1320px) {
   h2 {
@@ -444,7 +470,7 @@ h2 {
 
 .container {
   margin: auto;
-  padding: 0 55px;
+  width: 1320px;
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -454,9 +480,10 @@ h2 {
     padding: 0; }
   .container.no-padding-right {
     padding: 0 0 0 25px; }
-  @media (min-width: 768px) {
+  @media (max-width: 1440px) {
     .container {
-      padding: 0 110px; }
+      padding: 0 60px;
+      width: auto; }
       .container.no-padding-right {
         padding: 0 0 0 55px; } }
 
@@ -470,7 +497,7 @@ h2 {
     background: rgba(0, 0, 0, 0.65); }
 
 .bg-gray {
-  background: #f3f3f3; }
+  background: #E5E5E5; }
 
 .bg-dgrey {
   background: #424242; }
@@ -525,6 +552,28 @@ h2 {
     padding: 7px 0 8px;
     font-size: 16px;
     width: 180px; }
+  .btn-outline2 {
+    width: 255px;
+    margin-top: 35px;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    background: transparent;
+    padding: 19px 0 15px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: ProximaNova-Bold;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out; }
+    .btn-outline2:hover {
+      background: #FFFFFF;
+      color: #424242; }
   .btn-black {
     background: #000000;
     color: #FFFFFF;
@@ -647,7 +696,7 @@ h2 {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 0 60px; }
   .cards_column {
     justify-content: flex-start;
@@ -663,6 +712,8 @@ h2 {
   .cards.ct_2 .card {
     width: calc(1/2*100% - (1 - 1/2)*2%);
     padding-top: 33%; }
+  .cards.ct_3 .card:nth-child(3n) {
+    margin-right: 0; }
   .cards.ct_4 .card {
     width: calc(1/4*100% - (1 - 1/4)*2%); }
   .cards.ct_5 .card {
@@ -691,13 +742,14 @@ h2 {
   .cards.media3 .card_title {
     margin-top: 0; }
   .cards .card {
-    border: 1px solid #cfcfcf;
     padding: 0;
     position: relative;
-    padding-top: 33%;
+    height: 260px;
     margin-bottom: 2%;
-    width: calc(1/3*100% - (1 - 1/3)*2%);
-    color: #424242; }
+    background: #FFFFFF;
+    width: calc(1/3*100% - (1 - 1/3)*20px);
+    color: #424242;
+    margin-right: 20px; }
     .cards .card.w_a {
       padding-top: 33%;
       width: calc(1*100%); }
@@ -751,7 +803,7 @@ h2 {
       padding: 0;
       cursor: default; }
     .cards .card:hover .card_text {
-      max-height: 200px; }
+      max-height: 42px; }
     .cards .card_photo {
       position: absolute;
       top: 0;
@@ -785,11 +837,23 @@ h2 {
       bottom: 20px;
       max-width: 300px;
       color: #424242; }
+      .cards .card_body .card_title {
+        font-family: ProximaNova-Reg;
+        font-size: 22px;
+        line-height: normal;
+        margin-bottom: 0; }
+        .cards .card_body .card_title a {
+          color: #333333; }
+          .cards .card_body .card_title a:hover {
+            text-decoration: none; }
       .cards .card_body .card_text {
         color: #424242;
         max-height: 0;
         overflow: hidden;
-        transition: all 0.5s ease-in-out; }
+        transition: all 0.5s ease-in-out;
+        font-family: IBM Plex Sans;
+        line-height: 20px;
+        font-size: 14px; }
     .cards .card_body_c {
       position: absolute;
       left: 0;
@@ -830,7 +894,7 @@ h2 {
 .social_btn {
   display: inline-block;
   margin-right: 5px;
-  background: #f3f3f3;
+  background: #E5E5E5;
   padding: 5px 10px; }
   .social_btn:hover {
     text-decoration: none; }
@@ -1117,10 +1181,13 @@ h2 {
     word-break: break-all; } }
 
 header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: auto;
-  padding: 20px 0;
-  width: 100%; }
+  padding: 40px 0;
+  width: 100%;
+  z-index: 2; }
   header .container {
     height: 100%; }
     header .container .menu {
@@ -1132,9 +1199,11 @@ header {
       height: 100%; }
       header .container .menu .logo {
         float: left;
-        width: 150px;
-        height: 40px;
-        border: 1px solid #e5e5e5; }
+        width: 180px;
+        height: 60px; }
+        header .container .menu .logo img {
+          width: 100%;
+          height: auto; }
       header .container .menu .menu_top {
         float: right;
         display: flex;
@@ -1147,6 +1216,13 @@ header {
             float: left;
             margin: 0 0 0 60px;
             line-height: 60px; }
+            header .container .menu .menu_top ul li a {
+              font-family: 'HelveticaRegular';
+              font-size: 16px;
+              color: #FFFFFF; }
+              header .container .menu .menu_top ul li a:hover {
+                opacity: .8;
+                text-decoration: none; }
 
 @media (max-width: 768px) {
   header .container .menu .menu_top ul li {
@@ -1201,9 +1277,9 @@ footer {
       padding-bottom: 20px; } }
 
 #index .slider_inner {
-  margin: 60px 0;
-  border: 1px solid #f3f3f3;
+  margin: 0;
   width: 100%;
+  height: 700px;
   overflow: hidden;
   position: relative; }
   #index .slider_inner .arrows {
@@ -1216,15 +1292,13 @@ footer {
     justify-content: center;
     width: 100%; }
     #index .slider_inner .arrows .sel {
-      border: 1px solid #cfcfcf;
-      border-radius: 15px;
-      width: 15px;
-      height: 15px;
-      background: #FFFFFF;
+      width: 20px;
+      height: 20px;
+      border-bottom: 2px solid #FFFFFF;
       margin: 0 10px;
       cursor: pointer; }
     #index .slider_inner .arrows .active {
-      background: #cfcfcf;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
       cursor: default; }
 
 #index .slider_wrapper {
@@ -1249,22 +1323,50 @@ footer {
       top: 0;
       width: 100%;
       height: 100%; }
+      #index .slider_wrapper .slide_photo:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: ' ';
+        background: #E96060;
+        mix-blend-mode: multiply; }
+      #index .slider_wrapper .slide_photo .slide_photo_img {
+        width: 100%;
+        height: 100%;
+        background-size: cover; }
     #index .slider_wrapper .slide_info {
-      padding: 11% 60px;
+      padding: 207px 170px;
       position: relative;
       z-index: 5; }
     #index .slider_wrapper .slide_title {
       width: 300px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #cfcfcf; }
+      padding-bottom: 20px; }
       #index .slider_wrapper .slide_title h2 {
+        font-family: ProximaNova-Bold;
+        font-size: 54px;
+        line-height: 51px;
+        font-weight: 900;
         margin: 0;
-        color: #424242; }
+        color: #FFFFFF; }
     #index .slider_wrapper .slide_about {
       margin-top: 20px; }
+      #index .slider_wrapper .slide_about p {
+        font-family: IBM Plex Sans, sans-serif;
+        font-size: 20px;
+        line-height: 34px;
+        color: #FFFFFF; }
 
 #index .products {
   padding-top: 60px; }
+  #index .products .cards .card {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px; }
+    #index .products .cards .card_photo {
+      top: 32px;
+      left: 32px; }
   #index .products .items_inner {
     position: relative;
     overflow: hidden;
@@ -1293,6 +1395,7 @@ footer {
         cursor: default; }
 
 #index .services {
+  background: #FBFBFB;
   padding-top: 60px; }
   #index .services .card {
     padding-top: 25%; }
@@ -1450,7 +1553,7 @@ footer {
     flex: 1 100%;
     margin: 0px 60px 60px;
     height: 160px;
-    background: #f3f3f3;
+    background: #E5E5E5;
     display: flex;
     flex-flow: row wrap;
     padding: 10px 0;
