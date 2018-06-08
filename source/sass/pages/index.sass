@@ -86,12 +86,18 @@
 	padding-top: 60px
 	.cards
 		.card
-			border-radius: 8px
-			-webkit-border-radius: 8px
-			-moz-border-radius: 8px
+			transition: all 0.5s ease
+			-webkit-transition: all 0.5s ease
+			-moz-transition: all 0.5s ease
+			-ms-transition: all 0.5s ease
 			&_photo
 				top: 32px
 				left: 32px
+				width: auto
+				height: auto
+			&_text
+                font-size: 14px
+                line-height: 20px
 	.items
 		&_inner
 			position: relative
@@ -123,74 +129,123 @@
 .services
 	background: #{$gwhite}
 	padding-top: 60px
+	&_about
+		color: #{$dark_gray}
+		margin: 0px auto 40px
 	.card
-		padding-top: 25%
+		height: 400px
+		&:nth-child(1)
+			background: #{$sblue}
+			.card_icon
+				background-image: url(#{$img_path}/is-icon-1.png);
+		&:nth-child(2)
+			background: #{$sgreen}
+			.card_icon
+				background-image: url(#{$img_path}/is-icon-2.png);
+		&:nth-child(3)
+			background: #{$sred}
+			.card_icon
+				background-image: url(#{$img_path}/is-icon-3.png);
+		&_body
+			top: 30px
+			left: 30px
+			.card_title
+				margin-bottom: 35px
+				margin-top: 0
+				max-width: 150px
+				a
+					color: #{$white}
+			.card_text
+				color: #{$white}
+				height: auto
+				max-height: 100%
+		&_icon
+			position: absolute
+			bottom: 30px
+			left: 30px
+			background: url(#{$img_path}/is-icon-1.png) no-repeat left bottom
+			width: 40px
+			height: 42px
 .company
 	padding-top: 60px
 	&_about
 		color: #{$dark_gray}
-		margin: 0px auto 40px
-	.media
-		&_item
-			padding: 0
-			display: flex
-			flex-direction: row
-			flex-wrap: nowrap
-			&_photo
-				height: 80px
-				width: 80px
-				border: 1px solid #{$dgray}
-			&_title
-				font-size: 16px
-				line-height: 30px
-				margin-left: 20px
-				margin-right: 20px
-				display: flex
-				flex-direction: row
-				flex-wrap: nowrap
-				align-items: center
-				justify-content: flex-start
-				color: #{$dark_gray}
-				a
-					display: block
-					height: 100%
-	&_info
-		padding-bottom: 40px
-		.news
-			.title
-				padding-bottom: 0
-				h3
-					text-align: left
-			&_item
-				display: flex
-				flex-direction: row
-				flex-wrap: nowrap
-				padding: 10px 0
-				&_date
-					color: #{$dgray}
-				&_link
-					margin-left: 40px
-		.vacancies
-			display: flex
-			flex-direction: column
-			flex-wrap: nowrap
-			.title
-				padding-bottom: 0
-				h3
-					text-align: left
-			&_link
-				font-size: 16px
-				padding: 10px 0
-.clients
-	padding: 60px 0 4%
-	.cards
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		margin: 0px auto 60px
+	.cards.about_items
 		.card
-			padding-top: 12%
-			img
+			background: transparent
+			height: 140px
+			&_icon
 				position: absolute
-				left: 0
+				width: 116px
+				height: 116px
+				top: 15px
+				left: 50%
+				margin-left: -58px
+			&_body
+				position: relative
 				top: 0
+				left: 0
+				max-width: 100%
+				width: 100%
+				text-align: center
+				.card_text
+					height: 32px
+					width: 100%
+					padding: 0
+					max-height: 100%
+					color: #{$gblack}
+			&:nth-child(1)
+				.card_icon
+					background: #{$cyellow}
+					transform: rotate(30deg)
+					-webkit-transform: rotate(30deg)
+					-ms-transform: rotate(30deg)
+			&:nth-child(2)
+				.card_icon
+					background: #{$cblue}
+					transform: rotate(-30deg)
+					-webkit-transform: rotate(-30deg)
+					-ms-transform: rotate(-30deg)
+			&:nth-child(3)
+				.card_icon
+					background: #{$cpink}
+					transform: rotate(95deg)
+					-webkit-transform: rotate(95deg)
+					-ms-transform: rotate(95deg)
+	&_info.link_items
+		padding-bottom: 40px
+		.card
+			border: 1px solid #{$cgray}
+			height: 101px
+			align-items: center
+			justify-content: space-between
+			padding: 0 40px
+			h3
+				font-weight: 600
+		.vacancy
+			&_info
+				p
+					font-family: $roboto
+.clients
+	padding: 80px 0
+	.title
+		h3
+			color: #{$dark_gray}
+			font-size: 36px
+			line-height: 55px
+	.partners
+		.ct_4
+			justify-content: space-between
+		.ct_3
+			justify-content: space-around
+		.cards
+			align-items: center
+			.card
+				height: auto
+				background: transparent
+
+
 @media (max-width: '#{$small}px')
 	.services
 		.cards

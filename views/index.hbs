@@ -79,15 +79,15 @@
 			</div>
 		</div>
 	</section>
-	<section class="products bg-gray">
+	<section id="main_products" class="products bg-gray">
 		<div class="container">
 			<div class="title">
 				<h3><a href="/products">Продукты</a></h3>
 			</div>
 			<div class="items_inner">
-				<div class="cards ct_3">
-					<div class="card slide">
-						<img src="holder.js/80x80" class="holder_image card_photo">
+				<div class="cards ct_3 ctm_1">
+					<div class="card slide" data-color="#E96060">
+						<img src="images/item/prod1.png" class="holder_image card_photo">
 						<div class="card_body">
 							<h5 class="card_title"><a>Помошник арбитражного управляющего</a></h5>
 							<p class="card_text">
@@ -97,7 +97,7 @@
 						<a href="/product" class="card_link"><span></span></a>
 					</div>
 					<div class="card slide">
-						<img src="holder.js/80x80" class="holder_image card_photo">
+						<img src="images/item/prod2.png" class="holder_image card_photo">
 						<div class="card_body">
 							<h5 class="card_title"><a>F-анализ</a></h5>
 							<p class="card_text">
@@ -107,7 +107,7 @@
 						<a href="/product" class="card_link"><span></span></a>
 					</div>
 					<div class="card slide">
-						<img src="holder.js/80x80" class="holder_image card_photo">
+						<img src="images/item/prod3.png" class="holder_image card_photo">
 						<div class="card_body">
 							<h5 class="card_title"><a>CPO Эксперт</a></h5>
 							<p class="card_text">
@@ -118,7 +118,7 @@
 					</div>
 
 					<div class="card slide">
-						<img src="holder.js/80x80" class="holder_image card_photo">
+						<img src="images/item/prod4.png" class="holder_image card_photo">
 						<div class="card_body">
 							<h5 class="card_title"><a>Помошник арбитражного управляющего</a></h5>
 							<p class="card_text">
@@ -127,7 +127,7 @@
 						</div>
 						<a href="/product" class="card_link"><span></span></a>
 					</div><div class="card slide">
-						<img src="holder.js/80x80" class="holder_image card_photo">
+						<img src="images/item/prod5.png" class="holder_image card_photo">
 						<div class="card_body">
 							<h5 class="card_title"><a>Помошник арбитражного управляющего</a></h5>
 							<p class="card_text">
@@ -145,35 +145,54 @@
 			<div class="title">
 				<h3><a href="/services">Услуги</a></h3>
 			</div>
-			<div class="cards">
+			<div class="s_container services_about">
+				<p>
+					Мы предлагаем полный комплекс услуг для проектов любого уровня и любой стадии готовности — от начальной, когда есть лишь идея, нуждающаяся в разработке, создании инструментов и продвижении, до заключительной, когда ресурсу необходима только поддержка.
+				</p>
+			</div>
+			<div class="cards ct_3 ctm_1">
 				<div class="card">
-					<img src="holder.js/100px100p" class="holder_image card_photo">
 					<div class="card_body">
-						<h5 class="card_title"><a>Сайты</a></h5>
-						<p class="card_text"></p>
+						<h5 class="card_title"><a>Сайты и<br/> веб-сервисы</a></h5>
+						<p class="card_text">
+							- Корпоративные сайты<br/>
+							- Интернет-магазины<br/>
+							- Промо<br/>
+							- Лэндинги<br/>
+							- CRM, интеграция
+						</p>
 					</div>
+					<div class="card_icon"></div>
 					<a href="/cservice" class="card_link"><span></span></a>
 				</div>
 				<div class="card">
-					<img src="holder.js/100px100p" class="holder_image card_photo">
 					<div class="card_body">
 						<h5 class="card_title"><a>Мобильные приложения</a></h5>
-						<p class="card_text"></p>
+						<p class="card_text">
+							- iOS<br/>
+							- Android<br/>
+						</p>
 					</div>
+					<div class="card_icon"></div>
 					<a href="/cservice" class="card_link"><span></span></a>
 				</div>
 				<div class="card">
-					<img src="holder.js/100px100p" class="holder_image card_photo">
 					<div class="card_body">
-						<h5 class="card_title"><a>Разработка ПО</a></h5>
-						<p class="card_text"></p>
+						<h5 class="card_title"><a>Разработка программного обеспечения</a></h5>
+						<p class="card_text">
+							- Бизнес-анализ и консалтинг<br/>
+							- Разработка заказных ERP и CRM<br/>
+							- Внедрение, развертывание, интеграция и настройка<br/>
+						</p>
 					</div>
+					<div class="card_icon"></div>
 					<a href="/cservice" class="card_link"><span></span></a>
 				</div>
+
 			</div>
 		</div>
 	</section>
-	<section class="company bg-gray">
+	<section class="company">
 		<div class="container">
 			<div class="title">
 				<h3><a href="#">Компания</a></h3>
@@ -187,147 +206,99 @@
 				</p>
 			</div>
 
-			<div class="cards media">
-				<div class="card empty2">
-					<div class="card_m_photo">
-						<img src="holder.js/80x80" class="holder_image">
-					</div>
-					<div class="card_m_about">
+			<div class="cards about_items ct_3 ctm_1">
+				<div class="card">
+					<div class="card_icon"></div>
+					<div class="card_body">
 						<p class="card_text">
-							2004 год основания компании
+							
+						</p>
+						<h2 class="title_big">2004</h2>
+						<p class="card_text">
+							Год основания компании
 						</p>
 					</div>
 				</div>
-				<div class="card empty2">
-					<div class="card_m_photo">
-						<img src="holder.js/80x80" class="holder_image">
-					</div>
-					<div class="card_m_about">
+				<div class="card">
+					<div class="card_icon"></div>
+					<div class="card_body">
 						<p class="card_text">
-							Более 200 заказных проектов
+							Более
+						</p>
+						<h2 class="title_big">40</h2>
+						<p class="card_text">
+							заказных проектов
 						</p>
 					</div>
 				</div>
-				<div class="card empty2">
-					<div class="card_m_photo">
-						<img src="holder.js/80x80" class="holder_image">
-					</div>
-					<div class="card_m_about">
+				<div class="card">
+					<div class="card_icon"></div>
+					<div class="card_body">
 						<p class="card_text">
-							Более 100 сотрудников
+							Более
+						</p>
+						<h2 class="title_big">60</h2>
+						<p class="card_text">
+							сотрудников
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class="cards company_info">
-				<div class="card empty2 w_2_3 ws_a news">
-					<div class="title">
-						<h3><a href="/news">Новости</a></h3>
+			<div class="cards link_items ct_2 ctm_1 company_info">
+				<div class="card rows news">
+					<div class="title_block">
+						<h3>Новости компании:</h3>
 					</div>
-					<div class="news_item">
-						<div class="news_item_date">
-							<p>
-								21/03
-							</p>
-						</div>
-						<a href="#" class="news_item_link link">Профи-версия "Печати конвертов!" теперь и на одно рабочее место</a>
+					<div class="social">
+						<a href="#" class="social_btn"><span class="social_btn_icon in"></span></a>
+						<a href="#" class="social_btn"><span class="social_btn_icon fb"></span></a>
+						<a href="#" class="social_btn"><span class="social_btn_icon tw"></span></a>
+						<a href="#" class="social_btn"><span class="social_btn_icon vk"></span></a>
 					</div>
-					<div class="news_item">
-						<div class="news_item_date">
-							<p>
-								21/03
-							</p>
-						</div>
-						<a href="#" class="news_item_link link">С международным женским днем!</a>
-					</div>
-					<div class="news_item">
-						<div class="news_item_date">
-							<p>
-								21/03
-							</p>
-						</div>
-						<a href="#" class="news_item_link link">День рождения! РИТ исполнилось 12 лет!</a>
-					</div>
-					<div class="news_item">
-						<div class="news_item_date">
-							<p>
-								21/03
-							</p>
-						</div>
-						<a href="#" class="news_item_link link">24 августа - вебинар по эффективному использованию "Помошник АУ"</a>
-					</div>
+					
 				</div>
-				<div class="card empty2 w_1_3 ws_a vacancies">
-					<div class="title">
-						<h3><a href="/hire">Вакансии</a></h3>
+				<div class="card rows vacancy">
+					<div class="title_block">
+						<h3>Вакансии</h3>
 					</div>
-					<a href="#" class="vacancies_link">iOS-разработчик</a>
-					<a href="#" class="vacancies_link">Веб-дизайнер</a>
-					<a href="#" class="vacancies_link">.NET-разработчик</a>
-					<a href="#" class="vacancies_link">Менеджер проектов</a>
+					<div class="vacancy_info">
+						<p>Сейчас открыто 5 вакансий.</p>
+					</div>
+					<div class="btn btn-outline">Подробнее</div>
+
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="clients">
+	<section class="clients bg-gwhite">
 		<div class="container">
 			<div class="title">
 				<h3>
 					Более <a href="#">1500 клиентов</a> используют наши продукты
 				</h3>
 			</div>
-			<div class="s_container">
-				<div class="cards ct_5">
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
-					<div class="card">
-						<a href="#">
-							<img src="holder.js/100px100p" class="holder_image">
-						</a>
-					</div>
+			<div class="partners">
+				<div class="cards ct_4">
+					<div class="card"><img src="images/partner/partner1.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner2.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner3.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner4.png" alt=""></div>
+				</div>
+				<div class="cards ct_3">
+					<div class="card"><img src="images/partner/partner5.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner6.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner7.png" alt=""></div>
+				</div>
+				<div class="cards ct_4">
+					<div class="card"><img src="images/partner/partner8.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner9.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner10.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner11.png" alt=""></div>
+				</div>
+				<div class="cards ct_3">
+					<div class="card"><img src="images/partner/partner12.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner13.png" alt=""></div>
+					<div class="card"><img src="images/partner/partner14.png" alt=""></div>
 				</div>
 				
 			</div>
