@@ -1,50 +1,69 @@
 footer
 	position: relative;
-	height: 80px;
 	width: 100%;
+	background: #{$dark_blue}
+	color: #{$white}
+	padding: 40px 0 0
 	.container
 		height: 100%
-		.items
-			display: flex
-			flex-direction: row
-			flex-wrap: wrap
-			align-items: center
-			justify-content: space-between
-			padding: 20px 0
-			.item
-				width: auto
-				&:nth-child(2)
-					text-align: right
-
-.footer_nav
-	.items
-		display: flex
-		flex-flow: row wrap
-		justify-content: space-around
-		padding: 20px 0
-		.item
-			flex: 0 1 25%
-			display: flex
-			flex-direction: column
-			flex-wrap: nowrap
-			align-items: flex-start
-			justify-content: flex-start
-			width: auto
-			.title
-				padding-bottom: 10px
-				margin: 0
-				font-weight: normal
-@media (max-width: '#{$small}px')
-	footer
-		.container
-			.items
-				.item
-					padding-bottom: 20px
+		.footer_nav
+			.cards
+				justify-content: flex-start
+				.card
+					.logo
+						float: left;
+						width: 245px
+						height: 72px
+						img
+							width: 100%
+							height: auto
+					h4
+						height: 40px
+						a
+							color: #{$white}
+							&:hover
+								color: #{$white_o_65}
+								text-decoration: none
+		.link
+			padding-bottom: 8px
+			color: #{$white}
+			font: 14px/20px #{$ibm_sans}
+			&:hover
+				color: #{$white_o_65}
+				text-decoration: none
+		.footer_o
+			.cards
+				padding-bottom: 45px
+				.card
 					&:nth-child(2)
-						text-align: left
-	.footer_nav
-		.items
-			justify-content: space-between
-			.item
-				flex: 0 1 50%
-				padding-bottom: 20px
+						justify-content: center
+					&:nth-child(3)
+						text-align: right
+			p
+				font: 14px/20px #{$ibm_sans}
+				color: #{$white}
+			.f_social
+				text-align: center
+				&_btn
+			        display: inline-block
+			        margin-right: 20px
+			        &_icon
+			            width: 30px
+			            height: 30px
+			            display: block
+			            &:hover
+			            	opacity: .7
+			            &.in
+			                background: url(#{$img_path}/f_instagram.png) no-repeat
+			                background-size: 30px auto
+			            &.fb
+			                background: url(#{$img_path}/f_facebook.png) no-repeat
+			                background-size: 30px auto
+			            &.tw
+			                background: url(#{$img_path}/f_twitter.png) no-repeat
+			                background-size: 30px auto
+			            &.vk
+			                background: url(#{$img_path}/f_vk.png) no-repeat
+			                background-size: 30px auto
+			        &:last-child
+			            margin-right: 0

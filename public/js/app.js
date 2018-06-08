@@ -18,9 +18,13 @@ $('#openNewHire').click(function(){
 // Выбор главного цвета на изображении
 $('#main_products .cards').find('.card').each(function(){
 	$(this).hover(() => {
-		let c = $(this).attr('data-color');
+		let c = $(this).attr('data-color'), tc = $(this).attr('data-tcolor');
+		if(tc) {
+			$(this).find('.card_title a, .card_text').css({'color': tc});
+		}
 		$(this).css({'background': c});
 	}, () => {
+		$(this).find('.card_title a, .card_text').css({'color': '#373737'});
 		$(this).css({'background': '#fff'})
 	})
 })

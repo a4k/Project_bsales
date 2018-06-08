@@ -20,6 +20,8 @@
 				border-bottom: 2px solid #{$white}
 				margin: 0 10px
 				cursor: pointer
+				&:hover
+					border-bottom: 2px solid #{$white_o_5}
 			.active
 				border-bottom: 2px solid #{$white_o_3}
 				cursor: default
@@ -98,33 +100,6 @@
 			&_text
                 font-size: 14px
                 line-height: 20px
-	.items
-		&_inner
-			position: relative
-			overflow: hidden
-			width: 100%
-			height: 100%
-			padding: 0 0 60px
-			.arrows
-				position: absolute
-				z-index: 50
-				bottom: 40px
-				display: flex
-				flex-direction: row
-				align-items: center
-				justify-content: center
-				width: 100%
-				.sel
-					border: 1px solid #{$dgray}
-					border-radius: 15px
-					width: 15px
-					height: 15px
-					background: #{$white}
-					margin: 0 10px
-					cursor: pointer
-				.active
-					background: #{$dgray}
-					cursor: default
 
 .services
 	background: #{$gwhite}
@@ -238,7 +213,13 @@
 		.ct_4
 			justify-content: space-between
 		.ct_3
-			justify-content: space-around
+			justify-content: center
+			.card
+				width: 155px
+				text-align: center
+				margin: 0
+				&:nth-child(2)
+					margin: 0px 235px
 		.cards
 			align-items: center
 			.card
