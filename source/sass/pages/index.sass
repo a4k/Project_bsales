@@ -85,7 +85,6 @@
 					line-height: 34px
 					color: #{$white}
 .products
-	padding-top: 60px
 	.cards
 		.card
 			transition: all 0.5s ease
@@ -103,7 +102,6 @@
 
 .services
 	background: #{$gwhite}
-	padding-top: 60px
 	&_about
 		color: #{$dark_gray}
 		margin: 0px auto 40px
@@ -142,7 +140,6 @@
 			width: 40px
 			height: 42px
 .company
-	padding-top: 60px
 	&_about
 		color: #{$dark_gray}
 		margin: 0px auto 60px
@@ -203,13 +200,9 @@
 				p
 					font-family: $roboto
 .clients
-	padding: 80px 0
-	.title
-		h3
-			color: #{$dark_gray}
-			font-size: 36px
-			line-height: 55px
 	.partners
+		padding-top: 30px
+		padding-bottom: 60px
 		.ct_4
 			justify-content: space-between
 		.ct_3
@@ -228,6 +221,25 @@
 
 
 @media (max-width: '#{$small}px')
+	.slider
+		&_inner
+			height: auto
+		&_wrapper
+			.slide
+				&_info
+					padding-top: 190px
+					padding: 190px 20px 0
+				&_title
+					h2
+						font-size: 30px
+						line-height: 28px
+				&_about
+					p
+						font-size: 16px
+						line-height: 23px
+				.btn-outline2
+					margin-top: 90px
+					margin-bottom: 55px
 	.services
 		.cards
 			.card

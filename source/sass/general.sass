@@ -13,7 +13,7 @@ body
     font-weight: normal;
     color: $black;
     background: $cgray
-    font-size: #{$base + 'px'}
+    font-size: 16px
 
 a
     text-decoration: none;
@@ -97,7 +97,8 @@ h2
 /*base classes*/
 
 
-
+.block_content
+    padding-top: 60px
 .main_container
     background: #{$white}
     display: flex
@@ -358,12 +359,6 @@ h2
     width: 150px
     margin: 20px auto 20px
 .cards
-    // display: grid
-    // display: -ms-grid
-    // grid-template-columns: 1fr 1fr 1fr
-    // grid-template-rows: auto
-    // grid-auto-columns: 1fr
-    // grid-gap: 20px 2%
     display: flex
     flex-flow: row wrap
     align-items: flex-start
@@ -453,7 +448,7 @@ h2
         padding: 0
         position: relative
         height: 260px
-        margin-bottom: 2%
+        margin-bottom: 20px
         border-radius: 8px
         -webkit-border-radius: 8px
         -moz-border-radius: 8px
@@ -835,6 +830,10 @@ h2
             &.empty2
                 padding: 0
 @media (max-width: '#{$small}px')
+    .btn-outline2
+        width: 100%
+        font-size: 14px
+        line-height: 21px
     .modal
         &_dialog
             margin: 0

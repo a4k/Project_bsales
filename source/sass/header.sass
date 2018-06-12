@@ -22,7 +22,7 @@ header
 				img
 					width: 100%
 					height: auto
-			.menu_top
+			&_top
 				float: right
 				display: flex
 				flex-direction: row
@@ -43,9 +43,21 @@ header
 								text-decoration: none
 @media (max-width: '#{$small}px')
 	header
+		padding: 0
 		.container
+			padding: 40px 20px
 			.menu
-				.menu_top
+				align-items: flex-start
+				&_mobile
+					.icon
+						&_line
+							width: 23px
+							height: 2px
+							margin-bottom: 7px
+							display: block
+							background: #{$white}
+				&_top
+					display: none
 					ul
 						li
 							margin-left: 0
