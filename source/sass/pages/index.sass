@@ -84,6 +84,27 @@
 					font-size: 20px
 					line-height: 34px
 					color: #{$white}
+	.arrow
+		&_left
+			background: url(#{$svg_path}/sl-icon-l.svg) center no-repeat
+			width: 60px
+			height: 100%
+			background-size: auto 44px
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 50
+			cursor: pointer
+		&_right
+			background: url(#{$svg_path}/sl-icon-r.svg) center no-repeat
+			width: 60px
+			height: 100%
+			background-size: auto 44px
+			position: absolute
+			right: 0
+			top: 0
+			z-index: 50
+			cursor: pointer
 .products
 	.cards
 		.card
@@ -91,6 +112,7 @@
 			-webkit-transition: all 0.5s ease
 			-moz-transition: all 0.5s ease
 			-ms-transition: all 0.5s ease
+			box-shadow: 0px 0px 24px #{$black_o_1}
 			&_photo
 				top: 32px
 				left: 32px
@@ -107,18 +129,19 @@
 		margin: 0px auto 40px
 	.card
 		height: 400px
+		box-shadow: 0px 0px 24px #{$black_o_1}
 		&:nth-child(1)
 			background: #{$sblue}
 			.card_icon
-				background-image: url(#{$img_path}/is-icon-1.png);
+				background-image: url(#{$svg_path}/se-icon-1.svg);
 		&:nth-child(2)
 			background: #{$sgreen}
 			.card_icon
-				background-image: url(#{$img_path}/is-icon-2.png);
+				background-image: url(#{$svg_path}/se-icon-2.svg);
 		&:nth-child(3)
 			background: #{$sred}
 			.card_icon
-				background-image: url(#{$img_path}/is-icon-3.png);
+				background-image: url(#{$svg_path}/se-icon-3.svg);
 		&_body
 			top: 30px
 			left: 30px
@@ -137,6 +160,7 @@
 			bottom: 30px
 			left: 30px
 			background: url(#{$img_path}/is-icon-1.png) no-repeat left bottom
+			background-size: 40px 42px
 			width: 40px
 			height: 42px
 .company
@@ -220,6 +244,13 @@
 				background: transparent
 
 
+@media (min-width: '#{$small}px') and (max-width: '#{$medium}px')
+	.clients
+		.partners
+			.ct_3
+				.card
+					&:nth-child(2)
+						margin: 0 100px
 @media (max-width: '#{$small}px')
 	.slider
 		&_inner
@@ -227,9 +258,10 @@
 		&_wrapper
 			.slide
 				&_info
-					padding-top: 190px
 					padding: 190px 20px 0
 				&_title
+					max-width: 300px
+					width: auto
 					h2
 						font-size: 30px
 						line-height: 28px
@@ -240,8 +272,110 @@
 				.btn-outline2
 					margin-top: 90px
 					margin-bottom: 55px
+		.arrow
+			&_left
+				display: none
+			&_right
+				display: none
+	.products
+		.cards
+			.card
+				height: 120px
+				display: flex
+				flex-flow: row nowrap
+				justify-content: flex-start
+				align-items: center
+				margin-bottom: 10px
+				&_photo
+					position: relative
+					margin: 0 20px
+					width: 37px
+					height: auto
+					background-size: 37px auto
+					top: 0
+					left: 0
+				&_body
+					position: relative
+					top: 0
+					left: 0
+				&_text
+					display: none
 	.services
+		&_about
+			margin-bottom: 17px
+		.cards
+			.card
+				&_title
+					font-size: 20px
+					line-height: normal
+					margin-bottom: 24px
 		.cards
 			.card
 				padding-top: 50%
 				min-height: 150px
+	.company
+		&_about
+			margin-bottom: 44px
+		.about_items
+			.card
+				display: flex
+				flex-flow: row nowrap
+				justify-content: flex-start
+				align-items: center
+				margin-bottom: 30px
+		&_info
+			&.link_items
+				margin: 0 -20px
+				.card
+					border-radius: 0
+					border: none
+					border-top: 1px solid #{$cgray}
+					height: auto
+					justify-content: center
+					padding: 0
+					margin-bottom: 0
+					padding-bottom: 40px
+					.social
+						margin-top: 20px
+					.vacancy
+						&_info
+							p
+								line-height: 33px
+								margin-bottom: 13px
+	.clients
+		.partners
+			.cards
+				padding-bottom: 0
+				.card
+					margin: 0
+					margin-bottom: 30px
+					img
+						max-width: 100%
+			.cards.ct_4
+				.card
+					&:nth-child(1)
+						width: 100%
+						margin-right: 0
+					&:nth-child(2)
+						width: calc(1/2*100% - (1 - 1/2)*20px)
+						margin: 0 20px 30px 0
+					&:nth-child(3)
+						width: calc(1/2*100% - (1 - 1/2)*20px)
+						margin-right: 0
+					&:nth-child(4)
+						width: 100%
+						margin-right: 0
+			.cards.ct_3
+				.card
+					&:nth-child(1)
+						width: calc(1/2*100% - (1 - 1/2)*20px)
+						margin: 0 20px 30px 0
+					&:nth-child(2)
+						width: calc(1/2*100% - (1 - 1/2)*20px)
+						margin: 0 0 30px 0
+					&:nth-child(3)
+						width: 100%
+						margin-right: 0
+					&:nth-child(4)
+						width: 100%
+						margin-right: 0

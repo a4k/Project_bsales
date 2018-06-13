@@ -605,16 +605,16 @@ h2
             height: 45px
             display: block
             &.in
-                background: url(#{$img_path}/instagram.png) no-repeat
+                background: url(#{$svg_path}/b-in.svg) no-repeat
                 background-size: 45px auto
             &.fb
-                background: url(#{$img_path}/facebook.png) no-repeat
+                background: url(#{$svg_path}/b-fb.svg) no-repeat
                 background-size: 45px auto
             &.tw
-                background: url(#{$img_path}/twitter.png) no-repeat
+                background: url(#{$svg_path}/b-tw.svg) no-repeat
                 background-size: 45px auto
             &.vk
-                background: url(#{$img_path}/vk.png) no-repeat
+                background: url(#{$svg_path}/b-vk.svg) no-repeat
                 background-size: 45px auto
         &:last-child
             margin-right: 0
@@ -789,7 +789,6 @@ h2
             &.wm_a
                 width: calc(1*100%)
         .card
-            padding-top: 50%
             width: calc(1*100%)
             &.wm_a
                 padding-top: 75%
@@ -841,6 +840,11 @@ h2
             .close
                 top: -30px
                 right: 0
+    p
+        font-size: 14px
+        line-height: 24px
+    .container
+        padding: 0 20px
     .s_container
         width: 100%
         min-width: 100%
@@ -855,9 +859,22 @@ h2
         .item
             width: 100%
             margin-bottom: 2%
+    .block_content
+        padding-top: 44px
     .title
-        margin-bottom: 15px
-        margin-top: 25px
+        margin-bottom: 17px
+        margin-top: 0
+        &_big
+            font-size: 40px
+        &_block
+            width: 100%
+            text-align: center
+            margin-top: 27px
+            h3
+                font-size: 18px
+                line-height: 27px
+        h3
+            line-height: 42px
     .cards
         &.media
             padding-bottom: 30px
@@ -869,12 +886,26 @@ h2
             .card
                 width: calc(1*100%)
                 padding-top: 75%
+        &.ctm_1
+            .cards
+                margin-right: 0
+                width: 100%
+            .card
+                margin-right: 0
+                width: 100%
+        &.ctm_2
+            .card
+                width: calc(1/2*100% - (1 - 1/2)*20px)
+                &:nth-child(2n)
+                    margin-right: 0
         .cards
             &.ws_a
                 width: calc(1*100%)
         .card
-            padding-top: 50%
             width: calc(1*100%)
+            &_body
+                .card_title
+                    font-size: 16px
             &.ws_a
                 padding-top: 75%
                 width: calc(1*100%)

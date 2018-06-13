@@ -8,7 +8,9 @@ var uglify       = require('gulp-uglify');
 var plumber      = require('gulp-plumber');
 var sprite       = require('gulp-sprite-generator');
 var concat       = require('gulp-concat');
+var svgSprite = require('gulp-svg-sprites');
 
+// Стили
 gulp.task('style', function () {
     gulp.src(['source/sass/app.sass'])
         .pipe(plumber())
@@ -34,6 +36,8 @@ gulp.task('style', function () {
         });
 });
 
+
+// Скрипты
 gulp.task('script', function () {
     gulp.src(['source/js/app.js'])
         .pipe(plumber())
@@ -44,9 +48,37 @@ gulp.task('script', function () {
         .pipe(gulp.dest('public/js'));
 });
 
+// Файл стилей для спрайта
+var config = {
+    shape: {
+        dimension: {         // Set maximum dimensions
+            maxWidth: 500,
+            maxHeight: 500
+        },
+        spacing: {         // Add padding
+            padding: 0
+        }
+    },
+    mode: "symbols",
+    svg: {
+        symbols: 'symbol_sprite.html'
+    }
+    
+};
+
+gulp.task('sprites', function () {
+    return gulp.src('source/i/icons/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest("public/images/icons"));
+});
+
 gulp.task('watch', function() {
     gulp.watch(['source/sass/*.sass', 'source/sass/*/*.sass'], function() {
         gulp.run('style');
+    });
+    
+    gulp.watch('source/i/icons/*.svg', function() {
+        gulp.run('sprites');
     });
     
     gulp.watch('source/js/*.js', function() {
@@ -55,5 +87,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function() {
-    gulp.run('style', 'script');
+    gulp.run('style', 'script', 'sprites');
 });
