@@ -70,3 +70,12 @@ footer
 			                background-size: 30px auto
 			        &:last-child
 			            margin-right: 0
+
+@media (max-width: '#{$small}px')
+	footer
+		.container
+			.footer_o
+				.cards
+					.card
+						&:nth-child(3)
+							text-align: center

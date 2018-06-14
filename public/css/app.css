@@ -261,6 +261,7 @@ h2 {
       font: 18px/27px "ProximaNova-Reg"; }
 
 .title h3 {
+  word-break: normal;
   padding: 0;
   margin: 0;
   font-weight: 600;
@@ -1116,9 +1117,9 @@ h2 {
 
 @media (max-width: 580px) {
   .title h2 {
-    word-break: break-all; }
+    word-break: normal; }
   .title h3 {
-    word-break: break-all; } }
+    word-break: normal; } }
 
 header {
   position: absolute;
@@ -1175,12 +1176,7 @@ header {
 
 @media (max-width: 768px) {
   header {
-    padding: 0;
-      padding-transition: all 0.5s ease-in-out;
-      padding--o-transition: all 0.5s ease-in-out;
-      padding--moz-transition: all 0.5s ease-in-out;
-      padding--webkit-transition: all 0.5s ease-in-out;
-      padding--ms-transition: all 0.5s ease-in-out; }
+    padding: 0; }
     header.fix-header {
       position: fixed;
       z-index: 110;
@@ -1189,6 +1185,7 @@ header {
       header.fix-header .container {
         padding: 10px 20px; }
     header .container {
+      transition: unset;
       padding: 25px 20px; }
       header .container .menu {
         align-items: flex-start; }
@@ -1295,6 +1292,10 @@ footer {
             background-size: 30px auto; }
         footer .container .footer_o .f_social_btn:last-child {
           margin-right: 0; }
+
+@media (max-width: 768px) {
+  footer .container .footer_o .cards .card:nth-child(3) {
+    text-align: center; } }
 
 #index .slider_inner {
   margin: 0;

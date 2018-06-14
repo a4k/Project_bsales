@@ -53,11 +53,11 @@ header
 @media (max-width: '#{$small}px')
 	header
 		padding: 0
-        transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out
-        -moz-transition: all 0.5s ease-in-out
-        -webkit-transition: all 0.5s ease-in-out
-        -ms-transition: all 0.5s ease-in-out
+        // transition: all 0.5s ease-in-out;
+        // -o-transition: all 0.5s ease-in-out
+        // -moz-transition: all 0.5s ease-in-out
+        // -webkit-transition: all 0.5s ease-in-out
+        // -ms-transition: all 0.5s ease-in-out
 		&.fix-header
 			position: fixed
 			z-index: 110
@@ -66,6 +66,7 @@ header
 			.container
 				padding: 10px 20px
 		.container
+			transition: unset
 			padding: 25px 20px
 			.menu
 				align-items: flex-start
