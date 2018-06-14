@@ -1,24 +1,28 @@
 <div id="product">
-	<section class="header_product">
-		<div class="container">
-			<div class="menu">
-					<div class="logo">
-						<a href="/"><img src="holder.js/100px100p" class="holder_image"></a>
-					</div>
-				<nav class="menu_product">
-					<ul>
-						<li><a href="#" class="link">Возможности</a></li>
-						<li><a href="#" class="link">Цены</a></li>
-						<li><a href="#" class="link">Обзор</a></li>
-						<li><a href="#" class="link">Отзывы</a></li>
-						<li><a href="#" class="btn btn-outline">Демо-версия</a></li>
-						<li><a href="/buy" class="btn btn-blue">Купить</a></li>
-					</ul>
-				</nav>
+	<div class="header header_product h-top">
+			<div class="container">
+				<div class="menu">
+					<a href="/">
+						<div class="logo">
+							<!-- <img src="images/logo.png" class="holder_image"> -->
+						</div>
+					</a>
+					<a href="#" class="menu_mobile"><span class="icon_line"></span><span class="icon_line"></span><span class="icon_line"></span></a>
+					<nav class="menu_topr">
+						<div class="hidden-bm close"></div>
+						<ul>
+							<li><a href="#" class="link">Возможности</a></li>
+							<li><a href="#" class="link">Цены</a></li>
+							<li><a href="#" class="link">Обзор</a></li>
+							<li><a href="#" class="link">Отзывы</a></li>
+							<li><a href="#" class="btn btn-outline">Демо-версия</a></li>
+							<li><a href="/buy" class="btn btn-blue">Купить</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
-	</section>
-	<section class="product_info">
+	<section class="block_content product_info">
 		<div class="container">
 			<div class="product_out">
 				<div class="product_out_photo">
@@ -65,13 +69,13 @@
 			
 		</div>
 	</section>
-	<section class="capability bg-gray">
+	<section class="block_content capability bg-gray">
 		<div class="container">
 			<div class="title">
-				<h2>Возможности</h2>
+				<h3>Возможности</h3>
 			</div>
-			<div class="items_inner sinner" data-view="3">
-				<div class="items swrapper">
+			<div class="qslider items_inner sinner" data-view="3">
+				<div class="items swrapper owl-carousel">
 					<div class="item slide">
 						<img src="holder.js/150x150" class="holder_image">
 						<div class="item_about">
@@ -146,17 +150,16 @@
 			
 		</div>
 	</section>
-	<section class="prices">
+	<section class="block_content prices">
 		<div class="container">
 			<div class="title">
-				<h2>Цены</h2>
+				<h3>Цены</h3>
 			</div>
-			<div class="items items_price">
-				<div class="item">
-					<div class="item_about">
-						<h4>Лайт</h4>
-						<div class="small_text">1 рабочее место</div>
-						<p>
+			<div class="cards ct_3 ctm_1 items_price">
+				<div class="card">
+					<div class="card_body">
+						<h5 class="card_title"><a>Лайт</a></h5>
+						<p class="card_text">
 							<ul class="list">
 								<li>Ведение процедур банкротства</li>
 								<li class="noactive">Создание своих шаблонов, документов, мероприятий и процедур</li>
@@ -164,16 +167,13 @@
 								<li class="noactive">Нормативно правовая база по банкротству</li>
 							</ul>
 						</p>
-						<h3>
-							19 890 Р
-						</h3>
+						<h3>19 890 Р</h3>
 					</div>
 				</div>
-				<div class="item">
-					<div class="item_about">
-						<h4>Профессионал</h4>
-						<div class="small_text">3 рабочих мест</div>
-						<p>
+				<div class="card">
+					<div class="card_body">
+						<h5 class="card_title"><a>Профессионал</a></h5>
+						<p class="card_text">
 							<ul class="list">
 								<li>Ведение процедур банкротства</li>
 								<li>Создание своих шаблонов, документов, мероприятий и процедур</li>
@@ -181,16 +181,13 @@
 								<li>Нормативно правовая база по банкротству</li>
 							</ul>
 						</p>
-						<h3>
-							28 890 Р
-						</h3>
+						<h3>28 890 Р</h3>
 					</div>
 				</div>
-				<div class="item">
-					<div class="item_about">
-						<h4>Управляющая компания</h4>
-						<div class="small_text">Рабочие места не ограничены</div>
-						<p>
+				<div class="card">
+					<div class="card_body">
+						<h5 class="card_title"><a>Управляющая компания</a></h5>
+						<p class="card_text">
 							<ul class="list">
 								<li>Ведение процедур банкротства</li>
 								<li>Создание своих шаблонов, документов, мероприятий и процедур</li>
@@ -198,17 +195,16 @@
 								<li>Нормативно правовая база по банкротству</li>
 							</ul>
 						</p>
-							<h3>
-								108 890 Р
-							</h3>
+						<h3>108 890 Р</h3>
+					</div>
+				</div>
 
-					</div>
-				</div>
 			</div>
+			
 			<a href="#" class="btn btn-blue all_prices">Все цены</a>
 		</div>
 	</section>
-	<section class="view_service">
+	<section class="block_content view_service">
 		<div class="container">
 			<div class="title">
 				<h3>Обзор сервиса</h3>
@@ -234,7 +230,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="related">
+	<section class="block_content related">
 		<div class="container">
 			<div class="title">
 				<h3>
@@ -270,7 +266,7 @@
 
 		</div>
 	</section>
-	<section class="reviews">
+	<section class="block_content reviews">
 		<div class="container">
 			<div class="title">
 				<h3>
@@ -336,7 +332,7 @@
 	</section>
 
 
-	<section class="promo_product bg-gray">
+	<section class="block_content promo_product bg-gray">
 		<div class="l_container">
 			<div class="menu">
 				<div class="title">

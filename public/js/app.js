@@ -36,41 +36,21 @@ $('.slider').each(function() {
 	$count = $(this).find('.count'),
 	$arrows = $(this).find('.arrows'),
 	$wrapper = $(this).find('.slider_wrapper');
+	$(this).parent().prev('header').removeClass('h-top');
 
-	$(this).find('.slide').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
 	$(this).find('.slide_photo_img').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
-	var count = $wrapper.find('.slide_photo_img').length;
-	$arrows.html('');
-	for(var i = 0; i < count; i++) {
-		if(i==0) {
-			$arrows.append('<div class="sel active"></div>');
-		} else {
-			$arrows.append('<div class="sel"></div>')
-		}
-	}
 	$(this).find('.slide').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
 	$wrapper.owlCarousel({
 	    loop:true,
 	    margin:0,
 	    nav:false,
+	    dots: true,
 	    autoWidth: true,
 	    items: 1,
 	});
 	$wrapper.on('resize.owl.carousel', function(event) {
 		$(this).find('.slide').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
 		$(this).find('.slide_photo_img').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
-	});
-	$wrapper.on('changed.owl.carousel', function(event) {
-		// $count.text(event.page.index+1 + '/' + event.page.count);
-		var count = event.page.count;
-		$arrows.html('');
-		for(var i = 0; i < count; i++) {
-			if(i==event.page.index) {
-				$arrows.append('<div class="sel active"></div>');
-			} else {
-				$arrows.append('<div class="sel"></div>')
-			}
-		}
 	});
 
 	$(this).find('.arrow_right').click(function() {
@@ -81,6 +61,35 @@ $('.slider').each(function() {
 	    $wrapper.trigger('prev.owl.carousel');
 	})
 });
+$('.qslider').each(function() {
+	var $el = $(this), 
+	$count = $(this).find('.count'),
+	$arrows = $(this).find('.arrows'),
+	$wrapper = $(this).find('.swrapper'),
+	$slide = $wrapper.find('.slide');
+
+	$slide.css({'width': $el.width()/3 + 'px'});
+	$wrapper.owlCarousel({
+	    loop:true,
+	    margin:0,
+	    dots:true,
+	    nav:false,
+	    autoWidth: true,
+	    items: 3,
+	});
+	$wrapper.on('resize.owl.carousel', function(event) {
+		$slide.css({'width': $el.width()/3 + 'px'});
+	});
+
+	$(this).find('.arrow_right').click(function() {
+	    $wrapper.trigger('next.owl.carousel');
+	})
+	// Go to the previous item
+	$(this).find('.arrow_left').click(function() {
+	    $wrapper.trigger('prev.owl.carousel');
+	})
+});
+
 
 
 var $topE = 0; // Высота прокрутки
@@ -103,10 +112,12 @@ $(document).on('scroll', function() {
 
 	if(s_w < 900) {
 		if(top > 200) {
-			$('.header').addClass('fix-header');
+			$('.header_main').addClass('fix-header');
 		} else {
-			$('.header').removeClass('fix-header');
+			$('.header_main').removeClass('fix-header');
 		}
 	}
 });
+
+
 },{}]},{},[1])

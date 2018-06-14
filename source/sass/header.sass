@@ -1,11 +1,25 @@
-header
+.header
 	position: absolute;
 	top: 0
 	left: 0
 	height: auto;
 	padding: 40px 0
 	width: 100%;
-	z-index: 2
+	&_main
+		z-index: 2
+	&.h-top
+		position: relative
+		padding: 10px 0
+		.container
+			.menu
+				.logo
+					background: url('#{$svg_path}/logo-2.svg') center no-repeat
+					background-size: 180px auto
+				&_top
+					ul
+						li
+							a
+								color: #{$black}
 	.container
 		height: 100%
 		.menu
@@ -19,9 +33,29 @@ header
 				float: left;
 				width: 180px
 				height: 60px
+				background: url('#{$svg_path}/logo.svg') center no-repeat
+				background-size: 180px auto
 				img
 					width: 100%
 					height: auto
+			&_topr
+				float: right
+				display: flex
+				flex-direction: row
+				flex-wrap: nowrap
+				ul
+					margin: 0
+					padding: 0
+					li
+						float: left
+						margin: 0 0 0 40px
+						line-height: 60px
+						a
+							font-family: 'HelveticaRegular'
+							font-size: 16px
+							&:hover
+								opacity: .8
+								text-decoration: none
 			&_top
 				float: right
 				display: flex
@@ -51,7 +85,7 @@ header
 								opacity: .8
 								text-decoration: none
 @media (max-width: '#{$small}px')
-	header
+	.header
 		padding: 0
         // transition: all 0.5s ease-in-out;
         // -o-transition: all 0.5s ease-in-out
@@ -64,7 +98,26 @@ header
 			background: #{$kgray}
 			box-shadow: 0px 0px 24px #{$black_o_1}
 			.container
-				padding: 10px 20px
+				padding: 0px 20px
+				.menu
+					.logo
+						background: url('#{$svg_path}/logo.svg') center no-repeat
+						background-size: 120px auto
+						height: 40px
+		&_main.h-top.fix-header
+			.container
+				.menu
+					&_mobile
+						.icon
+							&_line
+								background: #{$white}
+		&_main.h-top
+			.container
+				.menu
+					&_mobile
+						.icon
+							&_line
+								background: #{$kgray}
 		.container
 			transition: unset
 			padding: 25px 20px
@@ -73,7 +126,7 @@ header
 				&_mobile
 					position: absolute
 					right: 30px
-					top: 30px
+					top: 20px
 					.icon
 						&_line
 							width: 23px
@@ -81,6 +134,12 @@ header
 							margin-bottom: 7px
 							display: block
 							background: #{$white}
+				&_topr
+					ul
+						li
+							height: 40px
+							line-height: 40px
+							margin-bottom: 5px
 				&_top
 					display: none
 					position: fixed

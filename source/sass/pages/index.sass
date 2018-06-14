@@ -5,7 +5,7 @@
 		height: 700px
 		overflow: hidden
 		position: relative
-		.arrows
+		.owl-dots
 			position: absolute
 			z-index: 50
 			bottom: 20px
@@ -13,12 +13,13 @@
 			flex-direction: row
 			align-items: center
 			justify-content: center
-			width: 100%
-			.sel
+			width: 100vw
+			.owl-dot
 				width: 20px
 				height: 20px
 				border-bottom: 2px solid #{$white}
 				margin: 0 10px
+				outline: none
 				cursor: pointer
 				&:hover
 					border-bottom: 2px solid #{$white_o_5}
@@ -105,23 +106,6 @@
 			top: 0
 			z-index: 50
 			cursor: pointer
-.products
-	.cards
-		.card
-			transition: all 0.5s ease
-			-webkit-transition: all 0.5s ease
-			-moz-transition: all 0.5s ease
-			-ms-transition: all 0.5s ease
-			box-shadow: 0px 0px 24px #{$black_o_1}
-			&_photo
-				top: 32px
-				left: 32px
-				width: auto
-				height: auto
-				min-width: 80px
-			&_text
-                font-size: 14px
-                line-height: 20px
 
 .services
 	background: #{$gwhite}
@@ -295,31 +279,6 @@
 				display: none
 			&_right
 				display: none
-	.products
-		.cards
-			.card
-				height: 120px
-				display: flex
-				flex-flow: row nowrap
-				justify-content: flex-start
-				align-items: center
-				margin-bottom: 10px
-				&_photo
-					position: relative
-					margin: 0 20px
-					width: 37px
-					height: auto
-					background-size: 37px auto
-					top: 0
-					left: 0
-					min-width: 37px
-					max-width: 37px
-				&_body
-					position: relative
-					top: 0
-					left: 0
-				&_text
-					display: none
 	.services
 		&_about
 			margin-bottom: 17px

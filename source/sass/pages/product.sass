@@ -1,40 +1,23 @@
 .header_product
-	position: relative;
-	height: auto;
-	width: 100%;
 	border-top: 1px solid #{$cgray}
 	border-bottom: 1px solid #{$cgray}
 	.container
 		height: 100%
 		.menu
-			display: flex
-			flex-direction: row
-			flex-wrap: wrap
-			align-items: center
-			justify-content: space-between
-			height: 100%
-			padding-bottom: 20px
 			.logo
-				margin: 20px 0 0
-				width: 150px
-				height: 60px
+				background: #{$cgray}
 				border: 1px solid #{$cgray}
 			&_product
 				display: block
 				margin-top: 20px
-				ul
-					margin: 0
-					margin-left: -40px
-					padding: 0
-					display: flex
-					flex-direction: row
-					flex-wrap: wrap
-					align-items: center
-					li
-						float: left
-						margin: 0 0 0 40px
-						.link
-							line-height: 60px
+			ul
+				li
+					.btn
+						font-size: 12px
+						letter-spacing: 0.1em
+						color: #{$white}
+						&.btn-outline
+							color: #{$blue}
 
 .product_info
 	position: relative
@@ -109,7 +92,7 @@
 			width: 100%
 			height: 100%
 			padding: 0 0 60px
-			.arrows
+			.owl-dots
 				position: absolute
 				z-index: 50
 				bottom: 40px
@@ -118,7 +101,7 @@
 				align-items: center
 				justify-content: center
 				width: 100%
-				.sel
+				.owl-dot
 					border: 1px solid #{$dgray}
 					border-radius: 15px
 					width: 15px
@@ -126,6 +109,7 @@
 					background: #{$white}
 					margin: 0 10px
 					cursor: pointer
+					outline: none
 				.active
 					background: #{$dgray}
 					cursor: default
@@ -145,25 +129,60 @@
 .prices
 	padding-top: 30px
 	.items_price
-		.item
-			border: 1px solid #{$dgray}
-			&_about
-				padding-bottom: 20px
-				text-align: center
-				color: #{$dark_gray}
-				h4
-					font-weight: normal
-					margin-bottom: 0
+		.card
+			height: 450px
+			box-shadow: 0px 0px 24px #{$black_o_1}
+			&:nth-child(1)
+				background: #{$sblue}
+				.card_icon
+					background-image: url(#{$svg_path}/se-icon-1.svg);
+			&:nth-child(2)
+				background: #{$sgreen}
+				.card_icon
+					background-image: url(#{$svg_path}/se-icon-2.svg);
+			&:nth-child(3)
+				background: #{$sred}
+				.card_icon
+					background-image: url(#{$svg_path}/se-icon-3.svg);
+			&_body
+				top: 30px
+				left: 30px
+				right: 30px
+				max-width: 100%
 				.small_text
 					color: #{$dark_gray}
 				.list
 					padding: 10px 0 20px
 					li
 						padding: 20px 0 0
+						color: #{$white}
 						&.noactive
 							color: #{$dgray}
+				.card_title
+					margin-bottom: 0px
+					margin-top: 0
+					max-width: 150px
+					a
+						color: #{$white}
+				.card_text
+					color: #{$white}
+					height: auto
+					max-height: 100%
 				h3
+					position: absolute
+					bottom: 0
+					width: 100%
+					text-align: center
 					margin-top: 20px
+					color: #{$white}
+			&_icon
+				position: absolute
+				bottom: 30px
+				left: 30px
+				background: url(#{$img_path}/is-icon-1.png) no-repeat left bottom
+				background-size: 40px 42px
+				width: 40px
+				height: 42px
 	.all_prices
 		display: block
 		margin: 0px auto
