@@ -293,6 +293,8 @@ h2 {
   flex-flow: column nowrap;
   justify-content: space-between;
   min-height: 80vh; }
+  .main_container > div {
+    min-height: 80vh; }
 
 .footer_container {
   width: 100%;
@@ -304,7 +306,7 @@ h2 {
   margin: 0 auto; }
 
 .s_container {
-  width: 874px;
+  max-width: 874px;
   margin: 0 auto; }
 
 .m_container {
@@ -491,6 +493,8 @@ h2 {
     text-align: center; }
   .items .item {
     width: 32%;
+    padding: 0; }
+  .items.empty {
     padding: 0; }
 
 .prods .item {
@@ -1067,6 +1071,8 @@ h2 {
     width: calc(1*100%); }
   .cards .card {
     width: calc(1*100%); }
+    .cards .card.m_column {
+      flex-flow: column wrap; }
     .cards .card_body .card_title {
       font-size: 16px; }
     .cards .card.ws_a {
@@ -1143,6 +1149,15 @@ header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap; }
+        header .container .menu_top .close {
+          background: url("/images/icon/close.svg") center no-repeat;
+          background-size: 32px auto;
+          width: 32px;
+          height: 32px;
+          cursor: pointer;
+          position: absolute;
+          top: 30px;
+          right: 30px; }
         header .container .menu_top ul {
           margin: 0;
           padding: 0; }
@@ -1160,22 +1175,58 @@ header {
 
 @media (max-width: 768px) {
   header {
-    padding: 0; }
+    padding: 0;
+      padding-transition: all 0.5s ease-in-out;
+      padding--o-transition: all 0.5s ease-in-out;
+      padding--moz-transition: all 0.5s ease-in-out;
+      padding--webkit-transition: all 0.5s ease-in-out;
+      padding--ms-transition: all 0.5s ease-in-out; }
+    header.fix-header {
+      position: fixed;
+      z-index: 110;
+      background: #465868;
+      box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1); }
+      header.fix-header .container {
+        padding: 10px 20px; }
     header .container {
-      padding: 40px 20px; }
+      padding: 25px 20px; }
       header .container .menu {
         align-items: flex-start; }
-        header .container .menu_mobile .icon_line {
-          width: 23px;
-          height: 2px;
-          margin-bottom: 7px;
-          display: block;
-          background: #FFFFFF; }
+        header .container .menu_mobile {
+          position: absolute;
+          right: 30px;
+          top: 30px; }
+          header .container .menu_mobile .icon_line {
+            width: 23px;
+            height: 2px;
+            margin-bottom: 7px;
+            display: block;
+            background: #FFFFFF; }
         header .container .menu_top {
-          display: none; }
-          header .container .menu_top ul li {
-            margin-left: 0;
-            margin-right: 60px; } }
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 50;
+          background: #465868; }
+          header .container .menu_top .close {
+            z-index: 2; }
+          header .container .menu_top ul {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px; }
+            header .container .menu_top ul li {
+              width: 100%;
+              height: 60px;
+              line-height: 60px;
+              margin-left: 0;
+              margin-right: 60px;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+              header .container .menu_top ul li a {
+                font-size: 22px; } }
 
 footer {
   position: relative;
@@ -1194,6 +1245,8 @@ footer {
         footer .container .footer_nav .cards .card .logo img {
           width: 100%;
           height: auto; }
+      footer .container .footer_nav .cards .card .title_block {
+        text-align: left; }
       footer .container .footer_nav .cards .card h4 {
         height: 40px; }
         footer .container .footer_nav .cards .card h4 a {
@@ -1306,7 +1359,7 @@ footer {
         height: 100%;
         background-size: cover; }
     #index .slider_wrapper .slide_info {
-      padding: 207px 170px;
+      padding-top: 207px;
       position: relative;
       z-index: 5; }
     #index .slider_wrapper .slide_title {
@@ -1359,7 +1412,8 @@ footer {
     top: 32px;
     left: 32px;
     width: auto;
-    height: auto; }
+    height: auto;
+    min-width: 80px; }
   #index .products .cards .card_text {
     font-size: 14px;
     line-height: 20px; }
@@ -1450,17 +1504,25 @@ footer {
     -ms-transform: rotate(95deg); }
 
 #index .company_info.link_items {
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  align-items: stretch; }
   #index .company_info.link_items .card {
     border: 1px solid #E4E4E4;
-    height: 101px;
     align-items: center;
+    height: auto;
     justify-content: space-between;
-    padding: 0 40px; }
-    #index .company_info.link_items .card h3 {
-      font-weight: 600; }
-  #index .company_info.link_items .vacancy_info p {
-    font-family: "Roboto"; }
+    padding: 29px 40px 27px; }
+    #index .company_info.link_items .card .title_block {
+      height: 45px;
+      padding-right: 10px; }
+      #index .company_info.link_items .card .title_block h3 {
+        font-weight: 600;
+        line-height: 45px; }
+  #index .company_info.link_items .vacancy_info {
+    padding: 0 20px; }
+    #index .company_info.link_items .vacancy_info p {
+      line-height: 45px;
+      font-family: "Roboto"; }
 
 #index .clients .partners {
   padding-top: 30px;
@@ -1481,7 +1543,7 @@ footer {
       height: auto;
       background: transparent; }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   #index .clients .partners .ct_3 .card:nth-child(2) {
     margin: 0 100px; } }
 
@@ -1497,6 +1559,7 @@ footer {
       font-size: 30px;
       line-height: 28px; }
   #index .slider_wrapper .slide_about p {
+    max-height: 70px;
     font-size: 16px;
     line-height: 23px; }
   #index .slider_wrapper .slide .btn-outline2 {
@@ -1520,7 +1583,9 @@ footer {
       height: auto;
       background-size: 37px auto;
       top: 0;
-      left: 0; }
+      left: 0;
+      min-width: 37px;
+      max-width: 37px; }
     #index .products .cards .card_body {
       position: relative;
       top: 0;
@@ -1545,7 +1610,8 @@ footer {
     align-items: center;
     margin-bottom: 30px; }
   #index .company_info.link_items {
-    margin: 0 -20px; }
+    margin: 0 -20px;
+    padding-bottom: 0; }
     #index .company_info.link_items .card {
       border-radius: 0;
       border: none;

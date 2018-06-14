@@ -61,7 +61,7 @@
 					height: 100%
 					background-size: cover
 			&_info
-				padding: 207px 170px
+				padding-top: 207px
 				position: relative
 				z-index: 5
 			&_title
@@ -118,6 +118,7 @@
 				left: 32px
 				width: auto
 				height: auto
+				min-width: 80px
 			&_text
                 font-size: 14px
                 line-height: 20px
@@ -211,17 +212,28 @@
 					-ms-transform: rotate(95deg)
 	&_info.link_items
 		padding-bottom: 40px
+		align-items: stretch
 		.card
 			border: 1px solid #{$cgray}
-			height: 101px
+			// height: 101px
 			align-items: center
+			height: auto
 			justify-content: space-between
-			padding: 0 40px
-			h3
-				font-weight: 600
+			padding: 29px 40px 27px
+			.title
+				&_block
+					height: 45px
+					padding-right: 10px
+					h3
+						font-weight: 600
+						line-height: 45px
 		.vacancy
+			.title
+				&_block
 			&_info
+				padding: 0 20px
 				p
+					line-height: 45px
 					font-family: $roboto
 .clients
 	.partners
@@ -244,7 +256,12 @@
 				background: transparent
 
 
-@media (min-width: '#{$small}px') and (max-width: '#{$medium}px')
+@media (min-width: '#{$small}px') and (max-width: '#{$large}px')
+	.company
+		&_info.link_items
+			.card
+				// padding: 10px 40px
+				// height: 130px
 	.clients
 		.partners
 			.ct_3
@@ -267,6 +284,7 @@
 						line-height: 28px
 				&_about
 					p
+						max-height: 70px
 						font-size: 16px
 						line-height: 23px
 				.btn-outline2
@@ -294,6 +312,8 @@
 					background-size: 37px auto
 					top: 0
 					left: 0
+					min-width: 37px
+					max-width: 37px
 				&_body
 					position: relative
 					top: 0
@@ -326,6 +346,7 @@
 		&_info
 			&.link_items
 				margin: 0 -20px
+				padding-bottom: 0
 				.card
 					border-radius: 0
 					border: none

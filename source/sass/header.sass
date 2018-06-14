@@ -27,6 +27,15 @@ header
 				display: flex
 				flex-direction: row
 				flex-wrap: nowrap
+				.close
+					background: url('#{$svg_path}/close.svg') center no-repeat
+					background-size: 32px auto
+					width: 32px
+					height: 32px
+					cursor: pointer
+					position: absolute
+					top: 30px
+					right: 30px
 				ul
 					margin: 0
 					padding: 0
@@ -44,11 +53,26 @@ header
 @media (max-width: '#{$small}px')
 	header
 		padding: 0
+        transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out
+        -moz-transition: all 0.5s ease-in-out
+        -webkit-transition: all 0.5s ease-in-out
+        -ms-transition: all 0.5s ease-in-out
+		&.fix-header
+			position: fixed
+			z-index: 110
+			background: #{$kgray}
+			box-shadow: 0px 0px 24px #{$black_o_1}
+			.container
+				padding: 10px 20px
 		.container
-			padding: 40px 20px
+			padding: 25px 20px
 			.menu
 				align-items: flex-start
 				&_mobile
+					position: absolute
+					right: 30px
+					top: 30px
 					.icon
 						&_line
 							width: 23px
@@ -58,7 +82,26 @@ header
 							background: #{$white}
 				&_top
 					display: none
+					position: fixed
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					z-index: 50
+					background: #{$kgray}
+					.close
+						z-index: 2
 					ul
+						position: absolute
+						top: 30px
+						left: 30px
+						right: 30px
 						li
+							width: 100%
+							height: 60px
+							line-height: 60px
 							margin-left: 0
 							margin-right: 60px
+							border-bottom: 1px solid #{$white_o_3}
+							a
+								font-size: 22px

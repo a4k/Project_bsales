@@ -36,6 +36,7 @@ $('.slider').each(function() {
 	$arrows = $(this).find('.arrows'),
 	$wrapper = $(this).find('.slider_wrapper');
 
+	$(this).find('.slide').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
 	$(this).find('.slide_photo_img').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
 	var count = $wrapper.find('.slide_photo_img').length;
 	$arrows.html('');
@@ -56,6 +57,7 @@ $('.slider').each(function() {
 	});
 	$wrapper.on('resize.owl.carousel', function(event) {
 		$(this).find('.slide').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
+		$(this).find('.slide_photo_img').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
 	});
 	$wrapper.on('changed.owl.carousel', function(event) {
 		// $count.text(event.page.index+1 + '/' + event.page.count);
@@ -77,4 +79,32 @@ $('.slider').each(function() {
 	$(this).find('.arrow_left').click(function() {
 	    $wrapper.trigger('prev.owl.carousel');
 	})
+});
+
+
+var $topE = 0; // Высота прокрутки
+$('.menu_mobile').on('click', function() {
+	$('.menu_top').show();
+	$('body').css({'overflow': 'hidden'});
+	$topE = $(window).scrollTop();
 })
+$('.menu_top .close').on('click', function() {
+	$('.menu_top').hide();
+	$('body').css({'overflow':'auto'});
+	console.log($topE);
+	$('html, body').animate({
+        scrollTop: $topE
+    }, 0);
+});
+$(document).on('scroll', function() {
+	var s_w = $(window).width();
+	var top = $(window).scrollTop();
+
+	if(s_w < 900) {
+		if(top > 200) {
+			$('.header').addClass('fix-header');
+		} else {
+			$('.header').removeClass('fix-header');
+		}
+	}
+});

@@ -105,6 +105,8 @@ h2
     flex-flow: column nowrap
     justify-content: space-between
     min-height: 80vh
+    &>div
+        min-height: 80vh
 .footer_container
     width: 100%
     margin: 0 auto
@@ -113,7 +115,7 @@ h2
     min-width: 450px
     margin: 0 auto
 .s_container
-    width: 874px
+    max-width: 874px
     margin: 0 auto
 .m_container
     width: 40vw
@@ -293,6 +295,8 @@ h2
         text-align: center
     .item
         width: 32%
+        padding: 0
+    &.empty
         padding: 0
 .prods
     .item
@@ -903,6 +907,8 @@ h2
                 width: calc(1*100%)
         .card
             width: calc(1*100%)
+            &.m_column
+                flex-flow: column wrap
             &_body
                 .card_title
                     font-size: 16px
