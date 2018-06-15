@@ -89,6 +89,34 @@ $('.qslider').each(function() {
 	})
 });
 
+$('.rslider').each(function() {
+	var $el = $(this), 
+	$count = $(this).find('.count'),
+	$arrows = $(this).find('.arrows'),
+	$wrapper = $(this).find('.swrapper'),
+	$slide = $wrapper.find('.slide');
+
+	$slide.css({'width': $el.width() + 'px'});
+	$wrapper.owlCarousel({
+	    loop:true,
+	    margin:0,
+	    dots:true,
+	    nav:false,
+	    autoWidth: true,
+	    items: 1,
+	});
+	$wrapper.on('resize.owl.carousel', function(event) {
+		$slide.css({'width': $el.width() + 'px'});
+	});
+
+	$(this).find('.arrow_right').click(function() {
+	    $wrapper.trigger('next.owl.carousel');
+	})
+	// Go to the previous item
+	$(this).find('.arrow_left').click(function() {
+	    $wrapper.trigger('prev.owl.carousel');
+	})
+});
 
 
 var $topE = 0; // Высота прокрутки

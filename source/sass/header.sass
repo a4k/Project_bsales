@@ -5,6 +5,28 @@
 	height: auto;
 	padding: 40px 0
 	width: 100%;
+	&_product
+		border-top: 1px solid #{$cgray}
+		border-bottom: 1px solid #{$cgray}
+		.container
+			height: 100%
+			.menu
+				.logo
+					background: #{$cgray}
+					border: 1px solid #{$cgray}
+				&_product
+					display: block
+					margin-top: 20px
+				ul
+					li
+						a
+							color: #{$black}
+						.btn
+							font-size: 12px
+							letter-spacing: 0.1em
+							color: #{$white}
+							&.btn-outline
+								color: #{$blue}
 	&_main
 		z-index: 2
 	&.h-top

@@ -1,23 +1,4 @@
-.header_product
-	border-top: 1px solid #{$cgray}
-	border-bottom: 1px solid #{$cgray}
-	.container
-		height: 100%
-		.menu
-			.logo
-				background: #{$cgray}
-				border: 1px solid #{$cgray}
-			&_product
-				display: block
-				margin-top: 20px
-			ul
-				li
-					.btn
-						font-size: 12px
-						letter-spacing: 0.1em
-						color: #{$white}
-						&.btn-outline
-							color: #{$blue}
+
 
 .product_info
 	position: relative
@@ -68,7 +49,7 @@
 		color: #{$kgray}
 	&_price
 		width: 50%
-		padding-top: 20px
+		padding: 20px 0
 		border-right: 2px solid #{$dgray}
 		text-align: center
 	.product_info_price
@@ -84,7 +65,6 @@
 			margin-top: 0
 
 .capability
-	padding-top: 30px
 	.items
 		&_inner
 			position: relative
@@ -95,7 +75,7 @@
 			.owl-dots
 				position: absolute
 				z-index: 50
-				bottom: 40px
+				bottom: 0px
 				display: flex
 				flex-direction: row
 				align-items: center
@@ -119,6 +99,7 @@
 				width: 150px
 				margin: 0 auto 20px
 			&_about
+				padding-top: 15px
 				text-align: center
 				h4
 					font-weight: normal
@@ -127,7 +108,6 @@
 					color: #{$dark_gray}
 
 .prices
-	padding-top: 30px
 	.items_price
 		.card
 			height: 450px
@@ -187,7 +167,6 @@
 		display: block
 		margin: 0px auto
 .view_service
-	padding-top: 40px
 	h2.title
 		margin-bottom: 0
 	.items_service
@@ -204,7 +183,6 @@
 				top: 0
 
 .related
-	padding-top: 20px
 .reviews
 	&_inner
 		margin: 20px 0
@@ -212,16 +190,16 @@
 		width: 100%
 		overflow: hidden
 		position: relative
-		.arrows
+		.owl-dots
 			position: absolute
 			z-index: 50
-			bottom: 20px
+			bottom: -40px
 			display: flex
 			flex-direction: row
 			align-items: center
 			justify-content: center
 			width: 100%
-			.sel
+			.owl-dot
 				border: 1px solid #{$dgray}
 				border-radius: 15px
 				width: 15px
@@ -233,16 +211,9 @@
 				background: #{$dgray}
 				cursor: default
 	&_wrapper
-		width: calc(100%*2);
-		display: flex
-		flex-flow: row nowrap
-		height: 100%
-		transition: all 0.5s ease-in-out;
 		.review
 			height: 100%
 			width: 100%
-			.s_container
-				padding: 0 80px
 			.avatar
 				width: 100px
 				flex: 0 0 auto
@@ -285,7 +256,6 @@
 	height: auto;
 	width: 100%;
 	padding: 20px 0
-	margin: 40px 0
 	.l_container
 		height: 100%
 		.menu

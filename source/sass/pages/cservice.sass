@@ -1,5 +1,4 @@
 .cservice
-	padding: 40px 0 0
 	.about
 		margin-bottom: 40px
 		color: #{$dark_gray}
@@ -8,7 +7,9 @@
 			min-height: 150px
 			padding-top: 17%
 .projects
-	padding-bottom: 30px
+	.container
+		&>.cards
+			padding-bottom: 60px
 	.cards
 		padding-bottom: 0
 		.g_one
@@ -25,78 +26,10 @@
 			grid-area: five
 			padding-top: 50%
 		.g_six
-			padding-top: calc(100%*3 + 2%*3)
-			margin-bottom: 4%
-	.items
-		display: flex
-		flex-flow: row wrap
-		align-items: stretch
-		justify-content: stretch
-		padding: 0 0 60px
-		.wl
-			flex: 0 1 790px
-			display: flex
-			flex-flow: row wrap
-			align-items: stretch
-			justify-content: stretch
-			.item
-				&:nth-child(1)
-					flex: 0 100%
-				&:nth-child(2)
-					flex: 0 0 355px
-				&:nth-child(3)
-					flex: 0 0 355px
-				&:nth-child(4)
-					flex: 0 1 100%
-		.wr
-			height: 1130px
-			display: flex
-			flex-flow: row wrap
-			align-items: stretch
-			justify-content: stretch
-			flex: 0 0 390px
-			.item
-				flex: 0 1 390px
+			height: calc(100% - 20px)
+		.card
+			&_photo
+				left: 0
+				top: 0
+				width: 100%
 				height: 100%
-		.item
-			width: auto
-			flex: 0 1 350px
-			&.wa
-				flex: 0 1 100%
-			&_info
-				height: auto
-@media (min-width: '#{$small}px') and (max-width: '#{$medium}px')
-	.projects
-		.cards
-			.card
-				&_body
-					right: 30px
-					.card_text
-						max-height: 95px
-			.g_one
-				padding-top: 75%
-			.g_two
-				padding-top: 75%
-			.g_three
-				padding-top: 75%
-			.g_four
-				padding-top: 75%
-			.g_five
-				padding-top: 75%
-			.g_six
-				padding-top: calc(100%*1 + 2%*1)
-@media (max-width: '#{$small}px')
-	.cservice
-		.cards
-			.card
-				padding-top: 75%
-	.projects
-		.cards
-			.g_one
-				padding-top: 75%
-			.g_two
-				padding-top: 75%
-			.g_five
-				padding-top: 75%
-			.g_six
-				padding-top: calc(100%*1 + 2%*1)
