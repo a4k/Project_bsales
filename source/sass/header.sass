@@ -68,10 +68,14 @@
 				ul
 					margin: 0
 					padding: 0
+					display: flex
+					flex-direction: row
+					flex-wrap: wrap
 					li
-						float: left
-						margin: 0 0 0 40px
+						margin: 0 40px 0 0
 						line-height: 60px
+						&:last-child
+							margin-right: 0
 						a
 							font-family: 'HelveticaRegular'
 							font-size: 16px
@@ -85,7 +89,7 @@
 				flex-wrap: nowrap
 				.close
 					background: url('#{$svg_path}/close.svg') center no-repeat
-					background-size: 32px auto
+					background-size: 16px auto
 					width: 32px
 					height: 32px
 					cursor: pointer
@@ -117,13 +121,15 @@
 		&.fix-header
 			position: fixed
 			z-index: 110
-			background: #{$kgray}
-			box-shadow: 0px 0px 24px #{$black_o_1}
+			background: #{$white}
+			box-shadow: 0px 0px 24px #{$black_o_3}
 			.container
 				padding: 0px 20px
 				.menu
+					&_mobile
+						top: 20px
 					.logo
-						background: url('#{$svg_path}/logo.svg') center no-repeat
+						background: url('#{$svg_path}/logo-2.svg') left center no-repeat
 						background-size: 120px auto
 						height: 40px
 		&_main.h-top.fix-header
@@ -132,7 +138,16 @@
 					&_mobile
 						.icon
 							&_line
-								background: #{$white}
+								background: #{$kgray}
+		&_main.fix-header
+			padding: 10px 0
+			.container
+				.menu
+					&_mobile
+						top: 20px
+						.icon
+							&_line
+								background: #{$kgray}
 		&_main.h-top
 			.container
 				.menu
@@ -140,15 +155,24 @@
 						.icon
 							&_line
 								background: #{$kgray}
+
+		&.h-top
+			.container
+				.menu
+					&_top
+						ul
+							li
+								a
+									color: #{$white}
 		.container
 			transition: unset
-			padding: 25px 20px
+			padding: 15px 20px
 			.menu
 				align-items: flex-start
 				&_mobile
 					position: absolute
 					right: 30px
-					top: 20px
+					top: 35px
 					.icon
 						&_line
 							width: 23px
@@ -159,9 +183,12 @@
 				&_topr
 					ul
 						li
+							margin: 0 40px 0 0
 							height: 40px
 							line-height: 40px
 							margin-bottom: 5px
+							&:last-child
+								margin-right: 0
 				&_top
 					display: none
 					position: fixed
@@ -184,6 +211,20 @@
 							line-height: 60px
 							margin-left: 0
 							margin-right: 60px
-							border-bottom: 1px solid #{$white_o_3}
+							// border-bottom: 1px solid #{$white_o_3}
 							a
 								font-size: 22px
+								color: #{$white}
+
+
+/* XSmall device styles */
+@media (max-width: '#{$xsmall}px')
+	.header
+		.container
+			.menu
+				&_topr
+					width: 100%
+					ul
+						li
+							width: 100%
+							margin-right: 0

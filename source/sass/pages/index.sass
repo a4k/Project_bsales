@@ -29,7 +29,6 @@
 	&_wrapper
 		padding-bottom: 0
 		.slide
-			width: 100%
 			position: relative
 			&_photo
 				position: absolute
@@ -244,11 +243,12 @@
 @media (max-width: '#{$small}px')
 	.slider
 		&_inner
-			height: auto
+			height: 568px
 		&_wrapper
 			.slide
 				&_info
 					padding: 190px 20px 0
+					height: 100%
 				&_title
 					max-width: 300px
 					width: auto
@@ -261,8 +261,11 @@
 						font-size: 16px
 						line-height: 23px
 				.btn-outline2
-					margin-top: 90px
-					margin-bottom: 55px
+					position: absolute
+					bottom: 55px
+					width: auto
+					left: 20px
+					right: 20px
 		.arrow
 			&_left
 				display: none

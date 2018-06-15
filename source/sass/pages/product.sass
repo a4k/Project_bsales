@@ -129,6 +129,9 @@
 				left: 30px
 				right: 30px
 				max-width: 100%
+				h4
+					a
+						color: #{$white}
 				.small_text
 					color: #{$dark_gray}
 				.list
@@ -164,7 +167,6 @@
 				width: 40px
 				height: 42px
 	.all_prices
-		display: block
 		margin: 0px auto
 .view_service
 	h2.title
@@ -320,7 +322,18 @@
 			.review
 				.s_container
 					padding: 0
+
+
+/* Small device styles */
 @media (max-width: '#{$small}px')
+	.product
+		&_out
+			&_photo
+				position: relative
+				padding-top: 0
+				min-height: auto
+				img
+					position: relative
 	.view_service
 		.items_service
 			.item

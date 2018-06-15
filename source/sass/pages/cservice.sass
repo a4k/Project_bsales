@@ -4,8 +4,6 @@
 		color: #{$dark_gray}
 	.cards
 		.card
-			min-height: 150px
-			padding-top: 17%
 .projects
 	.container
 		&>.cards
@@ -28,8 +26,30 @@
 		.g_six
 			height: calc(100% - 20px)
 		.card
-			&_photo
-				left: 0
-				top: 0
-				width: 100%
-				height: 100%
+			margin-bottom: 20px
+			&_body
+				position: absolute
+				top: auto
+				right: 30px
+				left: 30px
+				bottom: 30px
+				height: auto
+
+/* Small device style */
+@media (max-width: '#{$small}px')
+	.projects
+		.cards
+			.cards
+				margin-right: 0
+			.g_one
+				padding-top: 33%
+			.g_two
+				padding-top: 33%
+			.g_three
+				padding-top: 33%
+			.g_four
+				padding-top: 33%
+			.g_five
+				padding-top: 33%
+			.g_six
+				padding-top: 33%

@@ -141,19 +141,6 @@ h5
             &:hover
                 text-decoration: none
 
-@media (min-width: '#{$small}px') and (max-width: '#{$mlarge}px')
-    h2
-        font-size: 2.2rem
-    h3
-        font-size: 20px
-    p
-        font-size: 0.8rem
-    ul
-        font-size: 0.8rem
-    label
-        font-size: 0.8rem
-    .link
-        font-size: 0.8rem
 
 @media (max-width: '#{$small}px')
     .title
@@ -276,6 +263,7 @@ h5
         -webkit-transition: all 0.5s ease-in-out
         -ms-transition: all 0.5s ease-in-out
         cursor: pointer
+        display: inline-block
         &:hover
             color: #{$kgray}
     &-outline
@@ -287,6 +275,7 @@ h5
         font-size: 12px
         letter-spacing: 0.2em
         width: 182px
+        padding: 0 20px
         text-transform: uppercase
         height: 40px
         border-box: box-sizing
@@ -305,7 +294,7 @@ h5
         border: 1px solid $white;
         color: $white
         background: transparent
-        padding: 19px 0 15px
+        padding: 19px 20px 15px
         text-align: center
         font-size: 16px
         line-height: 24px
@@ -762,6 +751,12 @@ h5
                 width: auto
                 height: auto
                 min-width: 80px
+                &_big
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
             &_text
                 font-size: 14px
                 line-height: 20px
@@ -952,7 +947,7 @@ h5
             padding-bottom: 30px
         &.ctm_3
             .card
-                width: calc(1/3*100% - (1 - 1/3)*2%)
+                width: calc(1/3*100% - (1 - 1/3)*20px)
                 &:nth-child(3n)
                     margin-right: 0
         &.ctm_2
@@ -1010,10 +1005,17 @@ h5
 
 /* Small device style */
 @media (max-width: '#{$small}px')
-    .btn-outline2
-        width: 100%
-        font-size: 14px
-        line-height: 21px
+    .btn
+        &-blue
+            display: block
+        &-outline
+            display: block
+            width: 100%
+        &-outline2
+            display: block
+            width: 100%
+            font-size: 14px
+            line-height: 21px
     .modal
         &_dialog
             margin: 0
@@ -1075,38 +1077,32 @@ h5
                     left: 0
                     min-width: 37px
                     max-width: 37px
+                    height: auto
+                    max-height: 37px
                 &_body
                     position: relative
                     top: 0
                     left: 0
+                    padding-right: 10px
                 &_text
                     display: none
     .cards
+        padding-bottom: 40px
         &.media
             padding-bottom: 30px
         &.cts_2
             .card
-                width: calc(1/2*100% - (1 - 1/2)*2%)
-                padding-top: 75%
+                width: calc(1/2*100% - (1 - 1/2)*20px)
+                &:nth-child(2)
+                    margin-right: 0
         &.cts_1
             .card
                 width: calc(1*100%)
-                padding-top: 75%
-        &.ctm_1
-            .cards
                 margin-right: 0
-                width: 100%
-            .card
-                margin-right: 0
-                width: 100%
-        &.ctm_2
-            .card
-                width: calc(1/2*100% - (1 - 1/2)*20px)
-                &:nth-child(2n)
-                    margin-right: 0
         .cards
             &.ws_a
                 width: calc(1*100%)
+                margin-right: 0
         .card
             width: calc(1*100%)
             &.m_column
@@ -1115,41 +1111,30 @@ h5
                 .card_title
                     font-size: 16px
             &.ws_a
-                padding-top: 75%
+                margin-right: 0
                 width: calc(1*100%)
             &.ws_1_3
-                padding-top: 75%
                 width: calc(1/3*100% - (1 - 1/3)*2%)
             &.ws_2_3
-                padding-top: 75%
                 width: calc(2/3*100% - (1 - 2/3)*2%)
             &.ws_2_4
-                padding-top: 75%
                 width: calc(2/3*100% - (1 - 2/3)*2%)
             &.ws_1_2
-                padding-top: 100%
                 width: calc(1/2*100% - (1 - 1/2)*2%)
             &.ws_4_8
                 width: calc(1/2*100% - (1 - 1/2)*2%)
-                padding-top: 100%
             &.ws_1_5
                 width: calc(1/5*100% - (1 - 1/5)*2%)
-                padding-top: 100%
             &.ws_2_5
                 width: calc(2/5*100% - (1 - 2/5)*2%)
-                padding-top: 100%
             &.ws_3_5
                 width: calc(3/5*100% - (1 - 3/5)*2%)
-                padding-top: 100%
             &.ws_4_5
                 width: calc(4/5*100% - (1 - 4/5)*2%)
-                padding-top: 100%
             &.ws_4_6
                 width: calc(4/6*100% - (1 - 4/6)*2%)
-                padding-top: 100%
             &.ws_2_6
                 width: calc(2/6*100% - (1 - 2/6)*2%)
-                padding-top: 100%
             &.empty2
                 padding: 0
 

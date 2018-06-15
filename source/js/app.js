@@ -75,17 +75,27 @@ $('.qslider').each(function() {
 	$wrapper = $(this).find('.swrapper'),
 	$slide = $wrapper.find('.slide');
 
-	$slide.css({'width': $el.width()/3 + 'px'});
+	// $slide.css({'width': $el.width()/3 + 'px'});
 	$wrapper.owlCarousel({
 	    loop:true,
 	    margin:0,
 	    dots:true,
 	    nav:false,
-	    autoWidth: true,
-	    items: 3,
+	    autoWidth: false,
+	    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:2
+        },
+        992:{
+            items:3
+        }
+    }
 	});
 	$wrapper.on('resize.owl.carousel', function(event) {
-		$slide.css({'width': $el.width()/3 + 'px'});
+		// $slide.css({'width': $el.width()/3 + 'px'});
 	});
 
 	$(this).find('.arrow_right').click(function() {
