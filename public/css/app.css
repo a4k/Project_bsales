@@ -221,7 +221,8 @@ a {
     text-decoration: underline; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  font: 16px/27px IBM Plex Sans; }
 
 ol {
   padding-left: 15px; }
@@ -236,18 +237,34 @@ p {
 label {
   font: 16px/27px IBM Plex Sans; }
 
+h1 {
+  font: 600 48px/48px "ProximaNova-Reg";
+  word-break: normal;
+  padding: 0;
+  margin: 0;
+  color: #333333; }
+
 h2 {
-  font-weight: 600; }
+  font: 600 40px/40px "ProximaNova-Reg";
+  word-break: normal;
+  padding: 0;
+  margin: 0;
+  color: #333333; }
 
 h3 {
   margin: 0;
   padding: 0;
-  font: 24px/37px "ProximaNova-Reg"; }
+  font: 30px/37px "ProximaNova-Reg"; }
 
 h4 {
   font-family: ProximaNova-Reg;
   font-size: 22px;
   line-height: normal; }
+
+h5 {
+  margin: 0;
+  padding: 0;
+  font: 18px/27px "ProximaNova-Reg"; }
 
 /* Heading styles */
 .title h2 {
@@ -323,6 +340,10 @@ h4 {
   h3 {
     font-size: 20px; }
   p {
+    font-size: 0.8rem; }
+  ul {
+    font-size: 0.8rem; }
+  label {
     font-size: 0.8rem; }
   .link {
     font-size: 0.8rem; } }
@@ -443,7 +464,8 @@ h4 {
     line-height: 40px;
     font-size: 12px;
     letter-spacing: 0.2em;
-    width: 182px;
+    min-width: 182px;
+    padding: 0 20px;
     text-transform: uppercase;
     height: 40px;
     border-box: box-sizing;
@@ -505,6 +527,7 @@ h4 {
   .btn:hover {
     text-decoration: none; }
   .btn-big {
+    height: 65px;
     padding: 15px 25px 12px; }
 
 /* Breadcrumb styles */
@@ -525,14 +548,41 @@ h4 {
     justify-content: center;
     text-align: center; }
   .text .title {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    text-align: left; }
+    .text .title h1, .text .title h2, .text .title h3, .text .title h4, .text .title h5 {
+      text-align: left; }
+    .text .title h1 {
+      margin-bottom: 10px; }
+    .text .title h2 {
+      margin-bottom: 10px; }
+    .text .title h3 {
+      margin-bottom: 0px; }
+    .text .title h4 {
+      margin-bottom: 0; }
+    .text .title h5 {
+      margin-bottom: 0; }
+  .text ul {
+    margin-bottom: 20px; }
+    .text ul li {
+      position: relative;
+      padding-left: 20px; }
+      .text ul li:before {
+        content: ' ';
+        width: 8px;
+        height: 8px;
+        background: #cfcfcf;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 8px; }
   .text img {
     width: 100%;
     min-height: 500px;
+    margin-bottom: 20px;
     border: 1px solid #cfcfcf; }
   .text p {
-    margin-bottom: 40px;
-    padding-top: 1rem;
     padding-bottom: 2rem;
     color: #373737; }
   .text_small {
@@ -685,10 +735,12 @@ h4 {
       margin-right: 0; }
   .cards.ct_5 > .cards {
     width: calc(1/5*100% - (1 - 1/5)*20px); }
-    .cards.ct_5 > .cards:nth-child(4n) {
+    .cards.ct_5 > .cards:nth-child(5n) {
       margin-right: 0; }
   .cards.ct_5 > .card {
     width: calc(1/5*100% - (1 - 1/5)*20px); }
+    .cards.ct_5 > .card:nth-child(5n) {
+      margin-right: 0; }
   .cards.w_a {
     width: calc(1*100%); }
   .cards.w_1_3 {
@@ -710,8 +762,10 @@ h4 {
     .cards.media .card_title {
       margin-top: 0;
       margin-bottom: 0; }
-  .cards.media3 .card_title {
-    margin-top: 0; }
+  .cards.media3 .card {
+    height: auto; }
+    .cards.media3 .card_title {
+      margin-top: 0; }
   .cards.empty .cards {
     margin: 0;
     padding: 0; }
@@ -898,19 +952,30 @@ h4 {
     height: 45px;
     display: block; }
     .social_btn_icon.in {
-      background: url(/images/icon/b-in.svg) no-repeat;
+      background-image: url(/images/icon/b-in.svg);
+      background-repeat: no-repeat;
       background-size: 45px auto; }
     .social_btn_icon.fb {
-      background: url(/images/icon/b-fb.svg) no-repeat;
+      background-image: url(/images/icon/b-fb.svg);
+      background-repeat: no-repeat;
       background-size: 45px auto; }
     .social_btn_icon.tw {
-      background: url(/images/icon/b-tw.svg) no-repeat;
+      background-image: url(/images/icon/b-tw.svg);
+      background-repeat: no-repeat;
       background-size: 45px auto; }
     .social_btn_icon.vk {
-      background: url(/images/icon/b-vk.svg) no-repeat;
+      background-image: url(/images/icon/b-vk.svg);
+      background-repeat: no-repeat;
       background-size: 45px auto; }
   .social_btn:last-child {
     margin-right: 0; }
+
+.social_min .social_btn {
+  margin-right: 10px; }
+  .social_min .social_btn_icon {
+    width: 32px;
+    height: 32px;
+    background-size: 32px; }
 
 /* Toggle styles */
 .toggles {
@@ -927,28 +992,12 @@ h4 {
         margin: 0;
         cursor: pointer; }
     .toggles .toggle_body {
-      max-height: 0;
       overflow: hidden;
       transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -webkit-transition: all 0.5s ease;
       -ms-transition: all 0.5s ease; }
-      .toggles .toggle_body p {
-        margin-bottom: 30px; }
-      .toggles .toggle_body ul li {
-        position: relative;
-        padding-left: 20px; }
-        .toggles .toggle_body ul li:before {
-          content: ' ';
-          width: 8px;
-          height: 8px;
-          background: #cfcfcf;
-          border-radius: 50%;
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 8px; }
       .toggles .toggle_body .btn {
         width: auto;
         margin: 30px 0;
@@ -963,15 +1012,13 @@ h4 {
       display: block;
       position: absolute;
       right: 30px;
-      top: 18px;
+      top: 12px;
       width: 32px;
       height: 32px;
       background: url(/images/down.png) no-repeat center;
       cursor: pointer; }
     .toggles .toggle.opened .toggle_btn {
       background: url(/images/up.png) no-repeat center; }
-    .toggles .toggle.opened .toggle_body {
-      max-height: 3500px; }
 
 /* Modal styles */
 .modal {
@@ -1056,8 +1103,14 @@ h4 {
     .modal_body .form button {
       cursor: pointer; }
 
+#newHire .cards .card {
+  height: auto; }
+
 /* Small-medium device style */
 @media (min-width: 768px) and (max-width: 992px) {
+  .s_container {
+    width: 100%;
+    min-width: 100%; }
   .modal_dialog {
     margin: 15vh 15vw; }
   .cards.media {
@@ -1250,6 +1303,7 @@ h4 {
     .cards .card.empty2 {
       padding: 0; } }
 
+/* XSmall device style */
 @media (max-width: 580px) {
   .title h2 {
     word-break: normal; }
@@ -2207,12 +2261,7 @@ footer {
     max-width: 450px; }
 
 #service .service .brief {
-  margin-top: 40px;
-  color: #373737; }
-  #service .service .brief .title {
-    margin-bottom: 10px; }
-  #service .service .brief p {
-    margin-bottom: 40px; }
+  margin-top: 40px; }
 
 #service .about_client .items {
   padding: 40px 0; }
@@ -2294,9 +2343,6 @@ footer {
     width: 100%;
     height: 100%; }
 
-#support .support .breadcrumbs {
-  margin: 30px 0 0; }
-
 #support .support .about {
   color: #373737;
   margin-bottom: 30px; }
@@ -2347,44 +2393,38 @@ footer {
 #about .short_info .cards {
   padding: 0; }
   #about .short_info .cards .card {
-    padding-top: 125px;
+    height: 160px;
+    background: transparent;
     margin: 0; }
     #about .short_info .cards .card .card_title {
       margin-bottom: 0; }
 
-#about .leadership {
-  padding-top: 40px; }
-  #about .leadership .cards .card_title {
-    margin-bottom: 0; }
-  #about .leadership .cards .card_body_u {
-    height: 120px; }
+#about .leadership .cards .card_title {
+  margin-bottom: 0; }
 
-#about .neva .news .title {
-  padding-bottom: 0; }
-  #about .neva .news .title h3 {
-    text-align: left; }
+#about .leadership .cards .card_body_u {
+  height: 120px; }
 
-#about .neva .news_item {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding: 10px 0; }
-  #about .neva .news_item_date {
-    color: #cfcfcf; }
-  #about .neva .news_item_link {
-    margin-left: 40px; }
-
-#about .neva .vacancies {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap; }
-  #about .neva .vacancies .title {
-    padding-bottom: 0; }
-    #about .neva .vacancies .title h3 {
-      text-align: left; }
-  #about .neva .vacancies_link {
-    font-size: 16px;
-    padding: 10px 0; }
+#about .company_info.link_items {
+  padding-bottom: 40px;
+  align-items: stretch; }
+  #about .company_info.link_items .card {
+    border: 1px solid #E4E4E4;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    padding: 29px 40px 27px; }
+    #about .company_info.link_items .card .title_block {
+      height: 45px;
+      padding-right: 10px; }
+      #about .company_info.link_items .card .title_block h3 {
+        font-weight: 600;
+        line-height: 45px; }
+  #about .company_info.link_items .vacancy_info {
+    padding: 0 20px; }
+    #about .company_info.link_items .vacancy_info p {
+      line-height: 45px;
+      font-family: "Roboto"; }
 
 @media (min-width: 768px) and (max-width: 992px) {
   #about .leadership .cards .card_body_u {
@@ -2398,7 +2438,24 @@ footer {
     margin-bottom: 20px; }
     #about .leadership .cards .card_body_u {
       height: auto;
-      margin-bottom: 20px; } }
+      margin-bottom: 20px; }
+  #about .company_info.link_items {
+    margin: 0 -20px;
+    padding-bottom: 0; }
+    #about .company_info.link_items .card {
+      border-radius: 0;
+      border: none;
+      border-top: 1px solid #E4E4E4;
+      height: auto;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 0;
+      padding-bottom: 40px; }
+      #about .company_info.link_items .card .social {
+        margin-top: 20px; }
+      #about .company_info.link_items .card .vacancy_info p {
+        line-height: 33px;
+        margin-bottom: 13px; } }
 
 #news .news {
   padding: 30px 0 0; }
@@ -2483,6 +2540,9 @@ footer {
   padding: 30px 0 0; }
   #hire .whybest .cards {
     padding-bottom: 30px; }
+    #hire .whybest .cards .card {
+      background: transparent;
+      height: 100px; }
 
 #hire .hire_items {
   padding: 40px 0 80px; }

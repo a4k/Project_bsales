@@ -1,7 +1,15 @@
 $('[class=toggles]').find('.toggle_btn, h3').click(function(){
-	$(this).parent().parent().toggleClass('opened');
+	var $parent = $(this).parent().parent();
+	$parent.toggleClass('opened');
+	$parent.find('.toggle_body_text').toggle();
 });
-
+$('[class=toggles]').find('.toggle').each(function() {
+	if($(this).hasClass('opened')) {
+		$(this).find('.toggle_body_text').show();
+	} else {
+		$(this).find('.toggle_body_text').hide();
+	}
+})
 
 // Открытие модального окна
 $('[class=modal]').find('.close, .modal_shadow').click(function(){

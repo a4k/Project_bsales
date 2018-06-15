@@ -28,6 +28,7 @@ a
 
 ul
     list-style: none;
+    font: 16px/27px #{$ibm_sans};
 
 ol
     padding-left: 15px;
@@ -40,16 +41,30 @@ p
     font: 16px/27px #{$ibm_sans};
 label
     font: 16px/27px #{$ibm_sans};
+h1
+    font: 600 48px/48px $proxima_regular
+    word-break: normal
+    padding: 0
+    margin: 0
+    color: #{$gblack}
 h2
-    font-weight: 600
+    font: 600 40px/40px $proxima_regular
+    word-break: normal
+    padding: 0
+    margin: 0
+    color: #{$gblack}
 h3
     margin: 0
     padding: 0
-    font: 24px/37px $proxima_regular
+    font: 30px/37px $proxima_regular
 h4
     font-family: #{$proxima_regular}
     font-size: 22px
     line-height: normal
+h5
+    margin: 0
+    padding: 0
+    font: 18px/27px $proxima_regular
 
 
 /* Heading styles */
@@ -101,9 +116,6 @@ h4
         padding: 0
         margin: 0
         font-weight: 600
-        // font-size: 40px
-        // line-height: 44px
-        // font-weight: bold
         text-align: center
         line-height: 40px
         font-size: 40px
@@ -135,6 +147,10 @@ h4
     h3
         font-size: 20px
     p
+        font-size: 0.8rem
+    ul
+        font-size: 0.8rem
+    label
         font-size: 0.8rem
     .link
         font-size: 0.8rem
@@ -249,7 +265,8 @@ h4
         line-height: 40px
         font-size: 12px
         letter-spacing: 0.2em
-        width: 182px
+        min-width: 182px
+        padding: 0 20px
         text-transform: uppercase
         height: 40px
         border-box: box-sizing
@@ -312,6 +329,7 @@ h4
     &:hover
         text-decoration: none
     &-big
+        height: 65px
         padding: 15px 25px 12px
 
 /* Breadcrumb styles */
@@ -334,13 +352,40 @@ h4
         text-align: center
     .title
         margin-bottom: 10px
+        text-align: left
+        h1,h2,h3,h4,h5
+            text-align: left
+        h1
+            margin-bottom: 10px
+        h2
+            margin-bottom: 10px
+        h3
+            margin-bottom: 0px
+        h4
+            margin-bottom: 0
+        h5
+            margin-bottom: 0
+    ul
+        margin-bottom: 20px
+        li
+            position: relative
+            padding-left: 20px
+            &:before
+                content: ' '
+                width: 8px
+                height: 8px
+                background: #{$dgray}
+                border-radius: 50%
+                display: block
+                position: absolute
+                left: 0
+                top: 8px
     img
         width: 100%
         min-height: 500px
+        margin-bottom: 20px
         border: 1px solid #{$dgray}
     p
-        margin-bottom: 40px
-        padding-top: 1rem
         padding-bottom: 2rem
         color: #{$dark_gray}
     &_small
@@ -506,10 +551,12 @@ h4
     &.ct_5
         &>.cards
             width: calc(1/5*100% - (1 - 1/5)*20px)
-            &:nth-child(4n)
+            &:nth-child(5n)
                 margin-right: 0
         &>.card
             width: calc(1/5*100% - (1 - 1/5)*20px)
+            &:nth-child(5n)
+                margin-right: 0
     &.w_a
         width: calc(1*100%)
     &.w_1_3
@@ -534,6 +581,7 @@ h4
                 margin-bottom: 0
     &.media3
         .card
+            height: auto
             &_title
                 margin-top: 0
     &.empty
@@ -728,19 +776,30 @@ h4
             height: 45px
             display: block
             &.in
-                background: url(#{$svg_path}/b-in.svg) no-repeat
+                background-image: url(#{$svg_path}/b-in.svg)
+                background-repeat: no-repeat
                 background-size: 45px auto
             &.fb
-                background: url(#{$svg_path}/b-fb.svg) no-repeat
+                background-image: url(#{$svg_path}/b-fb.svg)
+                background-repeat: no-repeat
                 background-size: 45px auto
             &.tw
-                background: url(#{$svg_path}/b-tw.svg) no-repeat
+                background-image: url(#{$svg_path}/b-tw.svg)
+                background-repeat: no-repeat
                 background-size: 45px auto
             &.vk
-                background: url(#{$svg_path}/b-vk.svg) no-repeat
+                background-image: url(#{$svg_path}/b-vk.svg)
+                background-repeat: no-repeat
                 background-size: 45px auto
         &:last-child
             margin-right: 0
+    &_min
+        .social_btn
+            margin-right: 10px
+            &_icon
+                width: 32px
+                height: 32px
+                background-size: 32px
 
 /* Toggle styles */
 .toggles
@@ -757,29 +816,13 @@ h4
                 margin: 0
                 cursor: pointer
         &_body
-            max-height: 0
+            // max-height: 0
             overflow: hidden
             transition: all 0.5s ease
             -o-transition: all 0.5s ease
             -moz-transition: all 0.5s ease
             -webkit-transition: all 0.5s ease
             -ms-transition: all 0.5s ease
-            p
-                margin-bottom: 30px
-            ul
-                li
-                    position: relative
-                    padding-left: 20px
-                    &:before
-                        content: ' '
-                        width: 8px
-                        height: 8px
-                        background: #{$dgray}
-                        border-radius: 50%
-                        display: block
-                        position: absolute
-                        left: 0
-                        top: 8px
             .btn
                 width: auto
                 margin: 30px 0
@@ -795,7 +838,7 @@ h4
             display: block
             position: absolute
             right: 30px
-            top: 18px
+            top: 12px
             width: 32px
             height: 32px
             background: url(#{$img_path}/down.png) no-repeat center
@@ -805,7 +848,7 @@ h4
             .toggle_btn
                 background: url(#{$img_path}/up.png) no-repeat center
             .toggle_body
-                max-height: 3500px
+                // max-height: 3500px
 
 
 /* Modal styles */
@@ -891,10 +934,16 @@ h4
                     border: 1px solid #{$dgray}
             button
                 cursor: pointer
-
+#newHire
+    .cards
+        .card
+            height: auto
 
 /* Small-medium device style */
 @media (min-width: '#{$small}px') and (max-width: '#{$medium}px')
+    .s_container
+        width: 100%
+        min-width: 100%
     .modal
         &_dialog
             margin: 15vh 15vw
@@ -1103,6 +1152,8 @@ h4
                 padding-top: 100%
             &.empty2
                 padding: 0
+
+/* XSmall device style */
 @media (max-width: '#{$xsmall}px')
     .title
         h2
