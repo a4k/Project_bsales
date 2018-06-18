@@ -98,7 +98,20 @@
 				order: 0;
 			&-5
 				order: 0;
-
+	@media (max-width: '#{$small}px')
+		&-ws
+			&-0
+				order: 0;
+			&-1
+				order: 1;
+			&-2
+				order: 2;
+			&-3
+				order: 3;
+			&-4
+				order: 4;
+			&-5
+				order: 5;
 .order
 	&-ms
 		&-0
@@ -144,6 +157,6 @@
 	@media (min-width: '#{($medium)-1}px')
 		&-bl
 			display: none;
-	@media (min-width: '#{($small)-1}px')
+	@media (min-width: '#{($small)+1}px')
 		&-bm
 			display: none;

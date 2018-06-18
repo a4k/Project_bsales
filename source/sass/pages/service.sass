@@ -24,11 +24,13 @@
 	.arrows
 		margin-top: 40px
 		display: flex
-		flex-flow: row nowrap
+		flex-flow: row wrap
 		justify-content: space-between
 		align-items: flex-end
+		a
+			line-height: 30px
 
-@media (max-width: '#{$medium}px')
+@media (min-width: '#{$small}px') and (max-width: '#{$medium}px')
 	.service
 		.promo
 			.card
@@ -44,18 +46,50 @@
 		.container
 			.cards
 				.card
-					min-height: 250px
-					padding-top: 75%
+	.text
+		.s_container
 
 @media (max-width: '#{$small}px')
 	.about_client
 		.s_container
-			padding: 0 55px
 			.items
 				flex-flow: column wrap
 				align-items: center
+				.info
+					margin-left: 0
 				.logo
 					margin-bottom: 30px
-	.text
-		.s_container
-			padding: 0 55px
+@media (max-width: '#{$xsmall}px')
+	.service
+		.promo
+			.card
+				height: auto
+				&_body
+					left: auto
+					bottom: auto
+					margin: 80px 20px 40px
+					position: relative
+					max-width: 100%
+				&_tags
+					position: relative
+					right: auto
+					bottom: auto
+					text-align: center
+					display: flex
+					flex-flow: row wrap
+					justify-content: center
+					max-width: 100%
+					padding-bottom: 20px
+					.tag
+						margin: 10px
+	.about_client
+		.items
+			.logo
+				width: auto
+				height: auto
+				min-width: 180px
+	.textb
+		.arrows
+			justify-content: center
+			a
+				padding: 10px 20px

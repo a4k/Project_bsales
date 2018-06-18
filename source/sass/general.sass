@@ -908,7 +908,7 @@ h5
             .row
                 margin: 25px 0
                 display: flex
-                flex-flow: row nowrap
+                flex-flow: row wrap
                 justify-content: flex-start
                 align-items: flex-start
             &_title
@@ -1007,10 +1007,9 @@ h5
 @media (max-width: '#{$small}px')
     .btn
         &-blue
-            display: block
+            // display: block
         &-outline
             display: block
-            width: 100%
         &-outline2
             display: block
             width: 100%
@@ -1093,7 +1092,7 @@ h5
         &.cts_2
             .card
                 width: calc(1/2*100% - (1 - 1/2)*20px)
-                &:nth-child(2)
+                &:nth-child(2n)
                     margin-right: 0
         &.cts_1
             .card
@@ -1137,9 +1136,34 @@ h5
                 width: calc(2/6*100% - (1 - 2/6)*2%)
             &.empty2
                 padding: 0
+    .social
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        &_btn
+            margin: 10px
+            &:first-child
+                margin-left: 0px
 
 /* XSmall device style */
 @media (max-width: '#{$xsmall}px')
+    .btn
+        height: auto
+    .modal
+        &_header
+            .close
+                top: 0
+                right: 0
+        &_body
+            .form
+                &_title
+                    width: 100%
+                    text-align: left
+                    margin: 10px 0
+                &_input
+                    width: 100%
+                    input
+                        padding: 12px 15px
     .title
         h2
             word-break: normal
