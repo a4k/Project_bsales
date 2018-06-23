@@ -22,7 +22,7 @@ const hireRouter = require('./routes/hire');
 const contactsRouter = require('./routes/contacts');
 
 var app = express();
-var port = 3000;
+var port = 3050;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

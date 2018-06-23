@@ -1,0 +1,64 @@
+
+.auth
+	&_navigation
+		margin-top: 40px
+		width: 100%
+		overflow: hidden
+		height: 60px
+		line-height: 60px
+		.auth_nav
+			ul
+				width: 2000px
+				display: flex
+				flex-flow: row nowrap
+				justify-content: flex-start
+				align-items: center
+				margin-left: 30%
+				height: 60px
+				li
+					width: auto
+					color: #{$dark_gray}
+					display: flex
+					flex-flow: row nowrap
+					justify-content: flex-start
+					align-items: center
+					span
+						display: block
+						height: 100%
+					&:after
+						content: ' '
+						display: block
+						background: url(#{$img_path}/right-arrow.png) no-repeat center
+						background-size: 24px auto
+						width: 120px
+						height: 30px
+						text-align: center
+					&.noactive
+						color: #{$dgray}
+					&.empty
+						width: 0%
+						&:after
+							display: none
+	&_steps
+		margin-bottom: 80px
+		.form
+			padding-top: 20px
+			.row
+				margin: 25px 0
+				display: flex
+				flex-flow: row nowrap
+				justify-content: flex-start
+				align-items: center
+			&_title
+				width: 30%
+				padding-right: 20px
+				text-align: right
+				color: #{$dark_gray}
+			&_input
+				width: 70%
+				input
+					width: 60%
+					padding: 8px 15px
+					border: 1px solid #{$dgray}
+			button
+				cursor: pointer
