@@ -5,35 +5,50 @@
 	height: auto;
 	padding: 40px 0
 	width: 100%;
-	&_product
-		border-top: 1px solid #{$cgray}
-		border-bottom: 1px solid #{$cgray}
+	&.header_product
+		height: auto
+		background: #{$gwhite}
+		position: relative
+		z-index: 5
+		&.h-top
+			padding: 10px 0
 		.container
 			height: 100%
 			.menu
 				.logo
-					background: #{$cgray}
-					border: 1px solid #{$cgray}
+					display: inline-block
+					height: 50px
+					width: 50px
+					background-size: contain
+					background-position: left center
 				&_product
 					display: block
 					margin-top: 20px
+				.head_btn_buy
+					margin: 10px 0
+					.btn
+						display: inline-block
 				ul
 					li
 						a
-							color: #{$black}
+							color: #{$button_blue}
 						.btn
 							font-size: 12px
 							letter-spacing: 0.1em
 							color: #{$white}
 							&.btn-outline
-								color: #{$blue}
+								color: #{$button_red}
 								&:hover
-									color: #{$white}
+									color: #{$button_red}
 	&_main
 		z-index: 2
 	&.h-top
 		position: relative
-		padding: 10px 0
+		padding: 0
+		&.header_main
+			height: 133px
+			box-shadow: 0 2px 14px #{$shadow_gray}
+			z-index: 6
 		.container
 			.menu
 				.logo
@@ -43,18 +58,14 @@
 					ul
 						li
 							a
-								color: #{$black}
+								color: #{$button_blue}
 	.container
 		height: 100%
 		.menu
-			display: flex
-			flex-direction: row
-			flex-wrap: wrap
-			align-items: center
-			justify-content: space-between
 			height: 100%
+			&_mobile
+				display: none
 			.logo
-				float: left;
 				width: 180px
 				height: 60px
 				background: url('#{$svg_path}/logo.svg') center no-repeat
@@ -63,19 +74,14 @@
 					width: 100%
 					height: auto
 			&_topr
-				float: right
-				display: flex
-				flex-direction: row
-				flex-wrap: nowrap
 				ul
 					margin: 0
 					padding: 0
-					display: flex
-					flex-direction: row
-					flex-wrap: wrap
 					li
 						margin: 0 40px 0 0
-						line-height: 60px
+						line-height: 40px
+						&:first-child
+							margin-left: 0
 						&:last-child
 							margin-right: 0
 						a
@@ -85,10 +91,6 @@
 								opacity: .8
 								text-decoration: none
 			&_top
-				float: right
-				display: flex
-				flex-direction: row
-				flex-wrap: nowrap
 				.close
 					background: url('#{$svg_path}/close.svg') center no-repeat
 					background-size: 16px auto
@@ -102,11 +104,14 @@
 					margin: 0
 					padding: 0
 					li
-						float: left
 						margin: 0 0 0 60px
-						line-height: 60px
+						line-height: 40px
+						&:first-child
+							margin-left: 0
+						&:last-child
+							margin-right: 0
 						a
-							font-family: 'HelveticaRegular'
+							font-family: #{$proxima_bold}
 							font-size: 16px
 							color: #{$white}
 							&:hover
@@ -175,6 +180,7 @@
 					position: absolute
 					right: 30px
 					top: 35px
+					display: block
 					.icon
 						&_line
 							width: 23px

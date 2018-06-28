@@ -1,177 +1,160 @@
-
-
+.header
+	&_product
+		.link
+			color: #{$button_blue}
+			&:hover
+				color: #{$sblue}
+.link
+	color: #{$button_red}
+	&:hover
+		text-decoration: none
+		color: #{$red}
 .product_info
 	position: relative
-	.product_out
-		height: auto
-		width: 100%
+	.product
 		position: relative
-		&_photo
-			position: absolute
-			top: 50px
-			width: 48%
-			padding-top: 50%
-			min-height: 480px
-			overflow: hidden
-			img
-				position: absolute
-				top: 0
-				left: 0
-				width: auto
-				height: 100%
-				min-width: 100%
-	.inner
-		padding-top: 60px
-		z-index: 50
-		position: relative
-		
-		&_text
-			display: flex
-			flex-flow: row nowrap
-		.title
-			flex: 1 100%
-	&_textout
-		flex: 2 100%
-		width: 100%
-		padding-top: 50%
-		margin-bottom: -200px
-		min-height: 480px
-	&_text
-		flex: 2 100%
-		padding: 20px 0 0 10px
-		p
-			padding-bottom: 20px
-			color: #{$kgray}
-	&_box
-		flex: 1 100%
-		margin: 0px 60px 60px
-		height: 160px
-		background: #{$gray}
 		display: flex
-		flex-flow: row wrap
-		padding: 10px 0
-		color: #{$kgray}
+		flex-direction: row wrap
+		justify-content: center
+		align-items: stretch
+		height: auto
+		&_photo
+			width: 50%
+			height: 516px
+			position: relative
+			&_out
+				position: absolute
+				width: 823px
+				left: -144px
+				top: -41px
+		&_about
+			position: relative
+			z-index: 2
+			width: 50%
+			height: 516px
+			display: flex
+			flex-flow: column wrap
+			align-items: flex-start
+			justify-content: center
+			padding-left: 10px
+			.text
+				max-width: 500px
+			.title
+				h2
+					text-align: left
+					font-family: #{$proxima_bold}
+	&_box
+		margin-bottom: 60px
+		flex: 1 100%
+		height: 140px
+		position: relative
+		box-shadow: 0 0 24px #{$black_o_1}
+		width: 100%
+		z-index: 3
+		background: #{$white}
+		color: #{$dark_gray}
 	&_price
-		width: 50%
-		padding: 20px 0
-		border-right: 2px solid #{$dgray}
 		text-align: center
-	.product_info_price
-		h3
-			display: inline
-			margin: 0
-			padding: 0
+		position: relative
+		.title
+			&_item
+				h2
+					text-align: center
+		&:after
+			content: ' '
+			position: absolute
+			right: 0
+			height: 100%
+			top: 0
+			width: 1px
+			background: #{$cgray}
 	&_demo
-		width: 50%
-		padding-top: 20px
 		text-align: center
-		h3
-			margin-top: 0
+		position: relative
+		.title
+			&_item
+				h2
+					text-align: center
+	.product_program
+		&_info
+			padding-bottom: 40px
+		&_buttons
+			margin-bottom: 20px
 
 .capability
-	.items
-		&_inner
-			position: relative
-			overflow: hidden
-			width: 100%
-			height: 100%
-			padding: 0 0 60px
-			.owl-dots
-				position: absolute
-				z-index: 50
-				bottom: 0px
-				display: flex
-				flex-direction: row
-				align-items: center
-				justify-content: center
-				width: 100%
-				.owl-dot
-					border: 1px solid #{$dgray}
-					border-radius: 15px
-					width: 15px
-					height: 15px
-					background: #{$white}
-					margin: 0 10px
-					cursor: pointer
-					outline: none
-				.active
-					background: #{$dgray}
-					cursor: default
+	.features
 		.item
-			&_photo
-				height: 150px
-				width: 150px
-				margin: 0 auto 20px
+			margin: 0 0 60px 0
+			&_icon
+				width: 32px
+				height: 32px
+				position: relative
+				margin-bottom: 34px
 			&_about
-				padding-top: 15px
-				text-align: center
-				h4
-					font-weight: normal
-					margin-bottom: 10px
 				p
-					color: #{$dark_gray}
+					font: 14px/24px #{$ibm_sans}
 
 .prices
-	.items_price
-		.card
-			height: 450px
-			box-shadow: 0px 0px 24px #{$black_o_1}
-			&:nth-child(1)
-				background: #{$sblue}
-				.card_icon
-					background-image: url(#{$svg_path}/se-icon-1.svg);
+	.price_list
+		margin-bottom: 40px
+		.item
+			&:first-child
+				.item-body
+					border: 1px solid #{$cgray}
+					border-top: none
 			&:nth-child(2)
-				background: #{$sgreen}
-				.card_icon
-					background-image: url(#{$svg_path}/se-icon-2.svg);
-			&:nth-child(3)
-				background: #{$sred}
-				.card_icon
-					background-image: url(#{$svg_path}/se-icon-3.svg);
-			&_body
-				top: 30px
-				left: 30px
-				right: 30px
-				max-width: 100%
-				h4
-					a
-						color: #{$white}
-				.small_text
-					color: #{$dark_gray}
-				.list
-					padding: 10px 0 20px
+				.item-body
+					border-bottom: 1px solid #{$cgray}
+			&:last-child
+				.item-body
+					border: 1px solid #{$cgray}
+					border-top: none
+			&-feature
+				margin-left: -1rem
+				margin-right: -1rem
+			&-header
+				background: #{$price_one}
+				padding: 30px 30px 0 30px
+				.title
+					&_block
+						padding-bottom: 20px
+						h2
+							color: #{$white}
+						h3
+							color: #{$white}
+			&-body
+				position: relative
+				height: 760px
+				padding-top: 60px
+				ul
+					list-style: none
 					li
-						padding: 20px 0 0
-						color: #{$white}
+						font: 13px/22px #{$ibm_sans}
+						margin-bottom: 9px
 						&.noactive
-							color: #{$dgray}
-				.card_title
-					margin-bottom: 0px
-					margin-top: 0
-					max-width: 150px
-					a
-						color: #{$white}
-				.card_text
-					color: #{$white}
-					height: auto
-					max-height: 100%
-				h3
+							color: #{$noactive}
+						&:before
+							display: none
+				.price_link_more
+					margin-top: 40px
+				.button_buy
 					position: absolute
-					bottom: 0
+					margin: 0 auto
 					width: 100%
-					text-align: center
-					margin-top: 20px
-					color: #{$white}
-			&_icon
-				position: absolute
-				bottom: 30px
-				left: 30px
-				background: url(#{$img_path}/is-icon-1.png) no-repeat left bottom
-				background-size: 40px 42px
-				width: 40px
-				height: 42px
+					bottom: 36px
+					
 	.all_prices
 		margin: 0px auto
+		width: auto
+		padding: 0
+		width: 360px
+		height: 60px
+		line-height: 60px
+		font-size: 16px
+		color: #{$price_three}
+		border-color: #{$price_three}
+	.redaction
+		width: auto
 .view_service
 	h2.title
 		margin-bottom: 0
@@ -291,6 +274,9 @@
 					li
 						float: left
 						margin: 0 0 0px 40px
+.p_price
+	margin-bottom: 60px
+/* Medium device styles */
 @media (max-width: '#{$medium}px')
 	.product
 		&_info
@@ -299,6 +285,17 @@
 			&_box
 				margin: 0 0 30px
 				height: auto
+				padding: 20px 0
+				position: relative
+			&_price
+				&:after
+					position: relative
+					width: auto
+					top: auto
+					bottom: 0px
+					margin: 15px 27px
+					height: 1px
+					display: block
 			.product_out_photo
 				position: relative
 				top: 0
