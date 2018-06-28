@@ -544,6 +544,24 @@ h5 {
       color: #E96060;
       border: 1px solid #E96060;
       background: #FFFFFF; }
+  .btn-outline-blue {
+    border: 1px solid #41688C;
+    color: #41688C;
+    background: transparent;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    width: auto;
+    padding: 0 48px;
+    text-transform: uppercase;
+    height: 40px;
+    border-box: box-sizing;
+    cursor: pointer; }
+    .btn-outline-blue:hover {
+      color: #2D9CDB;
+      border: 1px solid #2D9CDB;
+      background: #FFFFFF; }
   .btn-outline2 {
     width: 255px;
     margin-top: 35px;
@@ -654,9 +672,7 @@ h5 {
 
 .link_tdu {
   color: #41688C;
-  text-decoration: underline;
-  text-transform: uppercase;
-  font: 12px/18px ProximaNova-Bold; }
+  text-decoration: underline; }
 
 .c-white {
   color: #FFFFFF; }
@@ -2190,8 +2206,12 @@ footer {
     #product .prices .price_list .item:first-child .item-body {
       border: 1px solid #E4E4E4;
       border-top: none; }
+    #product .prices .price_list .item:nth-child(2) .item-header {
+      background: #F17979; }
     #product .prices .price_list .item:nth-child(2) .item-body {
       border-bottom: 1px solid #E4E4E4; }
+    #product .prices .price_list .item:last-child .item-header {
+      background: #D8595A; }
     #product .prices .price_list .item:last-child .item-body {
       border: 1px solid #E4E4E4;
       border-top: none; }
@@ -2200,16 +2220,20 @@ footer {
       margin-right: -1rem; }
     #product .prices .price_list .item-header {
       background: #FF9B9B;
-      padding: 30px 30px 0 30px; }
-      #product .prices .price_list .item-header .title_block {
-        padding-bottom: 20px; }
-        #product .prices .price_list .item-header .title_block h2 {
-          color: #FFFFFF; }
-        #product .prices .price_list .item-header .title_block h3 {
-          color: #FFFFFF; }
+      padding: 0px 30px 0 30px;
+      height: 135px;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+      justify-content: center; }
+      #product .prices .price_list .item-header .title_block h2 {
+        color: #FFFFFF; }
+      #product .prices .price_list .item-header .title_block h3 {
+        color: #FFFFFF; }
     #product .prices .price_list .item-body {
       position: relative;
-      height: 760px;
+      min-height: 760px;
+      padding-bottom: 170px;
       padding-top: 60px; }
       #product .prices .price_list .item-body ul {
         list-style: none; }
@@ -2221,7 +2245,12 @@ footer {
           #product .prices .price_list .item-body ul li:before {
             display: none; }
       #product .prices .price_list .item-body .price_link_more {
-        margin-top: 40px; }
+        position: absolute;
+        margin: 40px auto 0;
+        width: 100%; }
+        #product .prices .price_list .item-body .price_link_more a {
+          text-transform: uppercase;
+          font: 12px/18px ProximaNova-Bold; }
       #product .prices .price_list .item-body .button_buy {
         position: absolute;
         margin: 0 auto;
@@ -2239,6 +2268,25 @@ footer {
     border-color: #D8595A; }
   #product .prices .redaction {
     width: auto; }
+  #product .callme_list {
+    min-height: 120px;
+    margin-bottom: 60px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+    padding: 0 40px; }
+    #product .callme_list .item:nth-child(2) {
+      text-align: center; }
+      #product .callme_list .item:nth-child(2) p {
+        font-size: 14px;
+        line-height: 20px; }
+    #product .callme_list .title {
+      margin-bottom: 0; }
+      #product .callme_list .title h3 {
+        text-align: left; }
+        #product .callme_list .title h3 a {
+          color: #41688C;
+          text-transform: normal; }
+  #product .news_list .item .date {
+    color: #959595; }
   #product .view_service h2.title {
     margin-bottom: 0; }
   #product .view_service .items_service .item {
@@ -2390,6 +2438,15 @@ footer {
         #product .promo_product .l_container .menu .menu_product ul li .btn {
           display: block;
           width: 100%; }
+    #product .prices .price_list .item-body {
+      border: 1px solid #E4E4E4;
+      border-top: none; }
+    #product .callme_list {
+      padding: 30px 0; }
+      #product .callme_list .item {
+        padding-bottom: 20px; }
+      #product .callme_list .title h3 {
+        text-align: center; }
     #product .reviews_inner .review .s_container {
       padding: 0; } }
   @media (max-width: 768px) {
