@@ -111,6 +111,10 @@ h5
     &_block
         &_bold
             margin-bottom: 12px
+            h3
+                margin: 0
+                padding: 0
+                font: 30px/28px $proxima_bold
             h4
                 font: 18px/27px $proxima_bold
         h2
@@ -153,6 +157,22 @@ h5
         text-align: center
         line-height: 32px
         font-size: 32px
+        color: #{$gblack}
+        a
+            color: #{$gblack}
+            &:hover
+                text-decoration: none
+    h4
+        word-break: normal
+        padding: 0
+        margin: 0
+        font-weight: 600
+        // font-size: 40px
+        // line-height: 44px
+        // font-weight: bold
+        text-align: center
+        line-height: 40px
+        font-size: 26px
         color: #{$gblack}
         a
             color: #{$gblack}
@@ -314,6 +334,24 @@ h5
         display: inline-block
         &:hover
             color: #{$white_o_65}
+        &-outline
+            border: 1px solid #{$price_three};
+            color: #{$price_three}
+            background: transparent
+            text-align: center
+            line-height: 40px
+            font-size: 12px
+            letter-spacing: 0.2em
+            width: 100%
+            padding: 0 20px
+            text-transform: uppercase
+            height: 40px
+            border-box: box-sizing
+            cursor: pointer
+            &:hover
+                color: #{$red}
+                border: 1px solid #{$red}
+                background: #{$white}
     &-outline
         border: 1px solid #{$button_red};
         color: #{$button_red}
@@ -446,6 +484,10 @@ h5
     p
         padding-bottom: 2rem
         color: #{$dark_gray}
+    table
+        line-height: 30px
+        td
+            padding-bottom: 7px
     &_small
         font-size: 14px
     &_big
@@ -463,6 +505,11 @@ h5
     &_tdu
         color: #{$button_blue}
         text-decoration: underline
+    &_btn
+        color: #{$button_red}
+        letter-spacing: 0.2em
+        font: 12px/18px #{$proxima_bold}
+        text-transform: uppercase
 .c
     &-white
         color: $white;
@@ -961,7 +1008,13 @@ h5
     z-index: 500
     &-open
         overflow: hidden
-    &#newVideo
+    &#newScreen
+        .modal
+            &_content
+                .photo
+                    img
+                        width: 100%
+    &.newMedia
         .close
             background: none
             width: 150px

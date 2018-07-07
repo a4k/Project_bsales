@@ -1,23 +1,34 @@
 .header
 	&_product
 		.link
-			color: #{$button_blue}
+			color: #{$link_red}
 			&:hover
-				color: #{$sblue}
+				color: #{$button_red}
 .link
 	color: #{$button_red}
 	&:hover
 		text-decoration: none
 		color: #{$red}
+.notification
+	background: #{$notification_red}
+	color: #{$white}
+	width: 100%
+	height: 30px
+	text-align: center
+	p
+		font-size: 14px
+		line-height: 28px
+// main product block
 .product_info
 	position: relative
 	.product
 		position: relative
 		display: flex
 		flex-direction: row wrap
-		justify-content: center
+		justify-content: flex-start
 		align-items: stretch
 		height: auto
+		padding: 87px 0 60px
 		&_photo
 			width: 50%
 			height: 516px
@@ -31,55 +42,54 @@
 			position: relative
 			z-index: 2
 			width: 50%
-			height: 516px
 			display: flex
 			flex-flow: column wrap
 			align-items: flex-start
 			justify-content: center
 			padding-left: 10px
 			.text
-				max-width: 500px
+				max-width: 610px
 			.title
 				h2
 					text-align: left
 					font-family: #{$proxima_bold}
-	&_box
-		margin-bottom: 60px
-		flex: 1 100%
-		height: 140px
-		position: relative
-		box-shadow: 0 0 24px #{$black_o_1}
-		width: 100%
-		z-index: 3
-		background: #{$white}
-		color: #{$dark_gray}
-	&_price
-		text-align: center
-		position: relative
-		.title
-			&_item
-				h2
-					text-align: center
-		&:after
-			content: ' '
-			position: absolute
-			right: 0
-			height: 100%
-			top: 0
-			width: 1px
-			background: #{$cgray}
-	&_demo
-		text-align: center
-		position: relative
-		.title
-			&_item
-				h2
-					text-align: center
-	.product_program
-		&_info
-			padding-bottom: 40px
-		&_buttons
-			margin-bottom: 20px
+			&_info
+				margin-bottom: 2rem
+				.info_column
+					padding: 0
+				.title
+					&_block
+						&_bold
+							margin-bottom: 0
+				.number_info
+					font-size: 14px
+	.block_buy
+		background: #{$gwhite}
+		border-radius: 5px
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		padding: 30px
+		width: 568px
+		margin-left: -30px
+		position: absolute
+		margin-top: -145px
+		color: #{$gblack}
+		&_fantom
+			height: 145px
+			position: relative
+			width: 100%
+		&_version
+			p
+				font-size: 14px
+				line-height: 24px
+			.block_buy_new
+				flex-basis: 100px
+				text-align: right
+		&_btn
+		&_demo
+			text-align: center
+			.text_demo
+				font: 12px/20px #{$ibm_sans}
 
 .capability
 	.features
@@ -93,107 +103,226 @@
 			&_about
 				p
 					font: 14px/24px #{$ibm_sans}
-
+// Prices block
 .prices
 	.price_list
 		margin-bottom: 40px
 		.item
+			position: relative
+			padding: 0
+			&-shadow
+				box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1)
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+				z-index: 5
 			&:first-child
 				.item-body
-					border: 1px solid #{$cgray}
-					border-top: none
+				.item-feature
+					border-radius: 8px 0 0 8px
+				.item-shadow
+					border-radius: 8px 0 0 8px
+					
 			&:nth-child(2)
+				margin-left: -1px
+				margin-right: -1px!important
+				position: relative
+				z-index: 10
+				margin-top: -35px
+				border-radius: 8px
+				margin-bottom: -35px
+				.best
+					position: absolute
+					right: 0
+					top: 0
+					overflow: hidden
+					width: 111px
+					height: 111px
+					&_text
+						color: #{$white}
+						background: #{$price_three}
+						width: 157px
+						height: 25px
+						font: 14px/24px #{$ibm_sans}
+						text-align: center
+						transform: rotate(45deg)
+						position: absolute
+						right: -38px
+						top: 34px
 				.item-header
-					background: #{$price_two}
-				.item-body
-					border-bottom: 1px solid #{$cgray}
+					.title
+						&_block
+							margin-bottom: 24px
+							h3
+								font-size: 26px
+								line-height: 40px
+								margin-bottom: 0px
+				.item-feature
+					border-radius: 8px
+					padding-top: 59px
+				.item-shadow
+					border-radius: 8px
+
 			&:last-child
-				.item-header
-					background: #{$price_three}
 				.item-body
-					border: 1px solid #{$cgray}
-					border-top: none
+				.item-feature
+					border-radius: 0 8px 8px 0
+				.item-shadow
+					border-radius: 0 8px 8px 0
 			&-feature
-				margin-left: -1rem
-				margin-right: -1rem
+				padding: 30px
+				border-radius: 8px 0 0 8px
+				width: 100%
+				height: 100%
+				background: #{$white}
+				position: relative
+				left: 0
+				top: 0
+				z-index: 6
 			&-header
-				background: #{$price_one}
-				padding: 0px 30px 0 30px
-				height: 135px
-				display: flex
-				flex-flow: column wrap
-				align-items: flex-start
-				justify-content: center
 				.title
 					&_block
+						margin-bottom: 28px
 						h2
-							color: #{$white}
+							color: #{$gblack}
 						h3
-							color: #{$white}
+							color: #{$gblack}
+							font-size: 20px
+							line-height: 30px
 			&-body
 				position: relative
-				min-height: 760px
-				padding-bottom: 170px
-				padding-top: 60px
 				ul
 					list-style: none
 					li
-						font: 13px/22px #{$ibm_sans}
+						font: 14px/24px #{$ibm_sans}
 						margin-bottom: 9px
+						.row
+							div
+								margin: 0
+								padding: 0
+							.hr
+								width: 100%
+								background: #{$hr_gray}
+								margin: 17px 0 27px
+							.end-xs
+								color: #{$button_red}
+								font-size: 16px
+								font-weight: 600
 						&.noactive
 							color: #{$noactive}
 						&:before
 							display: none
 				.price_link_more
-					position: absolute
-					margin: 40px auto 0
 					width: 100%
+					margin-top: 22px
 					a
 				        text-transform: uppercase
-				        font: 12px/18px #{$proxima_bold}
+				        font: 14px/18px #{$proxima_bold}
+				        color: #{$price_three}
 				.button_buy
-					position: absolute
-					margin: 0 auto
 					width: 100%
 					bottom: 36px
-					
+					.btn
+						margin: 23px auto 0
+					.link_demo
+						font: 14px/18px #{$proxima_bold}
+						text-align: center
+						letter-spacing: 0.2em
+						text-decoration: underline
+						color: #{$price_three}
+						margin-top: 30px
+						display: block
+						text-transform: uppercase
+					p
+						font-size: 14px
+
 	.all_prices
-		margin: 0px auto
+		margin: 40px auto 0
+		display: block
 		width: auto
 		padding: 0
-		width: 360px
-		height: 60px
-		line-height: 60px
+		line-height: 24px
 		font-size: 16px
+		font: 18px/24px #{$proxima_bold}
 		color: #{$price_three}
-		border-color: #{$price_three}
+		text-transform: uppercase
+		text-decoration: underline
+		&_out
+			margin: 70px 0 40px
 	.redaction
 		width: auto
+// Скриншоты
+.screen
+	&_list
+		padding-bottom: 60px
+		.item
+			cursor: pointer
+// Технические требования
+.techreq
+	padding-bottom: 40px
+	.tech
+		&_short
+			a
+				color: #{$button_red}
+		&_full
+			display: none
+			.attention
+				color: #{$button_red}
+				line-height: 50px
+			ul
+				margin-left: 30px
+				li
+					padding: 0 0 7px 30px
+// Оставить заявку
 .callme
 	&_list
-		min-height: 120px
 		margin-bottom: 60px
-		box-shadow: 0 0 24px #{$black_o_1}
-		padding: 0 40px
+		padding: 30px
+		background: #{$gwhite}
 		.item
 			&:nth-child(2)
 				text-align: center
 				p
 					font-size: 14px
 					line-height: 20px
+		.headphones
+			width: 60px
+			flex-basis: 60px
+			max-width: 60px
+			height: 38px
+			display: inline-block
 		.title
 			margin-bottom: 0
-			h3
+			h4
 				text-align: left
+				display: inline-block
 				a
 					color: #{$button_blue}
 					text-transform: normal
-.news
-	&_list
-		.item
-			.date
-				color: #{$date_gray}
-
+		.button
+			&_request
+				width: 230px
+		.callme_action
+			max-width: 600px
+			margin: 0px auto
+// События и вебинары
+.evs
+	.ev_list
+		margin-bottom: 60px
+	.title
+		h3
+			text-align: left
+	.news
+		&_list
+			.item
+				.date
+					color: #{$date_gray}
+	.webinary
+		&_about
+			padding-bottom: 40px
+		&_schedule
 .view_service
 	h2.title
 		margin-bottom: 0
@@ -365,9 +494,18 @@
 	.prices
 		.price_list
 			.item
-				&-body
-					border: 1px solid #{$cgray}
-					border-top: none
+				&:nth-child(2)
+					.best
+						&_text
+							top: 22px
+							right: -46px
+				&-feature
+					padding: 30px 20px
+				&-shadow
+					box-shadow: 0 0 12px #{$black_o_1}
+				.button_buy
+					.btn
+						padding: 0
 	.callme
 		&_list
 			padding: 30px 0
@@ -393,6 +531,38 @@
 				min-height: auto
 				img
 					position: relative
+	.prices
+		.price_list
+			.item
+				z-index: 1
+				margin: 0 0 20px 0
+				&:first-child
+					.item-feature
+						border-radius: 0
+					.item-shadow
+						border-radius: 0
+				&:last-child
+					.item-feature
+						border-radius: 0
+					.item-shadow
+						border-radius: 0
+				&:nth-child(2)
+					margin: 0 0 20px 0
+					z-index: 1
+					.item-feature
+						padding: 20px
+						border-radius: 0
+					.item-shadow
+						border-radius: 0
+				&-header
+					.title
+						&_block
+							margin-top: 0
+							text-align: left
+		.all_prices
+			&_out
+				margin-top: 40px
+
 	.view_service
 		.items_service
 			.item

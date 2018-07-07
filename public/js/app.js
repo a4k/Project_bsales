@@ -1,4 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+// Toggle меню
 $('[class=toggles]').find('.toggle_btn, h3').click(function(){
 	var $parent = $(this).parent().parent();
 	$parent.toggleClass('opened');
@@ -10,7 +11,15 @@ $('[class=toggles]').find('.toggle').each(function() {
 	} else {
 		$(this).find('.toggle_body_text').hide();
 	}
-})
+});
+
+// Читать подробнее технические требования
+$('#moreTechReq').click(function() {
+	$('.tech_short').hide();
+	$('.tech_full').slideDown();
+
+	return false;
+});
 
 // Закрытие модального окна
 $('[class=modal]').find('.close, .modal_shadow').click(function(){
@@ -27,6 +36,116 @@ $('body').find('[id=openNewHire]').click(function(){
 	$('#newHire').find('.title-info').text(title);
 	return false;
 });
+
+
+// Открытие окна с Скриншотом
+$('body').find('[id=openNewScreen]').click(function() {
+	var $newScreen = $('#newScreen'),
+		$openNewScreen = $('#screen').find('[id=openNewScreen]'),
+		title = $(this).attr('data-title'),
+		link = $(this).attr('data-link'),
+		current = 0, // Текущий
+		prev = 0, next = 0,
+		count = $openNewScreen.length, // Количество
+		i = 0;
+	$openNewScreen.each(function() {
+		i++;
+		if($(this).attr('data-link') == link) {
+			// Это текущий слайд
+			current = i;
+			return false;
+		}
+	});
+	// Считаем предыдущий и следующий слайд
+	if(current+1 > count) {
+		// Это последний слайд
+		next = 1;
+	} else {
+		next = current + 1;
+	}
+	if(current - 1 < 1) {
+		// Это первый слайд
+		prev = count;
+	} else {
+		prev = current - 1;
+	}
+	// Устанавливаем ссылки
+	$newScreen.find('.arrow_left').attr({'data-prev': prev});
+	$newScreen.find('.arrow_right').attr({'data-next': next});
+
+	$newScreen.find('.arrow_left .counter').text(prev + '/' + count);
+	$newScreen.find('.arrow_right .counter').text(next + '/' + count);
+	$newScreen.fadeIn();
+	$newScreen.find('.title h3').text(title);
+	$newScreen.find('.photo').html('<img src="'+link+'" alt="" />');
+	$('body').addClass('modal-open');
+	$('#panel').hide();
+	return false;
+});
+// Переключение на следующий и предыдущий Обзоры сервиса
+$('body').find('#newScreen .arrow_left, #newScreen .arrow_right, #newScreen .close').click(function() {
+	if($(this).hasClass('close')) {
+		var name = $(this).attr('data-name');
+		$('#'+name).fadeOut();
+		$('body').removeClass('modal-open');
+		$('#panel').show();
+		return true;
+	}
+	var $newScreen = $('#newScreen'),
+		$openNewScreen = $('#screen').find('[id=openNewScreen]'),
+		current = parseInt($(this).attr('data-prev')), // Текущий
+		prev = 0, next = 0,
+		title = '', // Название окна
+		link  = '', // ID - видео ютуба
+		count = $openNewScreen.length, // Количество
+		i = 0;
+	// Проверяем пользователь нажал на предыдущий или следующий слайд
+	current = $(this).hasClass('arrow_left') ? current : parseInt($(this).attr('data-next'));
+	// console.log(current);
+	if(current) {
+		// Есть ссылка на слайд, значит можем переключиться
+		$openNewScreen.each(function() {
+			i++;
+			if(i == current) {
+				// Это текущий слайд
+				title = $(this).attr('data-title');
+				link = $(this).attr('data-link');
+
+				return false;
+			}
+		});
+		// Считаем предыдущий и следующий слайд
+		if(current + 1 > count) {
+			// Это последний слайд
+			next = 1;
+		} else {
+			next = current + 1;
+		}
+		if(current - 1 < 1) {
+			// Это первый слайд
+			prev = count;
+		} else {
+			prev = current - 1;
+		}
+
+		// Устанавливаем ссылки
+		$newScreen.find('.arrow_left').attr({'data-prev': prev});
+		$newScreen.find('.arrow_right').attr({'data-next': next});
+
+		$newScreen.find('.arrow_left .counter').text(prev + '/' + count);
+		$newScreen.find('.arrow_right .counter').text(next + '/' + count);
+		$newScreen.fadeIn();
+		$newScreen.find('.title h3').text(title);
+		$newScreen.find('.photo').html('<img src="'+link+'" alt="" />');
+		$('body').addClass('modal-open');
+		$('#panel').hide();
+		
+	}
+
+	return false;
+});
+
+
 // Открытие окна с Обзором сервиса
 $('body').find('[id=openNewVideo]').click(function() {
 	var $newVideo = $('#newVideo'),
