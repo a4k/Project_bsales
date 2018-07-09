@@ -3,6 +3,7 @@
 <div id="product">
 
 <!-- Шапка продукта -->
+	<div class="header-fantom header_product"></div>
 	<div class="header header_product h-top">
 			<div class="container">
 				<div class="menu row between-xs middle-xs">
@@ -17,13 +18,13 @@
 					<nav class="menu_topr col-xs-12 col-md-10 center-xs">
 						<div class="hidden-bm close"></div>
 						<ul class="row center-xs">
-							<li><a href="#prices" class="link">Цены</a></li>
-							<li><a href="#capability" class="link">О программе</a></li>
-							<li><a href="#events" class="link">События</a></li>
-							<li><a href="#webinary" class="link">Вебинары</a></li>
-							<li><a href="#download" class="link">Центр загрузок</a></li>
-							<li><a href="#knowledge" class="link">База знаний</a></li>
-							<li><a href="#documents" class="link">Документы</a></li>
+							<li><a href="#prices" class="link link_anchor">Цены</a></li>
+							<li><a href="#capability" class="link link_anchor">О программе</a></li>
+							<li><a href="#events" class="link link_anchor">События</a></li>
+							<li><a href="#webinary" class="link link_anchor">Вебинары</a></li>
+							<li><a href="#download" class="link link_anchor">Центр загрузок</a></li>
+							<li><a href="#knowledge" class="link link_anchor">База знаний</a></li>
+							<li><a href="#documents" class="link link_anchor">Документы</a></li>
 							<!-- <li><a href="/pau.download.php?link=/upload/files/pau.exe" target="_blank" class="btn btn-outline">Демо-версия</a></li> -->
 						</ul>
 					</nav>
@@ -43,7 +44,6 @@
 			<div class="product row">
 				<div class="product_photo col-xs-12 col-md-6">
 					<div class="product_photo_out">
-						<img src="/upload/images/item/prod1-big.jpg" class="holder_image">
 					</div>
 				</div>
 				<div class="product_about col-xs-12 col-md-6">
@@ -57,7 +57,7 @@
 							их помощников и компаний, осуществляющих сопровождение
 							 процедур банкротства.
 						</p>
-						<div class="row product_about_info">
+						<div class="row center-xs start-md product_about_info">
 							<div class="col-xs-6 info_column">
 								<div class="title_block_bold">
 									<h3>5 678</h3>
@@ -71,8 +71,7 @@
 								<span class="number_info">человек запускают его ежедневно</span>
 							</div>
 						</div>
-						<div class="block_buy_fantom"></div>
-						<div class="block_buy">
+						<div class="block_buy center-xs start-md">
 							<div class="row block_buy_version">
 								<div class="info_column col-xs">
 									<p>Версия 3.9.8 от 25 июня 2018 года  доступна для скачивания</p>
@@ -84,10 +83,10 @@
 								</div>
 							</div>
 							<div class="row middle-xs">
-								<div class="info_column col-xs block_buy_btn">
+								<div class="info_column col-xs-12 center-xs start-md col-md block_buy_btn">
 									<a href="http://rsit.ru/buy/product/ama/" target="_blank" class="btn btn-outline">Купить</a>
 								</div>
-								<div class="info_column col-xs block_buy_demo">
+								<div class="info_column col-xs-12 center-xs col-md block_buy_demo">
 									<a href="http://www.rsit.ru/personal/register/" target="_blank" class="link_btn">Скачайте демо-версию</a>
 									<div class="text_demo">бесплатно 45 дней!</div>
 								</div>
@@ -421,17 +420,17 @@
 				<h4>Скриншоты</h4>
 			</div>
 			<div class="row screen_list">
-				<div class="item col-xs">
+				<div class="item col-xs-12 col-md-4">
 					<div id="openNewScreen" data-title="Скриншот 1" data-link="/upload/images/item/screen1.jpg">
 						<img src="/upload/images/item/screen1.jpg" alt="">
 					</div>
 				</div>
-				<div class="item col-xs">
+				<div class="item col-xs-12 col-md-4">
 					<div id="openNewScreen" data-title="Скриншот 2" data-link="/upload/images/item/screen1.jpg">
 						<img src="/upload/images/item/screen1.jpg" alt="">
 					</div>
 				</div>
-				<div class="item col-xs">
+				<div class="item col-xs-12 col-md-4">
 					<div id="openNewScreen" data-title="Скриншот 3" data-link="/upload/images/item/screen1.jpg">
 						<img src="/upload/images/item/screen1.jpg" alt="">
 					</div>
@@ -535,13 +534,13 @@
 		<div class="container">
 			<div class="row callme_list middle-xs">
 				<div class="col-md-3 item col-xs-12 center-xs start-md">
-					<div class="title row">
+					<div class="title middle-xs row">
 						<span class="headphones col-xs">
 							<object type="image/svg+xml" data="/upload/images/icon/headphones.svg">
 							   Your browser does not support SVG
 							</object>
 						</span>
-						<div class="col-xs">
+						<div class="col-xs start-xs">
 							<h4>Остались вопросы?</h4>
 						</div>
 					</div>
@@ -565,11 +564,18 @@
 	<section class="block_content evs" id="evs">
 		<div class="container">
 			<div class="row ev_list">
-				<div class="col-xs-12 col-md-6 news" id="events">
-					<div class="title">
-						<h3>События</h3>
+				<div class="col-xs-12 col-md-6 events" id="events">
+					<div class="row events_head">
+						<div class="col-xs-12 col-md-8 center-xs start-md">
+							<div class="title">
+								<h3>События</h3>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-3 center-xs end-md">
+							<a href="/news" class="link">Архив событий</a>
+						</div>
 					</div>
-					<div class="news_list">
+					<div class="events_list">
 						<div class="item row">
 							<div class="col-xs-12 col-md-3 center-xs start-md date"><p>25 сентября 2018</p></div>
 							<div class="col-xs-12 col-md-8 title center-xs start-md">
@@ -602,48 +608,156 @@
 					<a href="#" class="link_btn webinary_schedule">расписание вебинаров > </a>
 				</div>
 			</div>
-			<div class="row evs_social">
-				<div class="item col-xs evs_social_title"></div>
-				<div class="col-xs evs_social_icons">
-					<a href="#" target="_blank" class="icon_pau-fb">
-						<object type="image/svg+xml" data="/upload/images/icon/pau-fb.svg">
-						   Your browser does not support SVG
-						</object>
+			<div class="evs_social row">
+				<div class="item evs_social_title col-xs-12 col-md-3">
+					<div class="title_block_bold">
+						<h4>«Помощник АУ» в соцсетях:</h4>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-3 evs_social_icons">
+					<a href="#" target="_blank" class="icon icon_pau-fb">
+						<img src="/upload/images/icon/pau-fb.svg" alt="">
 					</a>
-					<a href="#" target="_blank" class="icon_pau-vk">
-						<object type="image/svg+xml" data="/upload/images/icon/pau-vk.svg">
-						   Your browser does not support SVG
-						</object>
+					<a href="#" target="_blank" class="icon icon_pau-vk">
+						<img src="/upload/images/icon/pau-vk.svg">
 					</a>
-					<a href="#" target="_blank" class="icon_pau-tg">
-						<object type="image/svg+xml" data="/upload/images/icon/pau-tg.svg">
-						   Your browser does not support SVG
-						</object>
+					<a href="#" target="_blank" class="icon icon_pau-tg">
+						<img src="/upload/images/icon/pau-tg.svg">
 					</a>
 				</div>
 			</div>
 		</div>
 	</section>
-	
-	
 
-
-	<section class="block_content promo_product bg-gray">
+<!-- Подписка на рассылку -->
+	<section class="subscribe">
 		<div class="container">
-			<div class="l_container">
-				<div class="menu">
-					<div class="title">
-						<h3>Просто попробуйте</h3>
+			<div class="row subscribe_list middle-xs">
+				<div class="col-md-6 item col-xs-12 center-xs start-md">
+					<div class="title middle-xs row">
+						<span class="mail col-xs">
+							<object type="image/svg+xml" data="/upload/images/icon/mail.svg">
+							   Your browser does not support SVG
+							</object>
+						</span>
+						<div class="col-xs">
+							<h4>Подпишитесь на рассылку новостей</h4>
+						</div>
 					</div>
-					<nav class="menu_product">
-						<ul>
-							<li><a href="#" class="btn btn-outline">Демо-версия</a></li>
-							<li><a href="/buy" class="btn btn-blue">Купить</a></li>
-						</ul>
-					</nav>
+				</div>
+				<div class="col-md-6 item col-xs-12 center-xs end-md">
+					<div class="row subscribe_form">
+						<div class="col-xs-12 col-md-8 start-xs">
+							<input type="text" class="subscribe_form_email form_input" placeholder="Ваша электронная почта">
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<a href="#" class="btn btn-red-outline subscribe_send">Подписаться</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			
+		</div>
+	</section>
+	
+	<!-- Центр загрузки База знаний -->
+	<section class="rsit_base" id="knowdow">
+		<div class="container">
+			<div class="row list_base">
+				<div class="col-xs-12 col-md-6" id="knowledge">
+					<div class="item">
+						<div class="row item_header middle-xs">
+							<div class="col-xs-3 item_header_icon start-xs">
+								<div class="icon center_download">
+									<object type="image/svg+xml" data="/upload/images/icon/center_download.svg">
+									   Your browser does not support SVG
+									</object>
+								</div>
+							</div>
+							<div class="col-xs start-xs">
+								<div class="title">
+									<h4>Центр загрузки</h4>
+								</div>
+							</div>
+						</div>
+						<div class="item_body">
+							<p>В центре загрузки вы можете скачать последние версии программных продуктов, документацию к программам, обновления нормативной базы и вестники банкротств.</p>
+						</div>
+						<div class="item_footer">
+							<a href="#" target="_blank" class="link_btn">Перейти в ЦЕНТР ЗАГРУЗОК ></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6" id="download">
+					<div class="item">
+						<div class="row item_header middle-xs">
+							<div class="col-xs-3 item_header_icon start-xs">
+								<div class="icon center_download">
+									<object type="image/svg+xml" data="/upload/images/icon/knowledge.svg">
+									   Your browser does not support SVG
+									</object>
+								</div>
+							</div>
+							<div class="col-xs start-xs">
+								<div class="title">
+									<h4>Служба поддержки<br/> и база знаний</h4>
+								</div>
+							</div>
+						</div>
+						<div class="item_body">
+							<p>Документация по работе в программе «Помощник арбитражного управляющего» доступна в Справочном центре РИТ.
+							Полезные инструкции, база знаний, ответы на часто задаваемые вопросы
+							и подробное описание работы по каждому разделу программы.
+							</p>
+						</div>
+						<div class="item_footer">
+							<a href="#" target="_blank" class="link_btn">Перейти в базу знаний ></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="documents" id="documents">
+		<div class="container">
+			<div class="title">
+				<h3>Документы</h3>
+			</div>
+			<div class="row docs_list">
+				<div class="item col-xs-12 col-md-5">
+					<div class="title">
+						<h4>Договоры</h4>
+					</div>
+					<div class="doc_links">
+						<div class="doc_link"><a href="#">Лицензионный договор, DOC, 95 Кб.</a></div>
+						<div class="doc_link"><a href="#">Договор на оказание услуг по технической поддержке, DOC, 100 Кб.</a></div>
+						<div class="doc_link"><a href="#">Договор на оказание услуг по разовому обновлению, DOC, 98 Кб.</a></div>
+						<div class="doc_link"><a href="#">Договор на новую комплектацию, DOC, 92 Кб.</a></div>
+						<div class="doc_link"><a href="#">Соглашение об обмене данными с Витриной, DOCX, 52 Кб.</a></div>
+						<div class="doc_link"><a href="#">Соглашение об обмене данными с Bankro.TECH, DOCX, 24 Кб.</a></div>
+					</div>
+				</div>
+				<div class="item col-xs-12 col-md-4">
+					<div class="title">
+						<h4>Оферты</h4>
+					</div>
+					<div class="doc_links">
+						<div class="doc_link"><a href="#">Публичная оферта</a></div>
+						<div class="doc_link"><a href="#">Публичная оферта на техническую поддержку </a></div>
+						<div class="doc_link"><a href="#">Публичная оферта на разовое обновление</a></div>
+						<div class="doc_link"><a href="#">Публичная оферта на новую конфигурацию</a></div>
+					</div>
+				</div>
+				<div class="item col-xs-12 col-md-3">
+					<div class="title">
+						<h4>Полезные ссылки</h4>
+					</div>
+					<div class="doc_links">
+						<div class="doc_link"><a href="#">Блок-схемы процедур</a></div>
+						<div class="doc_link"><a href="#">Методические пособия</a></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 

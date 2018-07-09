@@ -5,11 +5,29 @@
 	height: auto;
 	padding: 40px 0
 	width: 100%;
+	&-fantom
+		display: none
+		&.header_main
+			min-height: 133px
+			height: 133px
+			position: relative
+		&.header_product
+			min-height: 80px
+			height: 80px
+			position: relative
+		&.visible
+			display: block
 	&.header_product
 		height: auto
 		background: #{$gwhite}
 		position: relative
 		z-index: 5
+		&.fix-header
+			position: fixed
+			top: 80px
+			left: 0
+			box-shadow: 0 2px 14px #{$shadow_gray}
+			z-index: 140
 		&.h-top
 			padding: 15px 0
 		.container
@@ -47,8 +65,6 @@
 								color: #{$button_red}
 								&:hover
 									color: #{$button_red}
-	&_main
-		z-index: 2
 	&.h-top
 		position: relative
 		padding: 0
@@ -66,6 +82,18 @@
 						li
 							a
 								color: #{$button_blue}
+	&_main
+		z-index: 2
+		&.fix-header
+			position: fixed
+			top: 0
+			left: 0
+			z-index: 150
+			background: #{$white}
+			height: 80px
+			&.h-top
+				height: 80px
+				z-index: 150
 	.container
 		height: 100%
 		.menu

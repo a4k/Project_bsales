@@ -20,6 +20,7 @@ const newsRouter = require('./routes/news');
 const cnewsRouter = require('./routes/cnews');
 const hireRouter = require('./routes/hire');
 const contactsRouter = require('./routes/contacts');
+const priceRouter = require('./routes/price');
 
 var app = express();
 var port = 3050;
@@ -54,6 +55,7 @@ app.use('/news', newsRouter);
 app.use('/cnews', cnewsRouter);
 app.use('/hire', hireRouter);
 app.use('/contacts', contactsRouter);
+app.use('/price', priceRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

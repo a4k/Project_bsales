@@ -518,6 +518,14 @@ h5
 .italic
     font-style: italic;
 
+/* form styles */
+.form
+    &_input
+        border: 1px solid #{$input_border}
+        width: 100%
+        padding: 0 20px
+        height: 40px
+        font: 13px/22px #{$ibm_sans}
 .hr
     background: #{$dgray}
     height: 1px
@@ -1291,7 +1299,7 @@ h5
         font-size: 14px
         line-height: 24px
     .container
-        padding: 0 20px
+        padding: 0 55px
     .s_container
         width: 100%
         min-width: 100%
@@ -1322,6 +1330,12 @@ h5
                 line-height: 27px
         h3
             line-height: 42px
+        h4
+            font-size: 20px
+            line-height: 28px
+    .link
+        &_btn
+            font-size: 11px
     .product-cards
         &.cards
             .card
@@ -1412,6 +1426,8 @@ h5
 
 /* XSmall device style */
 @media (max-width: '#{$xsmall}px')
+    .container
+        padding: 0 30px
     .btn
         height: auto
     .modal

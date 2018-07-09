@@ -162,3 +162,23 @@
 	@media (min-width: '#{($small)+1}px')
 		&-bm
 			display: none;
+
+.visible
+	@media (max-width: '#{($xsmall)-1}px')
+		&-xs
+			display: block;
+	@media (max-width: '#{($small)-1}px')
+		&-s
+			display: block;
+	@media (max-width: '#{($medium)-1}px')
+		&-m
+			display: block;
+	@media (max-width: '#{($large)-1}px')
+		&-l
+			display: block;
+	@media (min-width: '#{($medium)-1}px')
+		&-bl
+			display: block;
+	@media (min-width: '#{($small)+1}px')
+		&-bm
+			display: block;
