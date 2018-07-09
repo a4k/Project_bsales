@@ -211,9 +211,8 @@ h5
     max-width: 874px
     margin: 0 auto
 .m_container
-    width: 40vw
-    margin: 0 auto
-    min-width: 450px
+    max-width: 650px
+    margin: 0px auto
 .x_container
     max-width: 600px
     margin: 0 auto
@@ -262,6 +261,8 @@ h5
 
 
 .menu_b
+    background: #{$gwhite}
+    margin-bottom: 40px
     .menu_top
         position: relative
         padding: 20px 0
@@ -279,7 +280,7 @@ h5
                 margin: 0 20px
                 color: #{$dark_gray}
                 h4
-                    line-height: 40px
+                    font: 16px/40px #{$proxima_regular}
                     padding: 0
                     margin: 0
 /* Button Styles */
@@ -423,9 +424,12 @@ h5
 
 /* Breadcrumb styles */
 .breadcrumbs
-    margin: 60px auto 30px
+    margin: 30px auto 30px
     color: #{$egray}
     text-align: center
+    font: 13px/20px #{$proxima_regular}
+    a
+        padding: 0 10px
 
 
 /* Text styles */
@@ -458,17 +462,18 @@ h5
         margin-bottom: 20px
         li
             position: relative
-            padding-left: 20px
+            padding-left: 27px
+            line-height: 35px
             &:before
                 content: ' '
-                width: 8px
-                height: 8px
-                background: #{$dgray}
+                width: 7px
+                height: 7px
+                background: #{$circle_gray}
                 border-radius: 50%
                 display: block
                 position: absolute
                 left: 0
-                top: 8px
+                top: 14px
             &.active
                 padding-left: 30px
                 &:before
@@ -490,6 +495,8 @@ h5
             padding-bottom: 7px
     &_small
         font-size: 14px
+    &_bold
+        font-weight: bold
     &_big
         font-size: 30px
         line-height: 50px
@@ -1333,6 +1340,11 @@ h5
         h4
             font-size: 20px
             line-height: 28px
+    .text
+        ul
+            li
+                font-size: 14px
+                line-height: 24px
     .link
         &_btn
             font-size: 11px

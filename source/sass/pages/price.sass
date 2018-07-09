@@ -1,1 +1,229 @@
 // price.sass
+.breadcrumbs
+	a
+		color: #{$button_red}
+.menu_b
+	a
+		color: #{$button_red}
+// Тарифы
+.rates
+	.list_types
+		display: block
+		text-align: center
+		margin: 0 0 20px
+		a
+			display: inline-block
+			margin: 0 15px
+			font: 16px/24px #{$proxima_bold}
+			color: #{$button_red}
+			&.noactive
+				color: #{$link_noactive}
+.price
+	&_list
+		padding-bottom: 60px
+	&_names
+		padding: 138px 30px 0 0
+	&_item
+		&_info
+			font: 14px/24px #{$ibm_sans}
+			margin-bottom: 13px
+	&_header
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		align-items: flex-end
+		height: 113px
+		position: relative
+		&:after
+			content: ' '
+			background: #{$hr_price_gray}
+			margin: 0 10px
+			height: 1px
+			width: 100%
+		&_title
+			padding-top: 10px
+			h4
+				font: 16px/24px #{$proxima_bold}
+			h3
+				font: 22px/34px #{$proxima_bold}
+	&_box
+		position: relative
+		&_body
+			box-shadow: 0 0 24px #{$black_o_1}
+			text-align: center
+			margin-left: 20px
+			background: #{$white}
+			width: 100%
+			height: 100%
+			padding: 0px 10px
+			border-radius: 8px
+			.checked, .canceled
+				display: inline-block
+				width: 16px
+				height: 24px
+			.checked
+				background: url(#{$svg_path}/checked.svg) no-repeat center
+			.canceled
+				background: url(#{$svg_path}/cancel.svg) no-repeat center
+			.best
+				position: absolute
+				right: 0
+				top: 0
+				overflow: hidden
+				width: 111px
+				height: 111px
+				&_text
+					color: #{$white}
+					background: #{$price_three}
+					width: 120px
+					height: 19px
+					font: 11px/19px #{$ibm_sans}
+					text-align: center
+					transform: rotate(45deg)
+					position: absolute
+					right: -36px
+					top: 17px
+		&_info
+			width: 100%
+			padding-top: 26px
+			text-align: center
+		.title
+			&_list
+				padding: 26px 30px 0
+				text-align: left
+			&_item
+				align-items: center
+				&_name
+					margin-bottom: 13px
+					font: 14px/24px #{$ibm_sans}
+				&_info
+					font: 22px/24px #{$proxima_bold}
+		&_item
+			margin-bottom: 13px
+			font: 22px/24px #{$proxima_bold}
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-flow: row wrap
+			&[rows="2"]
+				height: calc(24px * 2)
+				.checked, .canceled
+					height: calc(24px * 2)
+			&[rows="3"]
+				height: calc(24px * 3)
+				.checked, .canceled
+					height: calc(24px * 3)
+		.link
+			&_btn
+				color: #{$price_three}
+		&_text
+			font-size: 16px
+
+	&_footer
+		display: flex
+		flex-flow: column wrap
+		justify-content: flex-start
+		align-items: center
+		height: 174px
+		&_title
+			margin-bottom: 28px
+			h4
+				font: 16px/24px #{$proxima_bold}
+			h3
+				font: 22px/34px #{$proxima_bold}
+		.btn
+			margin-bottom: 22px
+// Техническая поддержка
+.support
+	.title
+		margin-bottom: 80px
+	.about
+		a
+			color: #{$button_red}
+	&_numbers
+		position: relative
+		margin-bottom: 30px
+		&:after
+			content: '='
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 48px
+			height: 48px
+			margin: -24px 0 0 -24px
+			font: 32px/49px #{$proxima_bold}
+			color: #{$price_three}
+	&_number
+		width: 200px
+		text-align: center
+		&_title
+			h3
+				font: 60px/91px #{$proxima_bold}
+				color: #{$price_three}
+		&_text
+			p
+				line-height: normal
+	&_policy
+		margin-bottom: 40px
+		p
+			font-size: 12px
+	.what_get
+		background: #{$gwhite}
+		padding: 40px
+		margin-bottom: 60px
+		.title
+			margin-bottom: 30px
+			text-align: center
+			h4
+				font-size: 22px
+	&_info
+		padding-bottom: 80px
+		a
+			color: #{$button_red}
+		ul
+			li
+				line-height: 24px
+				margin-bottom: 20px
+				&:before
+					top: 10px
+				
+
+/* Small device styles */
+@media (max-width: '#{$medium}px')
+	// Тарифы
+	.rates
+		.list_types
+	.price
+		&_header
+			height: 83px
+			&:after
+				margin: 0 30px
+			&_title
+				h4
+		&_item
+			margin-bottom: 20px
+		&_box
+			&_body
+				box-shadow: 0 0 24px #{$black_o_1}
+				text-align: center
+				margin: 0
+				background: #{$white}
+				width: 100%
+				height: 100%
+				padding: 0px 10px
+				border-radius: 8px
+			&_info
+				width: 100%
+				padding-top: 26px
+				text-align: center
+			&_tlist
+				padding: 26px 30px 0
+				text-align: left
+			&_title
+				margin-bottom: 13px
+				font: 14px/24px #{$ibm_sans}
+			.title
+				&_list
+					padding-bottom: 30px
+		&_footer
+			padding: 0 30px
