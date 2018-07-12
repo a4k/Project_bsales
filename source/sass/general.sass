@@ -72,7 +72,7 @@ h5
         padding-top: 0
 
 
-/* Heading styles */
+/* Heading styles, title styles */
 .title 
     h2
         text-align: center
@@ -88,6 +88,14 @@ h5
         color: #{$kgray}
         margin: 0px
         padding: 0
+    &_bold
+        margin-bottom: 35px
+        &.small_margin
+            margin-bottom: 10px
+        h2
+            font: 42px/49px #{$proxima_bold}
+        h4
+            font: 22px/34px #{$proxima_bold}
     &_item
         h2
             margin: 0
@@ -133,6 +141,14 @@ h5
                 font: 18px/27px $proxima_regular
 
 .title
+    h1
+        font: 42px/49px #{$proxima_bold}
+        word-break: normal
+        padding: 0
+        margin: 0
+        font-weight: 600
+        text-align: center
+        color: #{$gblack}
     h2
         word-break: normal
         padding: 0
@@ -185,6 +201,10 @@ h5
         &_big
             font-size: 35px
             line-height: 35px
+        &_block
+            &_bold
+                h4
+                    font-size: 14px
     h3
         font-size: 20px
 
@@ -213,6 +233,8 @@ h5
 .m_container
     max-width: 650px
     margin: 0px auto
+    &.title_container
+        max-width: 400px
 .x_container
     max-width: 600px
     margin: 0 auto
@@ -292,9 +314,9 @@ h5
     font-family: $proxima_bold;
     font-weight: bold;
     &-blue
-        border: 1px solid $blue;
+        border: 1px solid #{$button_blue};
         color: $white
-        background: $blue
+        background: #{$button_blue}
         text-align: center
         line-height: 40px
         font-size: 12px
@@ -311,6 +333,8 @@ h5
         -ms-transition: all 0.5s ease-in-out
         cursor: pointer
         display: inline-block
+        &-big
+            padding: 0 50px
         &:hover
             color: #{$white_o_65}
     &-red
@@ -456,6 +480,8 @@ h5
             margin-bottom: 0px
         h4
             margin-bottom: 0
+            font-size: 20px
+            line-height: 30px
         h5
             margin-bottom: 0
     ul
@@ -481,6 +507,19 @@ h5
                     background-size: 16px auto
                     width: 16px
                     height: 16px
+        &.list
+            &_nomargin
+                margin: 0
+            &_none
+                li
+                    &:before
+                        width: 0
+                        height: 0
+            &_out
+                li
+                    padding-left: 0
+                    &:before
+                        left: -27px
     img
         width: 100%
         min-height: 500px
@@ -489,14 +528,28 @@ h5
     p
         padding-bottom: 2rem
         color: #{$dark_gray}
+        &.small
+            &_text
+                font-size: 14px
+                line-height: 24px
+        &.small_padding
+            padding: 0 0 1rem
+        &.nopadding
+            padding: 0
     table
         line-height: 30px
         td
             padding-bottom: 7px
+    &_nopadding
+        padding: 0
+    &_nomargin
+        margin: 0
     &_small
         font-size: 14px
     &_bold
         font-weight: bold
+    &_italic
+        font-style: italic
     &_big
         font-size: 30px
         line-height: 50px
@@ -508,6 +561,9 @@ h5
         width: 40px
         height: 1px
         display: inline-block
+    .color
+        &_red
+            color: #{$price_three}
 .link
     &_tdu
         color: #{$button_blue}
@@ -524,7 +580,12 @@ h5
         color: $black;
 .italic
     font-style: italic;
-
+@media (max-width: '#{$small}px')
+    .text
+        .title
+            h4
+                font-size: 16px
+                line-height: 24px
 /* form styles */
 .form
     &_input
@@ -533,6 +594,38 @@ h5
         padding: 0 20px
         height: 40px
         font: 13px/22px #{$ibm_sans}
+        &_text
+            border: 1px solid #{$cgray}
+            border-radius: 4px
+            -webkit-border-radius: 4px
+            -moz-border-radius: 4px
+            font: 14px/40px #{$ibm_sans}
+            height: 40px
+            width: 100%
+            padding: 0 15px
+    &_textarea
+        border: 1px solid #{$cgray}
+        border-radius: 4px
+        -webkit-border-radius: 4px
+        -moz-border-radius: 4px
+        font: 14px/40px #{$ibm_sans}
+        height: 160px
+        width: 100%
+        padding: 0 15px
+    &_title
+        label
+            font-weight: bold
+    &_button
+        width: auto
+        display: inline-block
+    &_indent
+        margin-bottom: 10px
+    &_success
+        width: 130px
+        height: 130px
+        background: url(#{$svg_path}/success.svg) no-repeat center
+        background-size: 130px
+        margin: 60px auto
 .hr
     background: #{$dgray}
     height: 1px
@@ -1023,12 +1116,111 @@ h5
     z-index: 500
     &-open
         overflow: hidden
+    // Вебинары и обзоры
+    &#newWebinary
+        .title
+            h3
+                text-align: left
+                margin: 0
+        .modal
+            &_body
+                .schedule
+                    padding-bottom: 40px
+                    &_list
+                        .item
+                            margin-bottom: 25px
+                            p
+                                font-size: 14px
+                            a
+                                font-size: 14px
+
+                .reviews
+                    &_list
+                        .item
+                            margin-bottom: 25px
+                            p
+                                font-size: 14px
+                            a
+                                font-size: 14px
+        a
+            color: #{$price_three}
+            &:hover
+                text-decoration: none
+                color: #{$button_red}
+    // Технические требования
+    &#newTech
+        .title
+            h3
+                text-align: left
+                margin: 0
+        .modal
+            &_body
+                p
+                    font-size: 14px
+                    line-height: 20px
+                a
+                    font-size: 14px
+                    line-height: 20px
+                
+        .attention
+            border: 1px solid #{$price_three}
+            padding: 30px
+            background: #{$gwhite}
+            margin-bottom: 30px
+        a
+            color: #{$price_three}
+            &:hover
+                text-decoration: none
+                color: #{$button_red}
+    // Заявка
+    &#newRequest
+        .title
+            h3
+                text-align: left
+                margin: 0
+        .form
+            &_input
+                width: 100%
+            input
+                &[type=text], &[type=email]
+                    width: 100%
+                    border: 1px solid #{$input_border}
+                    width: 100%
+                    padding: 0 20px
+                    height: 40px
+                    font: 13px/22px #{$ibm_sans}
+    // Скриншоты
     &#newScreen
         .modal
             &_content
                 .photo
                     img
                         width: 100%
+    // Вакансии
+    &#newHire
+        .close
+            right: 0
+            top: 0
+            &:after
+                background: url(#{$svg_path}/close-3.svg) no-repeat center
+        .vacancy
+            &_form
+                padding-right: 20px
+            &_manager
+                padding-top: 25px
+                .manager
+                    border: 1px solid #{$cgray}
+                    border-radius: 4px
+                    -webkit-border-radius: 4px
+                    -moz-border-radius: 4px
+                    padding: 17px
+                    &_info
+                        margin-bottom: 20px
+                    &_photo
+                        margin-bottom: 20px
+                    &_voice
+                        font-style: italic
+    // Для медиа окон
     &.newMedia
         .close
             background: none
@@ -1086,11 +1278,13 @@ h5
         width: 30px
         height: 30px
         opacity: .65
+        z-index: 5
         background: none
         &:hover
             opacity: 1
         &:after
             content: ''
+            display: block
             width: 30px
             height: 30px
             background: url(#{$svg_path}/close-2.svg) no-repeat center
@@ -1153,6 +1347,17 @@ h5
                 margin-right: 20px
             .counter
                 margin-right: 10px
+    // Размеры модального окна
+    &_size
+        &_small
+            .modal_dialog
+                max-width: 460px
+        &_middle
+            .modal_dialog
+                max-width: 915px
+        &_big
+            .modal_dialog
+                max-width: 1130px
     &_dialog
         max-width: 800px
         margin: 15vh auto
@@ -1166,6 +1371,10 @@ h5
         padding: 30px
         &.no-padding
             padding: 0
+        .close
+            &:after
+                background: url(#{$svg_path}/close.svg) no-repeat center
+                background-size: 11px auto
     &_header
         position: relative
         h3
@@ -1209,6 +1418,7 @@ h5
                     border: 1px solid #{$dgray}
             button
                 cursor: pointer
+// Вакансии
 #newHire
     .cards
         .card
@@ -1345,6 +1555,13 @@ h5
             li
                 font-size: 14px
                 line-height: 24px
+                &:before
+                    top: 9px
+            &.list
+                &_out
+                    li
+                        &:before
+                            left: -17px
     .link
         &_btn
             font-size: 11px

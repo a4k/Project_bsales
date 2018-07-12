@@ -1,10 +1,14 @@
 .about
-	padding: 30px 0 0
+	padding: 0px 0 0
 	.breadcrumbs
 		margin-bottom: 30px
+		color: black
+
+.menu_b
+	.menu_top
+		height: 80px
 
 .infob
-	padding: 40px 0 30px
 	.media2
 		align-items: flex-start
 		.card:first-child
@@ -15,23 +19,116 @@
 		.card:nth-child(2)
 			padding-top: 30%
 	.about_text
-		color: #{$dark_gray}
+		color: black
+		p
+			font-size: 16px
+			line-height: 27px
+	.gallery
+		padding-bottom: 60px
+		&_images
+
+	#main_img_block img
+		width: 614px
+		height: 459px
+	#main_text_block
+		width: 658px
+		#main_text
+			height: 248px
+			#text1,#text2
+				margin-top: 30px
+				font-size: 16px
+				line-height: 27px
+	#other_comp_img_block
+		margin-top: 69px
+		.img_blocks img
+			width: 427px
+			height: 400px
+	#rectangle_block
+		margin-top: 30px
+		.rectangles
+			width: 20px
+			height: 2px
+			border: 1px solid gray
+			margin-left: 10px
+	#title_team
+		margin-top: 135px
+
+.team
+	.about
+		&_text
+			padding-bottom: 60px
 .short_info
-	.cards
-		padding: 0
-		.card
-			height: 160px
-			background: transparent
-			margin: 0
-			.card_title
-				margin-bottom: 0
+	&_list
+		padding-bottom: 60px
+		.card_body_c
+			width: 116px
+			height: 116px
+		#card_body_1
+			transform: rotate(94.5deg)
+			background: #FFEDFD
+		#card_body_1_text
+			transform: rotate(-94.5deg)
+		#card_body_2
+			transform: rotate(31.78deg)
+			background: #F0FAF4
+		#card_body_2_text
+			transform: rotate(-31.78deg)
+		#card_body_3
+			transform: rotate(94.5deg)
+			background: #FFF2E3
+		#card_body_3_text
+			transform: rotate(-94.5deg)
+		#card_body_4
+			transform: rotate(30deg)
+			background: rgba(213,246,253,0.7)
+		#card_body_4_text
+			transform: rotate(-30deg)
+		.text_big_2
+			font-size: 60px
+			font-family: $proxima_regular
+			color: #{$kgray}
+		.card_body_texts
+			width: 116px
+			height: 116px
+			text-align: center
+			padding-top: 20px
+		.card_text
+			position: relative
+			width: 315px
+			left: calc(-116px + 25%)
+			padding-top: 10px
+			font-family: $ibm_sans
+
+
+
 .leadership
-	.cards
-		.card
-			&_title
-				margin-bottom: 0
-			&_body_u
-				height: 120px
+	.container
+		.cards
+			.card
+				&_title
+					margin-bottom: 0
+				&_body_u
+					height: 120px
+				.card_u_photo img
+					width: 166px
+					height: 227px
+				.card_body_u
+					.card_title
+						font-size: 18px
+						font-weight: bold
+					.card_text
+						font-size: 16px
+					#card_text1
+						width: 74px
+					#card_text2
+						width: 133px
+					#card_text3
+						width: 101px
+					#card_text4
+						width: 162px
+					#card_text5
+						width: 175px
+
 .company
 	&_info
 		&.link_items
@@ -107,3 +204,4 @@
 							p
 								line-height: 33px
 								margin-bottom: 13px
+

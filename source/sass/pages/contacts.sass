@@ -4,14 +4,44 @@
 		margin-bottom: 30px
 .infob
 	padding-bottom: 40px
+	.email
+		&_list
+			margin-bottom: 30px
+			a
+				font: bold 16px/27px #{$ibm_sans}
+				color: #{$blue}
 	.social
-		margin-top: 30px
+		&_list
+			margin-bottom: 30px
+		&_item
+			display: inline-block
+			width: 30px
+			height: 30px
+			margin-right: 20px
+			a
+				display: block
+				.icon
+					width: 30px
+					height: 30px
+			&.in
+				.icon
+					background: url(#{$svg_path}/csoc-icon-1.svg) no-repeat center
+					background-size: 30px auto
+			&.fb
+				.icon
+					background: url(#{$svg_path}/csoc-icon-2.svg) no-repeat center
+					background-size: 30px auto
+			&.tw
+				.icon
+					background: url(#{$svg_path}/csoc-icon-3.svg) no-repeat center
+					background-size: 30px auto
+			&.vk
+				.icon
+					background: url(#{$svg_path}/csoc-icon-4.svg) no-repeat center
+					background-size: 30px auto
 .map
 	padding: 0 0 60px
-
-/* XSmall device style */
-@media (max-width: '#{$xsmall}px')
-	.infob
-		.cards
-			.card
-				height: auto
+	&_area
+		width: 100%
+		&_photo
+			width: 100%

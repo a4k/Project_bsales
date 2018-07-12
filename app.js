@@ -21,6 +21,8 @@ const eventRouter = require('./routes/event');
 const hireRouter = require('./routes/hire');
 const contactsRouter = require('./routes/contacts');
 const priceRouter = require('./routes/price');
+const uprcompanyRouter = require('./routes/uprcompany');
+const historyRouter = require('./routes/history');
 
 var app = express();
 var port = 3050;
@@ -56,6 +58,8 @@ app.use('/event', eventRouter);
 app.use('/hire', hireRouter);
 app.use('/contacts', contactsRouter);
 app.use('/price', priceRouter);
+app.use('/uprcompany', uprcompanyRouter);
+app.use('/history', historyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

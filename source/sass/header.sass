@@ -17,6 +17,21 @@
 			position: relative
 		&.visible
 			display: block
+	&.header_breadcrumb
+		height: auto
+		background: #{$gwhite}
+		position: relative
+		z-index: 5
+		padding: 0
+		background: #{$white}
+		padding: 15px 0
+		.container
+			.menu
+				.logo
+					width: 50px
+					height: 50px
+		.breadcrumbs
+			margin: 0
 	&.header_product
 		height: auto
 		background: #{$gwhite}
@@ -153,7 +168,7 @@
 							&:hover
 								opacity: .8
 								text-decoration: none
-@media (max-width: '#{$small}px')
+@media (max-width: '#{$medium}px')
 	.header
 		padding: 0
         // transition: all 0.5s ease-in-out;
@@ -175,6 +190,14 @@
 						background: url('#{$svg_path}/logo-2.svg') left center no-repeat
 						background-size: 120px auto
 						height: 40px
+		&.header_product
+			&.fix-header
+				top: 68px
+		&.header_breadcrumb
+			.container
+				.menu
+					.logo
+						margin: 0px auto 30px
 		&_main.h-top.fix-header
 			.container
 				.menu
@@ -191,7 +214,10 @@
 						.icon
 							&_line
 								background: #{$kgray}
-		&_main.h-top
+		&.header_main.h-top
+			height: 100px
+			&.fix-header
+				height: 68px
 			.container
 				.menu
 					&_mobile

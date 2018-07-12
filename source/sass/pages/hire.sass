@@ -6,14 +6,19 @@
 	.about
 		color: #{$dark_gray}
 		margin-bottom: 30px
+// Почему мы лучше, пункты
 .whybest
-	.cards
-		padding-bottom: 30px
-		.card
-			background: transparent
-			height: 100px
+	.features
+		padding-bottom: 60px
+		.title
+			&_block
+				&_bold
+					margin-bottom: 45px
+// Список вакансий
 .hire_items
-    padding-bottom: 80px
+    padding: 70px 0 80px
+    .toggles
+    	background: #{$white}
 .contact_manager
 	border: 1px solid #{$dgray}
 	padding: 15px 30px
@@ -24,3 +29,10 @@
 			padding: 0
 	.contact_photo
 		margin: 10px 0
+/* Medium device styles */
+@media (max-width: '#{$medium}px')
+	.hire_items
+		.title
+			&_block
+				margin-top: 0
+				text-align: left

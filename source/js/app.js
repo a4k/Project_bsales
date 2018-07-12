@@ -14,19 +14,39 @@ $('[class=toggles]').find('.toggle').each(function() {
 
 // Читать подробнее технические требования
 $('#moreTechReq').click(function() {
-	$('.tech_short').hide();
-	$('.tech_full').slideDown();
+	// $('.tech_short').hide();
+	// $('.tech_full').slideDown();
 
+	$('#newTech').fadeIn();
 	return false;
 });
 
+// Вебинары и обзоры
+$('#openNewWebinary').click(function() {
+	$('#newWebinary').fadeIn();
+	return false;
+});
+
+// Отправить заявку
+$('#button_request').click(function() {
+	$('#newRequest').fadeIn();
+	return false;
+});
+$('#newRequest').find('input[type=text]').each(function() {
+	var txt = $(this).val();
+	$(this).val('');
+	$(this).attr('placeholder', txt);
+});
+
 // Закрытие модального окна
-$('[class=modal]').find('.close, .modal_shadow').click(function(){
+$('.modal').find('.close, .modal_shadow, #close').click(function(){
+	console.log('test');
 	var name = $(this).attr('data-name');
 	$('#'+name).fadeOut();
 	$('body').removeClass('modal-open');
 	$('#panel').show();
 	// console.log($(this))
+	return false;
 });
 // Открытие окна с Вакансиями
 $('body').find('[id=openNewHire]').click(function(){

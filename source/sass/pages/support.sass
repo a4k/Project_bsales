@@ -1,30 +1,71 @@
+.breadcrumbs
+	margin-bottom: 60px
 .support
-	.breadcrumbs
 	.about
 		color: #{$dark_gray}
 		margin-bottom: 30px
-	.cards
-		padding-bottom: 0
-		.card
-			padding-top: 20%
-			min-height: 200px
-			.card_text
-				margin-bottom: 0
-			.card_title
-				margin-bottom: 0
+	.title
+		&_bold
+			margin-bottom: 60px
+	&_blocks
+		padding-bottom: 60px
+	&_block
+		.item
+			&_body
+				min-height: 268px
+				border-radius: 8px
+				box-shadow: 0 0 24px #{$black_o_1}
+				margin: 10px
+				display: flex
+				flex-flow: column wrap
+				justify-content: center
+				align-items: center
+				.online
+					border-radius: 50%
+					background: #{$online_green}
+					width: 14px
+					height: 14px
+					display: inline-block
+					margin-right: 10px
+				.callus
+				.title
+					&_block
+						margin-bottom: 30px
+				a
+					&.link
+						&_big
+							font: 30px/46px #{$proxima_bold}
+					&:hover
+						text-decoration: none
+						color: #{$button_blue}
+// Техническая поддержка
 .techsup
-	padding: 30px 0
-	.cards
-		.card
-			flex-wrap: nowrap
-			min-height: 150px
-			&_m_about
-				padding-top: 15px
+	.product_list
+		padding-bottom: 60px
+		.item
+			margin-bottom: 20px
+			.icon
+				flex-basis: 70px
+				max-width: 70px
+				img
+					max-width: 50px
+					max-height: 50px
+
+			.title_block
+				// margin-left: 20px
+				.middle_title
+					display: flex
+					flex-flow: column wrap
+					justify-content: center
+					align-items: flex-start
+					height: 100%
+
 @media (max-width: '#{$small}px')
 	.techsup
-		.cards
-			.card
-				min-height: 100px
+		.title
+			&_block
+				text-align: left
+				margin-top: 0
 	.support
 		.cards
 			.card
