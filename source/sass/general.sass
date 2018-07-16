@@ -305,6 +305,22 @@ h5
                     font: 16px/40px #{$proxima_regular}
                     padding: 0
                     margin: 0
+
+/* Tooltip Styles */
+[data-tooltip]
+    position: relative
+    .tooltip
+        position: absolute
+        bottom: 20px
+        background: #{$white}
+        font-size: 12px
+        line-height: normal
+        color: #{$kgray}
+        right: 0
+        max-width: 250px
+        padding: 20px
+        box-shadow: 0 0 8px #{$black_o_1}
+
 /* Button Styles */
 .btn
     display: inline-block;
@@ -377,6 +393,69 @@ h5
                 color: #{$red}
                 border: 1px solid #{$red}
                 background: #{$white}
+    &-green
+        border: 1px solid $f_green;
+        color: $white
+        background: $f_green
+        text-align: center
+        line-height: 40px
+        font-size: 12px
+        letter-spacing: 0.2em
+        min-width: 182px
+        padding: 0 20px
+        text-transform: uppercase
+        height: 40px
+        border-box: box-sizing
+        transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out
+        -moz-transition: all 0.5s ease-in-out
+        -webkit-transition: all 0.5s ease-in-out
+        -ms-transition: all 0.5s ease-in-out
+        cursor: pointer
+        display: inline-block
+        &:hover
+            color: #{$white_o_65}
+        &-outline
+            border: 1px solid #{$f_green};
+            color: #{$f_green}
+            background: transparent
+            text-align: center
+            line-height: 40px
+            font-size: 12px
+            letter-spacing: 0.2em
+            width: 100%
+            padding: 0 20px
+            text-transform: uppercase
+            height: 40px
+            border-box: box-sizing
+            cursor: pointer
+            &:hover
+                color: #{$f_dark_green}
+                border: 1px solid #{$f_dark_green}
+                background: #{$white}
+    &-lblue
+        &-outline
+            border: 1px solid #{$blue};
+            color: #{$blue}
+            background: #{$white}
+            text-align: center
+            line-height: 40px
+            font-size: 12px
+            letter-spacing: 0.2em
+            width: auto
+            padding: 0 40px
+            text-transform: uppercase
+            height: 40px
+            border-box: box-sizing
+            cursor: pointer
+            &:hover
+                color: #{$button_blue}
+                border: 1px solid #{$button_blue}
+                background: #{$white}
+        &-big
+            height: 54px
+            line-height: 54px
+            font-size: 16px
     &-outline
         border: 1px solid #{$button_red};
         color: #{$button_red}
@@ -1053,15 +1132,21 @@ h5
 
 /* Toggle styles */
 .toggles
-    border: 1px solid #{$dgray}
+    border: 1px solid #{$cgray}
     .toggle
         color: #{$dark_gray}
-        border-bottom: 1px solid #{$dgray}
+        border-bottom: 1px solid #{$cgray}
         &:last-child
             border-bottom: none
         &_head
-            padding: 10px 60px 10px 30px
+            padding: 20px 60px 20px 30px
             position: relative
+            .title
+                text-align: left
+                margin-bottom: 0
+                h4
+                    text-align: left
+                    cursor: pointer
             h3
                 margin: 0
                 cursor: pointer
@@ -1082,22 +1167,25 @@ h5
                     display: inline-block
                     margin-left: 20px
             &_text
-                padding: 0px 30px 20px
+                padding: 20px 30px 20px
 
         &_btn
             display: block
             position: absolute
-            right: 30px
+            right: 26px
             top: 50%
             margin-top: -17px
             width: 32px
             height: 32px
-            background: url(#{$img_path}/down.png) no-repeat center
+            background: url(#{$svg_path}/down.svg) no-repeat center
+            background-size: 20px auto
             cursor: pointer
             
         &.opened
+            border-top: 1px solid #{$cgray}
             .toggle_btn
-                background: url(#{$img_path}/up.png) no-repeat center
+                background: url(#{$svg_path}/up.svg) no-repeat center
+                background-size: 20px auto
             .toggle_body
                 // max-height: 3500px
 

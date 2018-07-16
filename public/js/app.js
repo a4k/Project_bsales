@@ -1,7 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Toggle меню
-$('[class=toggles]').find('.toggle_btn, h3').click(function(){
-	var $parent = $(this).parent().parent();
+$('[class=toggles]').find('.toggle_btn, h4').click(function(){
+	var $parent = $(this).closest('.toggle');
 	$parent.toggleClass('opened');
 	$parent.find('.toggle_body_text').toggle();
 });
@@ -11,6 +11,23 @@ $('[class=toggles]').find('.toggle').each(function() {
 	} else {
 		$(this).find('.toggle_body_text').hide();
 	}
+});
+
+// Переключение цен
+$('#rates .list_types').find('a').click(function() {
+	var id = $(this).attr('data-id');
+	$('[data-price]').addClass('hidden');
+	$('[data-price='+ id +']').removeClass('hidden');
+	$(this).parent().find('a').removeClass('noactive');
+	$(this).addClass('noactive');
+	return false;
+});
+
+$('[data-tooltip]').hover(function() {
+	var text = $(this).attr('data-tooltip');
+	$(this).append('<span class="tooltip">'+text+'</span>');
+}, function() {
+	$(this).find('.tooltip').remove();
 });
 
 // Читать подробнее технические требования
@@ -52,27 +69,13 @@ $('body').find('[id=openNewHire]').click(function(){
 	return false;
 });
 
-// Действия при загрузке страницы
+// Плавная прокрутка к якорю
 $(window).on('load', function(){
   // var top = $(window.location.hash).offset().top;
   // $('html,body').stop().animate({
   //   scrollTop: top
   // }, 1000);
-	var link = window.location.href,
-		end_link = link.split('#')[1];
-	if(end_link) {
-		console.log($_GET['formresult']);
-		if(end_link.indexOf('successRequest') > -1) {
-			$('#successRequest').show();
-		}
-	}
 });
-
-function $_GET(key) {
-    var p = window.location.search;
-    p = p.match(new RegExp(key + '=([^&=]+)'));
-    return p ? p[1] : false;
-}
 $(document).ready(function() {
 	$('a.link_anchor').click(function(event){
 		event.preventDefault();
@@ -94,14 +97,17 @@ $('body').find('[id=openNewScreen]').click(function() {
 		link = $(this).attr('data-link'),
 		current = 0, // Текущий
 		prev = 0, next = 0,
-		count = $openNewScreen.length, // Количество
+		countClone = $('#screen').find('.cloned [id=openNewScreen]').length,
+		count = $openNewScreen.length - countClone, // Количество
 		i = 0;
 	$openNewScreen.each(function() {
-		i++;
-		if($(this).attr('data-link') == link) {
-			// Это текущий слайд
-			current = i;
-			return false;
+		if(!$(this).closest('.cloned').hasClass('cloned')) {
+			i++;
+			if($(this).attr('data-link') == link) {
+				// Это текущий слайд
+				current = i;
+				return false;
+			}
 		}
 	});
 	// Считаем предыдущий и следующий слайд
@@ -145,7 +151,8 @@ $('body').find('#newScreen .arrow_left, #newScreen .arrow_right, #newScreen .clo
 		prev = 0, next = 0,
 		title = '', // Название окна
 		link  = '', // ID - видео ютуба
-		count = $openNewScreen.length, // Количество
+		countClone = $('#screen').find('.cloned [id=openNewScreen]').length,
+		count = $openNewScreen.length - countClone, // Количество
 		i = 0;
 	// Проверяем пользователь нажал на предыдущий или следующий слайд
 	current = $(this).hasClass('arrow_left') ? current : parseInt($(this).attr('data-next'));
@@ -153,13 +160,15 @@ $('body').find('#newScreen .arrow_left, #newScreen .arrow_right, #newScreen .clo
 	if(current) {
 		// Есть ссылка на слайд, значит можем переключиться
 		$openNewScreen.each(function() {
-			i++;
-			if(i == current) {
-				// Это текущий слайд
-				title = $(this).attr('data-title');
-				link = $(this).attr('data-link');
+			if(!$(this).closest('.cloned').hasClass('cloned')) {
+				i++;
+				if(i == current) {
+					// Это текущий слайд
+					title = $(this).attr('data-title');
+					link = $(this).attr('data-link');
 
-				return false;
+					return false;
+				}
 			}
 		});
 		// Считаем предыдущий и следующий слайд
@@ -212,6 +221,10 @@ $('body').find('[id=openNewVideo]').click(function() {
 			return false;
 		}
 	});
+	if(count == 0) {
+		$newVideo.find('.arrow_left').hide();
+		$newVideo.find('.arrow_right').hide();
+	}
 	// Считаем предыдущий и следующий слайд
 	if(current+1 > count) {
 		// Это последний слайд
@@ -410,6 +423,22 @@ $('.rslider').each(function() {
 	$(this).find('.arrow_left').click(function() {
 	    $wrapper.trigger('prev.owl.carousel');
 	})
+});
+
+// Галерея скриншотов
+$('#screens').each(function() {
+	var $el = $(this), 
+	$wrapper = $(this).find('.swrapper'),
+	$slide = $wrapper.find('.item');
+
+	$wrapper.owlCarousel({
+	    loop:true,
+	    margin:0,
+	    dots:true,
+	    nav:false,
+	    autoWidth: true,
+	    items: 3,
+	});
 });
 
 

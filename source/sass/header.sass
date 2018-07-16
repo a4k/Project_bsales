@@ -118,7 +118,7 @@
 			.logo
 				width: 180px
 				height: 60px
-				background: url('#{$svg_path}/logo.svg') center no-repeat
+				background: url('#{$svg_path}/logo-2.svg') center no-repeat
 				background-size: 180px auto
 				img
 					width: 100%
@@ -142,7 +142,7 @@
 								text-decoration: none
 			&_top
 				.close
-					background: url('#{$svg_path}/close.svg') center no-repeat
+					background: url('#{$svg_path}/close-2.svg') center no-repeat
 					background-size: 16px auto
 					width: 32px
 					height: 32px
@@ -164,7 +164,8 @@
 						a
 							font-family: #{$proxima_bold}
 							font-size: 16px
-							color: #{$white}
+							color: #{$button_blue}
+							display: block
 							&:hover
 								opacity: .8
 								text-decoration: none
@@ -240,16 +241,19 @@
 				align-items: flex-start
 				&_mobile
 					position: absolute
-					right: 30px
+					right: 10px
 					top: 35px
+					z-index: 50
+					width: 70px
+					height: 50px
 					display: block
 					.icon
 						&_line
 							width: 23px
 							height: 2px
-							margin-bottom: 7px
+							margin: 0 auto 7px
 							display: block
-							background: #{$white}
+							background: #{$kgray}
 				&_topr
 					ul
 						li
@@ -272,7 +276,7 @@
 						z-index: 2
 					ul
 						position: absolute
-						top: 30px
+						top: 100px
 						left: 30px
 						right: 30px
 						li

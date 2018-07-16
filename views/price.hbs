@@ -3,7 +3,7 @@
 			<div class="container">
 				<div class="menu row between-xs middle-xs">
 					<div class="logo_area col-xs-12 col-md center-xs start-md">
-						<a href="/">
+						<a href="/pau">
 							<div class="logo" style="background: url(/upload/images/item/prod1.png) no-repeat left center;background-size: contain">
 								<!-- <img src="images/logo.png" class="holder_image"> -->
 							</div>
@@ -12,9 +12,7 @@
 					<div class="breadcrumbs col-xs-12 col-md-10 center-xs">
 						<a href="/">Главная</a> 
 						/
-						<a href="/">Продукты</a> 
-						/
-						<a href="/">Помощник арбитражного управляющего</a> 
+						<a href="/pau">Помощник арбитражного управляющего</a> 
 						/
 						<span>Цены</span>
 					</div>
@@ -55,8 +53,8 @@
 	<section class="rates" id="rates">
 		<div class="container">
 			<div class="list_types">
-				<a href="#" class="noactive">Без ограничений</a>
-				<a href="#" class="link">Версия за 1 предприятие-банкрот</a>
+				<a href="#" data-id="price_1" class="noactive">Без ограничений</a>
+				<a href="#" data-id="price_2" class="link">Версия за 1 предприятие-банкрот</a>
 			</div>
 			<div class="row price_list">
 				<div class="row price_item price_names col-xs-12 col-md-5 start-md hidden-m">
@@ -112,7 +110,8 @@
 						<div class="price_header">
 							<div class="price_header_title">
 								<h4>«Лайт»</h4>
-								<h3>19 890 Р</h3>
+								<h3 data-price="price_1">19 890 Р</h3>
+								<h3 data-price="price_2" class="hidden">7 890 Р</h3>
 							</div>
 						</div>
 						<div class="row">
@@ -405,9 +404,10 @@
 						</div>
 						<div class="price_footer">
 							<div class="price_footer_title">
-								<h3>19 890 Р</h3>
+								<h3 data-price="price_1">19 890 Р</h3>
+								<h3 data-price="price_2" class="hidden">7 890 Р</h3>
 							</div>	
-							<a href="#" class="btn btn-red-outline">Купить</a>	
+							<a href="http://rsit.ru/buy/product/ama/" target="_blank" class="btn btn-red-outline">Купить</a>	
 						</div>
 					</div>
 				</div>
@@ -419,7 +419,8 @@
 						<div class="price_header">
 							<div class="price_header_title">
 								<h4>«Профессионал»</h4>
-								<h3>28 890 Р</h3>
+								<h3 data-price="price_1">28 890 Р</h3>
+								<h3 data-price="price_2" class="hidden">9 890 Р</h3>
 							</div>
 						</div>
 						<div class="row">
@@ -712,9 +713,10 @@
 						</div>
 						<div class="price_footer">
 							<div class="price_footer_title">
-								<h3>28 890 Р</h3>
+								<h3 data-price="price_1">28 890 Р</h3>
+								<h3 data-price="price_2" class="hidden">9 890 Р</h3>
 							</div>	
-							<a href="#" class="btn btn-red-outline">Купить</a>	
+							<a href="http://rsit.ru/buy/product/ama/" target="_blank" class="btn btn-red-outline">Купить</a>	
 						</div>
 					</div>
 				</div>
@@ -1020,8 +1022,8 @@
 							<div class="price_footer_title">
 								<h3>108 890 Р</h3>
 							</div>	
-							<a href="#" class="btn btn-red-outline">Купить</a>	
-							<a href="#" class="link_btn">Подробнее о редакции</a>
+							<a href="http://rsit.ru/buy/product/ama/" target="_blank" class="btn btn-red-outline">Купить</a>	
+							<a href="/pau/uprcompany" class="link_btn">Подробнее о редакции</a>
 						</div>
 					</div>
 				</div>
@@ -1089,9 +1091,6 @@
 				</div>
 				<div class="row price_item price_box col-xs-12 end-md col-md-2">
 					<div class="price_box_body">
-						<div class="best">
-							<div class="best_text">Хит продаж</div>
-						</div>
 						<div class="price_header">
 							<div class="price_header_title">
 								<h4>«Профессионал»</h4>
@@ -1191,7 +1190,11 @@
 			</div>
 			<div class="about">
 				<div class="text text_center">
-					<p>Стоимость технической поддержки вычисляется как процент от <a href="#" target="_blank">стоимости комплектации программы.</a></p>
+					<p>Стоимость технической поддержки вычисляется как процент от <span class="link"
+					 data-tooltip="В стоимость комплектации программы входит стоимость программы, дополнительных
+					  арбитражных управляющих и дополнительных рабочих мест. Для версии Управляющая компания не
+					   менее 42 000 руб., для версии Профессионал не менее 8 280 руб., для версии Лайт не менее 5 900 руб."
+					 target="_blank">стоимости комплектации программы.</span></p>
 				</div>
 			</div>
 			<div class="support_numbers row center-xs">
@@ -1214,7 +1217,7 @@
 			</div>
 			<div class="support_policy">
 				<div class="text text_center">
-					<p>Техническая поддержка приобретается на условиях публичной оферты.</p>
+					<p>Техническая поддержка приобретается на условиях <a href="/pau/offert" target="_blank">публичной оферты</a>.</p>
 				</div>
 			</div>
 			

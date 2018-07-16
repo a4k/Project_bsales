@@ -27,6 +27,9 @@
 		&_info
 			font: 14px/24px #{$ibm_sans}
 			margin-bottom: 13px
+		[data-price]
+			&.hidden
+				display: none
 	&_header
 		display: flex
 		flex-flow: row wrap
@@ -139,6 +142,8 @@
 		margin-bottom: 80px
 	.about
 		a
+			color: #{$button_red}
+		.link
 			color: #{$button_red}
 	&_numbers
 		position: relative

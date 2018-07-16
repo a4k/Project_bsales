@@ -1,0 +1,611 @@
+// Видео обзор
+.video
+	&_review
+
+.header
+	&_product
+		.link
+			color: #{$f_green}
+			&:hover
+				color: #{$f_green}
+.link
+	color: #{$f_green}
+	&:hover
+		text-decoration: none
+		color: #{$f_green}
+.notification
+	background: #6BBD7C
+	color: #{$white}
+	width: 100%
+	height: 30px
+	text-align: center
+	p
+		font-size: 14px
+		line-height: 28px
+// main product block
+.product_info
+	position: relative
+	.product
+		position: relative
+		display: flex
+		flex-direction: row wrap
+		justify-content: flex-start
+		align-items: stretch
+		height: auto
+		padding: 87px 0 60px
+		&_photo
+			width: 50%
+			height: 516px
+			position: relative
+			&_out
+				background: url(/upload/images/item/prod1-big.jpg) no-repeat center
+				width: 100%
+				height: 100%
+		&_about
+			position: relative
+			z-index: 2
+			width: 50%
+			display: flex
+			flex-flow: column wrap
+			align-items: flex-start
+			justify-content: center
+			padding-left: 10px
+			.text
+				max-width: 610px
+			.title
+				h2
+					text-align: left
+					font-family: #{$proxima_bold}
+			&_info
+				margin-bottom: 2rem
+				.info_column
+					padding: 0
+				.title
+					&_block
+						&_bold
+							margin-bottom: 0
+				.number_info
+					font-size: 14px
+	.block_buy
+		background: #{$gwhite}
+		border-radius: 5px
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		padding: 30px
+		max-width: 568px
+		margin-left: -30px
+		color: #{$gblack}
+		&_version
+			p
+				font-size: 14px
+				line-height: 24px
+			.block_buy_new
+				flex-basis: 100px
+				text-align: right
+		&_btn
+			.btn
+				width: 200px
+				display: inline-block
+		&_demo
+			text-align: center
+			.text_demo
+				font: 12px/20px #{$ibm_sans}
+		.link_btn
+			color: #{$f_green}
+// О программе
+.capability
+	.features
+		.item
+			padding-right: 45px
+			margin: 0 0 60px 0
+			color: #{$dark_gray}
+			&_icon
+				width: 32px
+				height: 32px
+				position: relative
+				margin-bottom: 34px
+			&_about
+				p
+					font: 14px/24px #{$ibm_sans}
+	// Примеры отчетов
+	.reports
+		padding-bottom: 60px
+		&_block
+			background: #{$white}
+			min-height: 153px
+			padding: 30px
+			.item
+				display: flex
+				flex-flow: column wrap
+				justify-content: center
+				align-items: center
+				padding: 10px 0
+				a
+					margin-bottom: 10px
+					font-family: #{$proxima_regular}
+					font-weight: bold
+					line-height: 19px
+
+// Поддержка
+.support
+	.about
+	.support_numbers
+		.support_number
+			width: 203px
+			.title
+				&_big
+					color: #{$f_green}
+					margin-bottom: 15px
+			&_text
+				color: #{$gblack}
+				p
+					line-height: 21px
+		.support_equal_block
+			.support_equal
+				width: 20px
+				height: 32px
+				p
+					color: #{$f_green}
+					font-size: 32px
+	.support_policy
+		.text
+			p
+				font-size: 12px
+				margin-top: 33px
+	.what_get
+		height: auto
+		padding: 40px
+		background: #{$gwhite}
+		h4
+			font-size: 22px
+	.support_info
+		padding-top: 0
+	.row_what_get_item
+		width: 514px
+		text-align: left
+	.support_info
+		margin-top: 40px
+		.text_center
+			height: 29px
+		ul
+			margin-top: 10px
+			li
+				line-height: 21px
+				margin-top: 20px
+				a
+					color: #{$f_green}
+// Цены
+.prices
+	.price_block
+		box-shadow: 0 0 24px rgba(0,0,0,0.1)
+		margin-bottom: 80px
+		width: 100%
+		max-width: 1135px
+		.item
+			padding: 30px
+			position: relative
+			&:first-child
+				&:after
+					content: ' '
+					position: absolute
+					right: 0
+					top: 20px
+					bottom: 20px
+					width: 1px
+					height: auto
+					background: #{$hr_price_gray}
+			.title
+				&_big
+					color: #{$f_green}
+					margin: 20px 0 30px
+			.btn
+				width: 200px
+				display: inline-block
+				margin-bottom: 30px
+			.block_buy_btn
+				text-align: center
+// Скриншоты
+.screen
+	&_list
+		padding-bottom: 60px
+		margin: 0 -10px
+		.owl-dots
+			z-index: 50
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: center
+			width: 100%
+			.owl-dot
+				width: 20px
+				height: 20px
+				border-bottom: 2px solid #{$cgray}
+				margin: 0 10px
+				outline: none
+				cursor: pointer
+				&:hover
+					border-bottom: 2px solid #{$kgray}
+			.active
+				border-bottom: 2px solid #{$button_red}
+				cursor: default
+		.item
+			cursor: pointer
+			#openNewScreen
+				margin: 0 10px
+			img
+				width: 100%
+// Технические требования
+.techreq
+	padding-bottom: 40px
+	.tech
+		&_short
+			a
+				color: #{$f_green}
+		&_full
+			display: none
+			.attention
+				color: #{$f_green}
+				line-height: 50px
+			ul
+				margin-left: 30px
+				li
+					padding: 0 0 7px 30px
+// Оставить заявку
+.callme
+	&_list
+		margin-bottom: 60px
+		padding: 30px
+		background: #{$gwhite}
+		.item
+			&:nth-child(2)
+				text-align: center
+				p
+					font-size: 14px
+					line-height: 20px
+		.headphones
+			width: 60px
+			flex-basis: 60px
+			max-width: 60px
+			height: 38px
+			display: inline-block
+		.title
+			margin-bottom: 0
+			h4
+				text-align: left
+				display: inline-block
+				a
+					color: #{$button_blue}
+					text-transform: normal
+		.button
+			&_request
+				width: 230px
+		.callme_action
+			max-width: 600px
+			margin: 0px auto
+// События и вебинары
+.evs
+	margin-bottom: 40px
+	.ev_list
+	.title
+		h3
+			text-align: left
+	.events
+		.link
+			font: 13px/22px #{$ibm_sans}
+		&_list
+			.item
+				.date
+					color: #{$date_gray}
+	.webinary
+		margin-bottom: 30px
+		&_about
+			padding-bottom: 40px
+		&_schedule
+	&_social
+		display: flex
+		&_title
+			display: block
+			color: #{$gblack}
+			flex-basis: auto
+		&_icons
+			display: block
+			a
+				display: inline-block
+				width: 30px
+				height: 30px
+			.icon
+				margin-left: 20px
+// Подписаться на рассылку
+.subscribe
+	&_answer
+		&_success
+			background: #{$white}
+			margin: auto
+			max-width: 1300px
+			padding: 30px
+			text-align: center
+			position: fixed
+			top: 250px
+			left: 20px
+			right: 20px
+			width: auto
+			z-index: 50
+			box-shadow: 0 0 24px #{$black_o_1}
+		&_error
+			background: #{$white}
+			margin: auto
+			max-width: 1300px
+			padding: 30px
+			text-align: center
+			position: fixed
+			top: 250px
+			left: 20px
+			right: 20px
+			width: auto
+			z-index: 50
+			box-shadow: 0 0 24px #{$black_o_1}
+	&_list
+		margin-bottom: 60px
+		padding: 30px
+		background: #{$gwhite}
+		.item
+			&:nth-child(2)
+				text-align: center
+				p
+					font-size: 14px
+					line-height: 20px
+		.mail
+			width: 60px
+			flex-basis: 60px
+			max-width: 60px
+			height: 26px
+			display: inline-block
+		.title
+			margin-bottom: 0
+			h4
+				text-align: left
+				display: inline-block
+				a
+					color: #{$button_blue}
+					text-transform: normal
+	&_form
+		&_email
+			margin-left: -20px
+// Центр загрузки и База знаний
+.rsit_base
+	.list_base
+		margin-bottom: 80px
+		.item
+			padding: 30px
+			position: relative
+			box-shadow: 0px 0px 24px #{$black_o_1}
+			background: #{$white}
+			height: 315px
+			border-radius: 8px
+			&:first-child
+				margin-right: 20px
+			&_header
+				margin-bottom: 30px
+				&_icon
+					flex-basis: auto
+					max-width: auto
+					.icon
+						display: flex
+						flex-flow: row wrap
+						align-items: center
+						justify-content: center
+				.title
+					margin-bottom: 0
+					margin-left: 30px
+					h4
+						text-align: left
+				.icon
+					background: green
+					width: 70px
+					height: 70px
+			&_body
+			&_footer
+				position: absolute
+				bottom: 30px
+				left: 30px
+				a
+					color: #{$f_green}
+.documents
+	.docs_list
+		margin-bottom: 60px
+		.title
+			margin-bottom: 28px
+			h4
+				text-align: left
+		.doc_links
+			.doc_link
+				a
+					font: 16px/35px #{$ibm_sans}
+					color: #{$f_green}
+
+
+.tech_req
+	.modal_body
+		.text
+			font-size: 26px
+
+
+.promo_product
+	position: relative;
+	height: auto;
+	width: 100%;
+	padding: 20px 0
+	.l_container
+		height: 100%
+		.menu
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			align-items: center
+			justify-content: space-between
+			height: 100%
+			.title
+				margin-bottom: 0
+				h2
+					text-align: left
+			.menu_product
+				ul
+					margin: 0 20px
+					padding: 0
+					display: flex
+					flex-direction: row
+					flex-wrap: wrap
+					align-items: center
+					li
+						float: left
+						margin: 0 0 0px 40px
+.p_price
+	margin-bottom: 60px
+/* Medium device styles */
+@media (max-width: '#{$medium}px')
+	.product
+		&_info
+			.product
+				padding: 20px 0 20px
+				&_about
+					padding-left: 0
+					&_info
+						// margin: auto
+			.block
+				&_buy
+					margin: auto
+					max-width: 100%
+					&_btn
+						margin-bottom: 10px
+						.btn
+							width: 100%
+	.prices
+		.price_list
+			.item
+				&-header
+					.title
+						&_block
+							h3
+								font-size: 20px
+				&:nth-child(2)
+					.item-header
+						.title
+							&_block
+								h3
+									font-size: 20px
+	.screen
+		&_list
+			.item
+				margin-bottom: 20px
+	.callme
+		&_list
+			margin-bottom: 40px
+			.title
+				margin-bottom: 28px
+			.callme
+				&_action
+					margin-bottom: 30px
+			.button
+				&_request
+					width: 100%
+	.evs
+		padding-top: 0
+		.title
+			h3
+				text-align: center
+		.ev
+			&_list
+				.events
+					margin-bottom: 40px
+		&_social
+			&_icons
+				.icon
+					margin-right: 20px
+					margin-left: 0
+	.subscribe
+		&_list
+			.title
+				margin-bottom: 28px
+		&_form
+			&_email
+				margin-left: 0
+				margin-bottom: 14px
+	.rsit_base
+		.list_base
+			.item
+				&:first-child
+					margin-right: 0
+					margin-bottom: 20px
+	.documents
+		.docs_list
+			.title
+				margin-bottom: 14px
+				margin-top: 14px	
+
+/* Small device styles */
+@media (max-width: '#{$small}px')
+	.notification
+		&.pau
+			padding: 0 20px
+			height: auto
+	.product
+		&_info
+			.container
+				padding: 0
+			.product
+				&_about
+					padding: 0 55px
+	.prices
+		.price_list
+			.item
+				z-index: 1
+				&-shadow
+					box-shadow: 0 0 8px #{$black_o_1}
+				&:nth-child(2)
+					margin: 20px auto
+					z-index: 1
+					.item-header
+						.title
+							&_block
+								h3
+									font-size: 24px
+				&-header
+					.title
+						&_block
+							margin-top: 0
+							h3
+								text-align: left
+				&-body
+					.button
+						&_buy
+							p
+								font-size: 12px
+							.link
+								&_demo
+									font-size: 12px
+		.all_prices
+			font-size: 14px
+			&_out
+				margin-top: 40px
+	.rsit_base
+		.list_base
+			.item
+				height: auto
+				padding-bottom: 80px
+
+/* XSmall device styles */
+@media (max-width: '#{$xsmall}px')	
+	.product
+		&_info
+			.product
+				&_about
+					padding: 0 20px
+	.rsit_base
+		.list_base
+			.item
+				&_header
+					.icon
+						width: 50px
+						height: 50px
+						object
+							width: 16px

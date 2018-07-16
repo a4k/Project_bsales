@@ -30,6 +30,41 @@
 		padding-bottom: 0
 		.slide
 			position: relative
+			&[data-slide="1"]
+				.slide
+					&_photo
+						&:after
+							background: #{$white}
+						&_img
+							background-size: contain
+							background-position: center
+							background-repeat: no-repeat
+					&_title
+						margin-bottom: 35px
+						h2
+							color: #{$slide_title}
+					&_hr
+						background: #{$slide_hr}
+						height: 1px
+						width: 100px
+						margin-bottom: 35px
+					&_info
+						width: 100%
+						height: 100%
+						position: relative
+						.btn
+							margin: 0px auto
+							position: absolute
+							bottom: 130px
+							width: 200px
+							left: 50%
+							margin-left: -100px
+					&_about
+						&_text
+							font: 34px/52px #{$proxima_bold}
+							color: #{$slide_title}
+							span
+								color: #{$slide_red}
 			&_photo
 				position: absolute
 				left: 0
@@ -45,7 +80,7 @@
 					content: ' '
 					background: #{$red}
 					mix-blend-mode: multiply
-				.slide_photo_img
+				&_img
 					width: 100%
 					height: 100%
 					background-size: cover
@@ -60,8 +95,8 @@
 					// font-size: 50px
 					// line-height: 60px
 					font-family: #{$proxima_bold};
-					font-size: 54px
-					line-height: 51px
+					font-size: 43px
+					line-height: 50px
 					font-weight: 900
 					margin: 0
 					color: #{$white}
@@ -266,6 +301,20 @@
 					width: auto
 					left: 20px
 					right: 20px
+
+				&[data-slide="1"]
+					.slide
+						&_photo
+							&_img
+								background-position: left center
+								background-size: auto 100%
+								background-position: no-repeat
+						&_info
+							.btn
+								font-size: 14px
+								height: 45px
+								line-height: 45px
+								bottom: 30px
 		.arrow
 			&_left
 				display: none

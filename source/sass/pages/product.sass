@@ -89,7 +89,9 @@
 .capability
 	.features
 		.item
+			padding-right: 45px
 			margin: 0 0 60px 0
+			color: #{$dark_gray}
 			&_icon
 				width: 32px
 				height: 32px
@@ -253,6 +255,25 @@
 	&_list
 		padding-bottom: 60px
 		margin: 0 -10px
+		.owl-dots
+			z-index: 50
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: center
+			width: 100%
+			.owl-dot
+				width: 20px
+				height: 20px
+				border-bottom: 2px solid #{$cgray}
+				margin: 0 10px
+				outline: none
+				cursor: pointer
+				&:hover
+					border-bottom: 2px solid #{$kgray}
+			.active
+				border-bottom: 2px solid #{$button_red}
+				cursor: default
 		.item
 			cursor: pointer
 			#openNewScreen
