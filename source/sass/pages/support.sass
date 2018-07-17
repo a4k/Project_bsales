@@ -1,12 +1,17 @@
 .breadcrumbs
 	margin-bottom: 60px
+a
+	color: #{$blue}
+	&:hover
+		text-decoration: none
+		opacity: .8
 .support
 	.about
 		color: #{$dark_gray}
-		margin-bottom: 30px
+		margin-bottom: 60px
 	.title
 		&_bold
-			margin-bottom: 60px
+			margin-bottom: 35px
 	&_blocks
 		padding-bottom: 60px
 	&_block
@@ -35,9 +40,6 @@
 					&.link
 						&_big
 							font: 30px/46px #{$proxima_bold}
-					&:hover
-						text-decoration: none
-						color: #{$button_blue}
 // Техническая поддержка
 .techsup
 	.product_list

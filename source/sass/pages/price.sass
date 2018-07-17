@@ -5,6 +5,11 @@
 .menu_b
 	a
 		color: #{$button_red}
+.link
+	color: #{$button_red}
+	&:hover
+		text-decoration: none
+		opacity: .8
 // Тарифы
 .rates
 	.list_types
@@ -16,8 +21,13 @@
 			margin: 0 15px
 			font: 16px/24px #{$proxima_bold}
 			color: #{$button_red}
+			&:hover
+				text-decoration: none
+				opacity: .8
 			&.noactive
 				color: #{$link_noactive}
+				&:hover
+					text-decoration: none
 .price
 	&_list
 		padding-bottom: 60px
@@ -80,11 +90,11 @@
 					background: #{$price_three}
 					width: 120px
 					height: 19px
-					font: 11px/19px #{$ibm_sans}
+					font: 10px/19px #{$ibm_sans}
 					text-align: center
-					transform: rotate(45deg)
+					transform: rotate(40deg)
 					position: absolute
-					right: -36px
+					right: -33px
 					top: 17px
 		&_info
 			width: 100%
@@ -139,7 +149,7 @@
 // Техническая поддержка
 .support
 	.title
-		margin-bottom: 80px
+		margin-bottom: 30px
 	.about
 		a
 			color: #{$button_red}
@@ -163,7 +173,7 @@
 		text-align: center
 		&_title
 			h3
-				font: 60px/91px #{$proxima_bold}
+				font: 60px/60px #{$proxima_bold}
 				color: #{$price_three}
 		&_text
 			p
@@ -239,3 +249,24 @@
 					padding-bottom: 30px
 		&_footer
 			padding: 0 30px
+
+/* xsmall device styles */
+@media (max-width: '#{$xsmall}px')
+	.rates
+		.list
+			&_types
+				margin: 0 0 40px
+	.price
+		&_box
+			.title
+				&_list
+					padding: 10px
+			&_text
+				font-size: 14px
+	.support
+		&_number
+			&:nth-child(2n) 
+				margin-top: 35px
+		.what_get
+			padding: 30px 20px
+			margin: 0 -20px 40px

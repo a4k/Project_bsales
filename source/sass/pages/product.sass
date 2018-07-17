@@ -3,12 +3,12 @@
 		.link
 			color: #{$link_red}
 			&:hover
-				color: #{$button_red}
+				opacity: .8
 .link
 	color: #{$button_red}
 	&:hover
 		text-decoration: none
-		color: #{$red}
+		opacity: .8
 .notification
 	background: #{$notification_red}
 	color: #{$white}
@@ -37,6 +37,7 @@
 				background: url(/upload/images/item/prod1-big.jpg) no-repeat center
 				width: 100%
 				height: 100%
+				background-size: 100% auto
 		&_about
 			position: relative
 			z-index: 2
@@ -55,7 +56,7 @@
 			&_info
 				margin-bottom: 2rem
 				.info_column
-					padding: 0
+					padding: 0 30px 0 0
 				.title
 					&_block
 						&_bold
@@ -96,7 +97,7 @@
 				width: 32px
 				height: 32px
 				position: relative
-				margin-bottom: 34px
+				margin-bottom: 14px
 			&_about
 				p
 					font: 14px/24px #{$ibm_sans}
@@ -216,22 +217,28 @@
 					margin-top: 22px
 					a
 				        text-transform: uppercase
-				        font: 14px/18px #{$proxima_bold}
+				        font: 12px/18px #{$proxima_bold}
 				        color: #{$price_three}
+				        letter-spacing: 0.2em
+				        &:hover
+				        	text-decoration: none
+				        	opacity: .8
 				.button_buy
 					width: 100%
 					bottom: 36px
 					.btn
 						margin: 23px auto 0
 					.link_demo
-						font: 14px/18px #{$proxima_bold}
+						font: 12px/18px #{$proxima_bold}
 						text-align: center
 						letter-spacing: 0.2em
-						text-decoration: underline
 						color: #{$price_three}
 						margin-top: 30px
 						display: block
 						text-transform: uppercase
+						&:hover
+							opacity: .8
+							text-decoration: none
 					p
 						font-size: 14px
 
@@ -242,10 +249,13 @@
 		padding: 0
 		line-height: 24px
 		font-size: 16px
-		font: 18px/24px #{$proxima_bold}
+		font: 16px/24px #{$proxima_bold}
+		letter-spacing: 0.2em
 		color: #{$price_three}
 		text-transform: uppercase
-		text-decoration: underline
+		&:hover
+			opacity: .8
+			text-decoration: none
 		&_out
 			margin: 70px 0 40px
 	.redaction
@@ -287,6 +297,9 @@
 		&_short
 			a
 				color: #{$button_red}
+				&:hover
+					opacity: .8
+					text-decoration: none
 		&_full
 			display: none
 			.attention
@@ -359,6 +372,8 @@
 				display: inline-block
 				width: 30px
 				height: 30px
+				&:hover
+					opacity: .8
 			.icon
 				margin-left: 20px
 // Подписаться на рассылку
@@ -462,10 +477,14 @@
 			h4
 				text-align: left
 		.doc_links
+			margin-bottom: 30px
 			.doc_link
 				a
 					font: 16px/35px #{$ibm_sans}
 					color: #{$button_red}
+					&:hover
+						opacity: .8
+						text-decoration: none
 .promo_product
 	position: relative;
 	height: auto;
@@ -536,6 +555,8 @@
 	.callme
 		&_list
 			margin-bottom: 40px
+			.headphones
+				margin-bottom: 30px
 			.title
 				margin-bottom: 28px
 			.callme
@@ -560,6 +581,8 @@
 					margin-left: 0
 	.subscribe
 		&_list
+			.mail
+				margin-bottom: 30px
 			.title
 				margin-bottom: 28px
 		&_form
@@ -591,6 +614,10 @@
 			.product
 				&_about
 					padding: 0 55px
+		&_about
+			&_info
+				.info_column
+					text-align: left
 	.prices
 		.price_list
 			.item
@@ -612,15 +639,25 @@
 							h3
 								text-align: left
 				&-body
+					ul
+						li
+							.row
+								.end-xs
+									font-size: 12px
+					.price_link_more
+						a
+							font-size: 10px
 					.button
 						&_buy
+							.btn
+								padding: 0
 							p
 								font-size: 12px
 							.link
 								&_demo
 									font-size: 12px
 		.all_prices
-			font-size: 14px
+			font-size: 12px
 			&_out
 				margin-top: 40px
 	.rsit_base
@@ -628,6 +665,12 @@
 			.item
 				height: auto
 				padding-bottom: 80px
+	.callme
+		.container
+			padding: 0
+	.subscribe
+		.container
+			padding: 0
 
 /* XSmall device styles */
 @media (max-width: '#{$xsmall}px')	
@@ -645,3 +688,9 @@
 						height: 50px
 						object
 							width: 16px
+	.evs
+		.events
+			&_head
+				.link
+					margin-bottom: 30px
+					display: inline-block

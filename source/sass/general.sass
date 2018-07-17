@@ -301,6 +301,11 @@ h5
             li
                 margin: 0 20px
                 color: #{$dark_gray}
+                a
+                    &:hover
+                        text-decoration: none
+                        h4
+                            opacity: .8
                 h4
                     font: 16px/40px #{$proxima_regular}
                     padding: 0
@@ -390,9 +395,7 @@ h5
             border-box: box-sizing
             cursor: pointer
             &:hover
-                color: #{$red}
-                border: 1px solid #{$red}
-                background: #{$white}
+                opacity: .8
     &-green
         border: 1px solid $f_green;
         color: $white
@@ -430,9 +433,7 @@ h5
             border-box: box-sizing
             cursor: pointer
             &:hover
-                color: #{$f_dark_green}
-                border: 1px solid #{$f_dark_green}
-                background: #{$white}
+                opacity: .8
     &-lblue
         &-outline
             border: 1px solid #{$blue};
@@ -449,9 +450,7 @@ h5
             border-box: box-sizing
             cursor: pointer
             &:hover
-                color: #{$button_blue}
-                border: 1px solid #{$button_blue}
-                background: #{$white}
+                opacity: .8
         &-big
             height: 54px
             line-height: 54px
@@ -532,6 +531,11 @@ h5
     text-align: center
     font: 13px/20px #{$proxima_regular}
     a
+        padding: 0 10px
+        &:hover
+            text-decoration: none
+            opacity: .8
+    span
         padding: 0 10px
 
 
@@ -652,6 +656,9 @@ h5
         letter-spacing: 0.2em
         font: 12px/18px #{$proxima_bold}
         text-transform: uppercase
+        &:hover
+            opacity: .8
+            text-decoration: none
 .c
     &-white
         color: $white;
@@ -690,6 +697,7 @@ h5
         font: 14px/40px #{$ibm_sans}
         height: 160px
         width: 100%
+        resize: none
         padding: 0 15px
     &_title
         label
@@ -901,7 +909,7 @@ h5
     .card
         padding: 0
         position: relative
-        height: 260px
+        height: 275px
         margin-bottom: 20px
         border-radius: 8px
         -webkit-border-radius: 8px
@@ -1013,14 +1021,14 @@ h5
                 font-family: #{$proxima_regular}
                 font-size: 22px
                 line-height: normal
-                margin-bottom: 0
+                margin-bottom: 10px
                 a
                     color: #{$gblack}
                     &:hover
                         text-decoration: none
             .card_text
                 color: #{$dark_gray}
-                max-height: 0
+                // max-height: 0
                 overflow: hidden
                 transition: all 0.2s ease-in-out;
         &_body_c
@@ -1071,7 +1079,7 @@ h5
             box-shadow: 0px 0px 24px #{$black_o_1}
             &:hover
                 .card_photo
-                    height: 50px
+                    // height: 50px
             &_photo
                 top: 32px
                 left: 32px
@@ -1104,6 +1112,8 @@ h5
             width: 45px
             height: 45px
             display: block
+            &:hover
+                opacity: .8
             &.in
                 background-image: url(#{$svg_path}/b-in.svg)
                 background-repeat: no-repeat
@@ -1146,6 +1156,7 @@ h5
                 margin-bottom: 0
                 h4
                     text-align: left
+                    color: #{$button_blue}
                     cursor: pointer
             h3
                 margin: 0
@@ -1204,6 +1215,47 @@ h5
     z-index: 500
     &-open
         overflow: hidden
+    // Разовое обновление
+    &#newUpdate
+        .title
+            h3
+                text-align: left
+                margin: 0
+        .modal
+            &_body
+                .link
+                    color: #{$button_red}
+                    &:hover
+                        opacity: .8
+                        text-decoration: none
+                .update
+                    &_info
+                        margin-bottom: 30px
+                        .title
+                            &_bold
+                                margin-bottom: 0
+                                h4
+                                    line-height: 24px
+                        &_header
+                            height: 60px
+                            p
+                                font-size: 14px
+                                line-height: 20px
+                            .item
+                                height: 60px
+                                padding: 0 30px
+                                &:first-child
+                                    background: #{$input_border}
+                                &:last-child
+                                    background: #{$hr_gray}
+                        &_row
+                            height: 60px
+                            p
+                                font-size: 14px
+                                line-height: 20px
+                            &:nth-child(2n+1)
+                                background: #{$table_odd}
+
     // Вебинары и обзоры
     &#newWebinary
         .title
@@ -1220,8 +1272,10 @@ h5
                             p
                                 font-size: 14px
                             a
-                                font-size: 14px
-
+                                font: 14px/18px #{$ibm_sans}
+                                &:hover
+                                    opacity: .8
+                                    text-decoration: none
                 .reviews
                     &_list
                         .item
@@ -1229,12 +1283,15 @@ h5
                             p
                                 font-size: 14px
                             a
-                                font-size: 14px
+                                font: 14px/18px #{$ibm_sans}
+                                &:hover
+                                    opacity: .8
+                                    text-decoration: none
         a
             color: #{$price_three}
             &:hover
                 text-decoration: none
-                color: #{$button_red}
+                opacity: .8
     // Технические требования
     &#newTech
         .title
@@ -1306,6 +1363,7 @@ h5
                         margin-bottom: 20px
                     &_photo
                         margin-bottom: 20px
+                        width: 100%
                     &_voice
                         font-style: italic
     // Для медиа окон
@@ -1317,7 +1375,7 @@ h5
             position: absolute
             top: 0
             right: 0
-            opacity: .65
+            opacity: .45
             background: none
             z-index: 1045
             &:hover
@@ -1392,7 +1450,7 @@ h5
             top: 0
             z-index: 1040
             cursor: pointer
-            opacity: .65
+            opacity: .45
             display: flex
             flex-flow: column wrap
             justify-content: center
@@ -1635,6 +1693,7 @@ h5
                 line-height: 27px
         h3
             line-height: 42px
+            font-size: 24px
         h4
             font-size: 20px
             line-height: 28px
@@ -1685,6 +1744,15 @@ h5
         padding-bottom: 40px
         &.media
             padding-bottom: 30px
+        &.ctm_1
+            &>.cards
+                width: calc(1*100% - (1 - 1)*20px)
+                &:nth-child(1n)
+                    margin-right: 0
+            &>.card
+                width: calc(1*100% - (1 - 1)*20px)
+                &:nth-child(1n)
+                    margin-right: 0
         &.cts_2
             .card
                 width: calc(1/2*100% - (1 - 1/2)*20px)
@@ -1700,6 +1768,8 @@ h5
                 margin-right: 0
         .card
             width: calc(1*100%)
+            &.wm_a
+                width: calc(1*100%)
             &.m_column
                 flex-flow: column wrap
             &_body
@@ -1743,11 +1813,24 @@ h5
 
 /* XSmall device style */
 @media (max-width: '#{$xsmall}px')
+    .title
+        h1
+            font-size: 28px
+            line-height: 35px
     .container
-        padding: 0 30px
+        padding: 0 20px
     .btn
         height: auto
     .modal
+        .arrow
+            &_left
+                .arrow
+                    background-position: left center
+                    margin-left: 0
+            &_right
+                .arrow
+                    background-position: right center
+                    margin-right: 0
         &_header
             .close
                 top: 0
@@ -1762,6 +1845,8 @@ h5
                     width: 100%
                     input
                         padding: 12px 15px
+        &_dialog
+            margin: 60px 30px
     .title
         h2
             word-break: normal

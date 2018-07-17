@@ -15,6 +15,11 @@ $('[class=toggles]').find('.toggle').each(function() {
 // Переключение цен
 $('#rates .list_types').find('a').click(function() {
 	var id = $(this).attr('data-id');
+	if(id == 'price_1') {
+		$('[data-coprice="3"]').show();
+	} else {
+		$('[data-coprice="3"]').hide();
+	}
 	$('[data-price]').addClass('hidden');
 	$('[data-price='+ id +']').removeClass('hidden');
 	$(this).parent().find('a').removeClass('noactive');
@@ -27,6 +32,13 @@ $('[data-tooltip]').hover(function() {
 	$(this).append('<span class="tooltip">'+text+'</span>');
 }, function() {
 	$(this).find('.tooltip').remove();
+});
+
+
+// Разовое обновление
+$('#moreUpdate').click(function() {
+	$('#newUpdate').fadeIn();
+	return false;
 });
 
 // Читать подробнее технические требования
@@ -76,6 +88,7 @@ $(window).on('load', function(){
   // }, 1000);
 });
 $(document).ready(function() {
+	$('input[name=form_text_7]').mask('+7(999) 999-9999');
 	$('a.link_anchor').click(function(event){
 		event.preventDefault();
 		var blockID = $(this).attr('href').split('#')[1];
@@ -429,15 +442,28 @@ $('#screens').each(function() {
 	var $el = $(this), 
 	$wrapper = $(this).find('.swrapper'),
 	$slide = $wrapper.find('.item');
+	if($el.hasClass('gallery')) {
+		// Это галерея в О Компании
+		$wrapper.owlCarousel({
+		    loop:true,
+		    margin:0,
+		    dots:true,
+		    nav:false,
+		    autoWidth: true,
+		    autoplay: true,
+		    items: 3,
+		});
+	} else {
+		$wrapper.owlCarousel({
+		    loop:true,
+		    margin:0,
+		    dots:true,
+		    nav:false,
+		    autoWidth: true,
+		    items: 3,
+		});
+	}
 
-	$wrapper.owlCarousel({
-	    loop:true,
-	    margin:0,
-	    dots:true,
-	    nav:false,
-	    autoWidth: true,
-	    items: 3,
-	});
 });
 
 

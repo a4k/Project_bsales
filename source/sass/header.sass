@@ -151,12 +151,14 @@
 					top: 30px
 					right: 30px
 				ul
-					min-width: 550px
+					// min-width: 550px
 					margin: 0
 					padding: 0
 					li
 						margin: 0 0 0 60px
+						text-align: center
 						line-height: 40px
+						width: auto
 						&:first-child
 							margin-left: 0
 						&:last-child
@@ -165,7 +167,6 @@
 							font-family: #{$proxima_bold}
 							font-size: 16px
 							color: #{$button_blue}
-							display: block
 							&:hover
 								opacity: .8
 								text-decoration: none
@@ -194,6 +195,13 @@
 		&.header_product
 			&.fix-header
 				top: 68px
+			.container
+				.menu
+					.logo
+						&_area
+							margin-bottom: 30px
+					&_mobile
+						display: none
 		&.header_breadcrumb
 			.container
 				.menu
@@ -284,7 +292,6 @@
 							height: 60px
 							line-height: 60px
 							margin-left: 0
-							margin-right: 60px
 							// border-bottom: 1px solid #{$white_o_3}
 							a
 								font-size: 22px

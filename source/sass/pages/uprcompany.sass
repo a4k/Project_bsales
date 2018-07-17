@@ -1,9 +1,8 @@
-.link
+.link, a
 	color: #{$button_red}
 	&:hover
 		text-decoration: none
-		color: #{$red}
-
+		opacity: .8
 // Редакции
 .redaction
 	&_list
@@ -199,3 +198,35 @@
 				a
 					font: 16px/35px #{$ibm_sans}
 					color: #{$button_red}
+
+/* medium device styles */
+@media (max-width: '#{$medium}px')
+	.price
+		&_item
+			margin-bottom: 20px
+	.list_base
+		#knowledge
+			margin-bottom: 20px
+			.item
+				margin-right: 0
+		#download
+			margin-bottom: 20px
+			.item
+				margin-right: 0
+	.docs_list
+		.item
+			margin-bottom: 30px
+			.title
+				margin-bottom: 0
+/* xsmall device styles */
+@media (max-width: '#{$xsmall}px')
+	.redaction
+		&_list
+			.item
+				.btn
+					padding: 0
+	.price
+		&_box
+			.title
+				&_list
+					padding: 10px
