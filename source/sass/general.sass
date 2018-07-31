@@ -66,6 +66,16 @@ h5
     padding: 0
     font: 18px/27px $proxima_regular
 
+.tablebodytext
+    display: none
+    height: 0
+    width: 0
+
+/* Zendesk */
+#launcher
+    right: 40px
+    bottom: 40px
+
 /* Common styles */
 .pt
     &_0
@@ -238,6 +248,11 @@ h5
 .x_container
     max-width: 600px
     margin: 0 auto
+.slider_container
+    padding: 0
+    max-width: 1320px
+    margin: 0 auto
+    position: relative
 .container_product
     margin: auto
     max-width: 1220px
@@ -257,12 +272,15 @@ h5
         padding: 0;
     &.no-padding-right
         padding: 0 0 0 25px;
-    @media (max-width: '#{$blarge}px')
-        // padding: 0 110px;
+@media (max-width: '#{$blarge}px')
+    // padding: 0 110px;
+    .container
         padding: 0 60px
         width: auto
         &.no-padding-right
             padding: 0 0 0 55px;
+    .slider_container
+        padding: 0 120px
 
 /* block bg- background styles */
 .bg
@@ -290,7 +308,7 @@ h5
         padding: 20px 0
         ul
             width: 100%
-            height: 100%
+            // height: 100%
             margin: 0
             padding: 0
             display: flex
@@ -314,6 +332,10 @@ h5
 /* Tooltip Styles */
 [data-tooltip]
     position: relative
+    opacity: 1
+    &.link
+        &:hover
+            opacity: 1
     .tooltip
         position: absolute
         bottom: 20px
@@ -323,6 +345,7 @@ h5
         color: #{$kgray}
         right: 0
         max-width: 250px
+        font-weight: normal
         padding: 20px
         box-shadow: 0 0 8px #{$black_o_1}
 
@@ -511,8 +534,7 @@ h5
         -webkit-transition: all 0.5s ease-in-out
         -ms-transition: all 0.5s ease-in-out
         &:hover
-            background: #{$white}
-            color: #{$kgray}
+            opacity: .8
 
     &-black
         background: #000000;
@@ -526,7 +548,7 @@ h5
 
 /* Breadcrumb styles */
 .breadcrumbs
-    margin: 30px auto 30px
+    margin: 10px auto 10px
     color: #{$egray}
     text-align: center
     font: 13px/20px #{$proxima_regular}
@@ -567,6 +589,7 @@ h5
             line-height: 30px
         h5
             margin-bottom: 0
+    /* List style */
     ul
         margin-bottom: 20px
         li
@@ -603,6 +626,19 @@ h5
                     padding-left: 0
                     &:before
                         left: -27px
+            &_line
+                li
+                    padding-left: 12px
+                    &:before
+                        content: ' - '
+                        background: transparent
+                        position: absolute
+                        left: 0px
+                        top: 0px
+                        width: auto
+                        height: auto
+                        display: inline
+                        border-radius: 0
     img
         width: 100%
         min-height: 500px
@@ -719,6 +755,12 @@ h5
     width: 150px
     margin: 20px auto 20px
 
+/* Preload styles */
+.preload
+    &_item
+        width: 0
+        height: 0
+        display: inline
 /* Item styles */
 .items
     display: flex
@@ -1080,6 +1122,10 @@ h5
             &:hover
                 .card_photo
                     // height: 50px
+            &[data-product="hudway"]
+                .card_photo
+                    background-size: auto 54px
+                    background-position: left center
             &_photo
                 top: 32px
                 left: 32px
@@ -1088,7 +1134,8 @@ h5
                 max-width: 190px
                 // min-width: 80px
                 background-repeat: no-repeat
-                background-size: contain
+                background-size: auto 80px
+                // background-size: contain
                 transition: all 0.5s ease
                 -webkit-transition: all 0.5s ease
                 -moz-transition: all 0.5s ease
@@ -1201,6 +1248,100 @@ h5
                 // max-height: 3500px
 
 
+/* Screens */
+.qslider
+    .item
+        &_screen
+            display: block
+            margin: 0 10px
+            img
+                width: 100%
+
+/* New Modal styles */
+.modal
+    &-view
+        &-container
+            .arrow
+                &_close
+                    cursor: pointer
+                    transition: all 0.5s ease-in-out
+                    -o-transition: all 0.5s ease-in-out
+                    -moz-transition: all 0.5s ease-in-out
+                    -webkit-transition: all 0.5s ease-in-out
+                    -ms-transition: all 0.5s ease-in-out
+                    display: block
+                    position: absolute
+                    top: 20px
+                    right: 20px
+                    width: 150px
+                    height: 150px
+                    opacity: .65
+                    z-index: 5
+                    background: none
+                    &:hover
+                        opacity: 1
+                    &:after
+                        content: ''
+                        display: block
+                        width: 150px
+                        height: 150px
+                        background: url(#{$svg_path}/close-2.svg) no-repeat 100px 20px
+                        background-size: 30px
+                &_info
+                    text-align: center
+                    width: 60px
+                &_left, &_right
+                    width: 50%
+                    height: 100%
+                    background-size: auto 44px
+                    position: absolute
+                    top: 0
+                    z-index: 99996
+                    cursor: pointer
+                    opacity: .45
+                    display: flex
+                    flex-flow: column wrap
+                    justify-content: center
+                    align-items: flex-start
+                    &:hover
+                        opacity: 1
+                        .counter
+                            opacity: 1
+                    .arrow
+                        display: inline-block
+                        width: 44px
+                        height: 44px
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: auto 44px
+                    .counter
+                        display: inline-block
+                        background: #{$black_o_65}
+                        color: #{$white}
+                        margin-top: 22px
+                        opacity: 0
+                        width: 44px
+                        text-align: center
+                        border-radius: 3px
+                        -webkit-border-radius: 3px
+                        -moz-border-radius: 3px
+                        -o-border-radius: 3px
+                &_left
+                    left: 0
+                    .arrow
+                        background-image: url(#{$svg_path}/sl-icon-l.svg)
+                        margin-left: 20px
+                    .counter
+                        margin-left: 10px
+                &_right
+                    right: 0
+                    align-items: flex-end
+                    .arrow
+                        background-image: url(#{$svg_path}/sl-icon-r.svg)
+                        margin-right: 20px
+                    .counter
+                        margin-right: 10px
+
 /* Modal styles */
 .modal
     position: fixed
@@ -1225,6 +1366,9 @@ h5
             &_body
                 .link
                     color: #{$button_red}
+                    &[data-tooltip]
+                        &:hover
+                            opacity: 1
                     &:hover
                         opacity: .8
                         text-decoration: none
@@ -1237,7 +1381,7 @@ h5
                                 h4
                                     line-height: 24px
                         &_header
-                            height: 60px
+                            // height: 60px
                             p
                                 font-size: 14px
                                 line-height: 20px
@@ -1249,8 +1393,13 @@ h5
                                 &:last-child
                                     background: #{$hr_gray}
                         &_row
-                            height: 60px
+                            // height: 60px
+                            .item
+                                height: 60px
+                                padding: 0 30px
                             p
+                                width: 100%
+                                display: block
                                 font-size: 14px
                                 line-height: 20px
                             &:nth-child(2n+1)
@@ -1721,12 +1870,16 @@ h5
                 justify-content: flex-start
                 align-items: center
                 margin-bottom: 10px
+                &[data-product="hudway"]
+                    .card_photo
+                        background-size: contain
+                        background-position: center
                 &_photo
                     position: relative
                     margin: 0 20px
                     width: 37px
                     height: 37px
-                    // background-size: 37px auto
+                    background-size: contain
                     top: 0
                     left: 0
                     min-width: 37px
@@ -1737,7 +1890,7 @@ h5
                     position: relative
                     top: 0
                     left: 0
-                    padding-right: 10px
+                    padding-right: 20px
                 &_text
                     display: none
     .cards
@@ -1819,6 +1972,8 @@ h5
             line-height: 35px
     .container
         padding: 0 20px
+    .slider_container
+        padding: 0 40px
     .btn
         height: auto
     .modal
@@ -1846,7 +2001,23 @@ h5
                     input
                         padding: 12px 15px
         &_dialog
-            margin: 60px 30px
+            margin: 0
+        &#newUpdate
+            .modal
+                &_body
+                    .update
+                        &_info
+                            &_header
+                                height: 150px
+                                .item
+                                    padding: 0
+                                    height: 100%
+                                    p
+                                        font-size: 11px
+                            &_row
+                                .item
+                                    height: 100%
+                                    padding: 10px 0
     .title
         h2
             word-break: normal

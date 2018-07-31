@@ -4,29 +4,35 @@ footer
 	background: #{$dark_blue}
 	color: #{$white}
 	padding: 40px 0 0
+	a
+		color: #{$white}!important
+		&:hover
+			color: #{$white}!important
+			opacity: .8
+			text-decoration: none
 	.container
 		height: 100%
 		.footer_nav
-			.cards
-				justify-content: flex-start
-				.card
-					.logo
-						float: left;
-						width: 245px
-						height: 72px
-						img
-							width: 100%
-							height: auto
-					.title
-						&_block
-							text-align: left
-					h4
-						height: 40px
-						a
-							color: #{$white}
-							&:hover
-								color: #{$white_o_65}
-								text-decoration: none
+			&_row
+				.logo
+					float: left;
+					width: 168px
+					height: 60px
+					img
+						width: 100%
+						height: auto
+				.title
+					&_block
+						text-align: left
+				h4
+					height: 40px
+					a
+						color: #{$white}
+						&:hover
+							color: #{$white_o_65}
+							text-decoration: none
+			&_item
+			    margin-bottom: 30px
 		.link
 			padding-bottom: 8px
 			color: #{$white}
@@ -36,8 +42,8 @@ footer
 				color: #{$white_o_65}
 				text-decoration: none
 		.footer_o
+			padding-bottom: 45px
 			.cards
-				padding-bottom: 45px
 				.card
 					&:nth-child(1)
 						text-align: left
@@ -49,7 +55,6 @@ footer
 				font: 14px/20px #{$ibm_sans}
 				color: #{$white}
 			.f_social
-				text-align: center
 				&_btn
 			        display: inline-block
 			        margin-right: 20px

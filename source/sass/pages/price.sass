@@ -10,6 +10,10 @@
 	&:hover
 		text-decoration: none
 		opacity: .8
+	&[data-tooltip]
+		&:hover
+			opacity: 1
+
 // Тарифы
 .rates
 	.list_types
@@ -146,8 +150,31 @@
 				font: 22px/34px #{$proxima_bold}
 		.btn
 			margin-bottom: 22px
-// Техническая поддержка
+// Поддержка
 .support
+	.support_numbers
+		.support_number
+			width: 203px
+			.title
+				&_big
+					color: #{$price_three}
+					margin-bottom: 15px
+			&_text
+				color: #{$gblack}
+				p
+					line-height: 21px
+		.support_equal_block
+			.support_equal
+				width: 20px
+				height: 32px
+				p
+					color: #{$price_three}
+					font-size: 32px
+	.support_policy
+		.text
+			p
+				font-size: 12px
+				margin-top: 33px
 	.title
 		margin-bottom: 30px
 	.about
@@ -155,33 +182,33 @@
 			color: #{$button_red}
 		.link
 			color: #{$button_red}
-	&_numbers
-		position: relative
-		margin-bottom: 30px
-		&:after
-			content: '='
-			position: absolute
-			top: 50%
-			left: 50%
-			width: 48px
-			height: 48px
-			margin: -24px 0 0 -24px
-			font: 32px/49px #{$proxima_bold}
-			color: #{$price_three}
-	&_number
-		width: 200px
-		text-align: center
-		&_title
-			h3
-				font: 60px/60px #{$proxima_bold}
-				color: #{$price_three}
-		&_text
-			p
-				line-height: normal
-	&_policy
-		margin-bottom: 40px
-		p
-			font-size: 12px
+	// &_numbers
+	// 	position: relative
+	// 	margin-bottom: 30px
+	// 	&:after
+	// 		content: '='
+	// 		position: absolute
+	// 		top: 50%
+	// 		left: 50%
+	// 		width: 48px
+	// 		height: 48px
+	// 		margin: -24px 0 0 -24px
+	// 		font: 32px/49px #{$proxima_bold}
+	// 		color: #{$price_three}
+	// &_number
+	// 	width: 200px
+	// 	text-align: center
+	// 	&_title
+	// 		h3
+	// 			font: 60px/60px #{$proxima_bold}
+	// 			color: #{$price_three}
+	// 	&_text
+	// 		p
+	// 			line-height: normal
+	// &_policy
+	// 	margin-bottom: 40px
+	// 	p
+	// 		font-size: 12px
 	.what_get
 		background: #{$gwhite}
 		padding: 40px
@@ -249,6 +276,15 @@
 					padding-bottom: 30px
 		&_footer
 			padding: 0 30px
+	.support
+		.support_info
+			.text_center
+				height: auto
+		.support_numbers
+			.support_equal_block
+				.support_equal
+					margin: 20px 0
+					height: 32px
 
 /* xsmall device styles */
 @media (max-width: '#{$xsmall}px')
@@ -264,9 +300,9 @@
 			&_text
 				font-size: 14px
 	.support
-		&_number
-			&:nth-child(2n) 
-				margin-top: 35px
+		// &_number
+		// 	&:nth-child(2n) 
+		// 		margin-top: 35px
 		.what_get
 			padding: 30px 20px
 			margin: 0 -20px 40px

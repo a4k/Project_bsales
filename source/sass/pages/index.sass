@@ -31,48 +31,18 @@
 		.slide
 			position: relative
 			&_link
-                position: absolute
-                left: 0
-                top: 0
-                z-index: 6
-                width: 100%
-                height: 100%
-			&[data-slide="1"]
-				.slide
-					&_photo
-						&:after
-							background: #{$white}
-						&_img
-							background: url(#{$img_path}/item/main_banner2.jpg) no-repeat
-							background-size: contain
-							background-position: center
-							background-repeat: no-repeat
-					&_title
-						margin-bottom: 35px
-						h2
-							color: #{$slide_title}
-					&_hr
-						background: #{$slide_hr}
-						height: 1px
-						width: 100px
-						margin-bottom: 35px
-					&_info
-						// height: 100%
-						z-index: 7
-						position: relative
-						padding: 0
-						height: 54px
-						.btn
-							// position: absolute
-							margin-top: 548px
-							width: 200px
-							z-index: 8
-					&_about
-						&_text
-							font: 34px/52px #{$proxima_bold}
-							color: #{$slide_title}
-							span
-								color: #{$slide_red}
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 6
+				width: 100%
+				height: 100%
+			&_title
+				margin-bottom: 35px
+				h1
+					font: 54px/51px #{$proxima_bold}
+					color: #{$white}
+					text-align: left
 			&_photo
 				position: absolute
 				left: 0
@@ -86,8 +56,8 @@
 					width: 100%
 					height: 100%
 					content: ' '
-					background: #{$red}
-					mix-blend-mode: multiply
+					// background: #{$red}
+					// mix-blend-mode: multiply
 				&_img
 					width: 100%
 					height: 100%
@@ -97,8 +67,7 @@
 				position: relative
 				z-index: 5
 			&_title
-				width: 300px
-				padding-bottom: 20px
+				max-width: 300px
 				h2
 					// font-size: 50px
 					// line-height: 60px
@@ -111,6 +80,7 @@
 
 			&_about
 				margin-top: 20px
+				max-width: 450px
 				p
 					font-family: #{$ibm_sans}, sans-serif
 					font-size: 20px
@@ -137,7 +107,16 @@
 			top: 0
 			z-index: 50
 			cursor: pointer
-
+/* Продукты */
+.products
+	.cards
+		.card
+			&_photo
+				background-size: auto 80px
+			&[data-product="hudway"]
+				.card_photo
+					background-size: auto 54px
+/* Услуги */
 .services
 	background: #{$gwhite}
 	&_about
@@ -167,13 +146,22 @@
 			.card_title
 				margin-bottom: 35px
 				margin-top: 0
-				max-width: 150px
+				max-width: 280px
 				a
 					color: #{$white}
+					cursor: default
+					&:hover
+						text-decoration: none
+						cursor: default
 			.card_text
 				color: #{$white}
 				height: auto
 				max-height: 100%
+				li
+					font: 16px/27px #{$ibm_sans}
+				p
+					padding-bottom: 0
+					margin-bottom: 0
 		&_icon
 			position: absolute
 			bottom: 30px
@@ -189,7 +177,8 @@
 	.cards.about_items
 		.card
 			background: transparent
-			height: 140px
+			height: 160px
+			margin-bottom: 30px
 			&_icon
 				position: absolute
 				width: 116px
@@ -204,6 +193,7 @@
 				max-width: 100%
 				width: 100%
 				text-align: center
+				padding-top: 15px
 				.card_text
 					height: 32px
 					width: 100%
@@ -278,22 +268,10 @@
 	.slider
 		&_wrapper
 			.slide
-				&[data-slide="1"]
-					.slide
-						&_photo
-							&_img
-						&_info
-							padding: 0 60px
 @media (min-width: '#{$small}px') and (max-width: '#{$large}px')
 	.slider
 		&_wrapper
 			.slide
-				&[data-slide="1"]
-					.slide
-						&_photo
-							&_img
-						&_info
-							padding: 0 40px
 	.company
 		&_info.link_items
 			.card
@@ -311,27 +289,15 @@
 			height: 568px
 		&_wrapper
 			.slide
-				&[data-slide="1"]
-					.slide
-						&_photo
-							&_img
-								background: url(#{$img_path}/item/main_banner2.jpg) no-repeat
-								background-size: auto 534px
-								background-position: center
-						&_info
-							padding: 0 55px
-							.btn
-								font-size: 14px
-								height: 45px
-								line-height: 45px
-								margin-top: 520px
-								width: 100%
 				&_info
-					padding: 190px 20px 0
+					padding: 190px 40px 0
 					height: 100%
 				&_title
 					max-width: 300px
 					width: auto
+					h1
+						font-size: 38px
+						line-height: 39px
 					h2
 						font-size: 30px
 						line-height: 28px
@@ -346,25 +312,20 @@
 					width: auto
 					left: 20px
 					right: 20px
-
-				&[data-slide="1"]
-					.slide
-						&_photo
-							&_img
-								background-position: left center
-								background-size: auto 100%
-								background-position: no-repeat
-						&_info
-							.btn
-								font-size: 14px
-								height: 45px
-								line-height: 45px
-								bottom: 30px
 		.arrow
 			&_left
 				display: none
 			&_right
 				display: none
+	/* Продукты */
+	.products
+		.cards
+			.card
+				&_photo
+					background-size: 37px auto
+				&[data-product="hudway"]
+					.card_photo
+						background-size: 37px auto
 	.services
 		&_about
 			margin-bottom: 17px
@@ -375,6 +336,11 @@
 					font-size: 20px
 					line-height: normal
 					margin-bottom: 24px
+				&_body
+					.card_text
+						li
+							font: 14px/24px #{$ibm_sans}
+
 		.cards
 			.card
 				padding-top: 50%
@@ -387,7 +353,7 @@
 				display: flex
 				flex-flow: row nowrap
 				justify-content: flex-start
-				align-items: center
+				align-items: flex-start
 				margin-bottom: 30px
 		&_info
 			&.link_items
@@ -455,12 +421,3 @@
 					bottom: -20px
 		&_wrapper
 			.slide
-				&[data-slide="1"]
-					.slide
-						&_photo
-							&_img
-								background: url(#{$img_path}/item/mobile_main_banner2.jpg) no-repeat
-								background-size: auto 534px
-								background-position: center
-						&_info
-							padding: 0 20px

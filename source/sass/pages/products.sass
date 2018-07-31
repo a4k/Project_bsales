@@ -1,1 +1,19 @@
+/* Продукты */
 .products
+	.cards
+		.card
+			&_photo
+				background-size: auto 80px
+			&[data-product="hudway"]
+				.card_photo
+					background-size: auto 54px
+@media (max-width: '#{$small}px')
+	/* Продукты */
+	.products
+		.cards
+			.card
+				&_photo
+					background-size: 37px auto
+			&[data-product="hudway"]
+				.card_photo
+					background-size: 37px auto

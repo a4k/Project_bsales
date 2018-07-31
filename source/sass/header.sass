@@ -5,11 +5,14 @@
 	height: auto;
 	padding: 40px 0
 	width: 100%;
+	transition: height .1s ease-in-out
+	-webkit-transition: height .1s ease-in-out
+	-moz-transition: height .1s ease-in-out
+	-ms-transition: height .1s ease-in-out
 	&-fantom
-		display: none
 		&.header_main
-			min-height: 133px
-			height: 133px
+			min-height: 80px
+			height: 80px
 			position: relative
 		&.header_product
 			min-height: 80px
@@ -30,8 +33,6 @@
 				.logo
 					width: 50px
 					height: 50px
-		.breadcrumbs
-			margin: 0
 	&.header_product
 		height: auto
 		background: #{$gwhite}
@@ -84,14 +85,14 @@
 		position: relative
 		padding: 0
 		&.header_main
-			height: 133px
+			height: 80px
 			box-shadow: 0 2px 14px #{$shadow_gray}
 			z-index: 6
 		.container
 			.menu
 				.logo
-					background: url('#{$svg_path}/logo-2.svg') center no-repeat
-					background-size: 180px auto
+					background: url('#{$svg_path}/logo-2.svg') center 1px no-repeat
+					background-size: 168px auto
 				&_top
 					ul
 						li
@@ -99,15 +100,29 @@
 								color: #{$button_blue}
 	&_main
 		z-index: 2
+		&.h-slide
+			&.fix-header
+				background: transparent
+			.container
+				.menu
+					.logo
+						background: url('#{$svg_path}/logo.svg') center 0px no-repeat
+						background-size: 168px auto
+					&_top
+						ul
+							li
+								a
+									color: #{$white}
+
 		&.fix-header
 			position: fixed
 			top: 0
 			left: 0
 			z-index: 150
 			background: #{$white}
-			height: 80px
+			// height: 80px
 			&.h-top
-				height: 80px
+				// height: 80px
 				z-index: 150
 	.container
 		height: 100%
@@ -116,10 +131,10 @@
 			&_mobile
 				display: none
 			.logo
-				width: 180px
+				width: 168px
 				height: 60px
-				background: url('#{$svg_path}/logo-2.svg') center no-repeat
-				background-size: 180px auto
+				background: url('#{$svg_path}/logo-2.svg') center 1px no-repeat
+				background-size: 168px auto
 				img
 					width: 100%
 					height: auto
@@ -142,7 +157,7 @@
 								text-decoration: none
 			&_top
 				.close
-					background: url('#{$svg_path}/close-2.svg') center no-repeat
+					background: url('#{$svg_path}/close-2.svg') center 1px no-repeat
 					background-size: 16px auto
 					width: 32px
 					height: 32px
@@ -155,7 +170,7 @@
 					margin: 0
 					padding: 0
 					li
-						margin: 0 0 0 60px
+						margin: 0 0 0 20px
 						text-align: center
 						line-height: 40px
 						width: auto
@@ -167,29 +182,41 @@
 							font-family: #{$proxima_bold}
 							font-size: 16px
 							color: #{$button_blue}
+							line-height: 40px
+							display: block
+							padding: 0 20px
 							&:hover
 								opacity: .8
 								text-decoration: none
 @media (max-width: '#{$medium}px')
 	.header
 		padding: 0
-        // transition: all 0.5s ease-in-out;
-        // -o-transition: all 0.5s ease-in-out
-        // -moz-transition: all 0.5s ease-in-out
-        // -webkit-transition: all 0.5s ease-in-out
-        // -ms-transition: all 0.5s ease-in-out
+		&.header_product
+			&.fix-header
+				position: relative
+				top: 0px!important
+				z-index: 18
+				margin-bottom: 35px
+		&.header-fantom
+        	&.header_product
+        		height: 160px
 		&.fix-header
 			position: fixed
 			z-index: 110
-			background: #{$white}
-			box-shadow: 0px 0px 24px #{$black_o_3}
+			&.h-slide
+				.container
+					.menu
+						.logo
+							background: url(#{$svg_path}/logo.svg) left 0px no-repeat
+							background-size: auto 40px
 			.container
 				padding: 0px 20px
 				.menu
 					&_mobile
-						top: 20px
+						// top: 50%
+						// margin-top: -9px
 					.logo
-						background: url('#{$svg_path}/logo-2.svg') left center no-repeat
+						background: url('#{$svg_path}/logo-2.svg') left 1px no-repeat
 						background-size: 120px auto
 						height: 40px
 		&.header_product
@@ -198,8 +225,11 @@
 			.container
 				.menu
 					.logo
+						width: 40px
 						&_area
+							margin-top: 10px
 							margin-bottom: 30px
+							height: 40px
 					&_mobile
 						display: none
 		&.header_breadcrumb
@@ -216,15 +246,21 @@
 								background: #{$kgray}
 		&_main.fix-header
 			padding: 10px 0
+			&.h-slide
+				.container
+					.menu
+						&_mobile
+							.icon
+								&_line
+									background: #{$white}
 			.container
 				.menu
 					&_mobile
-						top: 20px
 						.icon
 							&_line
 								background: #{$kgray}
 		&.header_main.h-top
-			height: 100px
+			height: 68px
 			&.fix-header
 				height: 68px
 			.container
@@ -247,10 +283,14 @@
 			padding: 15px 20px
 			.menu
 				align-items: flex-start
+				.logo
+					&_area
+						height: 100%
 				&_mobile
 					position: absolute
 					right: 10px
-					top: 35px
+					top: 50%
+					margin-top: -9px
 					z-index: 50
 					width: 70px
 					height: 50px
@@ -298,9 +338,23 @@
 								color: #{$white}
 
 
+/* Small device styles */
+@media (max-width: '#{$small}px')
+	.header
+        &-fantom
+        	&.header_product
+        		height: 200px
+
+
 /* XSmall device styles */
 @media (max-width: '#{$xsmall}px')
 	.header
+		&.header_product
+			&.fix-header
+				position: relative
+				top: 0px
+				z-index: 18
+				margin-bottom: 35px
 		.container
 			.menu
 				&_topr
