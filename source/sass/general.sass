@@ -609,7 +609,8 @@ h5
             &.active
                 padding-left: 30px
                 &:before
-                    background: url(#{$svg_path}/check.svg) no-repeat left center
+                    background: url(#{$svg_path}/icons.svg) no-repeat left center
+                    background-position: 0 -190px
                     background-size: 16px auto
                     width: 16px
                     height: 16px
@@ -1162,21 +1163,25 @@ h5
             &:hover
                 opacity: .8
             &.in
-                background-image: url(#{$svg_path}/b-in.svg)
+                background-image: url(#{$svg_path}/icons.svg)
+                background-position: 0 -32px
                 background-repeat: no-repeat
-                background-size: 45px auto
+                background-size: auto
             &.fb
-                background-image: url(#{$svg_path}/b-fb.svg)
+                background-image: url(#{$svg_path}/icons.svg)
+                background-position: 0 0
                 background-repeat: no-repeat
-                background-size: 45px auto
+                background-size: 253px auto
             &.tw
-                background-image: url(#{$svg_path}/b-tw.svg)
+                background-image: url(#{$svg_path}/icons.svg)
+                background-position: 0 -108px
                 background-repeat: no-repeat
-                background-size: 45px auto
+                background-size: 253px auto
             &.vk
-                background-image: url(#{$svg_path}/b-vk.svg)
+                background-image: url(#{$svg_path}/icons.svg)
+                background-position: 0 -153px
                 background-repeat: no-repeat
-                background-size: 45px auto
+                background-size: 253px auto
         &:last-child
             margin-right: 0
     &_min
@@ -1248,7 +1253,7 @@ h5
                 // max-height: 3500px
 
 
-/* Screens */
+/* Screens-slider styles */
 .qslider
     .item
         &_screen
@@ -1257,6 +1262,29 @@ h5
             img
                 width: 100%
 
+/* Captcha styles */
+.captcha
+    &_sid
+        &+img
+            margin: 0
+    &_word
+        border: 1px solid #{$cgray}
+        border-radius: 4px
+        -webkit-border-radius: 4px
+        -moz-border-radius: 4px
+        font: 14px/40px #{$ibm_sans}
+        height: 40px
+        width: 100%
+        padding: 0 15px
+font
+    &.errortext
+        border: 0px
+        background: #{$gwhite}
+        padding: 30px
+        -webkit-border-radius: 3px
+        -moz-border-radius: 3px
+        -o-border-radius: 3px
+        border-radius: 3px
 /* New Modal styles */
 .modal
     &-view

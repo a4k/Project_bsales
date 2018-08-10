@@ -135,7 +135,17 @@ $(window).on('load', function() {
     // }, 1000);
 });
 $(document).ready(function() {
-    $('input[name=form_text_7]').mask('+7(999) 999-9999');
+    $('input[id=phone_masked]').mask('+7(999) 999-9999');
+    var url = location.href;
+    if(url.includes('successRequest')) {
+        // Успешно отправлена Заявка
+        $('#successRequest').fadeIn();
+
+    } else if(url.includes('successVacancies')) {
+        // Успешно отправлена Вакансия
+        $('#successRequest').fadeIn();
+        
+    }
     $('a.link_anchor').click(function(event) {
         // event.preventDefault();
         var blockID = $(this).attr('href').split('#')[1];
@@ -146,6 +156,24 @@ $(document).ready(function() {
             scrollTop: top
         }, 1000);
         return false;
+    });
+    $('.form_errors11').each(function() {
+        var v = $(this).text();
+        var errors = [
+        'Файл: неверный тип файла',
+        'Файл: слишком большой файл',
+        'Неверно введены символы с картинки',
+        'Не заполнены следующие обязательные поля:',
+        'Имя: слишком короткое значение',
+        'Контактная информация: слишком короткое значение',
+        'Не заполнены следующие обязательные поля:',
+        '» "Дополнительно"',
+        ];
+        if(v.contains(errors[0]) || v.contains(errors[1])) {
+            $('["name"^="form" "type"="file"]').addClass('error');
+        } else if(v.contains(errors[1])) {
+            $('[name=captcha_word]').addClass('error');
+        }
     });
 });
 
@@ -552,6 +580,7 @@ $('.menu_mobile').on('click', function() {
 
     $menu.css({top: menu_top+panel_h+'px'});
     $close.css({top: close_top+panel_h+'px'});
+    return false;
 })
 $('.menu_top .close').on('click', function() {
     $('.menu_top').hide();
