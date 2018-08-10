@@ -708,7 +708,7 @@ h5 {
     color: #2D9CDB;
     background: #FFFFFF;
     text-align: center;
-    line-height: 40px;
+    line-height: 43px;
     font-size: 12px;
     letter-spacing: 0.2em;
     width: auto;
@@ -738,9 +738,7 @@ h5 {
     border-box: box-sizing;
     cursor: pointer; }
     .btn-outline:hover {
-      color: #E96060;
-      border: 1px solid #E96060;
-      background: #FFFFFF; }
+      opacity: .8; }
   .btn-outline-blue {
     border: 1px solid #41688C;
     color: #41688C;
@@ -756,9 +754,7 @@ h5 {
     border-box: box-sizing;
     cursor: pointer; }
     .btn-outline-blue:hover {
-      color: #2D9CDB;
-      border: 1px solid #2D9CDB;
-      background: #FFFFFF; }
+      opacity: .8; }
   .btn-outline2 {
     width: 255px;
     margin-top: 35px;
@@ -2301,7 +2297,7 @@ font.errortext {
         right: 30px; }
       .header .container .menu_top ul {
         margin: 0;
-        padding: 0; }
+        padding: 2px 0 0 0; }
         .header .container .menu_top ul li {
           margin: 0 0 0 20px;
           text-align: center;
@@ -2535,7 +2531,7 @@ footer {
     #index .slider_inner .owl-dots {
       position: absolute;
       z-index: 50;
-      bottom: 20px;
+      bottom: 0px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -2543,16 +2539,19 @@ footer {
       width: 100%; }
       #index .slider_inner .owl-dots .owl-dot {
         width: 20px;
-        height: 20px;
-        border-bottom: 2px solid #FFFFFF;
         margin: 0 10px;
         outline: none;
         cursor: pointer; }
-        #index .slider_inner .owl-dots .owl-dot:hover {
-          border-bottom: 2px solid rgba(255, 255, 255, 0.5); }
+        #index .slider_inner .owl-dots .owl-dot span {
+          display: block;
+          background: #FFFFFF;
+          width: 20px;
+          height: 2px;
+          margin: 20px 0; }
+        #index .slider_inner .owl-dots .owl-dot:hover span {
+          opacity: .5; }
       #index .slider_inner .owl-dots .active {
-        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-        cursor: default; }
+        opacity: .5; }
   #index .slider_wrapper {
     padding-bottom: 0; }
     #index .slider_wrapper .slide {
@@ -2601,33 +2600,31 @@ footer {
           margin: 0;
           color: #FFFFFF; }
       #index .slider_wrapper .slide_about {
-        margin-top: 20px;
+        margin-top: 0px;
         max-width: 450px; }
         #index .slider_wrapper .slide_about p {
           font-family: IBM Plex Sans, sans-serif;
           font-size: 20px;
           line-height: 34px;
           color: #FFFFFF; }
+  #index .slider .arrow_left, #index .slider .arrow_right {
+    background-image: url(/upload/images/icon/sl-icon-l.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 100%;
+    background-size: auto 44px;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    cursor: pointer; }
+    #index .slider .arrow_left:hover, #index .slider .arrow_right:hover {
+      opacity: .5; }
   #index .slider .arrow_left {
-    background: url(/upload/images/icon/sl-icon-l.svg) center no-repeat;
-    width: 60px;
-    height: 100%;
-    background-size: auto 44px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 50;
-    cursor: pointer; }
+    left: 0; }
   #index .slider .arrow_right {
-    background: url(/upload/images/icon/sl-icon-r.svg) center no-repeat;
-    width: 60px;
-    height: 100%;
-    background-size: auto 44px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 50;
-    cursor: pointer; }
+    background-image: url(/upload/images/icon/sl-icon-r.svg);
+    right: 0; }
   #index .products .cards .card_photo {
     background-size: auto 80px; }
   #index .products .cards .card[data-product="hudway"] .card_photo {
@@ -2742,10 +2739,13 @@ footer {
         padding-right: 10px; }
         #index .company_info.link_items .card .title_block h3 {
           font-weight: 600;
-          line-height: 45px; }
+          line-height: 43px; }
+    #index .company_info.link_items .vacancy .title_block h3 {
+      line-height: 43px; }
     #index .company_info.link_items .vacancy_info {
       padding: 0 20px 0 0; }
       #index .company_info.link_items .vacancy_info p {
+        height: 45px;
         line-height: 45px;
         font-family: "Roboto"; }
   #index .clients .partners {
@@ -2836,11 +2836,15 @@ footer {
           padding: 0;
           margin-bottom: 0;
           padding-bottom: 40px; }
+          #index .company_info.link_items .card .title_block {
+            padding-right: 0px; }
           #index .company_info.link_items .card .social {
             margin-top: 20px; }
-          #index .company_info.link_items .card .vacancy_info p {
-            line-height: 33px;
-            margin-bottom: 13px; }
+          #index .company_info.link_items .card .vacancy_info {
+            padding-right: 0px; }
+            #index .company_info.link_items .card .vacancy_info p {
+              line-height: 33px;
+              margin-bottom: 13px; }
       #index .clients .partners .cards {
         padding-bottom: 0; }
         #index .clients .partners .cards .card {
@@ -2875,7 +2879,7 @@ footer {
         margin-right: 0; } }
   @media (max-width: 580px) {
     #index .slider_inner .owl-dots {
-      bottom: -20px; }
+      bottom: 20px; }
     #index .slider_wrapper .slide_info {
       padding: 90px 40px 0;
       height: 100%; }
@@ -2943,10 +2947,14 @@ footer {
         height: 516px;
         position: relative; }
         #product .product_info .product_photo_out {
-          background: url(/upload/images/item/prod1-big.jpg) no-repeat center;
+          background-image: url(/upload/images/item/prod1-big.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
           width: 100%;
-          height: 100%;
-          background-size: 100% auto; }
+          height: 640px;
+          background-size: cover;
+          position: absolute;
+          margin-top: -50px; }
       #product .product_info .product_about {
         position: relative;
         z-index: 2;

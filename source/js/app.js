@@ -596,26 +596,24 @@ $('.menu_top .close').on('click', function() {
 function initHeader() {
     var s_w = $(window).width(),
         top = $(window).scrollTop(),
-        point_fade = 40,
         panel_h = $('#panel').height(),
-        main_h = 80, // развернутое состояние
-        main_hmin = 80, // свернутое состояние
         slider_h = $('.slider').height(),
         $main = $('.header.header_main'),
+        $main_fantom = $('.header-fantom.header_main'),
         $product = $('.header.header_product'),
-        product_h = $product.height(),
-        isDesktop = s_w > 768;
-    if (isDesktop) {
-        main_h = 80;
-        main_hmin = 80;
-    } else {
-        main_h = 68;
-        main_hmin = 68;
-    }
+        $product_fantom = $('.header-fantom.header_product'),
+        product_h = $product.height();
+
+    isDesktop = s_w > 768 ? true : false;   
+    main_h = isDesktop ? 80 : 68;
+    main_hmin = isDesktop ? 80 : 68
+    panel_h = panel_h ? panel_h : 0;
+    isProduct = product_h ? true : false;
+    isMainSlider = $main.hasClass('h-slide');
 
     point_fade = main_h - main_hmin + panel_h;
-    if ($main.hasClass('h-slide') || isMainSlider) {
-        isMainSlider = true;
+
+    if (isMainSlider) {
         if (top > panel_h) {
             $main.removeClass('h-slide');
             $main.addClass('h-top');
@@ -625,32 +623,43 @@ function initHeader() {
         }
     }
 
-    $('.header-fantom.header_product').css({'height': product_h+'px'});
+    $product_fantom.css({'height': product_h+'px'});
+
    if (top > point_fade) {
         var tt = panel_h - top,
         	ttp = main_hmin + panel_h - top;
-        if (tt < 0) {
-            tt = 0;
-        }
-        $main.css({ 'height': main_hmin + 'px', 'top': tt + 'px' });
-        if(isDesktop) {
-            $product.css({ 'top': tt + main_hmin + 'px' });
+
+        tt = tt > 0 ? tt : 0;
+        ttp = ttp > 0 ? ttp : 0;
+
+        if( isProduct ) {
+            $main.css({ 'position': 'relative' });
+            $main_fantom.hide();
         } else {
-	        // $product.css({ 'top': tt + main_hmin + 'px' });
-	        // $product.css({ 'top': ttp + main_hmin + 'px' });
-	    }
+            $main.css({ 'height': main_hmin + 'px', 'top': tt + 'px' });
+        }
+        if( isDesktop ) {
+            $product.css({ 'top': ttp + 'px' });
+        }
     } else {
         var tt = panel_h - top,
         	ttp = main_h + panel_h - top;
-        if (tt < 0) {
-            tt = 0;
-        }
-        $main.css({ 'height': main_h + 'px', 'top': tt + 'px' });
-        if(isDesktop) {
-            $product.css({ 'top': tt + main_h + 'px' });
+
+        tt = tt > 0 ? tt : 0;
+        ttp = ttp > 0 ? ttp : 0;
+
+        if ( isProduct ) {
+            $main.css({ 'position': 'relative' });
+            $main_fantom.hide();
+            if ( isDesktop ) {
+                
+            }
         } else {
-	        // $product.css({ 'top': tt + main_h + 'px' });
-        	// $product.css({'top': ttp + 'px'});
+            $main.css({ 'height': main_h + 'px', 'top': tt + 'px' });
+        }
+        if ( isDesktop ) {
+            console.log('main_h :: ' + main_h + ' panel_h :: ' + panel_h + ' top :: ' + top);
+            $product.css({ 'top': main_h + 'px' });
         }
     }
 

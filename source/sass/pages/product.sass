@@ -45,10 +45,15 @@
 			height: 516px
 			position: relative
 			&_out
-				background: url(/upload/images/item/prod1-big.jpg) no-repeat center
+				background-image: url(/upload/images/item/prod1-big.jpg)
+				background-repeat: no-repeat
+				background-position: top center
 				width: 100%
-				height: 100%
-				background-size: 100% auto
+				height: 640px
+				background-size: cover
+				position: absolute
+				margin-top: -50px
+
 		&_about
 			position: relative
 			z-index: 2
