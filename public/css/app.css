@@ -570,7 +570,7 @@ h5 {
         .menu_b .menu_top ul li a:hover {
           text-decoration: none; }
           .menu_b .menu_top ul li a:hover h4 {
-            opacity: .8; }
+            opacity: .7; }
         .menu_b .menu_top ul li h4 {
           font: 16px/40px ProximaNova-Reg;
           padding: 0;
@@ -654,7 +654,7 @@ h5 {
       color: #D8595A;
       background: transparent;
       text-align: center;
-      line-height: 40px;
+      line-height: 42px;
       font-size: 12px;
       letter-spacing: 0.2em;
       width: 100%;
@@ -664,7 +664,7 @@ h5 {
       border-box: box-sizing;
       cursor: pointer; }
       .btn-red-outline:hover {
-        opacity: .8; }
+        opacity: .7; }
   .btn-green {
     border: 1px solid #329746;
     color: #FFFFFF;
@@ -702,13 +702,13 @@ h5 {
       border-box: box-sizing;
       cursor: pointer; }
       .btn-green-outline:hover {
-        opacity: .8; }
+        opacity: .7; }
   .btn-lblue-outline {
     border: 1px solid #2D9CDB;
     color: #2D9CDB;
     background: #FFFFFF;
     text-align: center;
-    line-height: 43px;
+    line-height: 42px;
     font-size: 12px;
     letter-spacing: 0.2em;
     width: auto;
@@ -718,7 +718,7 @@ h5 {
     border-box: box-sizing;
     cursor: pointer; }
     .btn-lblue-outline:hover {
-      opacity: .8; }
+      opacity: .7; }
   .btn-lblue-big {
     height: 54px;
     line-height: 54px;
@@ -738,7 +738,7 @@ h5 {
     border-box: box-sizing;
     cursor: pointer; }
     .btn-outline:hover {
-      opacity: .8; }
+      opacity: .7; }
   .btn-outline-blue {
     border: 1px solid #41688C;
     color: #41688C;
@@ -754,7 +754,7 @@ h5 {
     border-box: box-sizing;
     cursor: pointer; }
     .btn-outline-blue:hover {
-      opacity: .8; }
+      opacity: .7; }
   .btn-outline2 {
     width: 255px;
     margin-top: 35px;
@@ -775,7 +775,7 @@ h5 {
     -webkit-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out; }
     .btn-outline2:hover {
-      opacity: .8; }
+      opacity: .7; }
   .btn-black {
     background: #000000;
     color: #FFFFFF;
@@ -796,7 +796,7 @@ h5 {
     padding: 0 10px; }
     .breadcrumbs a:hover {
       text-decoration: none;
-      opacity: .8; }
+      opacity: .7; }
   .breadcrumbs span {
     padding: 0 10px; }
 
@@ -927,7 +927,7 @@ h5 {
   font: 12px/18px ProximaNova-Bold;
   text-transform: uppercase; }
   .link_btn:hover {
-    opacity: .8;
+    opacity: .7;
     text-decoration: none; }
 
 .c-white {
@@ -1368,7 +1368,7 @@ h5 {
     height: 45px;
     display: block; }
     .social_btn_icon:hover {
-      opacity: .8; }
+      opacity: .7; }
     .social_btn_icon.in {
       background-image: url(/upload/images/icon/icons.svg);
       background-position: 0 -32px;
@@ -1588,7 +1588,7 @@ font.errortext {
     .modal#newUpdate .modal_body .link[data-tooltip]:hover {
       opacity: 1; }
     .modal#newUpdate .modal_body .link:hover {
-      opacity: .8;
+      opacity: .7;
       text-decoration: none; }
   .modal#newUpdate .modal_body .update_info {
     margin-bottom: 30px; }
@@ -1628,7 +1628,7 @@ font.errortext {
       .modal#newWebinary .modal_body .schedule_list .item a {
         font: 14px/18px IBM Plex Sans; }
         .modal#newWebinary .modal_body .schedule_list .item a:hover {
-          opacity: .8;
+          opacity: .7;
           text-decoration: none; }
   .modal#newWebinary .modal_body .reviews_list .item {
     margin-bottom: 25px; }
@@ -1637,13 +1637,13 @@ font.errortext {
     .modal#newWebinary .modal_body .reviews_list .item a {
       font: 14px/18px IBM Plex Sans; }
       .modal#newWebinary .modal_body .reviews_list .item a:hover {
-        opacity: .8;
+        opacity: .7;
         text-decoration: none; }
   .modal#newWebinary a {
     color: #D8595A; }
     .modal#newWebinary a:hover {
       text-decoration: none;
-      opacity: .8; }
+      opacity: .7; }
   .modal#newTech .title h3 {
     text-align: left;
     margin: 0; }
@@ -2741,12 +2741,12 @@ footer {
           font-weight: 600;
           line-height: 43px; }
     #index .company_info.link_items .vacancy .title_block h3 {
-      line-height: 43px; }
+      line-height: 42px; }
     #index .company_info.link_items .vacancy_info {
       padding: 0 20px 0 0; }
       #index .company_info.link_items .vacancy_info p {
         height: 45px;
-        line-height: 45px;
+        line-height: 44px;
         font-family: "Roboto"; }
   #index .clients .partners {
     padding-top: 30px;
@@ -2902,18 +2902,19 @@ footer {
         background-size: 37px auto; } }
 
 #product {
+  /* blarge device styles */
   /* Medium device styles */
   /* Small device styles */
   /* XSmall device styles */ }
   #product .header_product .link {
     color: #E44244; }
     #product .header_product .link:hover {
-      opacity: .8; }
+      opacity: .7; }
   #product .link {
     color: #DB0306; }
     #product .link:hover {
       text-decoration: none;
-      opacity: .8; }
+      opacity: .7; }
   #product .notification {
     background: #EB7F80;
     color: #FFFFFF;
@@ -2952,7 +2953,7 @@ footer {
           background-position: top center;
           width: 100%;
           height: 640px;
-          background-size: cover;
+          background-size: contain;
           position: absolute;
           margin-top: -50px; }
       #product .product_info .product_about {
@@ -3118,7 +3119,7 @@ footer {
             letter-spacing: 0.2em; }
             #product .prices .price_list .item-body .price_link_more a:hover {
               text-decoration: none;
-              opacity: .8; }
+              opacity: .7; }
         #product .prices .price_list .item-body .button_buy {
           width: 100%;
           bottom: 36px; }
@@ -3133,7 +3134,7 @@ footer {
             display: block;
             text-transform: uppercase; }
             #product .prices .price_list .item-body .button_buy .link_demo:hover {
-              opacity: .8;
+              opacity: .7;
               text-decoration: none; }
           #product .prices .price_list .item-body .button_buy p {
             font-size: 14px; }
@@ -3149,7 +3150,7 @@ footer {
     color: #D8595A;
     text-transform: uppercase; }
     #product .prices .all_prices:hover {
-      opacity: .8;
+      opacity: .7;
       text-decoration: none; }
     #product .prices .all_prices_out {
       margin: 70px 0 40px; }
@@ -3167,16 +3168,21 @@ footer {
       width: 100%; }
       #product .screen_list .owl-dots .owl-dot {
         width: 20px;
-        height: 20px;
-        border-bottom: 2px solid #E4E4E4;
         margin: 0 10px;
         outline: none;
         cursor: pointer; }
-        #product .screen_list .owl-dots .owl-dot:hover {
-          border-bottom: 2px solid #465868; }
-      #product .screen_list .owl-dots .active {
-        border-bottom: 2px solid #DB0306;
-        cursor: default; }
+        #product .screen_list .owl-dots .owl-dot span {
+          display: block;
+          background: #a9a9a9;
+          width: 20px;
+          height: 2px;
+          margin: 20px 0; }
+        #product .screen_list .owl-dots .owl-dot:hover span {
+          opacity: .5; }
+      #product .screen_list .owl-dots .active span {
+        background: #DB0306; }
+      #product .screen_list .owl-dots .active:hover span {
+        opacity: 1; }
     #product .screen_list .item {
       cursor: pointer; }
       #product .screen_list .item img {
@@ -3186,7 +3192,7 @@ footer {
     #product .techreq .tech_short a {
       color: #DB0306; }
       #product .techreq .tech_short a:hover {
-        opacity: .8;
+        opacity: .7;
         text-decoration: none; }
     #product .techreq .tech_full {
       display: none; }
@@ -3213,10 +3219,12 @@ footer {
       height: 38px;
       display: inline-block; }
     #product .callme_list .title {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      height: 40px; }
       #product .callme_list .title h4 {
         text-align: left;
-        display: inline-block; }
+        display: inline-block;
+        line-height: 26px; }
         #product .callme_list .title h4 a {
           color: #41688C;
           text-transform: normal; }
@@ -3235,6 +3243,8 @@ footer {
       font-size: 13px; }
     #product .evs .events_list .item .date {
       color: #959595; }
+      #product .evs .events_list .item .date p {
+        line-height: 22px; }
     #product .evs .webinary {
       margin-bottom: 30px; }
       #product .evs .webinary_about {
@@ -3245,6 +3255,8 @@ footer {
         display: block;
         color: #333333;
         flex-basis: auto; }
+        #product .evs_social_title .title_block h4 {
+          font-weight: 600; }
       #product .evs_social_icons {
         display: block; }
         #product .evs_social_icons a {
@@ -3252,7 +3264,7 @@ footer {
           width: 30px;
           height: 30px; }
           #product .evs_social_icons a:hover {
-            opacity: .8; }
+            opacity: .7; }
         #product .evs_social_icons .icon {
           margin-left: 20px; }
   #product .support .support_numbers .support_number {
@@ -3315,14 +3327,17 @@ footer {
       height: 26px;
       display: inline-block; }
     #product .subscribe_list .title {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      height: 40px; }
       #product .subscribe_list .title h4 {
         text-align: left;
-        display: inline-block; }
+        display: inline-block;
+        line-height: 26px; }
         #product .subscribe_list .title h4 a {
           color: #41688C;
           text-transform: normal; }
   #product .subscribe_form_email {
+    padding-top: 1px;
     margin-left: -20px; }
   #product .rsit_base .list_base {
     margin-bottom: 80px; }
@@ -3372,7 +3387,7 @@ footer {
           font: 16px/35px IBM Plex Sans;
           color: #DB0306; }
           #product .documents .docs_list .doc_links .doc_link a:hover {
-            opacity: .8;
+            opacity: .7;
             text-decoration: none; }
   #product .promo_product {
     position: relative;
@@ -3429,8 +3444,6 @@ footer {
       margin-bottom: 20px; }
     #product .callme_list {
       margin-bottom: 40px; }
-      #product .callme_list .headphones {
-        margin-bottom: 30px; }
       #product .callme_list .title {
         margin-bottom: 28px; }
       #product .callme_list .callme_action {
@@ -3443,11 +3456,11 @@ footer {
         text-align: center; }
       #product .evs .ev_list .events {
         margin-bottom: 40px; }
+      #product .evs_social_title {
+        margin-bottom: 20px; }
       #product .evs_social_icons .icon {
         margin-right: 20px;
         margin-left: 0; }
-    #product .subscribe_list .mail {
-      margin-bottom: 30px; }
     #product .subscribe_list .title {
       margin-bottom: 28px; }
     #product .subscribe_form_email {
