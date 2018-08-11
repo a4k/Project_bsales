@@ -322,8 +322,7 @@ h5
                 a
                     &:hover
                         text-decoration: none
-                        h4
-                            opacity: .7
+                        opacity: .7
                 h4
                     font: 16px/40px #{$proxima_regular}
                     padding: 0
@@ -379,8 +378,10 @@ h5
         display: inline-block
         &-big
             padding: 0 50px
+            &:hover
+                opacity: .7
         &:hover
-            color: #{$white_o_65}
+            opacity: .7
     &-red
         border: 1px solid $button_red;
         color: $white
@@ -402,7 +403,7 @@ h5
         cursor: pointer
         display: inline-block
         &:hover
-            color: #{$white_o_65}
+            opacity: .7
         &-outline
             border: 1px solid #{$price_three};
             color: #{$price_three}
@@ -446,7 +447,7 @@ h5
             color: #{$f_green}
             background: transparent
             text-align: center
-            line-height: 40px
+            line-height: 42px
             font-size: 12px
             letter-spacing: 0.2em
             width: 100%
@@ -478,6 +479,8 @@ h5
             height: 54px
             line-height: 54px
             font-size: 16px
+            &:hover
+                opacity: .7
     &-outline
         border: 1px solid #{$button_red};
         color: #{$button_red}
@@ -681,6 +684,12 @@ h5
         &_red
             color: #{$price_three}
 .link
+    &_blue
+        color: #{$button_blue}
+        text-decoration: none
+        &:hover
+            opacity: .7
+            text-decoration: none
     &_tdu
         color: #{$button_blue}
         text-decoration: underline
@@ -692,6 +701,12 @@ h5
         &:hover
             opacity: .7
             text-decoration: none
+    &_white
+        color: #{$white}
+        text-decoration: none
+        &:hover
+            text-decoration: none
+            opacity: .7
 .c
     &-white
         color: $white;
@@ -1204,8 +1219,11 @@ h5
                 margin-bottom: 0
                 h4
                     text-align: left
-                    color: #{$button_blue}
+                    color: #{$black}
                     cursor: pointer
+                    font-size: 20px
+                    &:hover
+                        opacity: .7
             h3
                 margin: 0
                 cursor: pointer
@@ -1742,6 +1760,12 @@ font
     .cards
         .card
             height: auto
+
+/* medium-blarge device style */
+@media (min-width: '#{$medium}px') and (max-width: '#{$blarge}px')
+    .title
+        h4
+            font-size: 20px
 
 /* Small-medium device style */
 @media (min-width: '#{$small}px') and (max-width: '#{$medium}px')

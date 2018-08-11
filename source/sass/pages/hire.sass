@@ -1,3 +1,6 @@
+.link
+	&:hover
+		opacity: .7
 .chire
 	.breadcrumbs
 		margin-bottom: 30px
@@ -19,15 +22,19 @@
 					text-align: center
 					.icon
 						margin-bottom: 20px
+						height: 50px
 // Список вакансий
 .hire_items
     padding: 70px 0 80px
     .toggles
     	background: #{$white}
-    .btn_hire
-    	font-size: 12px
-    	margin-right: 20px
-    	width: 370px
+    .btn
+    	&_hire
+	    	font-size: 11px
+	    	margin-right: 20px
+	    	padding: 0 40px
+	    	&_info
+	    		display: inline-block
 .contact_manager
 	border: 1px solid #{$dgray}
 	padding: 15px 30px
