@@ -381,6 +381,7 @@ function initHeader() {
     var s_w = $(window).width(),
         top = $(window).scrollTop(),
         panel_h = $('#panel').height(),
+        bx_area_h = $('#bx_incl_area_1').height(),
         slider_h = $('.slider').height(),
         $main = $('.header.header_main'),
         $main_fantom = $('.header-fantom.header_main'),
@@ -391,7 +392,8 @@ function initHeader() {
     isDesktop = s_w > 768 ? true : false;
     main_h = isDesktop ? 80 : 68;
     main_hmin = isDesktop ? 80 : 68
-    panel_h = panel_h ? panel_h : 0;
+    bx_area_h = bx_area_h ? bx_area_h : 0;
+    panel_h = panel_h ? (panel_h + bx_area_h) : 0;
     isProduct = product_h ? true : false;
     isMainSlider = $main.hasClass('h-slide');
 
@@ -409,44 +411,51 @@ function initHeader() {
 
     $product_fantom.css({ 'height': product_h + 'px' });
 
-    if (top > point_fade) {
-        var tt = panel_h - top,
-            ttp = main_hmin + panel_h - top;
+    var visible_panel_h = panel_h - top,
+        top_product_h = main_h + panel_h - top;
 
-        tt = tt > 0 ? tt : 0;
-        ttp = ttp > 0 ? ttp : 0;
+    if (top > point_fade) {
+        // Спустился из зоны
+        top_product_h = main_hmin + panel_h - top;
+
+        visible_panel_h = setNegativeToZero(visible_panel_h);
+        top_product_h = setNegativeToZero(top_product_h);
 
         if (isProduct) {
             $main.css({ 'position': 'relative' });
             $main_fantom.hide();
+            if (isDesktop) {
+                $product.css({ 'top': top_product_h + 'px' });
+            }
         } else {
-            $main.css({ 'height': main_hmin + 'px', 'top': tt + 'px' });
-        }
-        if (isDesktop) {
-            $product.css({ 'top': ttp + 'px' });
+            $main.css({ 'height': main_hmin + 'px', 'top': visible_panel_h + 'px' });
         }
     } else {
-        var tt = panel_h - top,
-            ttp = main_h + panel_h - top;
+        // Находится в зоне
+        top_product_h = main_h + panel_h - top;
 
-        tt = tt > 0 ? tt : 0;
-        ttp = ttp > 0 ? ttp : 0;
+        visible_panel_h = setNegativeToZero(visible_panel_h);
+        top_product_h = setNegativeToZero(top_product_h);
 
         if (isProduct) {
             $main.css({ 'position': 'relative', 'top': '0px' });
             $main_fantom.hide();
-            if (isDesktop) {
-
-            }
         } else {
-            $main.css({ 'height': main_h + 'px', 'top': tt + 'px' });
+            $main.css({ 'height': main_h + 'px', 'top': visible_panel_h + 'px' });
         }
         if (isDesktop) {
-            console.log('main_h :: ' + main_h + ' panel_h :: ' + panel_h + ' top :: ' + top);
-            $product.css({ 'top': main_h + 'px' });
+            // console.log('main_h :: ' + main_h + ' panel_h :: ' + panel_h + ' top :: ' + top);
+            $product.css({ 'top': top_product_h + 'px' });
         }
     }
+}
 
+// Если меньше ноля приравнять к нулю
+function setNegativeToZero(a) {
+    if ( a > 0 ) {
+        return a
+    }
+    return 0
 }
 
 
@@ -457,3 +466,170 @@ $(document).on('scroll', function() {
 
 // Init functions
 initHeader();
+
+
+//после загрузки веб-страницы
+function getCaptcha() {
+
+  // максимальное количество файлов
+/*  var countFiles = 5;
+  // типы разрешённых файлов
+  var typeFile = 'image.*';
+  // максимльный размер
+  var maxSizeFile = 524288; //512 Кбайт
+  // отображаем на форме максимальное количество файлов
+  $('#countFiles').text(countFiles);
+  // при изменения значения элемента "Выбрать файл"
+  $(document).on('change','input[name="images[]"]',function(e){
+    // если выбран файл, то добавить ещё элемент "Выбрать файл"
+    if ((e.target.files.length>0)&&($(this).next('p').next('input[name="images[]"]').length==0) && ($('input[name="images[]"]').length<countFiles)) {
+      $(this).next('p').after('<input type="file" name="images[]"><p style="margin-top: 3px; margin-bottom: 3px; color: #ff0000;"></p>');
+    }
+    // если выбран файл, то..
+    if (e.target.files.length>0) {
+      // получить файл
+      var file = e.target.files[0];
+      // проверить размер файла
+      if (file.size>maxSizeFile) {
+        $(this).next('p').text('* Файл не будет отправлен, т.к. его размер больше 512Кбайт');
+      }
+      // проверить тип файла
+      else if (!file.type.match(typeFile)) {
+        $(this).next('p').text('* Файл не будет отправлен, т.к. его тип не соответствует разрешённому');
+      }
+      else {
+        // убираем сообщение об ошибке
+        if ($(this).next('p')) {
+          $(this).next('p').text('');
+        }
+      }
+    }
+    else {
+      // если после изменения файл не выбран, то сообщаем об этом пользователю
+      $(this).next('p').text('* Файл не будет отправлен, т.к. он не выбран');
+    }
+  });*/
+
+  // при отправке формы messageForm на сервер (id="messageForm")
+  $('[name^=SIMPLE_FORM2]').submit(function (event) {
+    event.preventDefault();
+    var formValid = true;
+
+    $('[name^=SIMPLE_FORM2] input,[name^=SIMPLE_FORM2] textarea').each(function () {
+      var formGroup = $(this).parents('.form-group');
+      var glyphicon = formGroup.find('.form-control-feedback');
+      //валидация данных с помощью HTML5 функции checkValidity
+      if (this.checkValidity()) {
+        //добавить к formGroup класс .has-success и удалить .has-error
+        formGroup.addClass('has-success').removeClass('has-error');
+        glyphicon.addClass('glyphicon-ok').removeClass('glyphicon-remove');
+      } else {
+        formGroup.addClass('has-error').removeClass('has-success');
+        glyphicon.addClass('glyphicon-remove').removeClass('glyphicon-ok');
+        //если элемент не прошёл проверку, то отметить форму как не валидную
+        formValid = false;
+      }
+    });
+
+    //проверяем элемент, содержащий код капчи
+    //1. Получаем капчу
+    var captcha = grecaptcha.getResponse();
+    //2. Если длина кода капчи, которой ввёл пользователь не равно 6,
+    //   то сразу отмечаем капчу как невалидную (без отправки на сервер)
+    if (!captcha.length) {
+      // Выводим сообщение об ошибке
+      $('#recaptchaError').text('* Вы не прошли проверку "Я не робот"');
+    } else {
+      // получаем элемент, содержащий капчу
+      $('#recaptchaError').text('');
+    }
+
+    // если форма валидна и длина капчи не равно пустой строке, то отправляем форму на сервер (AJAX)
+    if ((formValid) && (captcha.length)) {
+
+      // получаем имя, которое ввёл пользователь
+      var name = $("[name=form_text_5]").val();
+      // получаем email, который ввёл пользователь
+      var email = $("[name=form_text_6]").val();
+      // получаем сообщение, которое ввёл пользователь
+      var message = $("[name=form_text_7]").val();
+
+      // объект, посредством которого будем кодировать форму перед отправкой её на сервер
+      var formData = new FormData();
+      // добавить в formData значение 'name'=значение_поля_name
+      formData.append('form_text_5', name);
+      // добавить в formData значение 'email'=значение_поля_email
+      formData.append('form_text_6', email);
+      // добавить в formData значение 'message'=значение_поля_message
+      formData.append('form_text_7', message);
+      // добавить в formData файлы
+      // получить все элементы с атрибутом name="images[]"
+      // var images = document.getElementsByName("images[]");
+      // перебрать все элементы images с помощью цикла
+      /*for (var i = 0; i < images.length; i++) {
+        // получить список файлов элемента input с type="file"
+        var fileList = images[i].files;
+        // если элемент не содержит файлов, то перейти к следующей
+        if (fileList.length > 0) {
+          // получить первый файл из списка
+          var file = fileList[0];
+          // проверить тип файла и размер
+          if ((file.type.match('image.*')) && (file.size<524288)) {
+            // добавить его (файл (file) с именем file.name) в formData
+            formData.append('images[]', file, file.name);
+          }
+        }
+      }*/
+
+      // добавить в formData значение 'g-recaptcha-response'=значение_recaptcha
+      formData.append('g-recaptcha-response', captcha);
+
+      // технология AJAX
+      $.ajax({
+        //метод передачи запроса - POST
+        type: "POST",
+        //URL-адрес запроса
+        url: "/products/pau/",
+        //передаваемые данные - formData
+        data: formData,
+        // не устанавливать тип контента, т.к. используется FormData
+        contentType: false,
+        // не обрабатывать данные formData
+        processData: false,
+        // отключить кэширование результатов в браузере
+        cache: false,
+        //при успешном выполнении запроса
+        success: function (data) {
+          // разбираем строку JSON, полученную от сервера
+          var $data = JSON.parse(data);
+          // устанавливаем элементу, содержащему текст ошибки, пустую строку
+          $('#error').text('');
+
+          // если сервер вернул ответ success, то значит двнные отправлены
+          if ($data.result == "success") {
+            // скрываем форму обратной связи
+            $('[name^=SIMPLE_FORM2]').hide();
+            // удаляем у элемента, имеющего id=msgSubmit, класс hidden
+            $('#msgSubmit').removeClass('hidden');
+          } else {
+            // Если сервер вернул ответ error, то делаем следующее...
+            $('#error').text('Произошла ошибка при отправке формы на сервер.');
+            // Сбрасываем виджет reCaptcha
+            grecaptcha.reset();
+            // Если существует свойство msg у объекта $data, то...
+            if ($data.msg) {
+              // вывести её в элемент у которого id=recaptchaError
+              $('#msg').text($data.msg);
+            }
+            if ($data.files) {
+              $('#error').html($('#error').text()+'<br>'+$data.files);
+            }
+          }
+        },
+        error: function (request) {
+          $('#error').text('Произошла ошибка ' + request.responseText + ' при отправке данных.');
+        }
+      });
+    }
+  });
+}

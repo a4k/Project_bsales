@@ -20,9 +20,10 @@
 		&_nopadding
 			padding: 0
 		img
-			width: 100%
-			min-height: 500px
-			border: 1px solid #{$dgray}
+			width: auto
+			min-height: auto
+			border: none
+			max-width: 100%
 		p
 			padding-top: 1rem
 			padding-bottom: 1rem
@@ -60,6 +61,15 @@
 					&:hover
 						text-decoration: none
 						color: #{$price_three}
+// Таблица версий
+.version
+	&_history
+		.item
+			border-bottom: 1px solid #{$gwhite}
+			padding: 0 15px
+			&_header
+				p
+					font-weight: 600
 /* Medium device style */
 @media (max-width: '#{$medium}px')
 	.history

@@ -456,7 +456,9 @@ h5 {
   .title_block_bold h4 {
     font-size: 14px; }
   h3 {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .text ul.list_out {
+    padding-left: 17px; } }
 
 /* Container styles */
 .block_content {
@@ -771,12 +773,7 @@ h5 {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-family: ProximaNova-Bold;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out; }
+    cursor: pointer; }
     .btn-outline2:hover {
       opacity: .7; }
   .btn-black {
@@ -2021,9 +2018,14 @@ font.errortext {
       width: 100%;
       text-align: center;
       margin-top: 27px; }
+      .title_block_bold h3 {
+        font-size: 24px; }
       .title_block h3 {
         font-size: 18px;
         line-height: 27px; }
+    .title h2 {
+      font-size: 30px;
+      line-height: 35px; }
     .title h3 {
       line-height: 42px;
       font-size: 24px; }
@@ -2138,6 +2140,12 @@ font.errortext {
   .title h1 {
     font-size: 28px;
     line-height: 35px; }
+  .title h2 {
+    font-size: 26px;
+    line-height: 28px; }
+  .title_bold h2 {
+    font-size: 26px;
+    line-height: 28px; }
   .container {
     padding: 0 20px; }
   .slider_container {
@@ -2937,6 +2945,8 @@ footer {
       opacity: .7; }
   #product .link {
     color: #DB0306; }
+    #product .link[data-tooltip]:hover {
+      opacity: 1; }
     #product .link:hover {
       text-decoration: none;
       opacity: .7; }
@@ -3471,10 +3481,13 @@ footer {
       margin-bottom: 20px; }
     #product .callme_list {
       margin-bottom: 40px; }
+      #product .callme_list .headphones {
+        margin-bottom: 10px; }
       #product .callme_list .title {
         margin-bottom: 28px; }
       #product .callme_list .callme_action {
-        margin-bottom: 30px; }
+        margin-bottom: 30px;
+        margin-top: 30px; }
       #product .callme_list .button_request {
         width: 100%; }
     #product .evs {
@@ -3488,8 +3501,14 @@ footer {
       #product .evs_social_icons .icon {
         margin-right: 20px;
         margin-left: 0; }
-    #product .subscribe_list .title {
-      margin-bottom: 28px; }
+    #product .subscribe_list {
+      margin-bottom: 40px; }
+      #product .subscribe_list .mail {
+        margin-bottom: 10px; }
+      #product .subscribe_list .title {
+        margin-bottom: 28px; }
+      #product .subscribe_list .item:nth-child(2) {
+        margin-top: 30px; }
     #product .subscribe_form_email {
       margin-left: 0;
       margin-bottom: 14px; }
@@ -4174,13 +4193,15 @@ footer {
           text-decoration: none;
           color: #D8595A; }
   @media (max-width: 992px) {
-    #events .events_list .item_date {
-      font-size: 12px; } }
+    #events .events_list .item {
+      margin-top: 15px; }
+      #events .events_list .item:after {
+        margin-top: 15px; }
+      #events .events_list .item_date {
+        font-size: 12px; } }
   @media (max-width: 580px) {
-    #events .breadcrumbs {
-      margin-bottom: 45px; }
     #events .event_date {
-      margin-bottom: 10px; } }
+      margin-bottom: 17px; } }
 
 #event {
   /* Medium device style */
@@ -4326,6 +4347,9 @@ footer {
   padding: 0 0 60px; }
   #contacts .map_area {
     width: 100%; }
+    #contacts .map_area #map {
+      width: 100%;
+      height: 350px; }
     #contacts .map_area_photo {
       width: 100%; }
 
@@ -4813,8 +4837,20 @@ footer {
       font: 16px/35px IBM Plex Sans;
       color: #DB0306; }
   @media (max-width: 992px) {
+    #uprcompany .redaction_list {
+      padding-bottom: 60px; }
+      #uprcompany .redaction_list .item_video {
+        margin-right: 0px; }
+      #uprcompany .redaction_list .item_content {
+        padding-top: 30px;
+        margin: 0 auto;
+        max-width: 100%; }
     #uprcompany .price_item {
       margin-bottom: 20px; }
+    #uprcompany .price_header_title h4 {
+      font-size: 20px; }
+    #uprcompany .price_box_body {
+      margin-left: 0; }
     #uprcompany .list_base #knowledge {
       margin-bottom: 20px; }
       #uprcompany .list_base #knowledge .item {
@@ -4826,10 +4862,16 @@ footer {
     #uprcompany .docs_list .item {
       margin-bottom: 30px; }
       #uprcompany .docs_list .item .title {
-        margin-bottom: 0; } }
+        margin-bottom: 14px; } }
   @media (max-width: 580px) {
     #uprcompany .redaction_list .item .btn {
+      width: 100%;
       padding: 0; }
+    #uprcompany .more_feature .btn.big {
+      height: auto;
+      line-height: 24px;
+      padding: 10px;
+      font-size: 11px; }
     #uprcompany .price_box .title_list {
       padding: 10px; } }
 
@@ -4853,9 +4895,10 @@ footer {
     #history .history .text_nopadding {
       padding: 0; }
     #history .history .text img {
-      width: 100%;
-      min-height: 500px;
-      border: 1px solid #cfcfcf; }
+      width: auto;
+      min-height: auto;
+      border: none;
+      max-width: 100%; }
     #history .history .text p {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -4891,6 +4934,11 @@ footer {
         #history .history .pagination .link_page a:hover {
           text-decoration: none;
           color: #D8595A; }
+  #history .version_history .item {
+    border-bottom: 1px solid #F5F5F5;
+    padding: 0 15px; }
+    #history .version_history .item_header p {
+      font-weight: 600; }
   @media (max-width: 992px) {
     #history .history_date {
       font-size: 12px; } }
@@ -4905,11 +4953,15 @@ footer {
       color: #329746; }
   #fanalys .link {
     color: #329746; }
+    #fanalys .link[data-tooltip]:hover {
+      opacity: 1; }
     #fanalys .link:hover {
       text-decoration: none;
       opacity: .7; }
     #fanalys .link_btn {
       color: #329746; }
+  #fanalys .modal.newTech a {
+    color: #329746; }
   #fanalys .modal#newUpdate .modal_body .link {
     color: #329746; }
   #fanalys .notification {

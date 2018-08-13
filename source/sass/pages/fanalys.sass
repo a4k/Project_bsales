@@ -10,15 +10,20 @@
 				color: #{$f_green}
 .link
 	color: #{$f_green}
+	&[data-tooltip]
+		&:hover
+			opacity: 1
 	&:hover
 		text-decoration: none
 		opacity: .7
 	&_btn
 		color: #{$f_green}
 .modal
-    &-open
-    // Разовое обновление
-    &#newUpdate
+	&-open
+	&.newTech
+		a
+			color: #{$f_green}
+	&#newUpdate
         .modal
             &_body
                 .link

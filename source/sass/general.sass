@@ -217,6 +217,11 @@ h5
                     font-size: 14px
     h3
         font-size: 20px
+    .text
+        ul
+            &.list
+                &_out
+                    padding-left: 17px
 
 /* Container styles */
 .block_content
@@ -527,11 +532,6 @@ h5
         text-transform: uppercase
         font-family: #{$proxima_bold}
         cursor: pointer
-        transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out
-        -moz-transition: all 0.5s ease-in-out
-        -webkit-transition: all 0.5s ease-in-out
-        -ms-transition: all 0.5s ease-in-out
         &:hover
             opacity: .7
 
@@ -1885,9 +1885,15 @@ font
             width: 100%
             text-align: center
             margin-top: 27px
+            &_bold
+                h3
+                    font-size: 24px
             h3
                 font-size: 18px
                 line-height: 27px
+        h2
+            font-size: 30px
+            line-height: 35px
         h3
             line-height: 42px
             font-size: 24px
@@ -2011,13 +2017,20 @@ font
             margin: 10px
             &:first-child
                 margin-left: 0px
-
 /* XSmall device style */
 @media (max-width: '#{$xsmall}px')
     .title
         h1
             font-size: 28px
             line-height: 35px
+        h2
+            font-size: 26px
+            line-height: 28px
+        &_bold
+            h2
+                font-size: 26px
+                line-height: 28px
+
     .container
         padding: 0 20px
     .slider_container

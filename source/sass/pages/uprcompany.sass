@@ -201,9 +201,27 @@
 
 /* medium device styles */
 @media (max-width: '#{$medium}px')
+	// Редакции
+	.redaction
+		&_list
+			padding-bottom: 60px
+			.item
+				&_video
+					margin-right: 0px
+				&_content
+					padding-top: 30px
+					margin: 0 auto
+					max-width: 100%
 	.price
 		&_item
 			margin-bottom: 20px
+		&_header
+			&_title
+				h4
+					font-size: 20px
+		&_box
+			&_body
+				margin-left: 0
 	.list_base
 		#knowledge
 			margin-bottom: 20px
@@ -217,14 +235,22 @@
 		.item
 			margin-bottom: 30px
 			.title
-				margin-bottom: 0
+				margin-bottom: 14px
 /* xsmall device styles */
 @media (max-width: '#{$xsmall}px')
 	.redaction
 		&_list
 			.item
 				.btn
+					width: 100%
 					padding: 0
+	.more_feature
+		.btn
+			&.big
+				height: auto
+				line-height: 24px
+				padding: 10px
+				font-size: 11px
 	.price
 		&_box
 			.title
